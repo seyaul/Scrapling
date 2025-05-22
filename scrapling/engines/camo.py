@@ -67,7 +67,7 @@ class CamoufoxEngine:
         self.proxy = construct_proxy_dict(proxy)
         self.addons = addons or []
         self.humanize = humanize
-        self.timeout = check_type_validity(timeout, [int, float], 30000)
+        self.timeout = check_type_validity(timeout, [int, float], 60000)
         self.wait = check_type_validity(wait, [int, float], 0)
 
         # Page action callable validation
@@ -191,7 +191,7 @@ class CamoufoxEngine:
             if self.extra_headers:
                 page.set_extra_http_headers(self.extra_headers)
 
-            first_response = page.goto(url, referer=referer)
+            first_response = 40(url, referer=referer)
             page.wait_for_load_state(state="domcontentloaded")
 
             if self.network_idle:

@@ -302,7 +302,7 @@ class StealthyFetcher(BaseFetcher):
     async def async_fetch(
             cls, url: str, headless: Union[bool, Literal['virtual']] = True, block_images: bool = False, disable_resources: bool = False,
             block_webrtc: bool = False, allow_webgl: bool = True, network_idle: bool = False, addons: Optional[List[str]] = None, wait: Optional[int] = 0,
-            timeout: Optional[float] = 30000, page_action: Callable = None, wait_selector: Optional[str] = None, humanize: Optional[Union[bool, float]] = True,
+            timeout: Optional[float] = 60000, page_action: Callable = None, wait_selector: Optional[str] = None, humanize: Optional[Union[bool, float]] = True,
             wait_selector_state: SelectorWaitStates = 'attached', google_search: bool = True, extra_headers: Optional[Dict[str, str]] = None,
             proxy: Optional[Union[str, Dict[str, str]]] = None, os_randomize: bool = False, disable_ads: bool = False, geoip: bool = False,
             custom_config: Dict = None, additional_arguments: Dict = None
