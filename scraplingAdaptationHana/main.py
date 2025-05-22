@@ -15,6 +15,7 @@ import pandas as pd
 import random
 import logging, sys, pathlib
 import re
+import unicodedata
 
 
 
@@ -23,7 +24,7 @@ PRICE_SHEET = "Scrapling/scraplingAdaptationHana/source_prices.xlsx"
 PRICE_SHEET2 = "Scrapling/scraplingAdaptationHana/fresh_prices.xlsx"
 THRESHOLD = 85
 DELTA_PCT = 0.25
-
+DF_COMP_FI = None
 
 logging.basicConfig(
     level=logging.INFO,
@@ -200,7 +201,7 @@ async def fetch_wholefoods_api(cookies, category="all-products", limit=60) -> li
     products = []
     seen_slugs = set()
     no_new_items_count = 0
-    max_no_new_items = 100  # Exit after 3 consecutive API calls with no new items
+    max_no_new_items = 10  # Exit after 3 consecutive API calls with no new items
     consecutive_empty_batches = 0
     first_run = True
     with httpx.Client(headers=headers, cookies=cookies_for_api, timeout=20) as c:
@@ -323,9 +324,9 @@ def extract_item_fields(item: dict) -> dict:
     }
 
 async def main_fetch_and_save(items):
-    df = pd.DataFrame(items)
+    #df = pd.DataFrame(items)
     out_file = "wholefoods_products.xlsx"
-    df.to_excel(out_file, index=False)
+    items.to_excel(out_file, index=False)
     print(f"saved to {out_file}")
 
 def store_id_from_cookie(jar: dict) -> str:
@@ -366,18 +367,25 @@ def build_matcher(df_cat: pd.DataFrame, brand_included: bool) -> callable:
                 scorer=fuzz.token_set_ratio,         # order-insensitive!
             )
             return idx_map[match], score
+        return best_match
     else:
-        sizes = df_cat["size"].tolist()
+        sizes = df_cat["size_norm"].tolist()
         names = df_cat["name"].tolist()
+        brands = df_cat["brand"].tolist()
 
+        by_brand: dict[str, list[str]] = {}
         by_size: dict[str, list[int]] = {}
         for idx, s in enumerate(sizes):
             by_size.setdefault(s, []).append(idx)
+        for idx, b in enumerate(brands):
+            by_brand.setdefault(b, []).append(idx)
 
-        def match(q_name: str, q_size: str):
+        def match(q_name: str, q_size: str, b_name: str):
             cand_rows = by_size.get(q_size, [])
-            if not cand_rows:
-                return None, 0.0          # no candidate with same size
+            brand_rows = by_brand.get(b_name, [])
+            ### TODO: split the conditional branch to do if not brand rows, calculate brand score
+            if not cand_rows or not brand_rows:
+                return None, 0.0        # no candidate with same size
 
             choices = [names[i] for i in cand_rows]
 
@@ -396,9 +404,8 @@ def build_matcher(df_cat: pd.DataFrame, brand_included: bool) -> callable:
                 return cand_rows[idx1], s1
             else:
                 return cand_rows[idx2], s2
-
         return match
-    return best_match
+    
 
 async def compare_prices(scraped_items: list[dict]):
     # 1. load reference file
@@ -408,7 +415,7 @@ async def compare_prices(scraped_items: list[dict]):
     brand_included = False          # expects cols: Name, Price
     if not ("brand" in df_src.columns):
         df_src["norm"] = df_src["item description"].map(normalise)
-        df_src["size"] = df_src["size"].map(clean_size)
+        df_src["size"] = df_src["size"].map(normalize_size_string)
 
         # 2. turn scraped list -> DataFrame
         df_comp = pd.DataFrame(scraped_items)
@@ -430,12 +437,15 @@ async def compare_prices(scraped_items: list[dict]):
     elif "brand" in df_src.columns:
         brand_included = True
         df_src["norm"] = df_src["item name"].map(normalise)
-        df_src["size"] = df_src["size"].map(clean_size)
-        df_src["brand"] = df_src["brand"].map(normalise)
+        df_src["size_norm"] = df_src["size"].map(normalize_size_string)
+        df_src["brand"] = df_src["brand"].map(normalize_brand)
         df_comp = pd.DataFrame(scraped_items)
         _, size_cmp = zip(*df_comp["slug"].map(split_slug))
         df_comp["name"] = df_comp["name"].map(normalise)
         df_comp["size"] = [s.replace(" ", "") if s else None for s in size_cmp]
+        df_comp["size_norm"] = df_comp["size"].map(normalize_size_string)
+        df_comp["brand"] = df_comp["brand"].map(normalize_brand)
+        DF_COMP_FI = df_comp
         matcher = build_matcher(df_comp, brand_included)
     # 4. match each row from price-sheet
     best_rows   = []
@@ -498,12 +508,12 @@ async def compare_prices(scraped_items: list[dict]):
             })
     elif ("brand" in df_src.columns):
         num_potential_matches = 0
-        for q_norm, brand, size_unit, src_price in zip(df_src["norm"], df_src["brand"], df_src["size"], df_src["avg price"]):
+        for q_norm, brand, size_unit, src_price in zip(df_src["norm"], df_src["brand"], df_src["size_norm"], df_src["avg price"]):
             match_name = None
             comp_price = None
             potentiate_name = None
             reject_reason = []
-            row_idx, score = matcher(q_norm, size_unit)
+            row_idx, score = matcher(q_norm, size_unit, brand)
             best_rows.append(row_idx)
             best_scores.append(score)
             if row_idx is not None: 
@@ -511,7 +521,7 @@ async def compare_prices(scraped_items: list[dict]):
 
             if row_idx is not None and (score >= THRESHOLD):
                 size_src  = (size_unit or "").strip().lower()
-                size_comp = (df_comp.loc[row_idx, "size"] or "").strip().lower()
+                size_comp = (df_comp.loc[row_idx, "size_norm"] or "").strip().lower()
                 brand_src = brand.strip()
                 brand_comp = df_comp.loc[row_idx, "brand" or ""].strip().lower()
 
@@ -524,13 +534,13 @@ async def compare_prices(scraped_items: list[dict]):
                     comp_price = df_comp.loc[row_idx, "regular_price"]
                     match_name = df_comp.loc[row_idx, "name"]
                 else:
-                    # helpful debug:
-                    # print(f"Some results-- \
-                    #       \nsrcName vs compName: {q_norm}, {df_comp.loc[row_idx, 'slug']}, \
-                    #        \nScore>=Threshold: {score}, {THRESHOLD}, {score>=THRESHOLD},\
-                    #         \nsize_comp: {size_unit.lower()}, {df_comp.loc[row_idx, 'size']},\
-                    #          \nbrand_src: {brand_src}, \
-                    #           \nbrand_comp: {brand_comp}")
+                    #helpful debug:
+                    print(f"Some results-- \
+                          \nsrcName vs compName: {q_norm}, {df_comp.loc[row_idx, 'slug']}, \
+                           \nScore>=Threshold: {score}, {THRESHOLD}, {score>=THRESHOLD},\
+                            \nsize_comp: {size_unit.lower()}, {df_comp.loc[row_idx, 'size']},\
+                             \nbrand_src: {brand_src}, \
+                              \nbrand_comp: {brand_comp}")
                     log.debug(
                         "size mismatch - src=%s / comp=%s  (row %s, score %.1f)",
                         size_src, size_comp, row_idx, score,
@@ -561,7 +571,9 @@ async def compare_prices(scraped_items: list[dict]):
             
 
             price_diffs.append({
+                "Brand" : df_comp.loc[row_idx, "brand"] if row_idx is not None else "n/a",
                 "MatchName" : df_comp.loc[row_idx, "name"] if row_idx is not None else "n/a",
+                "Size": df_comp.loc[row_idx, "size"] if row_idx is not None else "n/a",
                 "CompPrice": comp_price,
                 "PotetentiateName": potentiate_name,
                 "RejectReason": reject_reason,
@@ -585,6 +597,7 @@ async def compare_prices(scraped_items: list[dict]):
     out_file = "price_compare.xlsx"
     preformating_xl_helper(df_out, out_file)
     print(f"📝 comparison report ➜ {out_file}")
+    return df_comp
 
 
 
@@ -629,10 +642,29 @@ def split_name(txt: str) -> tuple[str, str | None]:
         return base, size
     return txt.lower(), None
 
-def clean_size(txt) -> str:
-    if not txt or pd.isna(txt):
+def normalize_size_string(size_str: str) -> str:
+    """
+    Normalize size strings by extracting only numeric characters.
+    - Removes units like 'oz', 'ml', 'ct'
+    - Removes decimal points
+    - Keeps digits only
+    """
+    if not isinstance(size_str, str):
         return ""
-    return str(txt).strip().lower().replace(" ", "")
+
+    # Remove everything that's not a digit
+    digits_only = re.sub(r"\D", "", size_str)
+    return digits_only
+
+
+def normalize_brand(b: str) -> str:
+    if not isinstance(b, str):
+        return ""
+    b = unicodedata.normalize("NFKD", b)  # normalize unicode
+    b = b.lower()
+    b = re.sub(r"[’'®™\-\.]", "", b)     
+    b = re.sub(r"\s+", " ", b).strip()   
+    return b
 
 
 def preformating_xl_helper(df_out, out_file):
@@ -644,7 +676,7 @@ def preformating_xl_helper(df_out, out_file):
 
     # 1️⃣ Find the MatchName and Score column indexes
     col_names = {cell.value: idx+1 for idx, cell in enumerate(ws[1])}
-    match_name_col_idx = col_names.get("MatchName")
+    match_name_col_idx = col_names.get("Brand")
     score_col_idx = col_names.get("Score")
 
     
@@ -699,5 +731,6 @@ _NUM_UNIT_RE = re.compile(
 if __name__ == "__main__":
     asyncio.run(main())
     items = asyncio.run(fetch_wholefoods_api(cookies_for_api))
-    asyncio.run(main_fetch_and_save(items))
-    asyncio.run(compare_prices(items))
+    
+    DF_COMP_FI = asyncio.run(compare_prices(items))
+    asyncio.run(main_fetch_and_save(DF_COMP_FI))
