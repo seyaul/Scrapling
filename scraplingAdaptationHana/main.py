@@ -144,14 +144,14 @@ async def set_zip_wholefoods(page, zipcode):
 
 
 
-async def main():
-    url = "https://www.wholefoodsmarket.com"
+async def main(urlstr):
+    url = urlstr
     domain = urlparse(url).netloc.replace("www.", "")
-    zipcode = "20005"
+    wf_zipcode = "20005"
 
     async def page_action(page):
         if domain in ZIP_HANDLERS:
-            await ZIP_HANDLERS[domain](page, zipcode)
+            await ZIP_HANDLERS[domain](page, wf_zipcode)
         else:
             print(f"No handler for domain: {domain}")
         return page
@@ -729,7 +729,21 @@ _NUM_UNIT_RE = re.compile(
     r"(\d+(?:\.\d+)?)\s*-?\s*(" + "|".join(SIZE_UNITS) + r")\b", re.I)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    url_choice = input("What website do you want to scrape: Whole Foods, Harris Teeter, Giant, or Safeway? ")
+    if url_choice.lower() == "whole foods":
+        print("You chose Whole Foods")
+        url = "https://www.wholefoodsmarket.com"
+    elif url_choice.lower() == "harris teeter":
+        print("You chose Harris Teeter")
+    elif url_choice.lower() == "giant":
+        print("You chose Giant")
+    elif url_choice.lower() == "safeway":
+        print("You chose Safeway")
+    else:
+        print("Invalid choice. Please choose Whole Foods, Harris Teeter, Giant, or Safeway.")
+        sys.exit(1)
+    
+    asyncio.run(main(url))
     items = asyncio.run(fetch_wholefoods_api(cookies_for_api))
     
     DF_COMP_FI = asyncio.run(compare_prices(items))
