@@ -6,10 +6,22 @@ import json
 import pandas as pd
 import logging, sys, pathlib
 import base64, json, urllib.parse
+import os
 
 LOG_FILE = pathlib.Path("harris_teeter_scrape.log")
-HT_UPC_LIST = ["009800895007"]  # Placeholder UPC list for Harris Teeter
 HT_OUTPUT_FILE = "harris_teeter_products.xlsx"
+
+CACHE_FILE = "scraplingAdaptationHana/upc_data.json"
+UPC_DATA = None
+if os.path.exists(CACHE_FILE):
+    with open(CACHE_FILE, "r") as f:
+        try:
+            UPC_DATA = json.load(f)
+        except json.JSONDecodeError:
+            print("⚠️ Cache file exists but is invalid or empty. Starting fresh.")
+            UPC_DATA = {}
+else: UPC_DATA = {}
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -22,6 +34,11 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 cookies_for_api = {}  # This will be populated after browser interaction
+
+def upc_to_gtin13(upc12):
+    # drop last digit, pad to 13
+    core = upc12[:-1]
+    return core.zfill(13)
 
 # --- Placeholder: Page interaction to set location/store ---
 async def set_zip_harTeet(page, zipcode):
@@ -79,77 +96,77 @@ async def main(urlstr):
         page_action=page_action
     )
 
-# --- Fetch Harris Teeter product data using UPCs ---
-def fetch_harris_teeter_api(cookies, upc_list):
-    url = "https://www.harristeeter.com/atlas/v1/product/v2/products"
-    params = {
-        "filter.verified": "true",
-        "projections": "items.full,offers.compact,nutrition.label"
-    }
+# # --- Fetch Harris Teeter product data using UPCs ---
+# def fetch_harris_teeter_api(cookies, upc_list):
+#     url = "https://www.harristeeter.com/atlas/v1/product/v2/products"
+#     params = {
+#         "filter.verified": "true",
+#         "projections": "items.full,offers.compact,nutrition.label"
+#     }
 
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/124.0.0.0 Safari/537.36"
-        ),
-        "Accept": "application/json",
-        "Origin": "https://www.harristeeter.com",
-        "Referer": "https://www.harristeeter.com",
-         "x-requested-with": "XMLHttpRequest",
-    }
-    headers.update({
-    "Sec-Fetch-Site": "same-origin",
-    "Sec-Fetch-Mode": "cors",
-    "Sec-Fetch-Dest": "empty",
-    })
+#     headers = {
+#         "User-Agent": (
+#             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+#             "AppleWebKit/537.36 (KHTML, like Gecko) "
+#             "Chrome/124.0.0.0 Safari/537.36"
+#         ),
+#         "Accept": "application/json",
+#         "Origin": "https://www.harristeeter.com",
+#         "Referer": "https://www.harristeeter.com",
+#          "x-requested-with": "XMLHttpRequest",
+#     }
+#     headers.update({
+#     "Sec-Fetch-Site": "same-origin",
+#     "Sec-Fetch-Mode": "cors",
+#     "Sec-Fetch-Dest": "empty",
+#     })
 
-    data_out = []
-    with httpx.Client(headers=headers, cookies=cookies, timeout=15) as c:
-        for upc in upc_list:
-            log.info(f"🔍 Fetching UPC {upc}")
-            p = params.copy()
-            p["filter.gtin13s"] = upc
-            try:
-                r = c.get(url, params=p)
-                r.raise_for_status()
-                res = r.json
-                print(r.status_code, r.text)
-                # for item in res.get("data", []):
-                #     data_out.append({
-                #         "UPC": upc,
-                #         "Name": item.get("description"),
-                #         "Brand": item.get("brand"),
-                #         "Price": item.get("offers", {}).get("compact", {}).get("price", {}).get("price"),
-                #     })
-            except Exception as e:
-                log.warning(f"❌ Failed to fetch {upc}: {e}")
-    return pd.DataFrame(data_out)
+#     data_out = []
+#     with httpx.Client(headers=headers, cookies=cookies, timeout=15) as c:
+#         for upc in upc_list:
+#             log.info(f"🔍 Fetching UPC {upc}")
+#             p = params.copy()
+#             p["filter.gtin13s"] = upc
+#             try:
+#                 r = c.get(url, params=p)
+#                 r.raise_for_status()
+#                 res = r.json
+#                 print(r.status_code, r.text)
+#                 # for item in res.get("data", []):
+#                 #     data_out.append({
+#                 #         "UPC": upc,
+#                 #         "Name": item.get("description"),
+#                 #         "Brand": item.get("brand"),
+#                 #         "Price": item.get("offers", {}).get("compact", {}).get("price", {}).get("price"),
+#                 #     })
+#             except Exception as e:
+#                 log.warning(f"❌ Failed to fetch {upc}: {e}")
+#     return pd.DataFrame(data_out)
 
-from playwright.async_api import async_playwright
+# from playwright.async_api import async_playwright
 
-async def dump_api_with_browser(url, cookies):
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context()
-        page = await context.new_page()
+# async def dump_api_with_browser(url, cookies):
+#     async with async_playwright() as p:
+#         browser = await p.chromium.launch(headless=True)
+#         context = await browser.new_context()
+#         page = await context.new_page()
 
-        await page.goto(url)
-        await page.wait_for_timeout(3000)
+#         await page.goto(url)
+#         await page.wait_for_timeout(3000)
 
-        # Set cookies manually if needed (not needed if page already has them)
-        # await context.add_cookies([...])
+#         # Set cookies manually if needed (not needed if page already has them)
+#         # await context.add_cookies([...])
 
-        response = await page.request.get(
-            "https://www.harristeeter.com/atlas/v1/product/v2/products",
-            params={
-                "filter.gtin13s": "009800895007",
-                "filter.verified": "true",
-                "projections": "items.full,offers.compact,nutrition.label"
-            }
-        )
-        print(await response.json())
-        await browser.close()
+#         response = await page.request.get(
+#             "https://www.harristeeter.com/atlas/v1/product/v2/products",
+#             params={
+#                 "filter.gtin13s": "009800895007",
+#                 "filter.verified": "true",
+#                 "projections": "items.full,offers.compact,nutrition.label"
+#             }
+#         )
+#         print(await response.json())
+#         await browser.close()
 
 
 # def decode_cookie_value(cookie_value):
@@ -182,7 +199,7 @@ ZIP_HANDLERS = {
 if __name__ == "__main__":
     url = "https://www.harristeeter.com"
     asyncio.run(main(url))
-    asyncio.run(dump_api_with_browser(url, cookies_for_api))
+    # asyncio.run(dump_api_with_browser(url, cookies_for_api))
 
     # df = fetch_harris_teeter_api(cookies_for_api, HT_UPC_LIST)
     # df.to_excel(HT_OUTPUT_FILE, index=False)
