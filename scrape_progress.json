@@ -1,0 +1,1240 @@
+{
+  "completed_categories": [
+    "Bread & Bakery::Sandwich Breads",
+    "Bread & Bakery::Bakery Beverages & Snack",
+    "Bread & Bakery::Tortillas, Tacos & Wraps",
+    "Bread & Bakery::Pitas & Flatbreads",
+    "Bread & Bakery::Cookies & Bakery Snacks",
+    "Bread & Bakery::Desserts & Cheesecakes",
+    "Bread & Bakery::Buns & Rolls",
+    "Bread & Bakery::Cakes & Cupcakes",
+    "Bread & Bakery::Bakery Catering Trays",
+    "Bread & Bakery::Breakfast & Donuts",
+    "Bread & Bakery::Bagels & Muffins",
+    "Bread & Bakery::Baguettes & French Bread",
+    "Dairy, Eggs & Cheese::Yogurt & Pudding",
+    "Dairy, Eggs & Cheese::Milk & Cream",
+    "Dairy, Eggs & Cheese::Eggs",
+    "Dairy, Eggs & Cheese::Butter & Sour Cream",
+    "Dairy, Eggs & Cheese::Cheese",
+    "Deli::Deli Sandwiches & Wraps",
+    "Deli::Sushi",
+    "Deli::Asian Cuisine",
+    "Deli::Deli Pizza",
+    "Deli::Deli Specialty Foods",
+    "Deli::Deli Soups",
+    "Deli::Deli Snacks Packs",
+    "Deli::Deli Sides & Meals",
+    "Deli::Deli Salads",
+    "Deli::Deli Meat",
+    "Deli::Deli Dips & Hummus",
+    "Deli::Deli Cheese",
+    "Deli::Deli Catering Trays",
+    "Fruits & Vegetables::Bulk Foods",
+    "Fruits & Vegetables::Packaged Produce",
+    "Fruits & Vegetables::Nuts & Dried Fruits",
+    "Fruits & Vegetables::Fresh Vegetables & Herbs",
+    "Fruits & Vegetables::Fresh Fruits",
+    "Meat & Seafood::Sausage,Hot Dogs & Bacon",
+    "Meat & Seafood::Salami & Lunch Meats",
+    "Meat & Seafood::Prepared & Frozen Meat",
+    "Meat & Seafood::Pork",
+    "Meat & Seafood::Lamb",
+    "Meat & Seafood::Fish & Shellfish",
+    "Meat & Seafood::Chicken & Turkey",
+    "Meat & Seafood::Beef",
+    "Breakfast & Cereal::Instant Breakfast Drink",
+    "Breakfast & Cereal::Pancake & Waffle Mix",
+    "Breakfast & Cereal::Cereal",
+    "Breakfast & Cereal::Frozen Breakfast"
+  ],
+  "failed_categories": [
+    {
+      "category": "Bread & Bakery::Buns & Rolls",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:42.378261"
+    },
+    {
+      "category": "Bread & Bakery::Cakes & Cupcakes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:43.016029"
+    },
+    {
+      "category": "Bread & Bakery::Bakery Catering Trays",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:43.763615"
+    },
+    {
+      "category": "Bread & Bakery::Breakfast & Donuts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:44.418581"
+    },
+    {
+      "category": "Bread & Bakery::Bagels & Muffins",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:45.061982"
+    },
+    {
+      "category": "Bread & Bakery::Baguettes & French Bread",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:45.691217"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Yogurt & Pudding",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:46.338720"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Milk & Cream",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:46.953069"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Eggs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:47.566029"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Butter & Sour Cream",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:48.223991"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Cheese",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:48.828629"
+    },
+    {
+      "category": "Deli::Deli Sandwiches & Wraps",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:49.450987"
+    },
+    {
+      "category": "Deli::Sushi",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:50.061022"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:50.676486"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:51.271428"
+    },
+    {
+      "category": "Deli::Asian Cuisine",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:51.887209"
+    },
+    {
+      "category": "Deli::Deli Pizza",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:52.517390"
+    },
+    {
+      "category": "Deli::Deli Specialty Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:53.167499"
+    },
+    {
+      "category": "Deli::Deli Soups",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:53.839274"
+    },
+    {
+      "category": "Deli::Deli Snacks Packs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:54.543050"
+    },
+    {
+      "category": "Deli::Deli Sides & Meals",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:55.211648"
+    },
+    {
+      "category": "Deli::Deli Salads",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:55.867099"
+    },
+    {
+      "category": "Deli::Deli Meat",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:56.507589"
+    },
+    {
+      "category": "Deli::Deli Dips & Hummus",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:57.128802"
+    },
+    {
+      "category": "Deli::Deli Cheese",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:57.747981"
+    },
+    {
+      "category": "Deli::Deli Catering Trays",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:58.409752"
+    },
+    {
+      "category": "Fruits & Vegetables::Bulk Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:59.153931"
+    },
+    {
+      "category": "Fruits & Vegetables::Packaged Produce",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:35:59.820683"
+    },
+    {
+      "category": "Fruits & Vegetables::Nuts & Dried Fruits",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:00.488428"
+    },
+    {
+      "category": "Fruits & Vegetables::Fresh Vegetables & Herbs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:01.137057"
+    },
+    {
+      "category": "Fruits & Vegetables::Fresh Fruits",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:01.790414"
+    },
+    {
+      "category": "Meat & Seafood::Sausage,Hot Dogs & Bacon",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:02.472116"
+    },
+    {
+      "category": "Meat & Seafood::Salami & Lunch Meats",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:03.089640"
+    },
+    {
+      "category": "Meat & Seafood::Prepared & Frozen Meat",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:03.720336"
+    },
+    {
+      "category": "Meat & Seafood::Pork",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:04.327074"
+    },
+    {
+      "category": "Meat & Seafood::Lamb",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:04.934620"
+    },
+    {
+      "category": "Meat & Seafood::Fish & Shellfish",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:05.591780"
+    },
+    {
+      "category": "Meat & Seafood::Chicken & Turkey",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:06.201587"
+    },
+    {
+      "category": "Meat & Seafood::Beef",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:06.813298"
+    },
+    {
+      "category": "Breakfast & Cereal::Instant Breakfast Drink",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:07.417221"
+    },
+    {
+      "category": "Breakfast & Cereal::Pancake & Waffle Mix",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:08.228552"
+    },
+    {
+      "category": "Breakfast & Cereal::Cereal",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:08.860275"
+    },
+    {
+      "category": "Breakfast & Cereal::Frozen Breakfast",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:09.506067"
+    },
+    {
+      "category": "Breakfast & Cereal::Breakfast Bars & Bites",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:10.260313"
+    },
+    {
+      "category": "Breakfast & Cereal::Syrup",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:10.876306"
+    },
+    {
+      "category": "Breakfast & Cereal::Toaster Pastries",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:11.528385"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Fruit",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:12.153933"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Meals",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:12.767126"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Beans",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:13.374614"
+    },
+    {
+      "category": "Canned Goods & Soups::Soups & Ramen",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:14.012860"
+    },
+    {
+      "category": "Canned Goods & Soups::Stocks, Broth & Bouillon",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:14.616031"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Tomatoes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:15.259725"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Vegetables",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:15.875259"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Meat",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:16.484722"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Seafood & Fish",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:17.092776"
+    },
+    {
+      "category": "Canned Goods & Soups::Noodles",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:17.769561"
+    },
+    {
+      "category": "Condiments, Spice & B...::Salad Dressing & Topping",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:18.409130"
+    },
+    {
+      "category": "Condiments, Spice & B...::Pickles, Relish & Olives",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:19.019862"
+    },
+    {
+      "category": "Condiments, Spice & B...::Vinegar & Oil",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:19.654936"
+    },
+    {
+      "category": "Condiments, Spice & B...::Honey, Syrup & Nectar",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:20.328462"
+    },
+    {
+      "category": "Condiments, Spice & B...::Jam,Spreads & Condiments",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:20.943174"
+    },
+    {
+      "category": "Condiments, Spice & B...::Seasoning,Spices & Herbs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:21.567189"
+    },
+    {
+      "category": "Condiments, Spice & B...::Baking Supplies & Decor",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:22.242422"
+    },
+    {
+      "category": "Condiments, Spice & B...::Baking Ingredients",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:22.938810"
+    },
+    {
+      "category": "Condiments, Spice & B...::Sauce, Marinades & Mixes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:23.553873"
+    },
+    {
+      "category": "Condiments, Spice & B...::Baking Dough & Mixes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:24.174184"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Popcorn & Grain Cakes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:24.805365"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Nuts, Seeds & Trail Mix",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:25.424499"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Jerky & Meat Snacks",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:26.058535"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Gelatin & Pudding",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:26.697885"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Fruit Snacks",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:27.346869"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Fruit Cups & Applesauce",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:27.948592"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Crackers",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:28.565662"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Cookies",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:29.220676"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Chips",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:29.846842"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Salsa & Dips",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:30.538466"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Pretzels",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:31.171780"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Seaweed",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:31.896630"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Mints",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:32.525254"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Gum",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:33.215096"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Chocolate",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:33.858958"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Candy - Seasonal",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:34.484919"
+    },
+    {
+      "category": "Cookies, Snacks & Candy::Candy",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:35.096740"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Rice Side Dishes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:35.830278"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Seeds",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:36.463191"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Skillet Dinners & Sides",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:37.108410"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Stuffing Mix",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:37.743422"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Pasta Sauce",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:38.358903"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Pasta Side Dishes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:38.970642"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Macaroni & Cheese",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:39.630170"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Pasta",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:40.269247"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Dry Beans & Lentils",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:40.916051"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Grains",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:41.598883"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Rice",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:42.247856"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Pizza Crust & Sauce",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:42.886060"
+    },
+    {
+      "category": "Grains, Pasta & Sides::Potato Side Dishes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:43.744347"
+    },
+    {
+      "category": "International Cuisine::Indian Middle East Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:44.353684"
+    },
+    {
+      "category": "International Cuisine::Misc International Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:44.967330"
+    },
+    {
+      "category": "International Cuisine::Kosher Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:45.748792"
+    },
+    {
+      "category": "International Cuisine::Hispanic Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:46.401841"
+    },
+    {
+      "category": "International Cuisine::Asian Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:47.202727"
+    },
+    {
+      "category": "Beverages::Water & Sparkling Water",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:47.807482"
+    },
+    {
+      "category": "Beverages::Hydration",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:48.434989"
+    },
+    {
+      "category": "Beverages::Drink Mix",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:49.059909"
+    },
+    {
+      "category": "Beverages::Kombucha",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:49.687043"
+    },
+    {
+      "category": "Beverages::Soft Drinks",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:50.305580"
+    },
+    {
+      "category": "Beverages::Energy Drinks & Shots",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:50.966201"
+    },
+    {
+      "category": "Beverages::Juice & Smoothies",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:51.598871"
+    },
+    {
+      "category": "Beverages::Coconut Water",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:52.252371"
+    },
+    {
+      "category": "Beverages::Coffee",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:52.876033"
+    },
+    {
+      "category": "Beverages::Cocoa & Hot Chocolate",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:53.534211"
+    },
+    {
+      "category": "Beverages::Sports Drinks",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:54.250669"
+    },
+    {
+      "category": "Beverages::Tea",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:55.057778"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:55.707953"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Wine",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:56.380305"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Spirits & Mixers",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:56.999333"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Beer",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:57.668248"
+    },
+    {
+      "category": "Baby Care::Formula & Baby Food",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:58.371579"
+    },
+    {
+      "category": "Baby Care::Diapers & Wipes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:59.354131"
+    },
+    {
+      "category": "Baby Care::Baby Accessories",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:36:59.983440"
+    },
+    {
+      "category": "Nutrition & Wellness::Adult Nutrition",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:00.586646"
+    },
+    {
+      "category": "Nutrition & Wellness::Weight Management",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:01.207484"
+    },
+    {
+      "category": "Nutrition & Wellness::Herbal Supplements",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:01.822904"
+    },
+    {
+      "category": "Nutrition & Wellness::Protein Supplements",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:02.436376"
+    },
+    {
+      "category": "Nutrition & Wellness::Diabetes Management",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:03.066403"
+    },
+    {
+      "category": "Nutrition & Wellness::Fitness Equipment",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:03.696886"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Cleaners & Supplies",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:04.311309"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Hardware & Home Needs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:04.930919"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Laundry",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:05.545489"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Dish Detergents",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:06.155707"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Shoe Care",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:06.831491"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Magazines, Books & Media",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:07.454176"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Tableware & Trash Bags",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:08.095068"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Plastic, Foil & Storage",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:08.854598"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Paper Products",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:09.464010"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Kitchen Accessories",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:10.103181"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Fire Logs & BBQ Needs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:10.736383"
+    },
+    {
+      "category": "Paper, Cleaning & Home::Air Fresheners & Candles",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:11.357571"
+    },
+    {
+      "category": "Personal Care & Health::Health Care & Apothecary",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:11.995392"
+    },
+    {
+      "category": "Personal Care & Health::First Aid & Medical Care",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:12.607073"
+    },
+    {
+      "category": "Personal Care & Health::Shave Needs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:13.279032"
+    },
+    {
+      "category": "Personal Care & Health::Pantyhose & Apparel",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:13.919544"
+    },
+    {
+      "category": "Personal Care & Health::Personal & Adult Care",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:14.540300"
+    },
+    {
+      "category": "Personal Care & Health::Oral Hygiene",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:15.150564"
+    },
+    {
+      "category": "Personal Care & Health::Feminine Care",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:15.767694"
+    },
+    {
+      "category": "Personal Care & Health::Family Planning",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:16.396471"
+    },
+    {
+      "category": "Personal Care & Health::Eye & Ear Care",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:17.134023"
+    },
+    {
+      "category": "Personal Care & Health::Deodorants",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:17.765339"
+    },
+    {
+      "category": "Personal Care & Health::Cold & Allergy",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:18.409514"
+    },
+    {
+      "category": "Personal Care & Health::Antacid & Digestive Aids",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:19.054440"
+    },
+    {
+      "category": "Pet Care::Small Animal Care",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:19.684526"
+    },
+    {
+      "category": "Pet Care::Dog Care",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:20.297141"
+    },
+    {
+      "category": "Pet Care::Cat Care",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:20.940562"
+    },
+    {
+      "category": "Flowers & gifts::Seasonal Items",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:21.578447"
+    },
+    {
+      "category": "Flowers & gifts::Candles, Gift Bag, Wrap",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:22.200646"
+    },
+    {
+      "category": "Flowers & gifts::Greeting Cards",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:22.795971"
+    },
+    {
+      "category": "Flowers & gifts::Decor",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:23.419157"
+    },
+    {
+      "category": "Flowers & gifts::Flowers",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:37:24.041642"
+    },
+    {
+      "category": "Bread & Bakery::Bagels & Muffins",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:28.842294"
+    },
+    {
+      "category": "Bread & Bakery::Baguettes & French Bread",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:29.450977"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Yogurt & Pudding",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:30.053590"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Milk & Cream",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:30.793223"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Eggs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:31.441917"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Butter & Sour Cream",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:32.058655"
+    },
+    {
+      "category": "Dairy, Eggs & Cheese::Cheese",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:32.666058"
+    },
+    {
+      "category": "Deli::Deli Sandwiches & Wraps",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:33.346406"
+    },
+    {
+      "category": "Deli::Sushi",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:33.978645"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:34.593744"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:35.223502"
+    },
+    {
+      "category": "Deli::Asian Cuisine",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:35.869930"
+    },
+    {
+      "category": "Deli::Deli Pizza",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:36.486830"
+    },
+    {
+      "category": "Deli::Deli Specialty Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:37.114814"
+    },
+    {
+      "category": "Deli::Deli Soups",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:37.746773"
+    },
+    {
+      "category": "Deli::Deli Snacks Packs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:38.360035"
+    },
+    {
+      "category": "Deli::Deli Sides & Meals",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:39.000095"
+    },
+    {
+      "category": "Deli::Deli Salads",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:39.689199"
+    },
+    {
+      "category": "Deli::Deli Meat",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:40.406386"
+    },
+    {
+      "category": "Deli::Deli Dips & Hummus",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:41.096128"
+    },
+    {
+      "category": "Deli::Deli Cheese",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:41.774990"
+    },
+    {
+      "category": "Deli::Deli Catering Trays",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:42.410248"
+    },
+    {
+      "category": "Fruits & Vegetables::Bulk Foods",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:43.034948"
+    },
+    {
+      "category": "Fruits & Vegetables::Packaged Produce",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:43.656873"
+    },
+    {
+      "category": "Fruits & Vegetables::Nuts & Dried Fruits",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:44.271378"
+    },
+    {
+      "category": "Fruits & Vegetables::Fresh Vegetables & Herbs",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:44.889415"
+    },
+    {
+      "category": "Fruits & Vegetables::Fresh Fruits",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:45.537435"
+    },
+    {
+      "category": "Meat & Seafood::Sausage,Hot Dogs & Bacon",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:46.230944"
+    },
+    {
+      "category": "Meat & Seafood::Salami & Lunch Meats",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:46.834182"
+    },
+    {
+      "category": "Meat & Seafood::Prepared & Frozen Meat",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:47.443852"
+    },
+    {
+      "category": "Meat & Seafood::Pork",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:48.058188"
+    },
+    {
+      "category": "Meat & Seafood::Lamb",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:48.678415"
+    },
+    {
+      "category": "Meat & Seafood::Fish & Shellfish",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:49.344871"
+    },
+    {
+      "category": "Meat & Seafood::Chicken & Turkey",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:49.979059"
+    },
+    {
+      "category": "Meat & Seafood::Beef",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:50.582560"
+    },
+    {
+      "category": "Breakfast & Cereal::Instant Breakfast Drink",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:51.233442"
+    },
+    {
+      "category": "Breakfast & Cereal::Pancake & Waffle Mix",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:51.893385"
+    },
+    {
+      "category": "Breakfast & Cereal::Cereal",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:52.516515"
+    },
+    {
+      "category": "Breakfast & Cereal::Frozen Breakfast",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:53.130226"
+    },
+    {
+      "category": "Breakfast & Cereal::Breakfast Bars & Bites",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:53.753722"
+    },
+    {
+      "category": "Breakfast & Cereal::Syrup",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:54.380471"
+    },
+    {
+      "category": "Breakfast & Cereal::Toaster Pastries",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:54.994952"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Fruit",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:55.637938"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Meals",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:56.262463"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Beans",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:56.879374"
+    },
+    {
+      "category": "Canned Goods & Soups::Soups & Ramen",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:57.492889"
+    },
+    {
+      "category": "Canned Goods & Soups::Stocks, Broth & Bouillon",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:58.256356"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Tomatoes",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:58.914630"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Vegetables",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:42:59.547555"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Meat",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:43:00.153064"
+    },
+    {
+      "category": "Canned Goods & Soups::Canned Seafood & Fish",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:43:00.835956"
+    },
+    {
+      "category": "Canned Goods & Soups::Noodles",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:43:01.446499"
+    },
+    {
+      "category": "Condiments, Spice & B...::Salad Dressing & Topping",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:43:02.104638"
+    },
+    {
+      "category": "Condiments, Spice & B...::Pickles, Relish & Olives",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:43:02.718079"
+    },
+    {
+      "category": "Condiments, Spice & B...::Vinegar & Oil",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:43:03.354053"
+    },
+    {
+      "category": "Condiments, Spice & B...::Honey, Syrup & Nectar",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:43:03.964019"
+    },
+    {
+      "category": "Condiments, Spice & B...::Jam,Spreads & Condiments",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T16:43:04.571436"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:06:24.288032"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:06:24.798815"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:07:34.561601"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:07:34.915240"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:08:55.862771"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:08:56.426669"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:11:20.923562"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:11:21.425155"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:14:05.234941"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:14:06.010718"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:29:32.056402"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:29:32.351918"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:41:51.724242"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:41:52.225155"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:43:24.140727"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:43:24.700839"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:44:10.903833"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:44:11.394834"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:44:57.139349"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:44:57.593355"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:46:55.972732"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-29T17:46:56.355852"
+    }
+  ],
+  "last_parent": null,
+  "last_subcat": null
+}

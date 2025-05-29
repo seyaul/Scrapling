@@ -9,8 +9,10 @@ from scrapling.fetchers import StealthyFetcher
 # Constants
 SAF_WELCOME = "https://www.safeway.com"
 CONFIG_FILE = 'scraplingAdaptationHana/.safeway_config.json'
-CATEGORIES_FILE = 'safeway_categories.json'
+CATEGORIES_FILE = 'enhanced_safeway_categories.json'
 OUTPUT_CSV = 'bread_bakery_scraped.csv'
+PROGRESS_FILE = 'scrape_progress.json'
+DUMP_FILE = 'scraped_products_dump.csv'
 
 async def gather_scrape_config():
     """Capture session data by monitoring API requests"""
@@ -66,6 +68,7 @@ async def gather_scrape_config():
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
+                'ocp-apim-subscription-key': 'e914eec9448c4d5eb672debf5011cf8f',
                 'priority': 'u=1, i'
             }
             
@@ -174,6 +177,9 @@ async def scrape_single_category(client, base_params, category_id, category_name
                     items.append(doc)
                     page_items += 1
                     
+                    if page_items <= 3:  # Only print first 3 per page to avoid spam
+                        print(f"    📊 UPC sample: {upc} (type: {type(upc)})")
+
                     if len(items) >= max_items:
                         break
             
@@ -191,22 +197,47 @@ async def scrape_single_category(client, base_params, category_id, category_name
             # Add delay to avoid rate limiting
             #await asyncio.sleep(2)
             
+        except httpx.HTTPStatusError as e:
+            status = e.response.status_code
+            print(f"❌ HTTP Status Error: {status}")
+            if status == 403:
+                print("🚫 Got blocked (403) - propagating throttle exception")
+                raise     # <-- let this bubble up
+            elif status == 400:
+                print("⚠️ Bad request (400) - stopping this category")
+                break
         except httpx.HTTPError as e:
+            # catch other HTTP errors (e.g. timeouts) here if you want
             print(f"❌ HTTP Error: {e}")
-            if "403" in str(e):
-                print("🚫 Got blocked (403) - stopping scrape")
-                break
-            elif "400" in str(e):
-                print("⚠️ Bad request (400) - check parameters")
-                break
-        except Exception as e:
-            print(f"❌ Unexpected error: {e}")
             break
     
     return items
 
+def load_progress():
+    """Load previous scraping progress"""
+    if os.path.exists(PROGRESS_FILE):
+        with open(PROGRESS_FILE, 'r') as f:
+            return json.load(f)
+    return {'completed_categories': [], 'failed_categories': [], 'last_parent': None, 'last_subcat': None}
+
+def save_progress(progress):
+    """Save current scraping progress"""
+    with open(PROGRESS_FILE, 'w') as f:
+        json.dump(progress, f, indent=2)
+
+def append_to_dump(items):
+    """Append items to dump file"""
+    if items:
+        df = pd.DataFrame(items)
+        if os.path.exists(DUMP_FILE):
+            df.to_csv(DUMP_FILE, mode='a', header=False, index=False)
+        else:
+            df.to_csv(DUMP_FILE, index=False)
+
+# Add this before your main() function
+
 async def main():
-    """Main function to scrape bread & bakery categories"""
+    """Main function to scrape all categories"""
     
     # Always generate fresh config
     if os.path.exists(CONFIG_FILE):
@@ -228,12 +259,12 @@ async def main():
         print("❌ Failed to load config. Exiting.")
         return
     
-    # Load categories
+    # Load enhanced categories
     try:
         with open(CATEGORIES_FILE) as f:
             categories_map = json.load(f)
     except FileNotFoundError:
-        print(f"❌ Categories file {CATEGORIES_FILE} not found.")
+        print(f"❌ Enhanced categories file {CATEGORIES_FILE} not found.")
         return
     
     # Setup request parameters
@@ -246,59 +277,151 @@ async def main():
         sub_key = input('🔑 Enter your ocp-apim-subscription-key: ').strip()
         headers['ocp-apim-subscription-key'] = sub_key
     
-    # Get bread & bakery categories (excluding "All Bread & Bakery")
-    bread_categories = categories_map.get("Bread & Bakery", [])
-    target_categories = [cat for cat in bread_categories if "All Bread" not in cat['display_name']]
-    
-    print(f"🎯 Found {len(target_categories)} bread & bakery subcategories to scrape")
-    
     all_items = []
     
+    # Load progress
+    progress = load_progress()
+    print(f"📈 Loaded progress: {len(progress['completed_categories'])} completed, {len(progress['failed_categories'])} failed")
+
+    # Count total subcategories for progress tracking
+    total_subcats = sum(len(subcats) for subcats in categories_map.values())
+    total_with_ids = sum(1 for subcats in categories_map.values() for subcat in subcats if subcat.get('category_id'))
+    completed_count = len(progress['completed_categories'])
+
+    print(f"🎯 Total subcategories: {total_subcats}")
+    print(f"🎯 With valid category IDs: {total_with_ids}")
+    print(f"🎯 Starting from: {completed_count}/{total_with_ids}")
+
+    all_items = []
+    throttled = False
+
     async with httpx.AsyncClient(headers=headers, cookies=cookies, timeout=30) as client:
-        # Test with just the first category for debugging
-        category = target_categories[0]
-        print(f"\n🧪 DEBUG MODE - Testing single category: {category['display_name']}")
-        print(f"🧪 Category href: {category['href']}")
-        
-        # Extract category info from href
-        parsed = urlparse(category['href'])
-        query_params = parse_qs(parsed.query)
-        
-        print(f"🧪 Parsed URL: {parsed}")
-        print(f"🧪 Query params from URL: {query_params}")
-        
-        # Build category name from URL path
-        path_parts = parsed.path.strip('/').split('/')
-        print(f"🧪 Path parts: {path_parts}")
-        
-        print
-        category_id = base_params.get('category-id', '1_2_10')  # Use captured ID as fallback
-        category_name = f"Bread & Bakery > {category['display_name']}"
-        
-        print(f"🧪 Generated category_name: {category_name}")
-        print(f"🧪 Generated category_id: {category_id}")
-        print(f"🧪 Base params: {base_params}")
-        
         try:
-            items = await scrape_single_category(
-                client, base_params, category_id, category_name, max_items=300  # Reduced for testing
-            )
-            all_items.extend(items)
-            
-            print(f"✅ Completed {category_name}: {len(items)} items")
-            
-        except Exception as e:
-            print(f"⚠️ Failed to scrape {category_name}: {e}")
-            import traceback
-            traceback.print_exc()
+            for parent_cat, subcats in categories_map.items():
+                if throttled:
+                    break
+                    
+                print(f"\n📂 Processing parent category: {parent_cat}")
+                
+                for subcat in subcats:
+                    if throttled:
+                        break
+                        
+                    # Skip categories without IDs
+                    if not subcat.get('category_id'):
+                        continue
+                    
+                    category_key = f"{parent_cat}::{subcat['display_name']}"
+                    
+                    # Skip if already completed
+                    if category_key in progress['completed_categories']:
+                        completed_count += 1
+                        print(f"⏭️ Skipping completed: {subcat['display_name']} ({completed_count}/{total_with_ids})")
+                        continue
+                    
+                    category_id = subcat['category_id']
+                    category_name = subcat['category_name']
+                    
+                    print(f"\n🗂️ [{completed_count + 1}/{total_with_ids}] Starting: {category_name}")
+                    
+                    try:
+                        items = await scrape_single_category(
+                            client, base_params, category_id, category_name, max_items=300
+                        )
+                        
+                        if items:
+                            # Add parent category to each item
+                            for item in items:
+                                item['parent_category'] = parent_cat
+                            
+                            all_items.extend(items)
+                            
+                            # Append to dump file immediately
+                            append_to_dump(items)
+                            
+                            print(f"✅ Completed {category_name}: {len(items)} items")
+                            
+                            # Mark as completed
+                            progress['completed_categories'].append(category_key)
+                            completed_count += 1
+                        else:
+                            print(f"⚠️ No items found for {category_name}")
+                            progress['failed_categories'].append({
+                                'category': category_key,
+                                'reason': 'No items found',
+                                'timestamp': pd.Timestamp.now().isoformat()
+                            })
+                        
+                        # Save progress after each category
+                        save_progress(progress)
+                    except httpx.HTTPStatusError as e:
+                        if e.response.status_code == 403:
+                            print("🚫 Throttled by server (403) — stopping everything.")
+                            throttled = True
+                            break  # this breaks out of the subcat loop
+                        else:
+                            print(f"⚠️ HTTP error {e.response.status_code} on {category_name}, skipping.")
+                            progress['failed_categories'].append(category_name)
+                            save_progress(progress)
+                            continue   
+                    except Exception as e:
+                        error_msg = str(e)
+                        print(f"⚠️ Failed to scrape {category_name}: {error_msg}")
+                        
+                        # Check for 403 throttling
+                        if "403" in error_msg:
+                            print(f"🚫 Got throttled (403)! Stopping all scraping.")
+                            print(f"📊 Progress saved. Resume by running script again.")
+                            throttled = True
+                            break
+                        
+                        # Mark as failed
+                        progress['failed_categories'].append({
+                            'category': category_key,
+                            'reason': error_msg,
+                            'timestamp': pd.Timestamp.now().isoformat()
+                        })
+                        
+                        # Save progress
+                        save_progress(progress)
+                        continue
+        except httpx.HTTPError as e:
+            if "403" in str(e).upper():
+                print("🚫 Throttled by server! Stopping scraping.")
+                throttled = True
+            else:  
+                raise e  # Re-raise other HTTP errors
+
+    if throttled:
+        print(f"\n🛑 Scraping stopped due to throttling")
+        print(f"📊 Completed: {len(progress['completed_categories'])}/{total_with_ids} categories")
+        print(f"📁 Products saved to: {DUMP_FILE}")
+        print(f"🔄 Run script again to resume from where you left off")
+    else:
+        print(f"\n🎉 All categories completed!")
     
     # Save results
-    if all_items:
-        df = pd.DataFrame(all_items)
-        df.to_csv(OUTPUT_CSV, index=False)
-        print(f"\n🎉 Success! Scraped {len(all_items)} total items")
-        print(f"📁 Saved to: {OUTPUT_CSV}")
-        print(f"🏷️ Unique categories: {df['category_name'].nunique()}")
+    # Final results
+    if os.path.exists(DUMP_FILE):
+        df = pd.read_csv(DUMP_FILE)
+        
+        # Print UPC samples for format analysis
+        print(f"\n🔍 UPC Format Analysis:")
+        upc_samples = df['upc'].dropna().head(10).tolist()
+        for i, upc in enumerate(upc_samples, 1):
+            print(f"   {i}. UPC: {upc} (type: {type(upc)}, length: {len(str(upc))})")
+        
+        print(f"\n📊 Final Results:")
+        print(f"📁 Total items scraped: {len(df)}")
+        print(f"📁 Data saved to: {DUMP_FILE}")
+        print(f"🏷️ Parent categories: {df['parent_category'].nunique()}")
+        print(f"🏷️ Subcategories: {df['category_name'].nunique()}")
+        print(f"🏷️ Unique UPCs: {df['upc'].nunique()}")
+        
+        if progress['failed_categories']:
+            print(f"\n❌ Failed categories: {len(progress['failed_categories'])}")
+            for failure in progress['failed_categories'][-5:]:  # Show last 5 failures
+                print(f"   • {failure['category']}: {failure['reason']}")
     else:
         print("❌ No items were scraped")
 
