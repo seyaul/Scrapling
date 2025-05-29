@@ -1,10 +1,6 @@
 {
   "Bread & Bakery": [
     {
-      "display_name": "All Bread & Bakery",
-      "href": "https://www.safeway.com/shop/aisles/bread-bakery.html?loc=3132"
-    },
-    {
       "display_name": "Sandwich Breads",
       "href": "https://www.safeway.com/shop/aisles/bread-bakery/sandwich-breads.html?loc=3132"
     },
@@ -55,10 +51,6 @@
   ],
   "Dairy, Eggs & Cheese": [
     {
-      "display_name": "All Dairy, Eggs & Cheese",
-      "href": "https://www.safeway.com/shop/aisles/dairy-eggs-cheese.html?loc=3132"
-    },
-    {
       "display_name": "Yogurt & Pudding",
       "href": "https://www.safeway.com/shop/aisles/dairy-eggs-cheese/yogurt-pudding.html?loc=3132"
     },
@@ -80,10 +72,6 @@
     }
   ],
   "Deli": [
-    {
-      "display_name": "All Deli",
-      "href": "https://www.safeway.com/shop/aisles/deli.html?loc=3132"
-    },
     {
       "display_name": "Deli Sandwiches & Wraps",
       "href": "https://www.safeway.com/shop/aisles/deli/deli-sandwiches-wraps.html?loc=3132"
@@ -147,10 +135,6 @@
   ],
   "Fruits & Vegetables": [
     {
-      "display_name": "All Fruits & Vegetables",
-      "href": "https://www.safeway.com/shop/aisles/fruits-vegetables.html?loc=3132"
-    },
-    {
       "display_name": "Bulk Foods",
       "href": "https://www.safeway.com/shop/aisles/fruits-vegetables/bulk-foods.html?loc=3132"
     },
@@ -172,10 +156,6 @@
     }
   ],
   "Meat & Seafood": [
-    {
-      "display_name": "All Meat & Seafood",
-      "href": "https://www.safeway.com/shop/aisles/meat-seafood.html?loc=3132"
-    },
     {
       "display_name": "Sausage,Hot Dogs & Bacon",
       "href": "https://www.safeway.com/shop/aisles/meat-seafood/sausage-hot-dogs-bacon.html?loc=3132"
@@ -211,10 +191,6 @@
   ],
   "Breakfast & Cereal": [
     {
-      "display_name": "All Breakfast & Cereal",
-      "href": "https://www.safeway.com/shop/aisles/breakfast-cereal.html?loc=3132"
-    },
-    {
       "display_name": "Instant Breakfast Drink",
       "href": "https://www.safeway.com/shop/aisles/breakfast-cereal/instant-breakfast-drink.html?loc=3132"
     },
@@ -244,10 +220,6 @@
     }
   ],
   "Canned Goods & Soups": [
-    {
-      "display_name": "All Canned Goods & Soups",
-      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups.html?loc=3132"
-    },
     {
       "display_name": "Canned Fruit",
       "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/canned-fruit.html?loc=3132"
@@ -291,10 +263,6 @@
   ],
   "Condiments, Spice & B...": [
     {
-      "display_name": "All Condiments, Spice & Bake",
-      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake.html?loc=3132"
-    },
-    {
       "display_name": "Salad Dressing & Topping",
       "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/salad-dressing-topping.html?loc=3132"
     },
@@ -336,10 +304,6 @@
     }
   ],
   "Cookies, Snacks & Candy": [
-    {
-      "display_name": "All Cookies, Snacks & Candy",
-      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy.html?loc=3132"
-    },
     {
       "display_name": "Popcorn & Grain Cakes",
       "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/popcorn-grain-cakes.html?loc=3132"
@@ -411,10 +375,6 @@
   ],
   "Grains, Pasta & Sides": [
     {
-      "display_name": "All Grains, Pasta & Sides",
-      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides.html?loc=3132"
-    },
-    {
       "display_name": "Rice Side Dishes",
       "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/rice-side-dishes.html?loc=3132"
     },
@@ -469,10 +429,6 @@
   ],
   "International Cuisine": [
     {
-      "display_name": "All International Cuisine",
-      "href": "https://www.safeway.com/shop/aisles/international-cuisine.html?loc=3132"
-    },
-    {
       "display_name": "Indian Middle East Foods",
       "href": "https://www.safeway.com/shop/aisles/international-cuisine/indian-middle-east-foods.html?loc=3132"
     },
@@ -494,10 +450,6 @@
     }
   ],
   "Beverages": [
-    {
-      "display_name": "All Beverages",
-      "href": "https://www.safeway.com/shop/aisles/beverages.html?loc=3132"
-    },
     {
       "display_name": "Water & Sparkling Water",
       "href": "https://www.safeway.com/shop/aisles/beverages/water-sparkling-water.html?loc=3132"
@@ -549,10 +501,6 @@
   ],
   "Wine, Beer & Spirits": [
     {
-      "display_name": "All Wine, Beer & Spirits",
-      "href": "https://www.safeway.com/shop/aisles/wine-beer-spirits.html?loc=3132"
-    },
-    {
       "display_name": "Bar General Merchandise",
       "href": "https://www.safeway.com/shop/aisles/wine-beer-spirits/bar-general-merchandise.html?loc=3132"
     },
@@ -571,10 +519,6 @@
   ],
   "Baby Care": [
     {
-      "display_name": "All Baby Care",
-      "href": "https://www.safeway.com/shop/aisles/baby-care.html?loc=3132"
-    },
-    {
       "display_name": "Formula & Baby Food",
       "href": "https://www.safeway.com/shop/aisles/baby-care/formula-baby-food.html?loc=3132"
     },
@@ -592,10 +536,6 @@
     }
   ],
   "Nutrition & Wellness": [
-    {
-      "display_name": "All Nutrition & Wellness",
-      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness.html?loc=3132"
-    },
     {
       "display_name": "Adult Nutrition",
       "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/adult-nutrition.html?loc=3132"
@@ -630,10 +570,6 @@
     }
   ],
   "Paper, Cleaning & Home": [
-    {
-      "display_name": "All Paper, Cleaning & Home",
-      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home.html?loc=3132"
-    },
     {
       "display_name": "Cleaners & Supplies",
       "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/cleaners-supplies.html?loc=3132"
@@ -684,10 +620,6 @@
     }
   ],
   "Personal Care & Health": [
-    {
-      "display_name": "All Personal Care & Health",
-      "href": "https://www.safeway.com/shop/aisles/personal-care-health.html?loc=3132"
-    },
     {
       "display_name": "Health Care & Apothecary",
       "href": "https://www.safeway.com/shop/aisles/personal-care-health/health-care-apothecary.html?loc=3132"
@@ -759,10 +691,6 @@
   ],
   "Pet Care": [
     {
-      "display_name": "All Pet Care",
-      "href": "https://www.safeway.com/shop/aisles/pet-care.html?loc=3132"
-    },
-    {
       "display_name": "Small Animal Care",
       "href": "https://www.safeway.com/shop/aisles/pet-care/small-animal-care.html?loc=3132"
     },
@@ -776,10 +704,6 @@
     }
   ],
   "Flowers & gifts": [
-    {
-      "display_name": "All Flowers, Cards, Occasion",
-      "href": "https://www.safeway.com/shop/aisles/flowers-cards-occasion.html?loc=3132"
-    },
     {
       "display_name": "Party Supplies",
       "href": "https://www.safeway.com/shop/aisles/flowers-cards-occasion/party-supplies.html?loc=3132"
@@ -807,10 +731,6 @@
   ],
   "Diets": [
     {
-      "display_name": "All Diets",
-      "href": "https://www.safeway.com/lp/specialty-diets.html"
-    },
-    {
       "display_name": "Keto-friendly",
       "href": "https://www.safeway.com/lp/specialty-diets/keto-diet.html"
     },
@@ -833,100 +753,6 @@
     {
       "display_name": "Paleo-friendly",
       "href": "https://www.safeway.com/lp/specialty-diets/paleo-diet.html"
-    }
-  ],
-  "Vine & Cellar": [
-    {
-      "display_name": "All Vine & Cellar",
-      "href": "https://www.safeway.com/vineandcellar/landing.html"
-    },
-    {
-      "display_name": "Type",
-      "href": "https://www.safeway.com/shop/vineandcellar/search-results.html?q=wine"
-    },
-    {
-      "display_name": "Shop by varietal",
-      "href": "https://www.safeway.com/vineandcellar/landing.html#shopvarietal"
-    },
-    {
-      "display_name": "Shop by region",
-      "href": "https://www.safeway.com/vineandcellar/landing.html#shopregion"
-    },
-    {
-      "display_name": "Shop by Food Pairing",
-      "href": "https://www.safeway.com/vineandcellar/landing.html#shopfoodpairing"
-    }
-  ],
-  "Sale": [
-    {
-      "display_name": "All Sale",
-      "href": "https://www.safeway.com/shop/deals/sale-prices.html"
-    },
-    {
-      "display_name": "Promo code deals",
-      "href": "https://www.safeway.com/shop/deals/promo-code-deals.html"
-    },
-    {
-      "display_name": "Buy One Get One Free",
-      "href": "https://www.safeway.com/shop/deals/buy-one-get-one-free.html"
-    },
-    {
-      "display_name": "Sale Prices",
-      "href": "https://www.safeway.com/shop/deals/sale-prices.html"
-    }
-  ],
-  "Our Brands": [
-    {
-      "display_name": "All Our Brands",
-      "href": "https://www.safeway.com/about-us/our-brands.html"
-    },
-    {
-      "display_name": "Overjoyed\u2122",
-      "href": "https://www.safeway.com/lp/overjoyed.html"
-    },
-    {
-      "display_name": "O Organics\u00ae",
-      "href": "https://www.safeway.com/lp/o-organics-organic.html"
-    },
-    {
-      "display_name": "Open Nature\u00ae",
-      "href": "https://www.safeway.com/lp/open-nature-natural.html"
-    },
-    {
-      "display_name": "Signature Select\u00ae",
-      "href": "https://www.safeway.com/lp/signature-select-cafe-reserve.html"
-    },
-    {
-      "display_name": "Lucerne\u00ae",
-      "href": "https://www.safeway.com/lp/lucerne.html"
-    },
-    {
-      "display_name": "Waterfront Bistro\u00ae",
-      "href": "https://www.safeway.com/lp/waterfrontbistro.html"
-    },
-    {
-      "display_name": "Primo Taglio\u00ae",
-      "href": "https://www.safeway.com/lp/primo-taglio.html"
-    },
-    {
-      "display_name": "Overjoyed Boutique\u2122",
-      "href": "https://www.safeway.com/lp/debi-lilly-design.html"
-    },
-    {
-      "display_name": "Value Corner\u00ae",
-      "href": "https://www.safeway.com/lp/value-corner.html"
-    },
-    {
-      "display_name": "Soleil\u2122",
-      "href": "https://www.safeway.com/lp/soleil.html"
-    },
-    {
-      "display_name": "ReadyMeals\u00ae",
-      "href": "https://www.safeway.com/lp/readymeals.html"
-    },
-    {
-      "display_name": "Chef's Counter",
-      "href": "https://www.safeway.com/lp/chefs-counter.html"
     }
   ]
 }

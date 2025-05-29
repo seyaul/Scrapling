@@ -1,0 +1,1116 @@
+{
+  "Bread & Bakery": [
+    {
+      "display_name": "Sandwich Breads",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/sandwich-breads.html?loc=3132",
+      "category_id": "1_2_10",
+      "category_name": "Bread & Bakery > Sandwich Breads"
+    },
+    {
+      "display_name": "Bakery Beverages & Snack",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/bakery-beverages-snack.html?loc=3132",
+      "category_id": "1_2_11",
+      "category_name": "Bread & Bakery > Bakery Beverages & Snack"
+    },
+    {
+      "display_name": "Tortillas, Tacos & Wraps",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/tortillas-tacos-wraps.html?loc=3132",
+      "category_id": "1_2_12",
+      "category_name": "Bread & Bakery > Tortillas, Tacos & Wraps"
+    },
+    {
+      "display_name": "Pitas & Flatbreads",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/pitas-flatbreads.html?loc=3132",
+      "category_id": "1_2_9",
+      "category_name": "Bread & Bakery > Pitas & Flatbreads"
+    },
+    {
+      "display_name": "Cookies & Bakery Snacks",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/cookies-bakery-snacks.html?loc=3132",
+      "category_id": "1_2_7",
+      "category_name": "Bread & Bakery > Cookies & Bakery Snacks"
+    },
+    {
+      "display_name": "Desserts & Cheesecakes",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/desserts-cheesecakes.html?loc=3132",
+      "category_id": "1_2_8",
+      "category_name": "Bread & Bakery > Desserts & Cheesecakes"
+    },
+    {
+      "display_name": "Buns & Rolls",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/buns-rolls.html?loc=3132",
+      "category_id": "1_2_5",
+      "category_name": "Bread & Bakery > Buns & Rolls"
+    },
+    {
+      "display_name": "Cakes & Cupcakes",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/cakes-cupcakes.html?loc=3132",
+      "category_id": "1_2_6",
+      "category_name": "Bread & Bakery > Cakes & Cupcakes"
+    },
+    {
+      "display_name": "Bakery Catering Trays",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/bakery-catering-trays.html?loc=3132",
+      "category_id": "1_2_3",
+      "category_name": "Bread & Bakery > Bakery Catering Trays"
+    },
+    {
+      "display_name": "Breakfast & Donuts",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/breakfast-donuts.html?loc=3132",
+      "category_id": "1_2_4",
+      "category_name": "Bread & Bakery > Breakfast & Donuts"
+    },
+    {
+      "display_name": "Bagels & Muffins",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/bagels-muffins.html?loc=3132",
+      "category_id": "1_2_1",
+      "category_name": "Bread & Bakery > Bagels & Muffins"
+    },
+    {
+      "display_name": "Baguettes & French Bread",
+      "href": "https://www.safeway.com/shop/aisles/bread-bakery/baguettes-french-bread.html?loc=3132",
+      "category_id": "1_2_2",
+      "category_name": "Bread & Bakery > Baguettes & French Bread"
+    }
+  ],
+  "Dairy, Eggs & Cheese": [
+    {
+      "display_name": "Yogurt & Pudding",
+      "href": "https://www.safeway.com/shop/aisles/dairy-eggs-cheese/yogurt-pudding.html?loc=3132",
+      "category_id": "1_11_8",
+      "category_name": "Dairy, Eggs & Cheese > Yogurt & Pudding"
+    },
+    {
+      "display_name": "Milk & Cream",
+      "href": "https://www.safeway.com/shop/aisles/dairy-eggs-cheese/milk-cream.html?loc=3132",
+      "category_id": "1_11_4",
+      "category_name": "Dairy, Eggs & Cheese > Milk & Cream"
+    },
+    {
+      "display_name": "Eggs",
+      "href": "https://www.safeway.com/shop/aisles/dairy-eggs-cheese/eggs.html?loc=3132",
+      "category_id": "1_11_3",
+      "category_name": "Dairy, Eggs & Cheese > Eggs"
+    },
+    {
+      "display_name": "Butter & Sour Cream",
+      "href": "https://www.safeway.com/shop/aisles/dairy-eggs-cheese/butter-sour-cream.html?loc=3132",
+      "category_id": "1_11_1",
+      "category_name": "Dairy, Eggs & Cheese > Butter & Sour Cream"
+    },
+    {
+      "display_name": "Cheese",
+      "href": "https://www.safeway.com/shop/aisles/dairy-eggs-cheese/cheese.html?loc=3132",
+      "category_id": "1_11_11",
+      "category_name": "Dairy, Eggs & Cheese > Cheese"
+    }
+  ],
+  "Deli": [
+    {
+      "display_name": "Deli Sandwiches & Wraps",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-sandwiches-wraps.html?loc=3132",
+      "category_id": "1_12_11",
+      "category_name": "Deli > Deli Sandwiches & Wraps"
+    },
+    {
+      "display_name": "Sushi",
+      "href": "https://www.safeway.com/shop/aisles/deli/sushi.html?loc=3132",
+      "category_id": "1_12_12",
+      "category_name": "Deli > Sushi"
+    },
+    {
+      "display_name": "Deli Frozen Desserts",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-frozen-desserts.html?loc=3132",
+      "category_id": "1_12_13",
+      "category_name": "Deli > Deli Frozen Desserts"
+    },
+    {
+      "display_name": "Deli Bar & Food Service",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-bar-food-service.html?loc=3132",
+      "category_id": "1_12_14",
+      "category_name": "Deli > Deli Bar & Food Service"
+    },
+    {
+      "display_name": "Asian Cuisine",
+      "href": "https://www.safeway.com/shop/aisles/deli/asian-cuisine.html?loc=3132",
+      "category_id": "1_12_15",
+      "category_name": "Deli > Asian Cuisine"
+    },
+    {
+      "display_name": "Deli Pizza",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-pizza.html?loc=3132",
+      "category_id": "1_12_10",
+      "category_name": "Deli > Deli Pizza"
+    },
+    {
+      "display_name": "Deli Specialty Foods",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-specialty-foods.html?loc=3132",
+      "category_id": "1_12_9",
+      "category_name": "Deli > Deli Specialty Foods"
+    },
+    {
+      "display_name": "Deli Soups",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-soups.html?loc=3132",
+      "category_id": "1_12_8",
+      "category_name": "Deli > Deli Soups"
+    },
+    {
+      "display_name": "Deli Snacks Packs",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-snacks-packs.html?loc=3132",
+      "category_id": "1_12_7",
+      "category_name": "Deli > Deli Snacks Packs"
+    },
+    {
+      "display_name": "Deli Sides & Meals",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-sides-meals.html?loc=3132",
+      "category_id": "1_12_6",
+      "category_name": "Deli > Deli Sides & Meals"
+    },
+    {
+      "display_name": "Deli Salads",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-salads.html?loc=3132",
+      "category_id": "1_12_5",
+      "category_name": "Deli > Deli Salads"
+    },
+    {
+      "display_name": "Deli Meat",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-meat.html?loc=3132",
+      "category_id": "1_12_4",
+      "category_name": "Deli > Deli Meat"
+    },
+    {
+      "display_name": "Deli Dips & Hummus",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-dips-hummus.html?loc=3132",
+      "category_id": "1_12_3",
+      "category_name": "Deli > Deli Dips & Hummus"
+    },
+    {
+      "display_name": "Deli Cheese",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-cheese.html?loc=3132",
+      "category_id": "1_12_2",
+      "category_name": "Deli > Deli Cheese"
+    },
+    {
+      "display_name": "Deli Catering Trays",
+      "href": "https://www.safeway.com/shop/aisles/deli/deli-catering-trays.html?loc=3132",
+      "category_id": "1_12_1",
+      "category_name": "Deli > Deli Catering Trays"
+    }
+  ],
+  "Fruits & Vegetables": [
+    {
+      "display_name": "Bulk Foods",
+      "href": "https://www.safeway.com/shop/aisles/fruits-vegetables/bulk-foods.html?loc=3132",
+      "category_id": "1_23_5",
+      "category_name": "Fruits & Vegetables > Bulk Foods"
+    },
+    {
+      "display_name": "Packaged Produce",
+      "href": "https://www.safeway.com/shop/aisles/fruits-vegetables/packaged-produce.html?loc=3132",
+      "category_id": "1_23_4",
+      "category_name": "Fruits & Vegetables > Packaged Produce"
+    },
+    {
+      "display_name": "Nuts & Dried Fruits",
+      "href": "https://www.safeway.com/shop/aisles/fruits-vegetables/nuts-dried-fruits.html?loc=3132",
+      "category_id": "1_23_3",
+      "category_name": "Fruits & Vegetables > Nuts & Dried Fruits"
+    },
+    {
+      "display_name": "Fresh Vegetables & Herbs",
+      "href": "https://www.safeway.com/shop/aisles/fruits-vegetables/fresh-vegetables-herbs.html?loc=3132",
+      "category_id": "1_23_2",
+      "category_name": "Fruits & Vegetables > Fresh Vegetables & Herbs"
+    },
+    {
+      "display_name": "Fresh Fruits",
+      "href": "https://www.safeway.com/shop/aisles/fruits-vegetables/fresh-fruits.html?loc=3132",
+      "category_id": "1_23_1",
+      "category_name": "Fruits & Vegetables > Fresh Fruits"
+    }
+  ],
+  "Meat & Seafood": [
+    {
+      "display_name": "Sausage,Hot Dogs & Bacon",
+      "href": "https://www.safeway.com/shop/aisles/meat-seafood/sausage-hot-dogs-bacon.html?loc=3132",
+      "category_id": "1_19_8",
+      "category_name": "Meat & Seafood > Sausage,Hot Dogs & Bacon"
+    },
+    {
+      "display_name": "Salami & Lunch Meats",
+      "href": "https://www.safeway.com/shop/aisles/meat-seafood/salami-lunch-meats.html?loc=3132",
+      "category_id": "1_19_7",
+      "category_name": "Meat & Seafood > Salami & Lunch Meats"
+    },
+    {
+      "display_name": "Prepared & Frozen Meat",
+      "href": "https://www.safeway.com/shop/aisles/meat-seafood/prepared-frozen-meat.html?loc=3132",
+      "category_id": "1_19_6",
+      "category_name": "Meat & Seafood > Prepared & Frozen Meat"
+    },
+    {
+      "display_name": "Pork",
+      "href": "https://www.safeway.com/shop/aisles/meat-seafood/pork.html?loc=3132",
+      "category_id": "1_19_5",
+      "category_name": "Meat & Seafood > Pork"
+    },
+    {
+      "display_name": "Lamb",
+      "href": "https://www.safeway.com/shop/aisles/meat-seafood/lamb.html?loc=3132",
+      "category_id": "1_19_4",
+      "category_name": "Meat & Seafood > Lamb"
+    },
+    {
+      "display_name": "Fish & Shellfish",
+      "href": "https://www.safeway.com/shop/aisles/meat-seafood/fish-shellfish.html?loc=3132",
+      "category_id": "1_19_3",
+      "category_name": "Meat & Seafood > Fish & Shellfish"
+    },
+    {
+      "display_name": "Chicken & Turkey",
+      "href": "https://www.safeway.com/shop/aisles/meat-seafood/chicken-turkey.html?loc=3132",
+      "category_id": "1_19_2",
+      "category_name": "Meat & Seafood > Chicken & Turkey"
+    },
+    {
+      "display_name": "Beef",
+      "href": "https://www.safeway.com/shop/aisles/meat-seafood/beef.html?loc=3132",
+      "category_id": "1_19_1",
+      "category_name": "Meat & Seafood > Beef"
+    }
+  ],
+  "Breakfast & Cereal": [
+    {
+      "display_name": "Instant Breakfast Drink",
+      "href": "https://www.safeway.com/shop/aisles/breakfast-cereal/instant-breakfast-drink.html?loc=3132",
+      "category_id": "1_7_4",
+      "category_name": "Breakfast & Cereal > Instant Breakfast Drink"
+    },
+    {
+      "display_name": "Pancake & Waffle Mix",
+      "href": "https://www.safeway.com/shop/aisles/breakfast-cereal/pancake-waffle-mix.html?loc=3132",
+      "category_id": "1_7_5",
+      "category_name": "Breakfast & Cereal > Pancake & Waffle Mix"
+    },
+    {
+      "display_name": "Cereal",
+      "href": "https://www.safeway.com/shop/aisles/breakfast-cereal/cereal.html?loc=3132",
+      "category_id": "1_7_2",
+      "category_name": "Breakfast & Cereal > Cereal"
+    },
+    {
+      "display_name": "Frozen Breakfast",
+      "href": "https://www.safeway.com/shop/aisles/breakfast-cereal/frozen-breakfast.html?loc=3132",
+      "category_id": "1_7_3",
+      "category_name": "Breakfast & Cereal > Frozen Breakfast"
+    },
+    {
+      "display_name": "Breakfast Bars & Bites",
+      "href": "https://www.safeway.com/shop/aisles/breakfast-cereal/breakfast-bars-bites.html?loc=3132",
+      "category_id": "1_7_1",
+      "category_name": "Breakfast & Cereal > Breakfast Bars & Bites"
+    },
+    {
+      "display_name": "Syrup",
+      "href": "https://www.safeway.com/shop/aisles/breakfast-cereal/syrup.html?loc=3132",
+      "category_id": "1_7_6",
+      "category_name": "Breakfast & Cereal > Syrup"
+    },
+    {
+      "display_name": "Toaster Pastries",
+      "href": "https://www.safeway.com/shop/aisles/breakfast-cereal/toaster-pastries.html?loc=3132",
+      "category_id": "1_7_7",
+      "category_name": "Breakfast & Cereal > Toaster Pastries"
+    }
+  ],
+  "Canned Goods & Soups": [
+    {
+      "display_name": "Canned Fruit",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/canned-fruit.html?loc=3132",
+      "category_id": "1_9_2",
+      "category_name": "Canned Goods & Soups > Canned Fruit"
+    },
+    {
+      "display_name": "Canned Meals",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/canned-meals.html?loc=3132",
+      "category_id": "1_9_3",
+      "category_name": "Canned Goods & Soups > Canned Meals"
+    },
+    {
+      "display_name": "Canned Beans",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/canned-beans.html?loc=3132",
+      "category_id": "1_9_1",
+      "category_name": "Canned Goods & Soups > Canned Beans"
+    },
+    {
+      "display_name": "Soups & Ramen",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/soups-ramen.html?loc=3132",
+      "category_id": "1_9_8",
+      "category_name": "Canned Goods & Soups > Soups & Ramen"
+    },
+    {
+      "display_name": "Stocks, Broth & Bouillon",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/stocks-broth-bouillon.html?loc=3132",
+      "category_id": "1_9_9",
+      "category_name": "Canned Goods & Soups > Stocks, Broth & Bouillon"
+    },
+    {
+      "display_name": "Canned Tomatoes",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/canned-tomatoes.html?loc=3132",
+      "category_id": "1_9_6",
+      "category_name": "Canned Goods & Soups > Canned Tomatoes"
+    },
+    {
+      "display_name": "Canned Vegetables",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/canned-vegetables.html?loc=3132",
+      "category_id": "1_9_7",
+      "category_name": "Canned Goods & Soups > Canned Vegetables"
+    },
+    {
+      "display_name": "Canned Meat",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/canned-meat.html?loc=3132",
+      "category_id": "1_9_4",
+      "category_name": "Canned Goods & Soups > Canned Meat"
+    },
+    {
+      "display_name": "Canned Seafood & Fish",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/canned-seafood-fish.html?loc=3132",
+      "category_id": "1_9_5",
+      "category_name": "Canned Goods & Soups > Canned Seafood & Fish"
+    },
+    {
+      "display_name": "Noodles",
+      "href": "https://www.safeway.com/shop/aisles/canned-goods-soups/noodles.html?loc=3132",
+      "category_id": "1_9_10",
+      "category_name": "Canned Goods & Soups > Noodles"
+    }
+  ],
+  "Condiments, Spice & B...": [
+    {
+      "display_name": "Salad Dressing & Topping",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/salad-dressing-topping.html?loc=3132",
+      "category_id": "1_20_7",
+      "category_name": "Condiments, Spice & Bake > Salad Dressing & Topping"
+    },
+    {
+      "display_name": "Pickles, Relish & Olives",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/pickles-relish-olives.html?loc=3132",
+      "category_id": "1_20_6",
+      "category_name": "Condiments, Spice & Bake > Pickles, Relish & Olives"
+    },
+    {
+      "display_name": "Vinegar & Oil",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/vinegar-oil.html?loc=3132",
+      "category_id": "1_20_4",
+      "category_name": "Condiments, Spice & Bake > Vinegar & Oil"
+    },
+    {
+      "display_name": "Honey, Syrup & Nectar",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/honey-syrup-nectar.html?loc=3132",
+      "category_id": "1_20_2",
+      "category_name": "Condiments, Spice & Bake > Honey, Syrup & Nectar"
+    },
+    {
+      "display_name": "Jam,Spreads & Condiments",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/jam-spreads-condiments.html?loc=3132",
+      "category_id": "1_20_1",
+      "category_name": "Condiments, Spice & Bake > Jam,Spreads & Condiments"
+    },
+    {
+      "display_name": "Seasoning,Spices & Herbs",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/seasoning-spices-herbs.html?loc=3132",
+      "category_id": "1_20_13",
+      "category_name": "Condiments, Spice & Bake > Seasoning,Spices & Herbs"
+    },
+    {
+      "display_name": "Baking Supplies & Decor",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/baking-supplies-decor.html?loc=3132",
+      "category_id": "1_20_15",
+      "category_name": "Condiments, Spice & Bake > Baking Supplies & Decor"
+    },
+    {
+      "display_name": "Baking Ingredients",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/baking-ingredients.html?loc=3132",
+      "category_id": "1_20_14",
+      "category_name": "Condiments, Spice & Bake > Baking Ingredients"
+    },
+    {
+      "display_name": "Sauce, Marinades & Mixes",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/sauce-marinades-mixes.html?loc=3132",
+      "category_id": "1_20_10",
+      "category_name": "Condiments, Spice & Bake > Sauce, Marinades & Mixes"
+    },
+    {
+      "display_name": "Baking Dough & Mixes",
+      "href": "https://www.safeway.com/shop/aisles/condiments-spice-bake/baking-dough-mixes.html?loc=3132",
+      "category_id": "1_20_16",
+      "category_name": "Condiments, Spice & Bake > Baking Dough & Mixes"
+    }
+  ],
+  "Cookies, Snacks & Candy": [
+    {
+      "display_name": "Popcorn & Grain Cakes",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/popcorn-grain-cakes.html?loc=3132",
+      "category_id": "1_24_9",
+      "category_name": "Cookies, Snacks & Candy > Popcorn & Grain Cakes"
+    },
+    {
+      "display_name": "Nuts, Seeds & Trail Mix",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/nuts-seeds-trail-mix.html?loc=3132",
+      "category_id": "1_24_8",
+      "category_name": "Cookies, Snacks & Candy > Nuts, Seeds & Trail Mix"
+    },
+    {
+      "display_name": "Jerky & Meat Snacks",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/jerky-meat-snacks.html?loc=3132",
+      "category_id": "1_24_7",
+      "category_name": "Cookies, Snacks & Candy > Jerky & Meat Snacks"
+    },
+    {
+      "display_name": "Gelatin & Pudding",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/gelatin-pudding.html?loc=3132",
+      "category_id": "1_24_6",
+      "category_name": "Cookies, Snacks & Candy > Gelatin & Pudding"
+    },
+    {
+      "display_name": "Fruit Snacks",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/fruit-snacks.html?loc=3132",
+      "category_id": "1_24_5",
+      "category_name": "Cookies, Snacks & Candy > Fruit Snacks"
+    },
+    {
+      "display_name": "Fruit Cups & Applesauce",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/fruit-cups-applesauce.html?loc=3132",
+      "category_id": "1_24_4",
+      "category_name": "Cookies, Snacks & Candy > Fruit Cups & Applesauce"
+    },
+    {
+      "display_name": "Crackers",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/crackers.html?loc=3132",
+      "category_id": "1_24_3",
+      "category_name": "Cookies, Snacks & Candy > Crackers"
+    },
+    {
+      "display_name": "Cookies",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/cookies.html?loc=3132",
+      "category_id": "1_24_2",
+      "category_name": "Cookies, Snacks & Candy > Cookies"
+    },
+    {
+      "display_name": "Chips",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/chips.html?loc=3132",
+      "category_id": "1_24_1",
+      "category_name": "Cookies, Snacks & Candy > Chips"
+    },
+    {
+      "display_name": "Salsa & Dips",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/salsa-dips.html?loc=3132",
+      "category_id": "1_24_11",
+      "category_name": "Cookies, Snacks & Candy > Salsa & Dips"
+    },
+    {
+      "display_name": "Pretzels",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/pretzels.html?loc=3132",
+      "category_id": "1_24_10",
+      "category_name": "Cookies, Snacks & Candy > Pretzels"
+    },
+    {
+      "display_name": "Seaweed",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/seaweed.html?loc=3132",
+      "category_id": "1_24_19",
+      "category_name": "Cookies, Snacks & Candy > Seaweed"
+    },
+    {
+      "display_name": "Mints",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/mints.html?loc=3132",
+      "category_id": "1_24_18",
+      "category_name": "Cookies, Snacks & Candy > Mints"
+    },
+    {
+      "display_name": "Gum",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/gum.html?loc=3132",
+      "category_id": "1_24_17",
+      "category_name": "Cookies, Snacks & Candy > Gum"
+    },
+    {
+      "display_name": "Chocolate",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/chocolate.html?loc=3132",
+      "category_id": "1_24_16",
+      "category_name": "Cookies, Snacks & Candy > Chocolate"
+    },
+    {
+      "display_name": "Candy - Seasonal",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/candy-seasonal.html?loc=3132",
+      "category_id": "1_24_15",
+      "category_name": "Cookies, Snacks & Candy > Candy - Seasonal"
+    },
+    {
+      "display_name": "Candy",
+      "href": "https://www.safeway.com/shop/aisles/cookies-snacks-candy/candy.html?loc=3132",
+      "category_id": "1_24_14",
+      "category_name": "Cookies, Snacks & Candy > Candy"
+    }
+  ],
+  "Grains, Pasta & Sides": [
+    {
+      "display_name": "Rice Side Dishes",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/rice-side-dishes.html?loc=3132",
+      "category_id": "1_6_10",
+      "category_name": "Grains, Pasta & Sides > Rice Side Dishes"
+    },
+    {
+      "display_name": "Seeds",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/seeds.html?loc=3132",
+      "category_id": "1_6_11",
+      "category_name": "Grains, Pasta & Sides > Seeds"
+    },
+    {
+      "display_name": "Skillet Dinners & Sides",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/skillet-dinners-sides.html?loc=3132",
+      "category_id": "1_6_12",
+      "category_name": "Grains, Pasta & Sides > Skillet Dinners & Sides"
+    },
+    {
+      "display_name": "Stuffing Mix",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/stuffing-mix.html?loc=3132",
+      "category_id": "1_6_13",
+      "category_name": "Grains, Pasta & Sides > Stuffing Mix"
+    },
+    {
+      "display_name": "Pasta Sauce",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/pasta-sauce.html?loc=3132",
+      "category_id": "1_6_5",
+      "category_name": "Grains, Pasta & Sides > Pasta Sauce"
+    },
+    {
+      "display_name": "Pasta Side Dishes",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/pasta-side-dishes.html?loc=3132",
+      "category_id": "1_6_6",
+      "category_name": "Grains, Pasta & Sides > Pasta Side Dishes"
+    },
+    {
+      "display_name": "Macaroni & Cheese",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/macaroni-cheese.html?loc=3132",
+      "category_id": "1_6_3",
+      "category_name": "Grains, Pasta & Sides > Macaroni & Cheese"
+    },
+    {
+      "display_name": "Pasta",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/pasta.html?loc=3132",
+      "category_id": "1_6_4",
+      "category_name": "Grains, Pasta & Sides > Pasta"
+    },
+    {
+      "display_name": "Dry Beans & Lentils",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/dry-beans-lentils.html?loc=3132",
+      "category_id": "1_6_1",
+      "category_name": "Grains, Pasta & Sides > Dry Beans & Lentils"
+    },
+    {
+      "display_name": "Grains",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/grains.html?loc=3132",
+      "category_id": "1_6_2",
+      "category_name": "Grains, Pasta & Sides > Grains"
+    },
+    {
+      "display_name": "Rice",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/rice.html?loc=3132",
+      "category_id": "1_6_9",
+      "category_name": "Grains, Pasta & Sides > Rice"
+    },
+    {
+      "display_name": "Pizza Crust & Sauce",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/pizza-crust-sauce.html?loc=3132",
+      "category_id": "1_6_7",
+      "category_name": "Grains, Pasta & Sides > Pizza Crust & Sauce"
+    },
+    {
+      "display_name": "Potato Side Dishes",
+      "href": "https://www.safeway.com/shop/aisles/grains-pasta-sides/potato-side-dishes.html?loc=3132",
+      "category_id": "1_6_8",
+      "category_name": "Grains, Pasta & Sides > Potato Side Dishes"
+    }
+  ],
+  "International Cuisine": [
+    {
+      "display_name": "Indian Middle East Foods",
+      "href": "https://www.safeway.com/shop/aisles/international-cuisine/indian-middle-east-foods.html?loc=3132",
+      "category_id": "1_13_8",
+      "category_name": "International Cuisine > Indian Middle East Foods"
+    },
+    {
+      "display_name": "Misc International Foods",
+      "href": "https://www.safeway.com/shop/aisles/international-cuisine/misc-international-foods.html?loc=3132",
+      "category_id": "1_13_4",
+      "category_name": "International Cuisine > Misc International Foods"
+    },
+    {
+      "display_name": "Kosher Foods",
+      "href": "https://www.safeway.com/shop/aisles/international-cuisine/kosher-foods.html?loc=3132",
+      "category_id": "1_13_3",
+      "category_name": "International Cuisine > Kosher Foods"
+    },
+    {
+      "display_name": "Hispanic Foods",
+      "href": "https://www.safeway.com/shop/aisles/international-cuisine/hispanic-foods.html?loc=3132",
+      "category_id": "1_13_2",
+      "category_name": "International Cuisine > Hispanic Foods"
+    },
+    {
+      "display_name": "Asian Foods",
+      "href": "https://www.safeway.com/shop/aisles/international-cuisine/asian-foods.html?loc=3132",
+      "category_id": "1_13_1",
+      "category_name": "International Cuisine > Asian Foods"
+    }
+  ],
+  "Beverages": [
+    {
+      "display_name": "Water & Sparkling Water",
+      "href": "https://www.safeway.com/shop/aisles/beverages/water-sparkling-water.html?loc=3132",
+      "category_id": "1_5_10",
+      "category_name": "Beverages > Water & Sparkling Water"
+    },
+    {
+      "display_name": "Hydration",
+      "href": "https://www.safeway.com/shop/aisles/beverages/hydration.html?loc=3132",
+      "category_id": "1_5_12",
+      "category_name": "Beverages > Hydration"
+    },
+    {
+      "display_name": "Drink Mix",
+      "href": "https://www.safeway.com/shop/aisles/beverages/drink-mix.html?loc=3132",
+      "category_id": "1_5_11",
+      "category_name": "Beverages > Drink Mix"
+    },
+    {
+      "display_name": "Kombucha",
+      "href": "https://www.safeway.com/shop/aisles/beverages/kombucha.html?loc=3132",
+      "category_id": "1_5_6",
+      "category_name": "Beverages > Kombucha"
+    },
+    {
+      "display_name": "Soft Drinks",
+      "href": "https://www.safeway.com/shop/aisles/beverages/soft-drinks.html?loc=3132",
+      "category_id": "1_5_7",
+      "category_name": "Beverages > Soft Drinks"
+    },
+    {
+      "display_name": "Energy Drinks & Shots",
+      "href": "https://www.safeway.com/shop/aisles/beverages/energy-drinks-shots.html?loc=3132",
+      "category_id": "1_5_4",
+      "category_name": "Beverages > Energy Drinks & Shots"
+    },
+    {
+      "display_name": "Juice & Smoothies",
+      "href": "https://www.safeway.com/shop/aisles/beverages/juice-smoothies.html?loc=3132",
+      "category_id": "1_5_5",
+      "category_name": "Beverages > Juice & Smoothies"
+    },
+    {
+      "display_name": "Coconut Water",
+      "href": "https://www.safeway.com/shop/aisles/beverages/coconut-water.html?loc=3132",
+      "category_id": "1_5_2",
+      "category_name": "Beverages > Coconut Water"
+    },
+    {
+      "display_name": "Coffee",
+      "href": "https://www.safeway.com/shop/aisles/beverages/coffee.html?loc=3132",
+      "category_id": "1_5_3",
+      "category_name": "Beverages > Coffee"
+    },
+    {
+      "display_name": "Cocoa & Hot Chocolate",
+      "href": "https://www.safeway.com/shop/aisles/beverages/cocoa-hot-chocolate.html?loc=3132",
+      "category_id": "1_5_1",
+      "category_name": "Beverages > Cocoa & Hot Chocolate"
+    },
+    {
+      "display_name": "Sports Drinks",
+      "href": "https://www.safeway.com/shop/aisles/beverages/sports-drinks.html?loc=3132",
+      "category_id": "1_5_8",
+      "category_name": "Beverages > Sports Drinks"
+    },
+    {
+      "display_name": "Tea",
+      "href": "https://www.safeway.com/shop/aisles/beverages/tea.html?loc=3132",
+      "category_id": "1_5_9",
+      "category_name": "Beverages > Tea"
+    }
+  ],
+  "Wine, Beer & Spirits": [
+    {
+      "display_name": "Bar General Merchandise",
+      "href": "https://www.safeway.com/shop/aisles/wine-beer-spirits/bar-general-merchandise.html?loc=3132",
+      "category_id": "1_29_4",
+      "category_name": "Wine, Beer & Spirits > Bar General Merchandise"
+    },
+    {
+      "display_name": "Wine",
+      "href": "https://www.safeway.com/shop/aisles/wine-beer-spirits/wine.html?loc=3132",
+      "category_id": "1_29_3",
+      "category_name": "Wine, Beer & Spirits > Wine"
+    },
+    {
+      "display_name": "Spirits & Mixers",
+      "href": "https://www.safeway.com/shop/aisles/wine-beer-spirits/spirits-mixers.html?loc=3132",
+      "category_id": "1_29_2",
+      "category_name": "Wine, Beer & Spirits > Spirits & Mixers"
+    },
+    {
+      "display_name": "Beer",
+      "href": "https://www.safeway.com/shop/aisles/wine-beer-spirits/beer.html?loc=3132",
+      "category_id": "1_29_1",
+      "category_name": "Wine, Beer & Spirits > Beer"
+    }
+  ],
+  "Baby Care": [
+    {
+      "display_name": "Formula & Baby Food",
+      "href": "https://www.safeway.com/shop/aisles/baby-care/formula-baby-food.html?loc=3132",
+      "category_id": "1_1_4",
+      "category_name": "Baby Care > Formula & Baby Food"
+    },
+    {
+      "display_name": "Baby Bath & Skin Care",
+      "href": "https://www.safeway.com/shop/aisles/baby-care/baby-bath-skin-care.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Diapers & Wipes",
+      "href": "https://www.safeway.com/shop/aisles/baby-care/diapers-wipes.html?loc=3132",
+      "category_id": "1_1_3",
+      "category_name": "Baby Care > Diapers & Wipes"
+    },
+    {
+      "display_name": "Baby Accessories",
+      "href": "https://www.safeway.com/shop/aisles/baby-care/baby-accessories.html?loc=3132",
+      "category_id": "1_1_1",
+      "category_name": "Baby Care > Baby Accessories"
+    }
+  ],
+  "Nutrition & Wellness": [
+    {
+      "display_name": "Adult Nutrition",
+      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/adult-nutrition.html?loc=3132",
+      "category_id": "1_102_1",
+      "category_name": "Nutrition & Wellness > Adult Nutrition"
+    },
+    {
+      "display_name": "Weight Management",
+      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/weight-management.html?loc=3132",
+      "category_id": "1_102_8",
+      "category_name": "Nutrition & Wellness > Weight Management"
+    },
+    {
+      "display_name": "Specialty Supplements",
+      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/specialty-supplements.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Vitamins & Minerals",
+      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/vitamins-minerals.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Herbal Supplements",
+      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/herbal-supplements.html?loc=3132",
+      "category_id": "1_102_4",
+      "category_name": "Nutrition & Wellness > Herbal Supplements"
+    },
+    {
+      "display_name": "Protein Supplements",
+      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/protein-supplements.html?loc=3132",
+      "category_id": "1_102_5",
+      "category_name": "Nutrition & Wellness > Protein Supplements"
+    },
+    {
+      "display_name": "Diabetes Management",
+      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/diabetes-management.html?loc=3132",
+      "category_id": "1_102_2",
+      "category_name": "Nutrition & Wellness > Diabetes Management"
+    },
+    {
+      "display_name": "Fitness Equipment",
+      "href": "https://www.safeway.com/shop/aisles/nutrition-wellness/fitness-equipment.html?loc=3132",
+      "category_id": "1_102_3",
+      "category_name": "Nutrition & Wellness > Fitness Equipment"
+    }
+  ],
+  "Paper, Cleaning & Home": [
+    {
+      "display_name": "Cleaners & Supplies",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/cleaners-supplies.html?loc=3132",
+      "category_id": "1_18_8",
+      "category_name": "Paper, Cleaning & Home > Cleaners & Supplies"
+    },
+    {
+      "display_name": "Hardware & Home Needs",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/hardware-home-needs.html?loc=3132",
+      "category_id": "1_18_7",
+      "category_name": "Paper, Cleaning & Home > Hardware & Home Needs"
+    },
+    {
+      "display_name": "Laundry",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/laundry.html?loc=3132",
+      "category_id": "1_18_6",
+      "category_name": "Paper, Cleaning & Home > Laundry"
+    },
+    {
+      "display_name": "Dish Detergents",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/dish-detergents.html?loc=3132",
+      "category_id": "1_18_3",
+      "category_name": "Paper, Cleaning & Home > Dish Detergents"
+    },
+    {
+      "display_name": "Shoe Care",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/shoe-care.html?loc=3132",
+      "category_id": "1_18_23",
+      "category_name": "Paper, Cleaning & Home > Shoe Care"
+    },
+    {
+      "display_name": "Magazines, Books & Media",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/magazines-books-media.html?loc=3132",
+      "category_id": "1_18_22",
+      "category_name": "Paper, Cleaning & Home > Magazines, Books & Media"
+    },
+    {
+      "display_name": "Tableware & Trash Bags",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/tableware-trash-bags.html?loc=3132",
+      "category_id": "1_18_21",
+      "category_name": "Paper, Cleaning & Home > Tableware & Trash Bags"
+    },
+    {
+      "display_name": "Plastic, Foil & Storage",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/plastic-foil-storage.html?loc=3132",
+      "category_id": "1_18_20",
+      "category_name": "Paper, Cleaning & Home > Plastic, Foil & Storage"
+    },
+    {
+      "display_name": "Paper Products",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/paper-products.html?loc=3132",
+      "category_id": "1_18_19",
+      "category_name": "Paper, Cleaning & Home > Paper Products"
+    },
+    {
+      "display_name": "Kitchen Accessories",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/kitchen-accessories.html?loc=3132",
+      "category_id": "1_18_17",
+      "category_name": "Paper, Cleaning & Home > Kitchen Accessories"
+    },
+    {
+      "display_name": "Fire Logs & BBQ Needs",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/fire-logs-bbq-needs.html?loc=3132",
+      "category_id": "1_18_11",
+      "category_name": "Paper, Cleaning & Home > Fire Logs & BBQ Needs"
+    },
+    {
+      "display_name": "Air Fresheners & Candles",
+      "href": "https://www.safeway.com/shop/aisles/paper-cleaning-home/air-fresheners-candles.html?loc=3132",
+      "category_id": "1_18_14",
+      "category_name": "Paper, Cleaning & Home > Air Fresheners & Candles"
+    }
+  ],
+  "Personal Care & Health": [
+    {
+      "display_name": "Health Care & Apothecary",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/health-care-apothecary.html?loc=3132",
+      "category_id": "1_17_21",
+      "category_name": "Personal Care & Health > Health Care & Apothecary"
+    },
+    {
+      "display_name": "Trial Size",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/trial-size.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "First Aid & Medical Care",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/first-aid-medical-care.html?loc=3132",
+      "category_id": "1_17_19",
+      "category_name": "Personal Care & Health > First Aid & Medical Care"
+    },
+    {
+      "display_name": "Shave Needs",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/shave-needs.html?loc=3132",
+      "category_id": "1_17_16",
+      "category_name": "Personal Care & Health > Shave Needs"
+    },
+    {
+      "display_name": "Skin Care & Cosmetics",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/skin-care-cosmetics.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Foot Care",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/foot-care.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Hair Care",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/hair-care.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Pain Relief",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/pain-relief.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Pantyhose & Apparel",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/pantyhose-apparel.html?loc=3132",
+      "category_id": "1_17_15",
+      "category_name": "Personal Care & Health > Pantyhose & Apparel"
+    },
+    {
+      "display_name": "Personal & Adult Care",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/personal-adult-care.html?loc=3132",
+      "category_id": "1_17_12",
+      "category_name": "Personal Care & Health > Personal & Adult Care"
+    },
+    {
+      "display_name": "Oral Hygiene",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/oral-hygiene.html?loc=3132",
+      "category_id": "1_17_13",
+      "category_name": "Personal Care & Health > Oral Hygiene"
+    },
+    {
+      "display_name": "Feminine Care",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/feminine-care.html?loc=3132",
+      "category_id": "1_17_8",
+      "category_name": "Personal Care & Health > Feminine Care"
+    },
+    {
+      "display_name": "Family Planning",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/family-planning.html?loc=3132",
+      "category_id": "1_17_7",
+      "category_name": "Personal Care & Health > Family Planning"
+    },
+    {
+      "display_name": "Eye & Ear Care",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/eye-ear-care.html?loc=3132",
+      "category_id": "1_17_6",
+      "category_name": "Personal Care & Health > Eye & Ear Care"
+    },
+    {
+      "display_name": "Deodorants",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/deodorants.html?loc=3132",
+      "category_id": "1_17_4",
+      "category_name": "Personal Care & Health > Deodorants"
+    },
+    {
+      "display_name": "Cold & Allergy",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/cold-allergy.html?loc=3132",
+      "category_id": "1_17_3",
+      "category_name": "Personal Care & Health > Cold & Allergy"
+    },
+    {
+      "display_name": "Antacid & Digestive Aids",
+      "href": "https://www.safeway.com/shop/aisles/personal-care-health/antacid-digestive-aids.html?loc=3132",
+      "category_id": "1_17_1",
+      "category_name": "Personal Care & Health > Antacid & Digestive Aids"
+    }
+  ],
+  "Pet Care": [
+    {
+      "display_name": "Small Animal Care",
+      "href": "https://www.safeway.com/shop/aisles/pet-care/small-animal-care.html?loc=3132",
+      "category_id": "1_22_5",
+      "category_name": "Pet Care > Small Animal Care"
+    },
+    {
+      "display_name": "Dog Care",
+      "href": "https://www.safeway.com/shop/aisles/pet-care/dog-care.html?loc=3132",
+      "category_id": "1_22_4",
+      "category_name": "Pet Care > Dog Care"
+    },
+    {
+      "display_name": "Cat Care",
+      "href": "https://www.safeway.com/shop/aisles/pet-care/cat-care.html?loc=3132",
+      "category_id": "1_22_2",
+      "category_name": "Pet Care > Cat Care"
+    }
+  ],
+  "Flowers & gifts": [
+    {
+      "display_name": "Party Supplies",
+      "href": "https://www.safeway.com/shop/aisles/flowers-cards-occasion/party-supplies.html?loc=3132",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Seasonal Items",
+      "href": "https://www.safeway.com/shop/aisles/flowers-cards-occasion/seasonal-items.html?loc=3132",
+      "category_id": "1_14_6",
+      "category_name": "Flowers, Cards, Occasion > Seasonal Items"
+    },
+    {
+      "display_name": "Candles, Gift Bag, Wrap",
+      "href": "https://www.safeway.com/shop/aisles/flowers-cards-occasion/candles-gift-bag-wrap.html?loc=3132",
+      "category_id": "1_14_4",
+      "category_name": "Flowers, Cards, Occasion > Candles, Gift Bag, Wrap"
+    },
+    {
+      "display_name": "Greeting Cards",
+      "href": "https://www.safeway.com/shop/aisles/flowers-cards-occasion/greeting-cards.html?loc=3132",
+      "category_id": "1_14_3",
+      "category_name": "Flowers, Cards, Occasion > Greeting Cards"
+    },
+    {
+      "display_name": "Decor",
+      "href": "https://www.safeway.com/shop/aisles/flowers-cards-occasion/decor.html?loc=3132",
+      "category_id": "1_14_2",
+      "category_name": "Flowers, Cards, Occasion > Decor"
+    },
+    {
+      "display_name": "Flowers",
+      "href": "https://www.safeway.com/shop/aisles/flowers-cards-occasion/flowers.html?loc=3132",
+      "category_id": "1_14_1",
+      "category_name": "Flowers, Cards, Occasion > Flowers"
+    }
+  ],
+  "Diets": [
+    {
+      "display_name": "Keto-friendly",
+      "href": "https://www.safeway.com/lp/specialty-diets/keto-diet.html",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Vegan",
+      "href": "https://www.safeway.com/lp/specialty-diets/vegan-diet.html",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Plant-based",
+      "href": "https://www.safeway.com/lp/specialty-diets/plant-based-diet.html",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Gluten-free",
+      "href": "https://www.safeway.com/lp/specialty-diets/gluten-free-diet.html",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Dairy-free",
+      "href": "https://www.safeway.com/lp/specialty-diets/dairy-free-diet.html",
+      "category_id": null,
+      "category_name": null
+    },
+    {
+      "display_name": "Paleo-friendly",
+      "href": "https://www.safeway.com/lp/specialty-diets/paleo-diet.html",
+      "category_id": null,
+      "category_name": null
+    }
+  ]
+}
