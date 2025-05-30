@@ -46,7 +46,16 @@
     "Breakfast & Cereal::Instant Breakfast Drink",
     "Breakfast & Cereal::Pancake & Waffle Mix",
     "Breakfast & Cereal::Cereal",
-    "Breakfast & Cereal::Frozen Breakfast"
+    "Breakfast & Cereal::Frozen Breakfast",
+    "Breakfast & Cereal::Breakfast Bars & Bites",
+    "Breakfast & Cereal::Syrup",
+    "Breakfast & Cereal::Toaster Pastries",
+    "Canned Goods & Soups::Canned Fruit",
+    "Canned Goods & Soups::Canned Meals",
+    "Canned Goods & Soups::Canned Beans",
+    "Canned Goods & Soups::Soups & Ramen",
+    "Canned Goods & Soups::Stocks, Broth & Bouillon",
+    "Canned Goods & Soups::Canned Tomatoes"
   ],
   "failed_categories": [
     {
@@ -1233,6 +1242,36 @@
       "category": "Deli::Deli Bar & Food Service",
       "reason": "No items found",
       "timestamp": "2025-05-29T17:46:56.355852"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:42:03.032226"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:42:03.431546"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:42:50.912035"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:42:51.754833"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:43:35.683172"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:43:36.080720"
     }
   ],
   "last_parent": null,

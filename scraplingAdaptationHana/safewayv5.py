@@ -243,7 +243,7 @@ def append_to_dump(items):
         else:
             df.to_csv(DUMP_FILE, index=False)
 
-async def scrape_with_throttle_recovery(categories_map, max_retries=3):
+async def scrape_with_throttle_recovery(categories_map, max_retries=999):
     """Main scraping function with automatic throttle recovery"""
     
     # Load progress
@@ -424,7 +424,7 @@ async def main():
         return
     
     # Start scraping with automatic throttle recovery
-    success = await scrape_with_throttle_recovery(categories_map, max_retries=3)
+    success = await scrape_with_throttle_recovery(categories_map, max_retries=999)
     
     if success:
         print("🎉 Scraping completed successfully!")
