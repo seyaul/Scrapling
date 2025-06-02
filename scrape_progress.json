@@ -55,7 +55,111 @@
     "Canned Goods & Soups::Canned Beans",
     "Canned Goods & Soups::Soups & Ramen",
     "Canned Goods & Soups::Stocks, Broth & Bouillon",
-    "Canned Goods & Soups::Canned Tomatoes"
+    "Canned Goods & Soups::Canned Tomatoes",
+    "Canned Goods & Soups::Canned Vegetables",
+    "Canned Goods & Soups::Canned Meat",
+    "Canned Goods & Soups::Canned Seafood & Fish",
+    "Canned Goods & Soups::Noodles",
+    "Condiments, Spice & B...::Salad Dressing & Topping",
+    "Condiments, Spice & B...::Pickles, Relish & Olives",
+    "Condiments, Spice & B...::Vinegar & Oil",
+    "Condiments, Spice & B...::Honey, Syrup & Nectar",
+    "Condiments, Spice & B...::Jam,Spreads & Condiments",
+    "Condiments, Spice & B...::Seasoning,Spices & Herbs",
+    "Condiments, Spice & B...::Baking Supplies & Decor",
+    "Condiments, Spice & B...::Baking Ingredients",
+    "Condiments, Spice & B...::Sauce, Marinades & Mixes",
+    "Condiments, Spice & B...::Baking Dough & Mixes",
+    "Cookies, Snacks & Candy::Popcorn & Grain Cakes",
+    "Cookies, Snacks & Candy::Nuts, Seeds & Trail Mix",
+    "Cookies, Snacks & Candy::Jerky & Meat Snacks",
+    "Cookies, Snacks & Candy::Gelatin & Pudding",
+    "Cookies, Snacks & Candy::Fruit Snacks",
+    "Cookies, Snacks & Candy::Fruit Cups & Applesauce",
+    "Cookies, Snacks & Candy::Crackers",
+    "Cookies, Snacks & Candy::Cookies",
+    "Cookies, Snacks & Candy::Chips",
+    "Cookies, Snacks & Candy::Salsa & Dips",
+    "Cookies, Snacks & Candy::Pretzels",
+    "Cookies, Snacks & Candy::Seaweed",
+    "Cookies, Snacks & Candy::Mints",
+    "Cookies, Snacks & Candy::Gum",
+    "Cookies, Snacks & Candy::Chocolate",
+    "Cookies, Snacks & Candy::Candy - Seasonal",
+    "Cookies, Snacks & Candy::Candy",
+    "Grains, Pasta & Sides::Rice Side Dishes",
+    "Grains, Pasta & Sides::Seeds",
+    "Grains, Pasta & Sides::Skillet Dinners & Sides",
+    "Grains, Pasta & Sides::Stuffing Mix",
+    "Grains, Pasta & Sides::Pasta Sauce",
+    "Grains, Pasta & Sides::Pasta Side Dishes",
+    "Grains, Pasta & Sides::Macaroni & Cheese",
+    "Grains, Pasta & Sides::Pasta",
+    "Grains, Pasta & Sides::Dry Beans & Lentils",
+    "Grains, Pasta & Sides::Grains",
+    "Grains, Pasta & Sides::Rice",
+    "Grains, Pasta & Sides::Pizza Crust & Sauce",
+    "Grains, Pasta & Sides::Potato Side Dishes",
+    "International Cuisine::Indian Middle East Foods",
+    "International Cuisine::Misc International Foods",
+    "International Cuisine::Kosher Foods",
+    "International Cuisine::Hispanic Foods",
+    "International Cuisine::Asian Foods",
+    "Beverages::Water & Sparkling Water",
+    "Beverages::Hydration",
+    "Beverages::Drink Mix",
+    "Beverages::Kombucha",
+    "Beverages::Soft Drinks",
+    "Beverages::Energy Drinks & Shots",
+    "Beverages::Juice & Smoothies",
+    "Beverages::Coconut Water",
+    "Beverages::Coffee",
+    "Beverages::Cocoa & Hot Chocolate",
+    "Beverages::Sports Drinks",
+    "Beverages::Tea",
+    "Wine, Beer & Spirits::Wine",
+    "Wine, Beer & Spirits::Spirits & Mixers",
+    "Wine, Beer & Spirits::Beer",
+    "Baby Care::Formula & Baby Food",
+    "Baby Care::Diapers & Wipes",
+    "Baby Care::Baby Accessories",
+    "Nutrition & Wellness::Adult Nutrition",
+    "Nutrition & Wellness::Weight Management",
+    "Nutrition & Wellness::Herbal Supplements",
+    "Nutrition & Wellness::Protein Supplements",
+    "Nutrition & Wellness::Diabetes Management",
+    "Nutrition & Wellness::Fitness Equipment",
+    "Paper, Cleaning & Home::Cleaners & Supplies",
+    "Paper, Cleaning & Home::Hardware & Home Needs",
+    "Paper, Cleaning & Home::Laundry",
+    "Paper, Cleaning & Home::Dish Detergents",
+    "Paper, Cleaning & Home::Shoe Care",
+    "Paper, Cleaning & Home::Magazines, Books & Media",
+    "Paper, Cleaning & Home::Tableware & Trash Bags",
+    "Paper, Cleaning & Home::Plastic, Foil & Storage",
+    "Paper, Cleaning & Home::Paper Products",
+    "Paper, Cleaning & Home::Kitchen Accessories",
+    "Paper, Cleaning & Home::Fire Logs & BBQ Needs",
+    "Paper, Cleaning & Home::Air Fresheners & Candles",
+    "Personal Care & Health::Health Care & Apothecary",
+    "Personal Care & Health::First Aid & Medical Care",
+    "Personal Care & Health::Shave Needs",
+    "Personal Care & Health::Pantyhose & Apparel",
+    "Personal Care & Health::Personal & Adult Care",
+    "Personal Care & Health::Oral Hygiene",
+    "Personal Care & Health::Feminine Care",
+    "Personal Care & Health::Family Planning",
+    "Personal Care & Health::Eye & Ear Care",
+    "Personal Care & Health::Deodorants",
+    "Personal Care & Health::Cold & Allergy",
+    "Personal Care & Health::Antacid & Digestive Aids",
+    "Pet Care::Small Animal Care",
+    "Pet Care::Dog Care",
+    "Pet Care::Cat Care",
+    "Flowers & gifts::Seasonal Items",
+    "Flowers & gifts::Candles, Gift Bag, Wrap",
+    "Flowers & gifts::Decor",
+    "Flowers & gifts::Flowers"
   ],
   "failed_categories": [
     {
@@ -1272,6 +1376,411 @@
       "category": "Deli::Deli Bar & Food Service",
       "reason": "No items found",
       "timestamp": "2025-05-30T09:43:36.080720"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:44:26.660323"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:44:27.144087"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:46:08.331343"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:46:08.861202"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:46:57.820160"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:46:58.211958"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:47:52.314789"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:47:52.756929"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:48:43.212386"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:48:43.631619"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:49:37.048796"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:49:37.441075"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:50:30.570155"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:50:31.075781"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:51:30.808425"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:51:31.348548"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:52:30.202241"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:52:30.731546"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:53:30.829280"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:53:31.366587"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:54:35.560476"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:54:35.980982"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:55:39.222664"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:55:39.754493"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:56:38.414476"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:56:39.115368"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:57:42.330457"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:57:43.319992"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:58:46.129259"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:58:46.649090"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:59:56.888941"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T09:59:57.448249"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:01:06.540029"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:01:07.048411"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:01:26.783691"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:02:15.490163"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:02:16.095763"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:02:16.813117"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:03:21.190156"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:03:21.534309"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:03:21.846697"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:04:24.061352"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:04:24.372420"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:04:24.650000"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:05:19.910212"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:05:20.180636"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:05:20.451587"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:06:15.490358"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:06:15.827578"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:06:16.104505"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:07:22.423597"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:07:22.981318"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:07:23.608227"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:08:35.608770"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:08:36.121195"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:08:36.636325"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:09:50.846571"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:09:51.363621"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:09:51.875143"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:11:02.853326"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:11:03.376206"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:11:03.904501"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:12:16.558173"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:12:17.065499"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:12:17.598305"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:13:29.976520"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:13:30.490950"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:13:30.994910"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:14:46.345192"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:14:46.875897"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:14:47.367477"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:16:03.652412"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:16:04.246542"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:16:04.776050"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:17:22.204417"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:17:22.728578"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:17:23.369514"
+    },
+    {
+      "category": "Deli::Deli Frozen Desserts",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:18:39.053257"
+    },
+    {
+      "category": "Deli::Deli Bar & Food Service",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:18:39.619713"
+    },
+    {
+      "category": "Wine, Beer & Spirits::Bar General Merchandise",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:18:40.162584"
+    },
+    {
+      "category": "Flowers & gifts::Greeting Cards",
+      "reason": "No items found",
+      "timestamp": "2025-05-30T10:18:53.264973"
     }
   ],
   "last_parent": null,

@@ -257,7 +257,7 @@ async def scrape_with_throttle_recovery(categories_map, max_retries=999):
 
     print(f"🎯 Total subcategories: {total_subcats}")
     print(f"🎯 With valid category IDs: {total_with_ids}")
-    print(f"🎯 Starting from: {completed_count}/{total_with_ids}")
+    print(f"🎯 Starting from: {len(progress['completed_categories'])}/{total_with_ids}")
 
     all_items = []
     retry_count = 0
@@ -307,13 +307,13 @@ async def scrape_with_throttle_recovery(categories_map, max_retries=999):
                         # Skip if already completed
                         if category_key in progress['completed_categories']:
                             completed_count += 1
-                            print(f"⏭️ Skipping completed: {subcat['display_name']} ({completed_count}/{total_with_ids})")
+                            print(f"⏭️ Skipping completed: {subcat['display_name']} ({len(progress['completed_categories'])}/{total_with_ids})")
                             continue
                         
                         category_id = subcat['category_id']
                         category_name = subcat['category_name']
                         
-                        print(f"\n🗂️ [{completed_count + 1}/{total_with_ids}] Starting: {category_name}")
+                        print(f"\n🗂️ [{len(progress['completed_categories'])}/{total_with_ids}] Starting: {category_name}")
                         
                         try:
                             items = await scrape_single_category(
@@ -392,7 +392,7 @@ async def scrape_with_throttle_recovery(categories_map, max_retries=999):
         
         if retry_count <= max_retries:
             # Progressive backoff: wait longer between retries
-            wait_time = retry_count   # 60s, 120s, 180s
+            wait_time = 1   # 60s, 120s, 180s
             print(f"⏳ Throttled! Waiting {wait_time} seconds before recreating context...")
             await asyncio.sleep(wait_time)
         else:
