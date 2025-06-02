@@ -19,9 +19,15 @@ import unicodedata
 
 
 
-LOG_FILE = pathlib.Path("wholefoods_scrape.log")
-PRICE_SHEET = "Scrapling/scraplingAdaptationHana/source_prices.xlsx"
-PRICE_SHEET2 = "Scrapling/scraplingAdaptationHana/fresh_prices.xlsx"
+BASE_DIR = pathlib.Path(__file__).resolve().parent
+LOG_FILE = BASE_DIR / "wholefoods_logging/wholefoods_scrape.log"
+LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+FINAL_RESULTS_DIR = BASE_DIR / "wholefoods_price_compare"
+FINAL_RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+
+PRICE_SHEET = "scraplingAdaptationHana/source_prices.xlsx"
+
 THRESHOLD = 85
 DELTA_PCT = 0.25
 DF_COMP_FI = None
@@ -37,8 +43,15 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 log = logging.getLogger(__name__)
 
-async def set_zip_harTeet(page, zipcode):
-    print()
+def prompt_for_excel(prompt_text: str) -> str:
+    while True:
+        path = input(prompt_text).strip().strip('"').strip("'")
+        if path.lower().endswith(".xlsx") and pathlib.Path(path).exists():
+            return path
+        print("❌ Invalid file. Please drag and drop a valid .xlsx file or paste the full path.")
+
+PRICE_SHEET2 = prompt_for_excel("Drag and drop the Whole Foods price sheet (xlsx)")
+
 async def set_zip_wholefoods(page, zipcode):
     global cookies_for_api
     await page.click("text='Find a Store' >> visible=true")
@@ -594,7 +607,7 @@ async def compare_prices(scraped_items: list[dict]):
     # )
 
     # 6. write result
-    out_file = "price_compare.xlsx"
+    out_file = FINAL_RESULTS_DIR / "wholefoods_pc.xlsx"
     preformating_xl_helper(df_out, out_file)
     print(f"📝 comparison report ➜ {out_file}")
     return df_comp
@@ -714,7 +727,6 @@ def preformating_xl_helper(df_out, out_file):
 
 ZIP_HANDLERS = {
     "wholefoodsmarket.com": set_zip_wholefoods,
-    "harristeeter.com": set_zip_harTeet
 }
 
 # Potential size units to look for in the product name
@@ -729,20 +741,7 @@ _NUM_UNIT_RE = re.compile(
     r"(\d+(?:\.\d+)?)\s*-?\s*(" + "|".join(SIZE_UNITS) + r")\b", re.I)
 
 if __name__ == "__main__":
-    url_choice = input("What website do you want to scrape: Whole Foods, Harris Teeter, Giant, or Safeway? ")
-    if url_choice.lower() == "whole foods":
-        print("You chose Whole Foods")
-        url = "https://www.wholefoodsmarket.com"
-    elif url_choice.lower() == "harris teeter":
-        print("You chose Harris Teeter")
-    elif url_choice.lower() == "giant":
-        print("You chose Giant")
-    elif url_choice.lower() == "safeway":
-        print("You chose Safeway")
-    else:
-        print("Invalid choice. Please choose Whole Foods, Harris Teeter, Giant, or Safeway.")
-        sys.exit(1)
-    
+    url = "https://www.wholefoodsmarket.com"
     asyncio.run(main(url))
     items = asyncio.run(fetch_wholefoods_api(cookies_for_api))
     

@@ -1,0 +1,44 @@
+{
+  "completed_indices": [
+    0,
+    1,
+    2
+  ],
+  "completed_count": 3,
+  "total_count": 465,
+  "last_session_start": "2025-06-02T16:34:11.426486",
+  "session_count": 1,
+  "results": [
+    {
+      "index": 0,
+      "data": {
+        "price": 5.29,
+        "upc": "980089500",
+        "size": "13 OZ JAR",
+        "name": "Nutella Hazelnut Spread with Cocoa"
+      },
+      "timestamp": "2025-06-02T16:34:48.102753"
+    },
+    {
+      "index": 1,
+      "data": {
+        "price": 5.29,
+        "upc": "1090000015",
+        "size": "75 SQ FT",
+        "name": "Reynolds Wrap Aluminum Foil 12 Inch Wide"
+      },
+      "timestamp": "2025-06-02T16:34:54.025627"
+    },
+    {
+      "index": 2,
+      "data": {
+        "price": 5.29,
+        "upc": "1090000015",
+        "size": "75 SQ FT",
+        "name": "Reynolds Wrap Aluminum Foil 12 Inch Wide"
+      },
+      "timestamp": "2025-06-02T16:35:01.501934"
+    }
+  ],
+  "last_updated": "2025-06-02T16:35:01.501948"
+}

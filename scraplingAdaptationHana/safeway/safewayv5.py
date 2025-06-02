@@ -5,14 +5,39 @@ from urllib.parse import urlencode, urlparse, parse_qs
 import pandas as pd
 import httpx
 from scrapling.fetchers import StealthyFetcher
+import pathlib
+import openpyxl
 
 # Constants
 SAF_WELCOME = "https://www.safeway.com"
-CONFIG_FILE = 'scraplingAdaptationHana/.safeway_config.json'
-CATEGORIES_FILE = 'enhanced_safeway_categories.json'
-OUTPUT_CSV = 'bread_bakery_scraped.csv'
-PROGRESS_FILE = 'scrape_progress.json'
-DUMP_FILE = 'scraped_products_dump.csv'
+
+BASE_DIR = pathlib.Path(__file__).resolve().parent
+
+CONFIG_FILE = BASE_DIR / 'safeway_necessary_ppdata/.safeway_config.json'
+CATEGORIES_FILE = BASE_DIR / 'safeway_necessary_ppdata/enhanced_safeway_categories.json'
+OUTPUT_XLSX = BASE_DIR / 'safeway_price_compare/safeway_pc.xlsx'
+OUTPUT_XLSX.parent.mkdir(parents=True, exist_ok=True)
+PROGRESS_FILE = BASE_DIR / 'scraping/safeway_scrape_progress.json'
+PROGRESS_FILE.parent.mkdir(parents=True, exist_ok=True)
+DUMP_FILE = BASE_DIR / 'scraping/scraped_products_dump.csv'
+
+def normalize_upc_input(upc):
+    """Normalize UPC format for better matching"""
+    if pd.isna(upc):
+        return None
+    upc_str = str(upc).strip()
+    upc_str = upc_str[:-1]
+    # Remove any leading zeros for comparison
+    return upc_str.lstrip('0') if upc_str != '0' else '0'
+
+def normalize_upc_scraped(upc):
+    """Normalize UPC format for better matching"""
+    if pd.isna(upc):
+        return None
+    upc_str = str(upc).strip()
+    # Remove any leading zeros for comparison
+    return upc_str.lstrip('0') if upc_str != '0' else '0'
+
 
 async def gather_scrape_config(max_retries=3):
     """Capture session data by monitoring API requests with retry mechanism"""
@@ -412,9 +437,186 @@ async def scrape_with_throttle_recovery(categories_map, max_retries=999):
     
     return False
 
-async def main():
-    """Main function to scrape all categories with throttle recovery"""
+
+def match_upcs_and_create_comparison():
+    """Match UPCs between input dataset and scraped data, create comparison file"""
     
+    # Get input file from user
+    input_file = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+    
+    if not os.path.exists(input_file):
+        print(f"❌ Input file not found: {input_file}")
+        return False
+    
+    try:
+        # Load input dataset
+        print(f"📖 Loading input dataset: {input_file}")
+        input_df = pd.read_excel(input_file)
+        print(f"📊 Input dataset: {len(input_df)} rows")
+        
+        # Check if UPC column exists
+        if 'UPC' not in input_df.columns:
+            print(f"❌ 'UPC' column not found in input dataset")
+            print(f"Available columns: {list(input_df.columns)}")
+            return False
+        
+        # Load scraped data
+        if not os.path.exists(DUMP_FILE):
+            print(f"❌ Scraped data file not found: {DUMP_FILE}")
+            return False
+        
+        print(f"📖 Loading scraped dataset: {DUMP_FILE}")
+        try:
+            # Try normal loading first
+            scraped_df = pd.read_csv(DUMP_FILE)
+        except pd.errors.ParserError as e:
+            print(f"⚠️ CSV parsing error: {e}")
+            print("🔧 Trying to fix CSV parsing issues...")
+            
+            # Try with different options to handle malformed CSV
+            try:
+                scraped_df = pd.read_csv(DUMP_FILE, 
+                                    error_bad_lines=False,  # Skip bad lines
+                                    warn_bad_lines=True,    # Warn about skipped lines
+                                    quoting=1,              # Handle quotes properly
+                                    escapechar='\\')        # Handle escape characters
+            except:
+                try:
+                    # More aggressive approach - read with minimal assumptions
+                    scraped_df = pd.read_csv(DUMP_FILE, 
+                                        sep=',',
+                                        quotechar='"',
+                                        skipinitialspace=True,
+                                        engine='python',  # Use Python engine for better error handling
+                                        on_bad_lines='skip')  # Skip problematic lines
+                except Exception as final_error:
+                    print(f"❌ Could not load CSV file: {final_error}")
+                    print("💡 Try regenerating the scraped data file")
+                    return False
+
+        print(f"📊 Scraped dataset: {len(scraped_df)} rows")
+        
+        # Get list of UPCs from input dataset
+        input_df['normalized_upc'] = input_df['UPC'].apply(normalize_upc_input)
+        scraped_df['normalized_upc'] = scraped_df['upc'].apply(normalize_upc_scraped)
+
+        input_upcs = set(input_df['normalized_upc'].dropna())
+        scraped_upcs = set(scraped_df['normalized_upc'].dropna())
+        
+        print(f"🔍 Input UPCs: {len(input_upcs)}")
+        print(f"🔍 Scraped UPCs: {len(scraped_upcs)}")
+        
+        # Find matches
+        matched_upcs = input_upcs.intersection(scraped_upcs)
+        print(f"✅ Matched UPCs: {len(matched_upcs)}")
+        
+        if not matched_upcs:
+            print("❌ No UPC matches found between datasets")
+            return False
+        
+        # Create comparison dataset
+        comparison_data = []
+        
+        for upc in matched_upcs:
+            # Get original data
+            original_rows = input_df[input_df['normalized_upc'].astype(str) == upc]
+            
+            # Get scraped data
+            scraped_rows = scraped_df[scraped_df['normalized_upc'].astype(str) == upc]
+            
+            for _, original_row in original_rows.iterrows():
+                for _, scraped_row in scraped_rows.iterrows():
+                    # Combine data
+                    combined_row = {
+                        # Original data (keep all columns)
+                        **original_row.to_dict(),
+                        # Add Safeway data with prefixes
+                        'safeway_upc': scraped_row.get('upc'),
+                        'safeway_price': scraped_row.get('price'),
+                        'safeway_sale_price': scraped_row.get('salePrice'),
+                        'safeway_category': scraped_row.get('category_name'),
+                        'safeway_parent_category': scraped_row.get('parent_category'),
+                        'safeway_brand': scraped_row.get('brand'),
+                        'safeway_name': scraped_row.get('name'),
+                        'safeway_size': scraped_row.get('size'),
+                        'safeway_description': scraped_row.get('description')
+                    }
+                    comparison_data.append(combined_row)
+        
+        # Create comparison DataFrame
+        comparison_df = pd.DataFrame(comparison_data)
+        
+        # Save to Excel
+        print(f"💾 Saving comparison to: {OUTPUT_XLSX}")
+        comparison_df.to_excel(OUTPUT_XLSX, index=False)
+        
+        print(f"\n🎉 UPC matching completed!")
+        print(f"📊 Matched products: {len(comparison_df)}")
+        print(f"📁 Comparison file saved to: {OUTPUT_XLSX}")
+        
+        # Show sample UPC format comparison
+        print(f"\n🔍 UPC Format Analysis:")
+        print("Input UPC samples:")
+        for i, upc in enumerate(list(input_upcs)[:5], 1):
+            print(f"   {i}. {upc} (length: {len(upc)})")
+        
+        print("Scraped UPC samples:")
+        for i, upc in enumerate(list(scraped_upcs)[:5], 1):
+            print(f"   {i}. {upc} (length: {len(upc)})")
+        
+        print("Matched UPC samples:")
+        for i, upc in enumerate(list(matched_upcs)[:5], 1):
+            print(f"   {i}. {upc} (length: {len(upc)})")
+        
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error during UPC matching: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+
+async def main():
+    """Main function with options for scraping or UPC matching"""
+    
+    print("🏪 Safeway Product Scraper & Price Comparator")
+    print("=" * 50)
+    print("1. Scrape products from Safeway")
+    print("2. Match UPCs and create price comparison")
+    print("3. Both (scrape then compare)")
+    
+    while True:
+        choice = input("\nEnter your choice (1, 2, or 3): ").strip()
+        
+        if choice == "1":
+            # Scraping only
+            await run_scraping()
+            break
+        elif choice == "2":
+            # UPC matching only
+            success = match_upcs_and_create_comparison()
+            if success:
+                print("✅ UPC matching completed successfully!")
+            else:
+                print("❌ UPC matching failed")
+            break
+        elif choice == "3":
+            # Both scraping and matching
+            await run_scraping()
+            print("\n" + "="*50)
+            print("🔄 Now starting UPC matching...")
+            success = match_upcs_and_create_comparison()
+            if success:
+                print("✅ Both scraping and UPC matching completed!")
+            else:
+                print("⚠️ Scraping completed but UPC matching failed")
+            break
+        else:
+            print("❌ Invalid choice. Please enter 1, 2, or 3.")
+
+async def run_scraping():
+    """Run the scraping functionality"""
     # Load enhanced categories
     try:
         with open(CATEGORIES_FILE) as f:
@@ -430,6 +632,8 @@ async def main():
         print("🎉 Scraping completed successfully!")
     else:
         print("⚠️ Scraping completed with some limitations due to throttling")
+
+# Add this before the if __name__ == '__main__' block
 
 if __name__ == '__main__':
     asyncio.run(main())

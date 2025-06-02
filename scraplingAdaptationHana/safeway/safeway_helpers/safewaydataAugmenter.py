@@ -3,12 +3,17 @@ import json
 import os
 from urllib.parse import urlparse, parse_qs
 from scrapling.fetchers import StealthyFetcher
+import pathlib
 
 # Constants
 SAF_WELCOME = "https://www.safeway.com"
-CATEGORIES_FILE = 'safeway_categories.json'
-ENHANCED_CATEGORIES_FILE = 'enhanced_safeway_categories.json'
-CONFIG_FILE = 'scraplingAdaptationHana/.safeway_config.json'
+
+BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
+
+CATEGORIES_FILE = BASE_DIR / 'safeway_necessary_ppdata/safeway_categories.json'
+#CATEGORIES_FILE = 'safeway_categories.json'
+ENHANCED_CATEGORIES_FILE = BASE_DIR / 'safeway_necessary_ppdata/enhanced_safeway_categories_test.json'
+CONFIG_FILE = BASE_DIR / 'safeway_necessary_ppdata/.safeway_config.json'
 
 async def discover_category_api_call(category_href):
     """Navigate to a category page and capture the API call to get real category ID"""

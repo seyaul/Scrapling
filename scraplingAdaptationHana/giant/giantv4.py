@@ -8,13 +8,16 @@ import os
 from datetime import datetime, timedelta
 import logging
 import sys
+import pathlib
+
+BASE_FILE = pathlib.Path(__file__).resolve().parent
 
 # File configurations
-SOURCE_DATA = "scraplingAdaptationHana/source_prices.xlsx"
-OUTPUT_DATA = "giant_foods_results.xlsx"
-CHECKPOINT_FILE = "scraping_checkpoint_giant.json"
-TEMP_RESULTS_FILE = "temp_session_results_giant.json"
-LOG_FILE = "giant_foods_scrape.log"
+SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_foods_pc.xlsx"
+CHECKPOINT_FILE = BASE_FILE / "giant_scraping/scraping_checkpoint_giant.json"
+TEMP_RESULTS_FILE = BASE_FILE / "giant_scraping/temp_session_results_giant.json"
+LOG_FILE = BASE_FILE / ".giant_log/giant_foods_scrape.log"
 
 # Scraping configurations
 BATCH_SIZE = 10  # Process 10 items at a time
@@ -23,7 +26,7 @@ SESSION_TIMEOUT_MINUTES = 60  # Auto-pause after this time
 MIN_DELAY = 2.0  # Minimum delay between requests
 MAX_DELAY = 5.0  # Maximum delay between requests
 ZIP_CODE = "20010"  # Default ZIP code
-STORE_ADDRESS = "1345 Park Road N.W."  # Default store
+STORE_ADDRESS = "1345 Park Road N.W." 
 
 # Setup logging
 logging.basicConfig(

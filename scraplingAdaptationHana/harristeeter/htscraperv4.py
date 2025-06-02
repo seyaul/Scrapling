@@ -13,10 +13,14 @@ from RateLimiter import RateLimiter
 
 # File configurations
 LOG_FILE = pathlib.Path("harris_teeter_scrape.log")
-CHECKPOINT_FILE = "scraping_checkpoint.json"
-SOURCE_EXCEL = "scraplingAdaptationHana/source_prices.xlsx"  # Your input file with UPCs
-OUTPUT_EXCEL = "harris_teeter_results.xlsx"  # Final results
-TEMP_RESULTS_FILE = "temp_session_results.json"
+
+BASE_FILE = pathlib.Path(__file__).resolve().parent
+
+CHECKPOINT_FILE = BASE_FILE / "ht_scraping/ht_scraping_checkpoint.json"
+# TODO: Remember this selection for next time?
+SOURCE_EXCEL = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+OUTPUT_EXCEL = BASE_FILE / "harris_teeter_price_compare/harris_teeter_pc.xlsx"  # Final results
+TEMP_RESULTS_FILE = BASE_FILE / "ht_scraping/temp_session_results.json"
 
 # Scraping configurations
 BATCH_SIZE = 26  # Conservative batch size

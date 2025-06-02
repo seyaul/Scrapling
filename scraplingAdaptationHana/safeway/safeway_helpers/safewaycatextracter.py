@@ -1,9 +1,14 @@
 import asyncio
 import json
 from scrapling.fetchers import StealthyFetcher
+import pathlib
 
 # URL for Safeway's main aisles page
 AISLES_URL = "https://www.safeway.com/shop/aisles.html"
+
+
+BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
+SAF_CAT_F = BASE_DIR / "safeway_categories_test.json"
 
 async def extract_categories(page):
     # Navigate to the aisles page
@@ -40,7 +45,7 @@ async def extract_categories(page):
     """)
 
     # Write out to JSON file
-    with open("safeway_categories.json", "w") as f:
+    with open(SAF_CAT_F, "w") as f:
         json.dump(categories, f, indent=2)
 
     print("✅ Categories saved to safeway_categories.json")
