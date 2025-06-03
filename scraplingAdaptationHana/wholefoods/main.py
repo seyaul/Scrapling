@@ -1,4 +1,4 @@
-from scrapling.fetchers import StealthyFetcher
+from scrapling.fetchers import PlayWrightFetcher
 from urllib.parse import urlparse
 from rapidfuzz import fuzz, process
 from openpyxl import load_workbook
@@ -169,11 +169,10 @@ async def main(urlstr):
             print(f"No handler for domain: {domain}")
         return page
     
-    response = await StealthyFetcher.async_fetch(
+    response = await PlayWrightFetcher.async_fetch(
         url=url,
         headless=True,
         network_idle=True,
-        block_images=True,
         disable_resources=True,
         page_action=page_action
     )
