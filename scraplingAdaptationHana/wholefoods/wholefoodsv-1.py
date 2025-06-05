@@ -19,19 +19,15 @@ import unicodedata
 
 
 
-BASE_DIR = pathlib.Path(__file__).resolve().parent
-LOG_FILE = BASE_DIR / "wholefoods_logging/wholefoods_scrape.log"
-LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
-FINAL_RESULTS_DIR = BASE_DIR / "wholefoods_price_compare"
-FINAL_RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-
-
+LOG_FILE = pathlib.Path("wholefoods_scrape.log")
 PRICE_SHEET = "scraplingAdaptationHana/source_prices.xlsx"
-
+PRICE_SHEET2 = "scraplingAdaptationHana/fresh_prices.xlsx"
 THRESHOLD = 85
 DELTA_PCT = 0.25
 DF_COMP_FI = None
+
 cookies_for_api = {}
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -43,15 +39,8 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 log = logging.getLogger(__name__)
 
-def prompt_for_excel(prompt_text: str) -> str:
-    while True:
-        path = input(prompt_text).strip().strip('"').strip("'")
-        if path.lower().endswith(".xlsx") and pathlib.Path(path).exists():
-            return path
-        print("❌ Invalid file. Please drag and drop a valid .xlsx file or paste the full path.")
-
-PRICE_SHEET2 = prompt_for_excel("Drag and drop the Whole Foods price sheet (xlsx)")
-
+async def set_zip_harTeet(page, zipcode):
+    print()
 async def set_zip_wholefoods(page, zipcode):
     global cookies_for_api
     await page.click("text='Find a Store' >> visible=true")
@@ -606,7 +595,7 @@ async def compare_prices(scraped_items: list[dict]):
     # )
 
     # 6. write result
-    out_file = FINAL_RESULTS_DIR / "wholefoods_pc.xlsx"
+    out_file = "price_compare.xlsx"
     preformating_xl_helper(df_out, out_file)
     print(f"📝 comparison report ➜ {out_file}")
     return df_comp
@@ -688,14 +677,13 @@ def preformating_xl_helper(df_out, out_file):
 
     # 1️⃣ Find the MatchName and Score column indexes
     col_names = {cell.value: idx+1 for idx, cell in enumerate(ws[1])}
-    match_name_col_idx = col_names.get("MatchName")  # Changed from "Brand" to "MatchName"
+    match_name_col_idx = col_names.get("Brand")
     score_col_idx = col_names.get("Score")
 
-    if match_name_col_idx is None or score_col_idx is None:
-        # Debug: print available columns to help diagnose issues
-        print("Available columns:", list(col_names.keys()))
-        raise ValueError("MatchName or Score column not found")
     
+    
+    if match_name_col_idx is None or score_col_idx is None:
+        raise ValueError("MatchName or Score column not found")
     match_col_letter = get_column_letter(match_name_col_idx)
     score_col_letter = get_column_letter(score_col_idx)
     
@@ -727,6 +715,7 @@ def preformating_xl_helper(df_out, out_file):
 
 ZIP_HANDLERS = {
     "wholefoodsmarket.com": set_zip_wholefoods,
+    "harristeeter.com": set_zip_harTeet
 }
 
 # Potential size units to look for in the product name
@@ -741,7 +730,7 @@ _NUM_UNIT_RE = re.compile(
     r"(\d+(?:\.\d+)?)\s*-?\s*(" + "|".join(SIZE_UNITS) + r")\b", re.I)
 
 if __name__ == "__main__":
-    url = "https://www.wholefoodsmarket.com"
+    url = 'https://www.wholefoodsmarket.com'
     asyncio.run(main(url))
     items = asyncio.run(fetch_wholefoods_api(cookies_for_api))
     

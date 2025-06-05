@@ -1,0 +1,210 @@
+2025-06-04 14:36:10,939 [INFO] 📋 10 categories remaining to scrape
+2025-06-04 14:36:10,939 [INFO] 🚀 Started new catalog scraping session
+2025-06-04 14:48:28,330 [INFO] 📋 21 categories remaining to scrape
+2025-06-04 14:48:28,331 [INFO] 🚀 Started new catalog scraping session
+2025-06-04 14:48:38,079 [INFO] 🌐 Setting up Giant Foods location...
+2025-06-04 14:48:56,869 [INFO] ✅ Giant Foods location selected, cookies established
+2025-06-04 14:48:56,870 [INFO] 
+🍎 Starting category: Produce (ID: 2098)
+2025-06-04 14:48:56,870 [INFO] 🔍 Fetching Produce products, start=0
+2025-06-04 14:48:57,225 [ERROR] ❌ Error parsing response: Expecting value: line 1 column 1 (char 0)
+2025-06-04 14:49:03,090 [ERROR] ❌ No API responses captured for Produce
+2025-06-04 14:49:03,090 [INFO] 🔍 Fetching Produce products, start=0
+2025-06-04 14:49:03,189 [ERROR] ❌ Error parsing response: Expecting value: line 1 column 1 (char 0)
+2025-06-04 14:49:06,505 [ERROR] ❌ Error parsing response: Expecting value: line 1 column 1 (char 0)
+2025-06-04 14:49:07,204 [ERROR] ❌ No API responses captured for Produce
+2025-06-04 14:49:07,204 [INFO] 🔍 Fetching Produce products, start=0
+2025-06-04 14:49:07,347 [ERROR] ❌ Error parsing response: Expecting value: line 1 column 1 (char 0)
+2025-06-04 14:49:10,856 [ERROR] ❌ No API responses captured for Produce
+2025-06-04 15:04:50,793 [ERROR] Error executing async page_action: Timeout waiting for Giant API request
+2025-06-04 15:04:50,893 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:06:18,257 [ERROR] Error executing async page_action: Timeout waiting for Giant API request
+2025-06-04 15:06:18,358 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:08:34,576 [ERROR] Error executing async page_action: Timeout waiting for Giant API request
+2025-06-04 15:08:34,998 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:13:24,514 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-04 15:13:24,588 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:14:55,114 [ERROR] Error executing async page_action: Timeout waiting for Giant API request
+2025-06-04 15:14:55,209 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:16:01,386 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("#search-location")
+    - locator resolved to <button type="submit" id="search-location" class="button button--prime btn">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-04 15:16:01,469 [INFO] Fetched (304) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:18:28,392 [ERROR] Error executing async page_action: Timeout waiting for Giant API request
+2025-06-04 15:18:28,668 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:19:06,764 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("#search-location")
+    - locator resolved to <button type="submit" id="search-location" class="button button--prime btn">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-04 15:19:06,895 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:21:02,292 [ERROR] Error executing async page_action: Timeout waiting for Giant API request
+2025-06-04 15:21:02,597 [INFO] Fetched (304) <GET https://giantfood.com/home> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:29:28,640 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:29:32,865 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&sort=itemsPurchased+desc%2C+name+asc&filter=&start=0&flags=true&substitute=false&nutrition=false&extendedInfo=false&facetExcludeFilter=true&facet=specials%2Ccategories%2Cbrands%2Cnutrition%2Csustainability%2CnewArrivals%2CprivateLabel "HTTP/1.1 403 Forbidden"
+2025-06-04 15:30:59,654 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:31:00,760 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&sort=itemsPurchased+desc%2C+name+asc&filter=&start=0&flags=true&substitute=false&nutrition=false&extendedInfo=false&facetExcludeFilter=true&facet=specials%2Ccategories%2Cbrands%2Cnutrition%2Csustainability%2CnewArrivals%2CprivateLabel "HTTP/1.1 403 Forbidden"
+2025-06-04 15:32:28,232 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 15:32:29,158 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&sort=itemsPurchased+desc%2C+name+asc&filter=&start=0&flags=true&substitute=false&nutrition=false&extendedInfo=false&facetExcludeFilter=true&facet=specials%2Ccategories%2Cbrands%2Cnutrition%2Csustainability%2CnewArrivals%2CprivateLabel "HTTP/1.1 403 Forbidden"
+2025-06-04 16:22:59,237 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:39:30,939 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:39:32,017 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:43:37,124 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:43:38,600 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:45:10,768 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:45:11,766 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:47:13,583 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:47:14,736 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:48:28,191 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-04 16:48:28,303 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:48:55,889 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:48:56,783 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:50:26,955 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:50:27,961 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:52:19,888 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:52:21,085 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?sort=itemsPurchased+desc%2C+name+asc&filter=&flags=true&substitute=false&nutrition=false&extendedInfo=false&facetExcludeFilter=true&dtmCookieId=AQAE1gPCF1lK6gFNpTrMAQBAqQABAQCWPbYFmgEBAJY9tgWa&adSessionId=667cf759-659c-48cf-a005-320020d41e4e&platform=desktop&includeSponsoredProducts=true&facet=specials%2Ccategories%2Cbrands%2Cnutrition%2Csustainability%2CnewArrivals%2CprivateLabel&catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:53:52,373 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:53:53,171 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?sort=itemsPurchased+desc%2C+name+asc&filter=&flags=true&substitute=false&nutrition=false&extendedInfo=false&facetExcludeFilter=true&dtmCookieId=&adSessionId=84374af0-01eb-4717-bf0f-f067790e26de&platform=desktop&includeSponsoredProducts=true&facet=specials%2Ccategories%2Cbrands%2Cnutrition%2Csustainability%2CnewArrivals%2CprivateLabel&catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:55:25,907 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:55:27,014 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?sort=bestMatch+asc&filter=categories%3A904%2C908%2C963%2C891%2C968%2C909&flags=true&substitute=true&nutrition=false&extendedInfo=false&facetExcludeFilter=true&dtmCookieId=&adSessionId=&platform=desktop&includeSponsoredProducts=true&facet=nutrition&catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 16:56:28,007 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-04 16:56:28,068 [INFO] Fetched (304) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:56:45,214 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-04 16:56:57,593 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-04 16:58:04,961 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-04 16:58:05,053 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:58:25,409 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-04 16:58:25,464 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:58:58,358 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 16:59:00,131 [INFO] HTTP Request: GET https://giantfood.com/api/v6.0/products/330070638/50000732?sort=itemsPurchased+desc%2C+name+asc&filter=&flags=true&substitute=false&nutrition=false&extendedInfo=false&facetExcludeFilter=true&dtmCookieId=&adSessionId=23231a16-6bcc-4b3e-903a-c8eb45771a53&platform=desktop&includeSponsoredProducts=true&facet=specials%2Ccategories%2Cbrands%2Cnutrition%2Csustainability%2CnewArrivals%2CprivateLabel&catTreeId=2098&start=0 "HTTP/1.1 403 Forbidden"
+2025-06-04 17:25:15,829 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-04 17:25:43,889 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-04 17:25:43,958 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-04 17:26:13,048 [ERROR] Error executing async page_action: Page.goto: NS_BINDING_ABORTED; maybe frame was detached?
+Call log:
+  - navigating to "https://giantfood.com/", waiting until "load"
+
+2025-06-04 17:26:13,084 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-05 09:50:45,679 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-05 09:50:45,757 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-05 13:08:30,643 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098/select/organic> (referer: https://www.google.com/search?q=giantfood)
+2025-06-05 14:43:43,107 [ERROR] Error executing async page_action: Object of type set is not JSON serializable
+2025-06-05 14:43:43,211 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-05 15:02:38,622 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-05 15:03:49,750 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("#search-location")
+    - locator resolved to <button type="submit" id="search-location" class="button button--prime btn">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-05 15:03:49,876 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-05 15:05:54,692 [ERROR] Error executing async page_action: Timeout waiting for Giant API request
+2025-06-05 15:06:21,998 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-05 16:56:22,506 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-05 17:13:44,948 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-05 17:16:16,608 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-05 17:22:36,758 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)

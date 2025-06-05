@@ -1,0 +1,858 @@
+import asyncio
+import json
+import os
+from urllib.parse import urlencode, urlparse, parse_qs
+import pandas as pd
+from scrapling.fetchers import StealthyFetcher
+import pathlib
+import random
+from datetime import datetime, timedelta
+import logging
+import sys
+from typing import Dict, List, Optional, Tuple
+
+BASE_FILE = pathlib.Path(__file__).resolve().parent
+
+# File configurations
+# SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+SOURCE_DATA = '/Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/scraplingAdaptationHana/source_prices.xlsx'
+OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_foods_comparison.xlsx"
+CHECKPOINT_FILE = BASE_FILE / "giant_scraping/catalog_checkpoint_giant.json"
+DUMP_FILE = BASE_FILE / 'giant_scraping/scraped_products_dump.csv'
+LOG_FILE = BASE_FILE / ".giant_log/giant_catalog_scrape.log"
+
+# Ensure directories exist
+for file_path in [CHECKPOINT_FILE, DUMP_FILE, LOG_FILE, OUTPUT_DATA]:
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+
+# Scraping configurations
+FACILITY_ID = "50000732"
+ZIP_CODE = "20010"
+STORE_ADDRESS = "1345 Park Road N.W."
+
+# Main categories to scrape
+MAIN_CATEGORIES = {
+    "2098": "Produce",
+    "1563": "Meat",
+    "1633": "Seafood", 
+    "921": "Deli & Prepared Food",
+    "805": "Dairy & Eggs",
+    "85": "Bread & Bakery",
+    "365": "Beverages",
+    "1066": "Rice, Pasta & Beans",
+    "166": "Baking & Cooking",
+    "569": "Condiments & Sauces",
+    "2708": "Soups & Canned Goods",
+    "530": "Breakfast",
+    "2543": "Snacks",
+    "7099": "Candy & Chocolate",
+    "2": "Adult Beverages",
+    "1448": "Laundry, Paper & Cleaning",
+    "1675": "Home & Office",
+    "6477": "Floral & Garden",
+    "1201": "Health & Beauty",
+    "1370": "Baby",
+    "2057": "Pets"
+}
+
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler(LOG_FILE, encoding="utf-8"),
+        logging.StreamHandler(sys.stdout),
+    ],
+)
+log = logging.getLogger(__name__)
+
+def normalize_upc_input(upc):
+    """Normalize UPC format for better matching"""
+    if pd.isna(upc):
+        return None
+    upc_str = str(upc).strip()
+    upc_str = upc_str[:-1]  # Remove check digit
+    return upc_str.lstrip('0') if upc_str != '0' else '0'
+
+def normalize_upc_scraped(upc):
+    """Normalize UPC format for better matching"""
+    if pd.isna(upc):
+        return None
+    upc_str = str(upc).strip()
+    return upc_str.lstrip('0') if upc_str != '0' else '0'
+
+def load_giant_progress():
+    """Load previous scraping progress"""
+    if os.path.exists(CHECKPOINT_FILE):
+        with open(CHECKPOINT_FILE, 'r') as f:
+            data = json.load(f)
+    else:
+        data = {
+        'completed_categories': [], 
+        'failed_categories': [],
+        'seen_upcs': [],
+        'overall_total': 0,
+        'category_totals': {cat_id: 0 for cat_id in MAIN_CATEGORIES.keys()},
+        'scroll_limit_reached': {limbool : False for limbool in MAIN_CATEGORIES.keys()},
+        'all_in_category' : 0,
+        'seed_payload': None,
+    }
+    data["seen_upcs"] = set(data.get("seen_upcs", []))  # Ensure seen_upcs is a set
+    return data
+
+def save_giant_progress(progress):
+    """Save current scraping progress"""
+    serialisable = progress.copy()
+    serialisable['seen_upcs'] = list(serialisable['seen_upcs'])  # Convert set to list for JSON serialization
+    with open(CHECKPOINT_FILE, 'w') as f:
+        json.dump(serialisable, f, indent=2)
+
+def append_to_giant_dump(items):
+    """Append items to dump file"""
+    if items:
+        df = pd.DataFrame(items)
+        if os.path.exists(DUMP_FILE):
+            df.to_csv(DUMP_FILE, mode='a', header=False, index=False)
+        else:
+            df.to_csv(DUMP_FILE, index=False)
+
+async def scrape_giant_category_with_browser(page, category_id, category_name, base_params, store_id, max_items=10000):
+    """Scrape using browser context requests"""
+    ## JUMPER
+    progress = load_giant_progress()
+    seen_upcs = progress.get('seen_upcs')
+    overall_total = progress.get('overall_total')  # Use list to mutate in inner function
+    category_total = progress.get('category_totals').get(category_id, 0)
+    print(f"Debugging: seen_upcs={seen_upcs}, overall_total={overall_total}, category_total={category_total}")
+    api_total = progress.get('all_in_category', None)
+    items = []
+    pct = (category_total / api_total) * 100 if api_total else 0
+    start = 0
+    limbool = progress.get('scroll_limit_reached', {}).get(category_id, False)
+    seed_payload = progress.get('seed_payload', None)
+    
+
+    print(f"🍞 Scraping {category_name} (ID: {category_id})...")
+
+    while len(items) < max_items:
+        # Build parameters using captured session data
+        params = base_params.copy()
+        
+        if not limbool:
+            params.update({
+                'catTreeId': category_id,
+                'start': str(start),
+                'rows': '40',
+            })
+
+            url = f'https://giantfood.com/api/v6.0/products/{store_id}/{FACILITY_ID}?' + urlencode(params)
+            
+            print(f"📄 Fetching page starting at item {start}...")
+            
+            try:
+                # Use browser context request instead of httpx
+                # Use JavaScript fetch but handle the promise properly
+                escaped_url = url.replace("'", "\\'")
+        
+                fetch_script = f"""
+                (async () => {{
+                try {{
+                    const res = await fetch('{escaped_url}', {{
+                    method: 'GET',
+                    credentials: 'include',
+                    headers: {{
+                        'accept'              : 'application/json, text/plain, */*',
+                        'user-agent'          : navigator.userAgent,
+                        'referer'             : location.href
+                    }}
+                    }});
+
+                    if (!res.ok) {{
+                    return {{error: true, status: res.status, message: 'HTTP ' + res.status}};
+                    }}
+
+                    // Giant sometimes returns an HTML throttle page — guard against it
+                    const ct = res.headers.get('content-type') || '';
+                    if (!ct.includes('application/json')) {{
+                    const body = await res.text();
+                    return {{error: true,
+                            status: res.status,
+                            message: 'Non-JSON response',
+                            body   : body.slice(0,120)}};
+                    }}
+
+                    const data = await res.json();
+                    return {{error:false, status:res.status, data}};
+                }} catch (err) {{
+                    return {{error:true, status:0, message:err.message}};
+                }}
+                }})();
+                """
+                
+                # Execute the fetch and get result
+                result = await page.evaluate(fetch_script)
+                
+                print(f"📊 Response received from browser fetch")
+                        
+                
+                status = result['status']
+                if status in [429, 403, 503, 520, 521, 522, 523, 524]:
+                    raise Exception(f"Throttled with status {status}")
+                
+                elif result.get('error'):
+                    print(f"⏳ {result.get('message')} (status {result.get('status')}) – retrying…")
+                    print(f" Payload: {result.get('data', {})}")
+                    limbool = True
+                    progress['scroll_limit_reached'][category_id] = limbool
+                    save_giant_progress(progress)
+                    continue
+
+                    # Rest of your processing code...
+
+
+
+                print(f"📊 Response status: {status}")
+                if status == 200:
+                    payload = result.get('data', {})
+                    #print(f"📊 Response payload: {payload}")
+                    response = payload.get('response', {})
+                    if seed_payload is None:
+                        seed_payload = response
+                    products = response.get('products', {})
+                    # print(f"products: {products}")
+                    pagination = response.get('pagination', {})
+                    
+                    if api_total is None:
+                        api_total = pagination.get('total', 0)
+                        progress['all_in_category'] = api_total
+                        save_giant_progress(progress)
+                        #print(f"📊 Total items in API: {api_total}")
+
+                    if not products:
+                        print("📭 No more items found")
+                        break
+                    
+                    # Process products
+                    page_items = 0
+                    for product in products:
+                        upc = product.get('upc')
+                        if upc and upc not in seen_upcs:
+                            seen_upcs.add(upc)
+                            
+                            item_data = {
+                                'upc': upc,
+                                'name': product.get('name'),
+                                'price': product.get('price'),
+                                'size': product.get('size'),
+                                'brand': product.get('brand'),
+                                'description': product.get('description'),
+                                'category_name': category_name,
+                                'category_id': category_id,
+                                'scraped_timestamp': datetime.now().isoformat()
+                            }
+                            
+                            items.append(item_data)
+                            append_to_giant_dump([item_data])  # Append to dump file
+                            page_items += 1
+                            category_total += 1
+                            overall_total += 1
+                            
+
+                            pct = (category_total / api_total) * 100 if api_total else 0
+                            if len(items) >= max_items:
+                                break
+                        else:
+                            print(f"⏭️ Duplicate UPC found: {upc}, skipping")
+
+                    print(f"✅ Added {page_items} new items, " f"{category_total}/{api_total} scraped in this category" f"({pct:0.2f}%), {overall_total} items scraped so far")
+                    progress['overall_total'] = overall_total
+                    progress['category_totals'][category_id] = category_total
+                    progress['seen_upcs'] = seen_upcs
+                    progress['seed_payload'] = seed_payload
+                    progress['scroll_limit_reached'][category_id] = limbool
+                    save_giant_progress(progress)
+                    # Check pagination
+                    total = pagination.get('total', 0)
+                    start += page_items  # page_size
+                    
+                    if start >= total:
+                        print("📄 Reached end of category")
+                        break
+                    
+                    # Delay between requests
+                    await asyncio.sleep(random.uniform(2, 5))
+                else:
+                    print(f"❌ HTTP error {status}")
+                    break
+                    
+            except Exception as e:
+                print(f"❌ Request failed: {e}")
+                raise
+        else:
+            subcats = []
+
+            for cat in seed_payload.get("facets", {}).get("categories", []):
+                # skip trivial buckets (e.g. <5 items) if you want
+                if cat["count"] > 0:
+                    subcats.append({"id": cat["id"], "name": cat["name"],
+                                    "remaining": cat["count"]})
+            print(f"📂 Found {len(subcats)} subcategories: {subcats}")
+            for sc in subcats:
+                start = 0
+                sc_count = 0
+                print(f"🔍 Scraping subcategory: {sc['name']}: {sc['id']}, {sc['count']} remaining")
+                while True:
+                    params.update({
+                        "catTreeId": sc['id'],
+                        "start" : str(start),
+                        "rows"  : "40",
+                        "facet" : "true" 
+                    })
+                    url = f'https://giantfood.com/api/v6.0/products/{store_id}/{FACILITY_ID}?' + urlencode(params)
+                    try:
+                        # Use browser context request instead of httpx
+                        # Use JavaScript fetch but handle the promise properly
+                        escaped_url = url.replace("'", "\\'")
+                
+                        fetch_script = f"""
+                        (async () => {{
+                        try {{
+                            const res = await fetch('{escaped_url}', {{
+                            method: 'GET',
+                            credentials: 'include',
+                            headers: {{
+                                'accept'              : 'application/json, text/plain, */*',
+                                'user-agent'          : navigator.userAgent,
+                                'referer'             : location.href
+                            }}
+                            }});
+
+                            if (!res.ok) {{
+                            return {{error: true, status: res.status, message: 'HTTP ' + res.status}};
+                            }}
+
+                            // Giant sometimes returns an HTML throttle page — guard against it
+                            const ct = res.headers.get('content-type') || '';
+                            if (!ct.includes('application/json')) {{
+                            const body = await res.text();
+                            return {{error: true,
+                                    status: res.status,
+                                    message: 'Non-JSON response',
+                                    body   : body.slice(0,120)}};
+                            }}
+
+                            const data = await res.json();
+                            return {{error:false, status:res.status, data}};
+                        }} catch (err) {{
+                            return {{error:true, status:0, message:err.message}};
+                        }}
+                        }})();
+                        """
+
+                        result = await page.evaluate(fetch_script)
+                        status = result['status']
+                        if status in [429, 403, 503, 520, 521, 522, 523, 524]:
+                            raise Exception(f"Throttled with status {status}")
+                        
+                        elif result.get('error'):
+                            print(f"⏳ {result.get('message')} (status {result.get('status')}) – retrying…")
+                            print(f" Payload: {result.get('data', {})}")
+                            print(f"Category {sc['name']} failed, lowkey kill yourself")
+                            break
+                        if status == 200:
+                            payload = result.get('data', {})
+                            #print(f"📊 Response payload: {payload}")
+                            response = payload.get('response', {})
+                            if seed_payload is None:
+                                seed_payload = response
+                            products = response.get('products', {})
+                            # print(f"products: {products}")
+                            #pagination = response.get('pagination', {})
+                            
+
+                            if not products:
+                                print("📭 No more items found")
+                                break
+                            
+                            # Process products
+                            page_items = 0
+                            for product in products:
+                                upc = product.get('upc')
+                                if upc and upc not in seen_upcs:
+                                    seen_upcs.add(upc)
+                                    
+                                    item_data = {
+                                        'upc': upc,
+                                        'name': product.get('name'),
+                                        'price': product.get('price'),
+                                        'size': product.get('size'),
+                                        'brand': product.get('brand'),
+                                        'description': product.get('description'),
+                                        'category_name': subcats['name'],
+                                        'category_id': subcats['id'],
+                                        'scraped_timestamp': datetime.now().isoformat()
+                                    }
+                                    
+                                    items.append(item_data)
+                                    append_to_giant_dump([item_data])  # Append to dump file
+                                    page_items += 1
+                                    category_total += 1
+                                    overall_total += 1
+                                    sc_count += 1
+                                    pct_subcat = (sc_count / sc['count']) * 100 if sc['count'] else 0
+                                    pct_full = (category_total / api_total) * 100 if api_total else 0
+                                    if len(items) >= max_items:
+                                        break
+                                else:
+                                    print(f"⏭️ Duplicate UPC found: {upc}, skipping")
+
+                            print(f"✅ Added {page_items} new items to subcategory {sc['name']}, " f"{sc_count / sc['count']}% scraped in this subcategory " f"{pct_subcat:0.2f}%, {overall_total} items scraped so far")
+                            print(f"✅ Added {page_items} new items, " f"{category_total}/{api_total} scraped in this category" f"({pct_full:0.2f}%), {overall_total} items scraped so far")
+                            progress['overall_total'] = overall_total
+                            progress['category_totals'][category_id] = category_total
+                            progress['seen_upcs'] = seen_upcs
+                            save_giant_progress(progress)
+                            # Check pagination
+                            total = sc['count']
+                            start += page_items  # page_size
+                            
+                            if start >= total:
+                                print("📄 Reached end of category")
+                                await asyncio.sleep(random.uniform(5, 10))
+                                break
+                            
+                            # Delay between requests
+                            await asyncio.sleep(random.uniform(2, 5))
+                        else:
+                            print(f"❌ HTTP error {status}")
+                            break
+                    except Exception as e:
+                        print(f"❌ Request failed: {e}")
+                        raise
+    return items
+
+async def scrape_with_browser_context():
+    """Scrape using browser context throughout"""
+    
+    async def page_action(page):
+        # First capture config
+        captured_request = None
+        
+        def handle_request(request):
+            nonlocal captured_request
+            if ("/api/v6.0/products/" in request.url and 
+                f"/{FACILITY_ID}" in request.url and
+                "catTreeId=" in request.url):
+                captured_request = request
+                print(f"✅ Captured Giant API request!")
+        
+        page.on("request", handle_request)
+        
+        # Set up location
+        print("🌐 Setting up Giant Foods location...")
+        await page.goto("https://giantfood.com", timeout=30000)
+        await page.wait_for_selector('button.robot-shopping-mode-location', timeout=30000)
+        await page.click('button.robot-shopping-mode-location', timeout=5000)
+        await page.fill("input[name='zipCode']", ZIP_CODE)  
+        await page.click('#search-location', timeout=5000)
+        await page.wait_for_load_state("networkidle", timeout=17000)
+        await page.wait_for_timeout(1000)
+        address = page.locator("li", has_text=STORE_ADDRESS)
+        await address.locator("button").click(timeout=7000)
+        await page.wait_for_timeout(5000)
+        
+        # Navigate to category to trigger API call
+        await page.goto("https://giantfood.com/browse-aisles/categories/1/categories/2098-produce", timeout=30000)
+        await page.wait_for_timeout(3000)
+        
+        # Try to trigger API call
+        try:
+            load_more_button = page.locator('button:has-text("Load More")')
+            if await load_more_button.count() > 0:
+                await load_more_button.click()
+                await page.wait_for_timeout(2000)
+        except:
+            pass
+        
+        # Wait for captured request
+        max_wait = 90
+        waited = 0
+        while not captured_request and waited < max_wait:
+            await asyncio.sleep(0.5)
+            waited += 0.5
+        
+        if not captured_request:
+            raise Exception("Timeout waiting for Giant API request")
+        
+        print("🎉 Processing captured Giant request...")
+        
+        # Extract parameters from captured request
+        parsed_url = urlparse(captured_request.url)
+        captured_params = parse_qs(parsed_url.query)
+
+        extracted_params = {}
+        for key, value_list in captured_params.items():
+            extracted_params[key] = value_list[0] if value_list else ''
+
+        base_params = {
+            'sort': extracted_params.get('sort', 'itemsPurchased desc, name asc'),
+            'filter': extracted_params.get('filter', ''),
+            'flags': extracted_params.get('flags', 'true'),
+            'substitute': extracted_params.get('substitute', 'false'),
+            'nutrition': extracted_params.get('nutrition', 'false'),
+            'extendedInfo': extracted_params.get('extendedInfo', 'false'),
+            'facetExcludeFilter': extracted_params.get('facetExcludeFilter', 'true'),
+            'dtmCookieId': extracted_params.get('dtmCookieId', ''),
+            'adSessionId': extracted_params.get('adSessionId', ''),
+            'platform': extracted_params.get('platform', 'desktop'),
+            'includeSponsoredProducts': extracted_params.get('includeSponsoredProducts', 'true'),
+            'facet': extracted_params.get('facet', 'specials,categories,brands,nutrition,sustainability,newArrivals,privateLabel')
+        }
+        
+        # Extract store ID
+        import re
+        url_pattern = r'/api/v6\.0/products/(\d+)/' + FACILITY_ID
+        match = re.search(url_pattern, captured_request.url)
+        store_id = match.group(1) if match else "330070638"  # fallback
+        
+        print(f"🏪 Using store ID: {store_id}")
+        print(f"🔗 Session ID: {base_params['adSessionId']}")
+        
+        # Now scrape all categories using the same browser context
+
+        ## NOTE: Come back to this to see what parameters I should pass in for scrape_w_browser
+        ## JUMPER
+        progress = load_giant_progress()
+
+        for category_id, category_name in MAIN_CATEGORIES.items():
+            category_key = f"{category_id}::{category_name}"
+            
+            if category_key in progress['completed_categories']:
+                print(f"⏭️ Skipping completed: {category_name}")
+                continue
+            
+            print(f"\n🗂️ Starting: {category_name}")
+            
+            try:
+                max_items = 10000  # or set to your desired value
+                items = await scrape_giant_category_with_browser(
+                    page, category_id, category_name, base_params, store_id, max_items
+                )
+    
+                if items:
+                    ## TODO: Check performance stats of bulk write vs one line write, pretty sure one line is much heavier
+                    # append_to_giant_dump(items)
+                    print(f"✅ Completed {category_name}: {len(items)} items")
+                    progress['completed_categories'].append(category_key)
+                else:
+                    print(f"⚠️ No items found for {category_name}")
+                    progress['failed_categories'].append({
+                        'category': category_key,
+                        'reason': 'No items found',
+                        'timestamp': datetime.now().isoformat()
+                    })
+                
+                save_giant_progress(progress)
+                
+            except Exception as e:
+                if "403" in str(e) or "Throttled" in str(e):
+                    print(f"🚫 Got throttled on {category_name}! Will restart browser context.")
+                    ## NOTE: replaced False here and True there to get rid of the bool has no wait for timeout error. Will see if this rough patch works or i need a more 
+                    ## sophisticated fix. 
+                    return page  # Exit to restart browser context
+                else:
+                    print(f"⚠️ Failed to scrape {category_name}: {e}")
+                    progress['failed_categories'].append({
+                        'category': category_key,
+                        'reason': str(e),
+                        'timestamp': datetime.now().isoformat()
+                    })
+                    save_giant_progress(progress)
+            
+            # Delay between categories
+            await asyncio.sleep(random.uniform(10, 20))
+        
+        print("🎉 All categories completed!")
+        return page
+    
+    # Run with browser context
+    result = await StealthyFetcher.async_fetch(
+        url="https://giantfood.com",
+        headless=False,
+        network_idle=True,
+        block_images=False,
+        disable_resources=False,
+        page_action=page_action
+    )
+    
+    return result
+
+async def scrape_giant_with_throttle_recovery(max_retries=999):
+    """Main Giant scraping function using browser context requests"""
+    
+    # Load progress
+    progress = load_giant_progress()
+    print(f"📈 Loaded progress: {len(progress['completed_categories'])} completed, {len(progress['failed_categories'])} failed, overall total: {progress['overall_total']}")
+
+
+    total_categories = len(MAIN_CATEGORIES)
+    # overall_total = progress['overall_total']
+
+    completed_count = len(progress['completed_categories'])
+
+    print(f"🎯 Total categories: {total_categories}")
+    print(f"🎯 Starting from: {completed_count}/{total_categories}")
+
+    retry_count = 0
+    
+    while retry_count <= max_retries:
+        try:
+            print(f"\n🔄 Attempt {retry_count + 1}/{max_retries + 1} - Starting browser session...")
+            
+            # Get fresh config and maintain browser context for scraping
+            config_success = await scrape_with_browser_context()
+            if config_success:
+                print("🎉 Scraping completed successfully!")
+                return True
+            else:
+                print("⚠️ Scraping session ended, will retry...")
+                
+        except Exception as e:
+            print(f"❌ Unexpected error in attempt {retry_count + 1}: {e}")
+        
+        retry_count += 1
+        
+        if retry_count <= max_retries:
+            wait_time = 60
+            print(f"⏳ Waiting {wait_time} seconds before recreating context...")
+            await asyncio.sleep(wait_time)
+        else:
+            print(f"\n🛑 Maximum retries ({max_retries}) reached. Stopping.")
+            break
+    
+    # Final status
+    progress = load_giant_progress()
+    print(f"\n📊 Final Status:")
+    print(f"✅ Completed: {len(progress['completed_categories'])}/{total_categories} categories")
+    print(f"❌ Failed: {len(progress['failed_categories'])} categories")
+    
+    if os.path.exists(DUMP_FILE):
+        try:
+            df = pd.read_csv(DUMP_FILE)
+            print(f"📁 Total items scraped: {len(df)}")
+            print(f"📁 Data saved to: {DUMP_FILE}")
+        except:
+            print(f"📁 Data saved to: {DUMP_FILE}")
+        print(f"🔄 Run script again to retry failed categories")
+    
+    return False
+
+def match_giant_upcs_and_create_comparison():
+    """Match UPCs between input dataset and Giant scraped data, create comparison file"""
+    
+    if not os.path.exists(SOURCE_DATA):
+        print(f"❌ Input file not found: {SOURCE_DATA}")
+        return False
+    
+    try:
+        # Load input dataset
+        print(f"📖 Loading input dataset: {SOURCE_DATA}")
+        input_df = pd.read_excel(SOURCE_DATA)
+        print(f"📊 Input dataset: {len(input_df)} rows")
+        
+        # Check if UPC column exists
+        if 'UPC' not in input_df.columns:
+            print(f"❌ 'UPC' column not found in input dataset")
+            print(f"Available columns: {list(input_df.columns)}")
+            return False
+        
+        # Load scraped data
+        if not os.path.exists(DUMP_FILE):
+            print(f"❌ Scraped data file not found: {DUMP_FILE}")
+            return False
+        
+        print(f"📖 Loading Giant scraped dataset: {DUMP_FILE}")
+        try:
+            scraped_df = pd.read_csv(DUMP_FILE)
+        except pd.errors.ParserError as e:
+            print(f"⚠️ CSV parsing error: {e}")
+            print("🔧 Trying to fix CSV parsing issues...")
+            
+            try:
+                scraped_df = pd.read_csv(DUMP_FILE, 
+                                    on_bad_lines='skip',
+                                    quoting=1,
+                                    escapechar='\\')
+            except Exception as final_error:
+                print(f"❌ Could not load CSV file: {final_error}")
+                return False
+
+        print(f"📊 Giant scraped dataset: {len(scraped_df)} rows")
+        
+        # Normalize UPCs
+        input_df['normalized_upc'] = input_df['UPC'].apply(normalize_upc_input)
+        scraped_df['normalized_upc'] = scraped_df['upc'].apply(normalize_upc_scraped)
+
+        input_upcs = set(input_df['normalized_upc'].dropna())
+        scraped_upcs = set(scraped_df['normalized_upc'].dropna())
+        
+        print(f"🔍 Input UPCs: {len(input_upcs)}")
+        print(f"🔍 Giant UPCs: {len(scraped_upcs)}")
+        
+        # Find matches
+        matched_upcs = input_upcs.intersection(scraped_upcs)
+        print(f"✅ Matched UPCs: {len(matched_upcs)}")
+        
+        if not matched_upcs:
+            print("❌ No UPC matches found between datasets")
+            return False
+        
+        # Create comparison dataset
+        comparison_data = []
+        
+        for upc in matched_upcs:
+            # Get original data
+            original_rows = input_df[input_df['normalized_upc'].astype(str) == upc]
+            
+            # Get scraped data
+            scraped_rows = scraped_df[scraped_df['normalized_upc'].astype(str) == upc]
+            
+            for _, original_row in original_rows.iterrows():
+                for _, scraped_row in scraped_rows.iterrows():
+                    # Combine data
+                    combined_row = {
+                        # Original data (keep all columns)
+                        **original_row.to_dict(),
+                        # Add Giant data with prefixes
+                        'giant_upc': scraped_row.get('upc'),
+                        'giant_price': scraped_row.get('price'),
+                        'giant_category': scraped_row.get('category_name'),
+                        'giant_brand': scraped_row.get('brand'),
+                        'giant_name': scraped_row.get('name'),
+                        'giant_size': scraped_row.get('size'),
+                        'giant_description': scraped_row.get('description'),
+                        'giant_scraped_at': scraped_row.get('scraped_timestamp')
+                    }
+                    comparison_data.append(combined_row)
+        
+        # Create comparison DataFrame
+        comparison_df = pd.DataFrame(comparison_data)
+        
+        # Save to Excel with multiple sheets
+        with pd.ExcelWriter(OUTPUT_DATA, engine='openpyxl') as writer:
+            # All results
+            comparison_df.to_excel(writer, sheet_name='All_Comparisons', index=False)
+            
+            # Matches with prices for comparison
+            price_comparison = comparison_df.dropna(subset=['giant_price'])
+            if not price_comparison.empty:
+                price_comparison.to_excel(writer, sheet_name='Price_Comparisons', index=False)
+        
+        print(f"\n🎉 Giant UPC matching completed!")
+        print(f"📊 Matched products: {len(comparison_df)}")
+        print(f"📁 Comparison file saved to: {OUTPUT_DATA}")
+        
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error during Giant UPC matching: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+async def main():
+    """Main function with options for scraping or UPC matching"""
+    
+    print("🏪 Giant Foods Product Scraper & Price Comparator")
+    print("=" * 50)
+    print("1. Scrape products from Giant Foods")
+    print("2. Match UPCs and create price comparison")
+    print("3. Both (scrape then compare)")
+    
+    while True:
+        choice = input("\nEnter your choice (1, 2, or 3): ").strip()
+        
+        if choice == "1":
+            # Scraping only
+            await run_giant_scraping()
+            break
+        elif choice == "2":
+            # UPC matching only
+            success = match_giant_upcs_and_create_comparison()
+            if success:
+                print("✅ Giant UPC matching completed successfully!")
+            else:
+                print("❌ Giant UPC matching failed")
+            break
+        elif choice == "3":
+            # Both scraping and matching
+            await run_giant_scraping()
+            print("\n" + "="*50)
+            print("🔄 Now starting UPC matching...")
+            success = match_giant_upcs_and_create_comparison()
+            if success:
+                print("✅ Both scraping and UPC matching completed!")
+            else:
+                print("⚠️ Scraping completed but UPC matching failed")
+            break
+        else:
+            print("❌ Invalid choice. Please enter 1, 2, or 3.")
+
+async def run_giant_scraping():
+    """Run the Giant scraping functionality"""
+    # Start scraping with automatic throttle recovery
+    success = await scrape_giant_with_throttle_recovery(max_retries=999)
+    
+    if success:
+        print("🎉 Giant scraping completed successfully!")
+    else:
+        print("⚠️ Giant scraping completed with some limitations due to throttling")
+
+# Utility functions
+def show_giant_progress():
+    """Show current Giant scraping progress"""
+    progress = load_giant_progress()
+    completed = len(progress['completed_categories'])
+    total = len(MAIN_CATEGORIES)
+    
+    print(f"\n📊 Giant Catalog Scraping Progress:")
+    print(f"   Categories: {completed}/{total} ({completed/total*100:.1f}%)")
+    
+    if os.path.exists(DUMP_FILE):
+        try:
+            df = pd.read_csv(DUMP_FILE)
+            print(f"   Products scraped: {len(df)}")
+        except:
+            print("   Products scraped: (file exists but couldn't read)")
+    
+    if completed < total:
+        remaining = [name for cat_id, name in MAIN_CATEGORIES.items() 
+                    if f"{cat_id}::{name}" not in progress['completed_categories']]
+        print(f"   Remaining: {', '.join(remaining[:5])}{'...' if len(remaining) > 5 else ''}")
+
+def reset_giant_progress():
+    """Reset Giant progress and dump file"""
+    files_to_remove = [CHECKPOINT_FILE, DUMP_FILE]
+    
+    for file_path in files_to_remove:
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            print(f"🗑️ Removed {file_path}")
+        else:
+            print(f"ℹ️ {file_path} not found")
+    
+    print("🔄 Giant progress reset complete")
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "status":
+            show_giant_progress()
+        elif sys.argv[1] == "reset":
+            reset_giant_progress()
+        else:
+            print("Usage: python giant_catalog_scraper.py [status|reset]")
+            print("  status - Show current scraping progress")
+            print("  reset  - Reset progress and start over")
+            print("  (no args) - Run scraping/comparison session")
+    else:
+        asyncio.run(main())

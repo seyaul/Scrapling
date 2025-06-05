@@ -9,12 +9,18 @@ import os
 import random
 import time
 from datetime import datetime, timedelta
-from RateLimiter import RateLimiter
+
+
+
 
 # File configurations
 LOG_FILE = pathlib.Path("harris_teeter_scrape.log")
 
 BASE_FILE = pathlib.Path(__file__).resolve().parent
+
+PARENT_DIR = pathlib.Path(__file__).resolve().parent.parent
+sys.path.append(str(PARENT_DIR))
+from RateLimiter import RateLimiter
 
 CHECKPOINT_FILE = BASE_FILE / "ht_scraping/ht_scraping_checkpoint.json"
 # TODO: Remember this selection for next time?
