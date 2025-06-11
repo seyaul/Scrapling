@@ -78,12 +78,51 @@ class MainWindow(QMainWindow):
         """)
         self.close_button.setCursor(Qt.PointingHandCursor)
         self.close_button.clicked.connect(self.toggle_sidebar)
-
         sidebar_layout.addWidget(self.close_button, alignment=Qt.AlignRight)
-        # tool1_button = QPushButton("Tool 1")
-        # tool1_button.setCursor(Qt.PointingHandCursor)
-        # tool1_button.clicked.connect(lambda: self.switch_to_tab(0)) 
-        # sidebar_layout.addWidget(tool1_button)
+
+        # Initialize the Tab Widget and Tabs
+        self.tab_widget = QTabWidget()
+        self.tab_widget.tabBar().hide()
+
+        # Create Tabs
+        self.tab1 = QWidget()
+        layout1 = QVBoxLayout(self.tab1)
+        layout1.addWidget(QLabel("This is Tool 1 Page"))
+        self.tab_widget.addTab(self.tab1, "Tab 1")
+        
+        # Tool 1 Tab:
+        tool1_button = QPushButton("Tool 1")
+        tool1_button.setCursor(Qt.PointingHandCursor)
+        tool1_button.setFixedSize(250, 80)
+        tool1_button.setStyleSheet("""
+            background-color: #1d55b4;
+            font-size: 24px;
+            font-weight: 100;
+        """)
+        tool1_button.clicked.connect(lambda: self.switch_tab(0))
+        sidebar_layout.addWidget(tool1_button, alignment=Qt.AlignHCenter)
+
+        # Tool 2 Tab:
+        tool2_button = QPushButton("Tool 2")
+        tool2_button.setCursor(Qt.PointingHandCursor)
+        tool2_button.setFixedSize(250, 80)
+        tool2_button.setStyleSheet("""
+            background-color: #1d55b4;
+            font-size: 24px;
+            font-weight: 100;
+        """)
+        sidebar_layout.addWidget(tool2_button, alignment=Qt.AlignHCenter)
+
+        # Tool 3 Tab:
+        tool3_button = QPushButton("Tool 3")
+        tool3_button.setCursor(Qt.PointingHandCursor)
+        tool3_button.setFixedSize(250, 80)
+        tool3_button.setStyleSheet("""
+            background-color: #1d55b4;
+            font-size: 24px;
+            font-weight: 100;
+        """)
+        sidebar_layout.addWidget(tool3_button, alignment=Qt.AlignHCenter)
 
         # Sidebar animation setup
         self.sidebar_animation = QPropertyAnimation(self.sidebar, b"geometry")
@@ -113,7 +152,7 @@ class MainWindow(QMainWindow):
             self.sidebar.setVisible(False)
             self.dimming_layer.setVisible(False)
     
-    def switch_to_tab(self, index):
+    def switch_tab(self, index):
         self.tab_widget.setCurrentIndex(index)
         self.toggle_sidebar()
 
