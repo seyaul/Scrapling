@@ -1,4 +1,4 @@
-from scrapling.fetchers import PlayWrightFetcher
+from scrapling.fetchers import StealthyFetcher
 from urllib.parse import urlparse
 from rapidfuzz import fuzz, process
 from openpyxl import load_workbook
@@ -21,12 +21,14 @@ import unicodedata
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 LOG_FILE = BASE_DIR / "wholefoods_logging/wholefoods_scrape.log"
+SCRAPE_DUMP_FILE = BASE_DIR / "wholefoods_scrape_dump" / "catalogue_dump.json"
+SCRAPE_DUMP_FILE.parent.mkdir(parents=True, exist_ok=True)
 LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 FINAL_RESULTS_DIR = BASE_DIR / "wholefoods_price_compare"
 FINAL_RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-PRICE_SHEET = "scraplingAdaptationHana/source_prices.xlsx"
+# PRICE_SHEET = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
 
 THRESHOLD = 85
 DELTA_PCT = 0.25
@@ -169,7 +171,7 @@ async def main(urlstr):
             print(f"No handler for domain: {domain}")
         return page
     
-    response = await PlayWrightFetcher.async_fetch(
+    response = await StealthyFetcher.async_fetch(
         url=url,
         headless=False,
         network_idle=True,
@@ -294,6 +296,9 @@ async def fetch_wholefoods_api(cookies, category="all-products", limit=60) -> li
                 offset += limit
             
     log.info(f"Total unique skus: {len(products)}")
+    
+    save_catalogue_dump(products)
+
     return products
 
 
@@ -355,6 +360,43 @@ def total_skus_from_facets(facets:list) -> int | None:
                 if ref.get("slug") == "all-products":
                     return ref.get("count")
     return None
+
+def save_catalogue_dump(products: list[dict]):
+    """Save scraped catalogue to dump file with timestamp"""
+    dump_data = {
+        "scraped_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "total_products": len(products),
+        "products": products
+    }
+    
+    try:
+        with open(SCRAPE_DUMP_FILE, 'w', encoding='utf-8') as f:
+            json.dump(dump_data, f, indent=2, ensure_ascii=False)
+        log.info(f"📁 Catalogue dump saved to {SCRAPE_DUMP_FILE}")
+        print(f"📁 Catalogue dump saved: {len(products)} products → {SCRAPE_DUMP_FILE}")
+    except Exception as e:
+        log.error(f"Failed to save catalogue dump: {e}")
+
+def load_catalogue_dump() -> list[dict] | None:
+    """Load previously scraped catalogue from dump file"""
+    if not SCRAPE_DUMP_FILE.exists():
+        return None
+    
+    try:
+        with open(SCRAPE_DUMP_FILE, 'r', encoding='utf-8') as f:
+            dump_data = json.load(f)
+        
+        scraped_at = dump_data.get("scraped_at", "unknown")
+        products = dump_data.get("products", [])
+        
+        log.info(f"📂 Loaded catalogue dump: {len(products)} products (scraped: {scraped_at})")
+        print(f"📂 Loaded catalogue dump: {len(products)} products (scraped: {scraped_at})")
+        
+        return products
+    except Exception as e:
+        log.error(f"Failed to load catalogue dump: {e}")
+        return None
+
 
 def normalise(txt: str | None) -> str:
     """lower-case, strip, collapse whitespace."""
@@ -426,7 +468,7 @@ async def compare_prices(scraped_items: list[dict]):
     df_src.columns = [col.lower() for col in df_src.columns]
     brand_included = False          # expects cols: Name, Price
     if not ("brand" in df_src.columns):
-        df_src["norm"] = df_src["item description"].map(normalise)
+        df_src["norm"] = df_src["item desc."].map(normalise)
         df_src["size"] = df_src["size"].map(normalize_size_string)
 
         # 2. turn scraped list -> DataFrame
@@ -520,7 +562,7 @@ async def compare_prices(scraped_items: list[dict]):
             })
     elif ("brand" in df_src.columns):
         num_potential_matches = 0
-        for q_norm, brand, size_unit, src_price in zip(df_src["norm"], df_src["brand"], df_src["size_norm"], df_src["avg price"]):
+        for q_norm, brand, size_unit, src_price in zip(df_src["norm"], df_src["brand"], df_src["size_norm"], df_src["price"]):
             match_name = None
             comp_price = None
             potentiate_name = None
@@ -741,6 +783,27 @@ _NUM_UNIT_RE = re.compile(
     r"(\d+(?:\.\d+)?)\s*-?\s*(" + "|".join(SIZE_UNITS) + r")\b", re.I)
 
 if __name__ == "__main__":
+    import sys
+    
+    # Check for command line arguments
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "use-dump":
+            # Use existing catalogue dump instead of scraping
+            items = load_catalogue_dump()
+            if items is None:
+                print("❌ No catalogue dump found. Run without arguments to scrape first.")
+                sys.exit(1)
+            print("🔄 Using existing catalogue dump for price comparison...")
+            DF_COMP_FI = asyncio.run(compare_prices(items))
+            asyncio.run(main_fetch_and_save(DF_COMP_FI))
+            sys.exit(0)
+        else:
+            print("Usage:")
+            print("  python main.py                - Full scrape and compare")
+            print("  python main.py use-dump       - Use existing dump for comparison")
+            sys.exit(1)
+    
+    # Default behavior: full scrape
     url = "https://www.wholefoodsmarket.com"
     asyncio.run(main(url))
     items = asyncio.run(fetch_wholefoods_api(cookies_for_api))

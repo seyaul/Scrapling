@@ -1,2 +1,5 @@
 2025-06-03 12:39:36,413 [ERROR] Error executing async page_action: Cannot save file into a non-existent directory: '/Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/scraplingAdaptationHana/harristeeter/harris_teeter_price_compare'
 2025-06-03 12:39:36,481 [INFO] Fetched (200) <GET https://www.harristeeter.com/search?query=hazelnut&searchType=default_search> (referer: https://www.google.com/search?q=harristeeter)
+2025-06-10 15:59:34,132 [ERROR] Error executing async page_action: Cannot save file into a non-existent directory: '/Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/scraplingAdaptationHana/harristeeter/harris_teeter_price_compare'
+2025-06-10 15:59:34,338 [INFO] Fetched (200) <GET https://www.harristeeter.com/search?query=cheerios&searchType=default_search> (referer: https://www.google.com/search?q=harristeeter)
+2025-06-10 16:41:15,094 [INFO] Fetched (200) <GET https://www.harristeeter.com/search?query=cheerios&searchType=default_search> (referer: https://www.google.com/search?q=harristeeter)

@@ -114,4898 +114,1118 @@
     111,
     112,
     113,
-    114,
-    115,
-    116,
-    117,
-    118,
-    119,
-    120,
-    121,
-    122,
-    123,
-    124,
-    125,
-    126,
-    127,
-    128,
-    129,
-    130,
-    131,
-    132,
-    133,
-    134,
-    135,
-    136,
-    137,
-    138,
-    139,
-    140,
-    141,
-    142,
-    143,
-    144,
-    145,
-    146,
-    147,
-    148,
-    149,
-    150,
-    151,
-    152,
-    153,
-    154,
-    155,
-    156,
-    157,
-    158,
-    159,
-    160,
-    161,
-    162,
-    163,
-    164,
-    165,
-    166,
-    167,
-    168,
-    169,
-    170,
-    171,
-    172,
-    173,
-    174,
-    175,
-    176,
-    177,
-    178,
-    179,
-    180,
-    181,
-    182,
-    183,
-    184,
-    185,
-    186,
-    187,
-    188,
-    189,
-    190,
-    191,
-    192,
-    193,
-    194,
-    195,
-    196,
-    197,
-    198,
-    199,
-    200,
-    201,
-    202,
-    203,
-    204,
-    205,
-    206,
-    207,
-    208,
-    209,
-    210,
-    211,
-    212,
-    213,
-    214,
-    215,
-    216,
-    217,
-    218,
-    219,
-    220,
-    221,
-    222,
-    223,
-    224,
-    225,
-    226,
-    227,
-    228,
-    229,
-    230,
-    231,
-    232,
-    233,
-    234,
-    235,
-    236,
-    237,
-    238,
-    239,
-    240,
-    241,
-    242,
-    243,
-    244,
-    245,
-    246,
-    247,
-    248,
-    249,
-    250,
-    251,
-    252,
-    253,
-    254,
-    255,
-    256,
-    257,
-    258,
-    259,
-    260,
-    261,
-    262,
-    263,
-    264,
-    265,
-    266,
-    267,
-    268,
-    269,
-    270,
-    271,
-    272,
-    273,
-    274,
-    275,
-    276,
-    277,
-    278,
-    279,
-    280,
-    281,
-    282,
-    283,
-    284,
-    285,
-    286,
-    287,
-    288,
-    289,
-    290,
-    291,
-    292,
-    293,
-    294,
-    295,
-    296,
-    297,
-    298,
-    299,
-    300,
-    301,
-    302,
-    303,
-    304,
-    305,
-    306,
-    307,
-    308,
-    309,
-    310,
-    311,
-    312,
-    313,
-    314,
-    315,
-    316,
-    317,
-    318,
-    319,
-    320,
-    321,
-    322,
-    323,
-    324,
-    325,
-    326,
-    327,
-    328,
-    329,
-    330,
-    331,
-    332,
-    333,
-    334,
-    335,
-    336,
-    337,
-    338,
-    339,
-    340,
-    341,
-    342,
-    343,
-    344,
-    345,
-    346,
-    347,
-    348,
-    349,
-    350,
-    351,
-    352,
-    353,
-    354,
-    355,
-    356,
-    357,
-    358,
-    359,
-    360,
-    361,
-    362,
-    363,
-    364,
-    365,
-    366,
-    367,
-    368,
-    369,
-    370,
-    371,
-    372,
-    373,
-    374,
-    375,
-    376,
-    377,
-    378,
-    379,
-    380,
-    381,
-    382,
-    383,
-    384,
-    385,
-    386,
-    387,
-    388,
-    389,
-    390,
-    391,
-    392,
-    393,
-    394,
-    395,
-    396,
-    397,
-    398,
-    399,
-    400,
-    401,
-    402,
-    403,
-    404,
-    405,
-    406,
-    407,
-    408,
-    409,
-    410,
-    411,
-    412,
-    413,
-    414,
-    415,
-    416,
-    417,
-    418,
-    419,
-    420,
-    421,
-    422,
-    423,
-    424,
-    425,
-    426,
-    427,
-    428,
-    429,
-    430,
-    431,
-    432,
-    433,
-    434,
-    435,
-    436,
-    437,
-    438,
-    439,
-    440,
-    441,
-    442,
-    443,
-    444,
-    445,
-    446,
-    447,
-    448,
-    449,
-    450,
-    451,
-    452,
-    453,
-    454,
-    455,
-    456,
-    457,
-    458,
-    459,
-    460,
-    461,
-    462,
-    463,
-    464
+    114
   ],
-  "completed_count": 465,
-  "total_count": 465,
-  "last_session_start": "2025-06-03T12:35:05.481774",
+  "completed_count": 115,
+  "total_count": 115,
+  "last_session_start": "2025-06-10T16:39:19.853889",
   "session_count": 1,
   "results": [
     {
       "index": 0,
       "data": {
-        "upc": "0000980089500",
-        "price": "USD 5.29",
-        "size": "13 oz",
-        "description": "Nutella Hazelnut Spread with Cocoa 13 oz"
+        "upc": "0008500001819",
+        "price": "USD 11.99",
+        "size": "750 mL",
+        "description": "Alamos\u00ae Malbec Argentina Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012163"
+      "timestamp": "2025-06-10T16:40:06.616757"
     },
     {
       "index": 1,
       "data": {
-        "upc": "0001090000018",
-        "price": "USD 12.99",
-        "size": "200 Sq Ft",
-        "description": "Reynolds Wrap\u00ae Aluminum Foil"
+        "upc": "0008711311091",
+        "price": null,
+        "size": null,
+        "description": "Albert Bichot St Louis Bourgogne French Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012214"
+      "timestamp": "2025-06-10T16:40:06.616785"
     },
     {
       "index": 2,
       "data": {
-        "upc": "0001090000021",
-        "price": "USD 4.99",
-        "size": "50 Sq Ft",
-        "description": "Reynolds Wrap\u00ae Heavy Duty Aluminum Foil"
+        "upc": "0008500002154",
+        "price": "USD 9.99",
+        "size": "750 mL",
+        "description": "Apothic Rose California Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012232"
+      "timestamp": "2025-06-10T16:40:06.616798"
     },
     {
       "index": 3,
       "data": {
-        "upc": "0001090000330",
-        "price": "USD 2.99",
-        "size": "75 Sq Ft",
-        "description": "Reynolds Kitchens\u00ae Cut-Rite\u00ae Wax Paper"
+        "upc": "0008500001774",
+        "price": "USD 9.99",
+        "size": "750 mL",
+        "description": "Apothic Red Blend California Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012246"
+      "timestamp": "2025-06-10T16:40:06.616809"
     },
     {
       "index": 4,
       "data": {
-        "upc": "0001090074331",
-        "price": "USD 4.49",
-        "size": "45 Sq Ft",
-        "description": "Reynolds Kitchens\u00ae Stay Flat Parchment Paper Food Wrap"
+        "upc": "0008500002348",
+        "price": "USD 9.99",
+        "size": "750 mL",
+        "description": "Apothic Crush Red Blend California Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012258"
+      "timestamp": "2025-06-10T16:40:06.616819"
     },
     {
       "index": 5,
       "data": {
-        "upc": "0001111587132",
-        "price": "USD 1.79",
-        "size": "4 ct / 16 oz",
-        "description": "Imperial Vegetable Oil Spread Sticks 16 oz"
+        "upc": "0008417396808",
+        "price": "USD 18.99",
+        "size": "12 cans / 12 fl oz",
+        "description": "Happy Dad Seltzer Hard Seltzer Variety Pack"
       },
-      "timestamp": "2025-06-03T12:36:02.012271"
+      "timestamp": "2025-06-10T16:40:06.616830"
     },
     {
       "index": 6,
-      "data": {
-        "upc": "0001300000605",
-        "price": "USD 6.29",
-        "size": "32 OZ",
-        "description": "Heinz Tomato Ketchup"
-      },
-      "timestamp": "2025-06-03T12:36:02.012283"
+      "data": null,
+      "timestamp": "2025-06-10T16:40:06.616841"
     },
     {
       "index": 7,
       "data": {
-        "upc": "0001300000799",
-        "price": "USD 4.69",
-        "size": "13 OZ",
-        "description": "Heinz No Sugar Added Tomato Ketchup"
+        "upc": "0008051604854",
+        "price": "USD 15.99",
+        "size": "750 mL",
+        "description": "Banfi Centine Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012303"
+      "timestamp": "2025-06-10T16:40:06.616853"
     },
     {
       "index": 8,
       "data": {
-        "upc": "0001300000812",
-        "price": null,
-        "size": null,
-        "description": "Heinz Apple Cider Vinegar 16 Fl Oz Bottles"
+        "upc": "0001834115105",
+        "price": "USD 9.99",
+        "size": "1.5 L",
+        "description": "Barefoot Cellars Chardonnay White Wine 1.5L Bottle"
       },
-      "timestamp": "2025-06-03T12:36:02.012318"
+      "timestamp": "2025-06-10T16:40:06.616864"
     },
     {
       "index": 9,
       "data": {
-        "upc": "0001300000852",
-        "price": null,
-        "size": null,
-        "description": "Heinz All Natural Distilled White Vinegar with 5% Acidity, Bottle"
+        "upc": "0008500002587",
+        "price": "USD 7.99",
+        "size": "750 mL",
+        "description": "Barefoot Cellars Rose California Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012333"
+      "timestamp": "2025-06-10T16:40:06.616873"
     },
     {
       "index": 10,
       "data": {
-        "upc": "0001300000854",
-        "price": "USD 2.99",
-        "size": "32 FO",
-        "description": "Heinz All Natural Distilled White Vinegar 5% Acidity, Bottle"
+        "upc": "0063297400143",
+        "price": "USD 14.99",
+        "size": "750 mL",
+        "description": "Benvolio Prosecco Italian Sparkling Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012347"
+      "timestamp": "2025-06-10T16:40:06.616883"
     },
     {
       "index": 11,
       "data": {
-        "upc": "0001300001110",
-        "price": "USD 6.39",
-        "size": "29.5 OZ",
-        "description": "Heinz No Sugar Added Tomato Ketchup"
+        "upc": "0008143471001",
+        "price": "USD 18.99",
+        "size": "3 L",
+        "description": "Black Box Pinot Noir Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012362"
+      "timestamp": "2025-06-10T16:40:06.616892"
     },
     {
       "index": 12,
       "data": {
-        "upc": "0001330020430",
-        "price": "USD 2.99",
-        "size": "32 oz",
-        "description": "Pillsbury Best\u2122 All Purpose Flour"
+        "upc": "0008143400004",
+        "price": "USD 18.99",
+        "size": "3 L",
+        "description": "Black Box Chardonnay White Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012376"
+      "timestamp": "2025-06-10T16:40:06.616901"
     },
     {
       "index": 13,
       "data": {
-        "upc": "0001480000034",
-        "price": "USD 5.29",
-        "size": "64 fl oz",
-        "description": "Mott's\u00ae 100% Original Apple Juice"
+        "upc": "0008210073839",
+        "price": "USD 18.99",
+        "size": "3 liter",
+        "description": "Black Box Sauvignon Blanc White Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012391"
+      "timestamp": "2025-06-10T16:40:06.616910"
     },
     {
       "index": 14,
       "data": {
-        "upc": "0001480000229",
-        "price": "USD 5.29",
-        "size": "6 bottles / 8 fl oz",
-        "description": "Mott's\u00ae 100% Original Apple Juice"
+        "upc": "0008143400022",
+        "price": "USD 18.99",
+        "size": "3 L",
+        "description": "Black Box Pinot Grigio White Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012405"
+      "timestamp": "2025-06-10T16:40:06.616919"
     },
     {
       "index": 15,
       "data": {
-        "upc": "0001480051324",
-        "price": "USD 4.19",
-        "size": "32 fl oz",
-        "description": "Clamato\u00ae Original Tomato Cocktail"
+        "upc": "0008143400003",
+        "price": "USD 18.99",
+        "size": "3 L",
+        "description": "Black Box Cabernet Sauvignon Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012418"
+      "timestamp": "2025-06-10T16:40:06.616928"
     },
     {
       "index": 16,
       "data": {
-        "upc": "0001600010610",
-        "price": "USD 6.49",
-        "size": "5 lbs",
-        "description": "Gold Medal All Purpose Flour"
+        "upc": "0008210073846",
+        "price": "USD 18.99",
+        "size": "3 L",
+        "description": "Black Box Malbec Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012432"
+      "timestamp": "2025-06-10T16:40:06.616937"
     },
     {
       "index": 17,
       "data": {
-        "upc": "0001600010710",
-        "price": "USD 3.99",
-        "size": "32 oz",
-        "description": "Gold Medal All Purpose Flour"
+        "upc": "0008143471014",
+        "price": "USD 18.99",
+        "size": "3 L",
+        "description": "Black Box Rose Blush Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012446"
+      "timestamp": "2025-06-10T16:40:06.616946"
     },
     {
       "index": 18,
       "data": {
-        "upc": "0001600012254",
-        "price": "USD 5.69",
-        "size": "12 oz",
-        "description": "General Mills Cinnamon Toast Crunch Cereal"
+        "upc": "0008500003339",
+        "price": "USD 5.00",
+        "size": "500 mL",
+        "description": "Black Box Sauvignon Blanc White Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012460"
+      "timestamp": "2025-06-10T16:40:06.616955"
     },
     {
       "index": 19,
       "data": {
-        "upc": "0001600012399",
-        "price": "USD 5.29",
-        "size": "10.5 oz",
-        "description": "General Mills Lucky Charms with Marshmallows Cereal"
+        "upc": "0008143400029",
+        "price": "USD 5.00",
+        "size": "500 mL",
+        "description": "Black Box Cabernet Sauvignon Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012478"
+      "timestamp": "2025-06-10T16:40:06.616964"
     },
     {
       "index": 20,
       "data": {
-        "upc": "0001600012479",
-        "price": "USD 5.49",
-        "size": "10.8 oz",
-        "description": "General Mills Honey Nut Cheerios Heart Healthy Breakfast Cereal"
+        "upc": "0008500003151",
+        "price": "USD 19.99",
+        "size": "8 cans / 12 fl oz",
+        "description": "High Noon Vodka Hard Seltzer Variety Pack"
       },
-      "timestamp": "2025-06-03T12:36:02.012503"
+      "timestamp": "2025-06-10T16:40:06.616973"
     },
     {
       "index": 21,
       "data": {
-        "upc": "0001600012506",
-        "price": "USD 6.99",
-        "size": "15.4 oz",
-        "description": "General Mills Honey Nut Cheerios Large Size Cereal"
+        "upc": "0008500003255",
+        "price": "USD 19.99",
+        "size": "8 cans / 12 fl oz",
+        "description": "High Noon Vodka Hard Seltzer Tropical Variety Pack"
       },
-      "timestamp": "2025-06-03T12:36:02.012518"
+      "timestamp": "2025-06-10T16:40:06.616981"
     },
     {
       "index": 22,
       "data": {
-        "upc": "0001600027526",
-        "price": "USD 4.69",
-        "size": "8.9 oz",
-        "description": "General Mills Cheerios Cereal"
+        "upc": "0008797552650",
+        "price": null,
+        "size": null,
+        "description": "Sapporo Premium Black Beer"
       },
-      "timestamp": "2025-06-03T12:36:02.012534"
+      "timestamp": "2025-06-10T16:40:06.616990"
     },
     {
       "index": 23,
       "data": {
-        "upc": "0001600048772",
-        "price": "USD 6.19",
-        "size": "12 oz",
-        "description": "General Mills Cheerios Large Size Cereal"
+        "upc": "0008797502650",
+        "price": "USD 5.99",
+        "size": "22 fl oz",
+        "description": "Sapporo Premium Beer Single Can"
       },
-      "timestamp": "2025-06-03T12:36:02.012555"
+      "timestamp": "2025-06-10T16:40:06.616999"
     },
     {
       "index": 24,
       "data": {
-        "upc": "0001600048794",
-        "price": "USD 5.69",
-        "size": "12 oz",
-        "description": "General Mills Rice Chex Cereal"
+        "upc": "0008797572650",
+        "price": null,
+        "size": null,
+        "description": "Sapporo Reserve Beer"
       },
-      "timestamp": "2025-06-03T12:36:02.012576"
+      "timestamp": "2025-06-10T16:40:06.617008"
     },
     {
       "index": 25,
       "data": {
-        "upc": "0001800028794",
-        "price": "USD 5.29",
-        "size": "2 Crusts / 14.1 oz",
-        "description": "Pillsbury Premade Pie Crusts"
+        "upc": "0008143471005",
+        "price": "USD 5.00",
+        "size": "500 mL",
+        "description": "Black Box Pinot Noir Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:02.012592"
+      "timestamp": "2025-06-10T16:40:06.617017"
     },
     {
       "index": 26,
-      "data": null,
-      "timestamp": "2025-06-03T12:36:15.860901"
+      "data": {
+        "upc": "0008143400030",
+        "price": "USD 5.00",
+        "size": "500 mL",
+        "description": "Black Box Chardonnay White WIne"
+      },
+      "timestamp": "2025-06-10T16:40:21.397816"
     },
     {
       "index": 27,
       "data": {
-        "upc": "0001800081778",
-        "price": "USD 5.79",
-        "size": "24 ct / 0.67 oz",
-        "description": "Pillsbury Ready to Bake Refrigerated Chocolate Chip Cookie Dough"
+        "upc": "0008224201438",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Nighthawk by Bota Bold Cabernet Sauvignon Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.860957"
+      "timestamp": "2025-06-10T16:40:21.397839"
     },
     {
       "index": 28,
       "data": {
-        "upc": "0002011300153",
-        "price": null,
-        "size": null,
-        "description": "La Mexicana\u00ae Fresh Pico de Gallo Mild Salsa"
+        "upc": "0008224201495",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Old Vine Zinfandel Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.860983"
+      "timestamp": "2025-06-10T16:40:21.397850"
     },
     {
       "index": 29,
       "data": {
-        "upc": "0002073509276",
-        "price": null,
-        "size": null,
-        "description": "Turkey Hill\u00ae Lemonade"
+        "upc": "0008224201677",
+        "price": "USD 18.99",
+        "size": "3 L",
+        "description": "Bota Box Breeze Low Calorie Dry Rose Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861006"
+      "timestamp": "2025-06-10T16:40:21.397861"
     },
     {
       "index": 30,
       "data": {
-        "upc": "0002073509286",
-        "price": "USD 4.29",
-        "size": "1 gal",
-        "description": "Turkey Hill\u00ae Lemonade"
+        "upc": "0008224201682",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Breeze Sauvignon Blanc White Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861029"
+      "timestamp": "2025-06-10T16:40:21.397871"
     },
     {
       "index": 31,
-      "data": null,
-      "timestamp": "2025-06-03T12:36:15.861053"
+      "data": {
+        "upc": "0008224201755",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Merlot Red Wine"
+      },
+      "timestamp": "2025-06-10T16:40:21.397880"
     },
     {
       "index": 32,
       "data": {
-        "upc": "0002100005439",
-        "price": "USD 4.69",
-        "size": "7 oz",
-        "description": "Kraft Sharp Cheddar Finely Shredded Cheese with 2% Milk"
+        "upc": "0008224201395",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Riesling White Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861076"
+      "timestamp": "2025-06-10T16:40:21.397890"
     },
     {
       "index": 33,
       "data": {
-        "upc": "0002100005440",
-        "price": null,
-        "size": null,
-        "description": "Kraft Fat Free Cheddar Shredded Cheese"
+        "upc": "0008224201605",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box RedVolution Wine, 3 L"
       },
-      "timestamp": "2025-06-03T12:36:15.861149"
+      "timestamp": "2025-06-10T16:40:21.397899"
     },
     {
       "index": 34,
       "data": {
-        "upc": "0002100005465",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Creamy Melt Mozzarella Cheese 8 oz"
+        "upc": "0008224201765",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Nighthawk by Bota Dark Malbec Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861174"
+      "timestamp": "2025-06-10T16:40:21.397909"
     },
     {
       "index": 35,
       "data": {
-        "upc": "0002100005466",
-        "price": null,
-        "size": null,
-        "description": "Kraft Mexican Style Four Cheese Shredded Cheese With A Touch Of Philadelphia"
+        "upc": "0008500003429",
+        "price": "USD 19.99",
+        "size": "8 cans / 12 fl oz",
+        "description": "High Noon Vodka Hard Seltzer Pool Variety Pack"
       },
-      "timestamp": "2025-06-03T12:36:15.861190"
+      "timestamp": "2025-06-10T16:40:21.397918"
     },
     {
       "index": 36,
-      "data": null,
-      "timestamp": "2025-06-03T12:36:15.861205"
+      "data": {
+        "upc": "0008224201325",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Pinot Grigio Wine, 3 L"
+      },
+      "timestamp": "2025-06-10T16:40:21.397928"
     },
     {
       "index": 37,
       "data": {
-        "upc": "0002100005494",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Italian Five Cheese Shredded Cheese"
+        "upc": "0008500002986",
+        "price": "USD 28.99",
+        "size": "12 cans / 12 fl oz",
+        "description": "High Noon Vodka Hard Seltzer Variety Pack"
       },
-      "timestamp": "2025-06-03T12:36:15.861218"
+      "timestamp": "2025-06-10T16:40:21.397937"
     },
     {
       "index": 38,
       "data": {
-        "upc": "0002100005495",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Mozzarella Shredded Cheese"
+        "upc": "0008500003661",
+        "price": "USD 28.99",
+        "size": "12 cans / 355 mL",
+        "description": "High Noon Vodka Hard Seltzer El Pres Variety Pack"
       },
-      "timestamp": "2025-06-03T12:36:15.861232"
+      "timestamp": "2025-06-10T16:40:21.397947"
     },
     {
       "index": 39,
       "data": {
-        "upc": "0002100005496",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Mexican Style Four Cheese Blend Shredded Cheese"
+        "upc": "0008224201236",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Pinot Noir Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861250"
+      "timestamp": "2025-06-10T16:40:21.397956"
     },
     {
       "index": 40,
       "data": {
-        "upc": "0002100005500",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Sharp Cheddar Finely Shredded Cheese"
+        "upc": "0008797501350",
+        "price": "USD 9.99",
+        "size": "6 pk / 12 fl oz",
+        "description": "Sapporo Premium Beer"
       },
-      "timestamp": "2025-06-03T12:36:15.861273"
+      "timestamp": "2025-06-10T16:40:21.397965"
     },
     {
       "index": 41,
       "data": {
-        "upc": "0002100005501",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Mild Cheddar Finely Shredded Cheese, 8 oz Bag"
+        "upc": "0008224201437",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Dry Rose Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861297"
+      "timestamp": "2025-06-10T16:40:21.397975"
     },
     {
       "index": 42,
       "data": {
-        "upc": "0002100005516",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Mozzarella Shredded Cheese Fine Cut"
+        "upc": "0008224201045",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Cabernet Sauvignon, 3 L"
       },
-      "timestamp": "2025-06-03T12:36:15.861367"
+      "timestamp": "2025-06-10T16:40:21.397984"
     },
     {
       "index": 43,
       "data": {
-        "upc": "0002100005532",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Colby-Jack Shredded Cheese Fine Cut"
+        "upc": "0008500042926",
+        "price": "USD 10.99",
+        "size": "4 cans / 355 mL",
+        "description": "High Noon Pineapple Vodka Hard Seltzer"
       },
-      "timestamp": "2025-06-03T12:36:15.861399"
+      "timestamp": "2025-06-10T16:40:21.397994"
     },
     {
       "index": 44,
       "data": {
-        "upc": "0002100005534",
-        "price": "USD 4.69",
-        "size": "8 oz",
-        "description": "Kraft Triple Cheddar Finely Shredded Cheese"
+        "upc": "0008224201105",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Chardonnay, 3 L"
       },
-      "timestamp": "2025-06-03T12:36:15.861425"
+      "timestamp": "2025-06-10T16:40:21.398003"
     },
     {
       "index": 45,
       "data": {
-        "upc": "0002100005536",
-        "price": null,
-        "size": null,
-        "description": "Kraft Deliciously Paired Cheddar & Asadero Shredded Cheese with Taco Seasoning for Tacos"
+        "upc": "0008797504350",
+        "price": "USD 15.99",
+        "size": "12 ct / 12 fl oz",
+        "description": "Sapporo Premium Beer"
       },
-      "timestamp": "2025-06-03T12:36:15.861449"
+      "timestamp": "2025-06-10T16:40:21.398012"
     },
     {
       "index": 46,
       "data": {
-        "upc": "0002100060464",
-        "price": "USD 5.99",
-        "size": "16 CT",
-        "description": "Kraft Singles American Sliced Cheese"
+        "upc": "0008224201293",
+        "price": "USD 18.99",
+        "size": "3 l",
+        "description": "Bota Box Sauvignon Blanc Wine, 3 L"
       },
-      "timestamp": "2025-06-03T12:36:15.861471"
+      "timestamp": "2025-06-10T16:40:21.398021"
     },
     {
       "index": 47,
       "data": {
-        "upc": "0002100061215",
-        "price": "USD 8.29",
-        "size": "16 oz",
-        "description": "Philadelphia Original Cream Cheese Spread"
+        "upc": "0008224201493",
+        "price": "USD 4.99",
+        "size": "500 ml",
+        "description": "Bota Mini Dry Rose Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861491"
+      "timestamp": "2025-06-10T16:40:21.398030"
     },
     {
       "index": 48,
       "data": {
-        "upc": "0002100061223",
-        "price": "USD 4.39",
-        "size": "8 OZ",
-        "description": "Philadelphia Original Cream Cheese"
+        "upc": "0008224201614",
+        "price": "USD 5.00",
+        "size": "500 ml",
+        "description": "Night Hawk Gold\u00ae Bota Mini Buttery Chardonnay"
       },
-      "timestamp": "2025-06-03T12:36:15.861512"
+      "timestamp": "2025-06-10T16:40:21.398040"
     },
     {
       "index": 49,
       "data": {
-        "upc": "0002100061247",
-        "price": "USD 4.39",
-        "size": "8 OZ",
-        "description": "Philadelphia Reduced Fat Cream Cheese"
+        "upc": "0008224201676",
+        "price": "USD 5.00",
+        "size": "500 mL",
+        "description": "Bota Box Nighthawk Black Lush Pinot Noir Table Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861534"
+      "timestamp": "2025-06-10T16:40:21.398049"
     },
     {
       "index": 50,
       "data": {
-        "upc": "0002100061531",
-        "price": "USD 6.29",
-        "size": "8 oz",
-        "description": "Kraft Parmesan Grated Cheese"
+        "upc": "0008224201431",
+        "price": "USD 5.00",
+        "size": "500 ml",
+        "description": "Bota Mini Sauvignon Blanc White Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861558"
+      "timestamp": "2025-06-10T16:40:21.398058"
     },
     {
       "index": 51,
       "data": {
-        "upc": "0002100061688",
-        "price": "USD 7.39",
-        "size": "12 oz",
-        "description": "Philadelphia Original Cream Cheese Spread"
+        "upc": "0008224201331",
+        "price": "USD 5.00",
+        "size": "500 ml",
+        "description": "Bota Mini Pinot Grigio White Wine"
       },
-      "timestamp": "2025-06-03T12:36:15.861582"
+      "timestamp": "2025-06-10T16:40:21.398068"
     },
     {
       "index": 52,
       "data": {
-        "upc": "0002100061984",
-        "price": "USD 5.19",
-        "size": "8 OZ",
-        "description": "Philadelphia Original Whipped Cream Cheese Spread"
+        "upc": "0008224201041",
+        "price": "USD 5.00",
+        "size": "500 ml",
+        "description": "Bota Mini Cabernet Sauvignon Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223325"
+      "timestamp": "2025-06-10T16:40:37.619795"
     },
     {
       "index": 53,
       "data": {
-        "upc": "0002100065883",
-        "price": "USD 1.79",
-        "size": "7.25 OZ",
-        "description": "Kraft Original Mac N Cheese Macaroni and Cheese Dinner"
+        "upc": "0008224201083",
+        "price": "USD 4.99",
+        "size": "500 ml",
+        "description": "Bota Mini RedVolution Red Wine Blend"
       },
-      "timestamp": "2025-06-03T12:36:30.223354"
+      "timestamp": "2025-06-10T16:40:37.619819"
     },
     {
       "index": 54,
       "data": {
-        "upc": "0002100065893",
-        "price": "USD 4.79",
-        "size": "12 OZ",
-        "description": "Velveeta Shells and Cheese Original Macaroni and Cheese Dinner"
+        "upc": "0008224201101",
+        "price": "USD 5.00",
+        "size": "500 ml",
+        "description": "Bota Mini Chardonnay White Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223369"
+      "timestamp": "2025-06-10T16:40:37.619832"
     },
     {
       "index": 55,
       "data": {
-        "upc": "0002127310012",
-        "price": "USD 4.29",
-        "size": "Case of 3 - 12 OZ each",
-        "description": "Gunter Pure Clover Honey - 12 oz. - Pack of 3"
+        "upc": "0008469251114",
+        "price": "USD 17.99",
+        "size": "750 mL",
+        "description": "Caposaldo Prosecco"
       },
-      "timestamp": "2025-06-03T12:36:30.223381"
+      "timestamp": "2025-06-10T16:40:37.619844"
     },
     {
       "index": 56,
       "data": {
-        "upc": "0002127360016",
+        "upc": "0008901601726",
         "price": null,
         "size": null,
-        "description": "Gunter's Pure Golden Honey"
+        "description": "Capriccio Sangria Spain Red Wine Blend"
       },
-      "timestamp": "2025-06-03T12:36:30.223393"
+      "timestamp": "2025-06-10T16:40:37.619855"
     },
     {
       "index": 57,
-      "data": {
-        "upc": "0002409401401",
-        "price": "USD 4.19",
-        "size": "17.5 oz",
-        "description": "De Cecco Potato Gnocchi"
-      },
-      "timestamp": "2025-06-03T12:36:30.223405"
+      "data": null,
+      "timestamp": "2025-06-10T16:40:37.619865"
     },
     {
       "index": 58,
       "data": {
-        "upc": "0002409407006",
-        "price": "USD 3.99",
-        "size": "16 oz",
-        "description": "De Cecco Fettucine"
+        "upc": "0008735651012",
+        "price": "USD 9.99",
+        "size": "750 mL",
+        "description": "Clos du Bois Chardonnay California White Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223417"
+      "timestamp": "2025-06-10T16:40:37.619876"
     },
     {
       "index": 59,
       "data": {
-        "upc": "0002409407007",
-        "price": "USD 3.99",
-        "size": "16 oz",
-        "description": "De Cecco No. 7 Linguine"
+        "upc": "0008735640512",
+        "price": "USD 9.99",
+        "size": "750 mL",
+        "description": "Clos Du Bois Cabernet Sauvignon California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223428"
+      "timestamp": "2025-06-10T16:40:37.619887"
     },
     {
       "index": 60,
       "data": {
-        "upc": "0002409407008",
-        "price": null,
-        "size": null,
-        "description": "De Cecco Linguine Fini No 8 Pasta"
+        "upc": "0008735644212",
+        "price": "USD 9.99",
+        "size": "750 ml",
+        "description": "Clos du Bois Pinot Noir California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223440"
+      "timestamp": "2025-06-10T16:40:37.619897"
     },
     {
       "index": 61,
       "data": {
-        "upc": "0002409407009",
-        "price": "USD 3.99",
-        "size": "1 lb",
-        "description": "De Cecco No 9 Angel Hair"
+        "upc": "0008273421367",
+        "price": "USD 10.99",
+        "size": "1.5 L",
+        "description": "Frontera Cabernet Sauvignon Chile Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223451"
+      "timestamp": "2025-06-10T16:40:37.619907"
     },
     {
       "index": 62,
       "data": {
-        "upc": "0002409407011",
-        "price": "USD 3.99",
-        "size": "1 lb",
-        "description": "De Cecco Thin Spaghetti 20X1 Lb"
+        "upc": "0008273400101",
+        "price": "USD 10.99",
+        "size": "1.5 L",
+        "description": "Frontera Cabernet Sauvignon Merlot Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223464"
+      "timestamp": "2025-06-10T16:40:37.619917"
     },
     {
       "index": 63,
       "data": {
-        "upc": "0002409407012",
-        "price": "USD 3.99",
-        "size": "16 oz",
-        "description": "De Cecco No. 12 Spaghetti"
+        "upc": "0008273446702",
+        "price": "USD 10.99",
+        "size": "1.5 L",
+        "description": "Frontera Argentina Malbec Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223475"
+      "timestamp": "2025-06-10T16:40:37.619927"
     },
     {
       "index": 64,
       "data": {
-        "upc": "0002409407024",
-        "price": "USD 3.79",
-        "size": "1 lb",
-        "description": "De Cecco Rigatoni No 24 Pasta"
+        "upc": "0085000818202",
+        "price": "USD 19.99",
+        "size": "750 mL",
+        "description": "Daou Vineyards Rose"
       },
-      "timestamp": "2025-06-03T12:36:30.223487"
+      "timestamp": "2025-06-10T16:40:37.619938"
     },
     {
       "index": 65,
       "data": {
-        "upc": "0002409407034",
-        "price": "USD 3.79",
-        "size": "1 lb",
-        "description": "De Cecco\u00ae Fusilli Pasta"
+        "upc": "0008500002714",
+        "price": "USD 5.49",
+        "size": "375 mL",
+        "description": "Dark Horse\u00ae Pinot Grigio California White Wine Can"
       },
-      "timestamp": "2025-06-03T12:36:30.223500"
+      "timestamp": "2025-06-10T16:40:37.619949"
     },
     {
       "index": 66,
       "data": {
-        "upc": "0002409407041",
-        "price": "USD 3.79",
-        "size": "1 lb",
-        "description": "De Cecco Penne Rigate Pasta"
+        "upc": "0008500002713",
+        "price": "USD 5.49",
+        "size": "375 mL",
+        "description": "Dark Horse\u00ae Rose California Wine Can"
       },
-      "timestamp": "2025-06-03T12:36:30.223511"
+      "timestamp": "2025-06-10T16:40:37.619959"
     },
     {
       "index": 67,
       "data": {
-        "upc": "0002409407050",
-        "price": "USD 3.99",
-        "size": "16 oz",
-        "description": "De Cecco Conch Rigati"
+        "upc": "0008500002903",
+        "price": "USD 5.49",
+        "size": "375 mL",
+        "description": "Dark Horse Brut California Sparkling Wine Can"
       },
-      "timestamp": "2025-06-03T12:36:30.223523"
+      "timestamp": "2025-06-10T16:40:37.619969"
     },
     {
       "index": 68,
       "data": {
-        "upc": "0002409407081",
-        "price": "USD 3.19",
-        "size": "1 lb",
-        "description": "De Cecco Enriched Macaroni Elbow Pasta"
+        "upc": "0073995801450",
+        "price": "USD 17.99",
+        "size": "750 ml",
+        "description": "Coppola Diamond Collection California Pinot Noir Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223534"
+      "timestamp": "2025-06-10T16:40:37.619979"
     },
     {
       "index": 69,
       "data": {
-        "upc": "0002409407087",
-        "price": "USD 3.99",
-        "size": "1 lb",
-        "description": "De Cecco Cavatappi 1 LB. Pasta"
+        "upc": "0073995898420",
+        "price": "USD 14.99",
+        "size": "750 ml",
+        "description": "Coppola Diamond Collection California Chardonnay White Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223546"
+      "timestamp": "2025-06-10T16:40:37.619989"
     },
     {
       "index": 70,
       "data": {
-        "upc": "0002409407091",
-        "price": "USD 3.99",
-        "size": "1 lb",
-        "description": "De Cecco Orecchiette Pasta"
+        "upc": "0008308520052",
+        "price": "USD 14.99",
+        "size": "750 mL",
+        "description": "Franciscan\u00ae Chardonnay California White Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223557"
+      "timestamp": "2025-06-10T16:40:37.619999"
     },
     {
       "index": 71,
       "data": {
-        "upc": "0002409407093",
-        "price": "USD 3.79",
-        "size": "16 oz",
-        "description": "De Cecco Farfalle Bow Tie Pasta"
+        "upc": "0008273431412",
+        "price": "USD 10.99",
+        "size": "1.5 L",
+        "description": "Frontera Chardonnay White Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223569"
+      "timestamp": "2025-06-10T16:40:37.620009"
     },
     {
       "index": 72,
       "data": {
-        "upc": "0002460001003",
-        "price": "USD 2.29",
-        "size": "26 oz",
-        "description": "Morton\u00ae Iodized Table Salt"
+        "upc": "0008273400103",
+        "price": "USD 10.99",
+        "size": "1.5 L",
+        "description": "Frontera Sauvignon Blanc"
       },
-      "timestamp": "2025-06-03T12:36:30.223580"
+      "timestamp": "2025-06-10T16:40:37.620019"
     },
     {
       "index": 73,
       "data": {
-        "upc": "0002484201121",
-        "price": "USD 3.99",
-        "size": "9 oz",
-        "description": "Buitoni\u00ae Fettuccine Refrigerated Pasta Noodles"
+        "upc": "0008273441669",
+        "price": "USD 10.99",
+        "size": "1.5 L",
+        "description": "Frontera Pinot Grigio"
       },
-      "timestamp": "2025-06-03T12:36:30.223592"
+      "timestamp": "2025-06-10T16:40:37.620029"
     },
     {
       "index": 74,
       "data": {
-        "upc": "0002484207650",
-        "price": "USD 9.99",
-        "size": "20 oz",
-        "description": "Buitoni\u00ae Mixed Cheese Tortellini Family Sized Pasta"
+        "upc": "0008678866688",
+        "price": "USD 12.99",
+        "size": "750 mL",
+        "description": "Hahn Cabernet Sauvignon California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223603"
+      "timestamp": "2025-06-10T16:40:37.620039"
     },
     {
       "index": 75,
       "data": {
-        "upc": "0002484211211",
-        "price": "USD 6.99",
-        "size": "9 oz",
-        "description": "Buitoni\u00ae Three Cheese Tortellini Refrigerated Pasta"
+        "upc": "0008678800047",
+        "price": "USD 12.99",
+        "size": "750ml",
+        "description": "Hahn California GSM"
       },
-      "timestamp": "2025-06-03T12:36:30.223614"
+      "timestamp": "2025-06-10T16:40:37.620049"
     },
     {
       "index": 76,
       "data": {
-        "upc": "0002484232111",
-        "price": "USD 6.99",
-        "size": "7 oz",
-        "description": "Buitoni\u00ae Pesto with Basil Refrigerated Pasta Sauce"
+        "upc": "0008678888802",
+        "price": "USD 12.99",
+        "size": "750 ml",
+        "description": "Hahn Pinot Noir California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223627"
+      "timestamp": "2025-06-10T16:40:37.620061"
     },
     {
       "index": 77,
       "data": {
-        "upc": "0002500004080",
-        "price": "USD 5.49",
-        "size": "52 fl oz",
-        "description": "Simply All Natural Orange Juice With Mango"
+        "upc": "0008678870807",
+        "price": null,
+        "size": null,
+        "description": "Hahn Appellation Series Pinot Noir California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:30.223639"
+      "timestamp": "2025-06-10T16:40:37.620072"
     },
     {
       "index": 78,
       "data": {
-        "upc": "0002500004082",
-        "price": "USD 5.49",
-        "size": "52 fl oz",
-        "description": "Simply Orange with Pineapple Juice"
+        "upc": "0072462411609",
+        "price": "USD 14.99",
+        "size": "25.4 oz",
+        "description": "J Vineyards Pinot Gris California White Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774540"
+      "timestamp": "2025-06-10T16:40:50.347215"
     },
     {
       "index": 79,
       "data": {
-        "upc": "0002500004086",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply Lemonade With Strawberry All Natural Non-Gmo"
+        "upc": "0072462411401",
+        "price": "USD 42.00",
+        "size": "750 mL",
+        "description": "J Vineyards Cuvee 20 Brut California Sparkling Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774567"
+      "timestamp": "2025-06-10T16:40:50.347244"
     },
     {
       "index": 80,
       "data": {
-        "upc": "0002500004088",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply Limeade Non-Gmo All Natural"
+        "upc": "0072462411201",
+        "price": "USD 48.00",
+        "size": "750 mL",
+        "description": "J Vineyards Brut Rose California Sparkling Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774580"
+      "timestamp": "2025-06-10T16:40:50.347258"
     },
     {
       "index": 81,
       "data": {
-        "upc": "0002500004400",
-        "price": "USD 5.49",
-        "size": "52 fl oz",
-        "description": "Simply High Pulp All Natural Orange Juice"
+        "upc": "0072462411501",
+        "price": "USD 49.00",
+        "size": "750 mL",
+        "description": "J Vineyards Russian River Valley Pinot Noir California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774592"
+      "timestamp": "2025-06-10T16:40:50.347271"
     },
     {
       "index": 82,
       "data": {
-        "upc": "0002500004483",
-        "price": "USD 5.49",
-        "size": "52 fl oz",
-        "description": "Simply Orange Medium Pulp Orange All Natural Juice With Calcium And Vitamin D"
+        "upc": "0075573800097",
+        "price": "USD 11.99",
+        "size": "750 mL",
+        "description": "Jam Jar Western Cape Shiraz Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774604"
+      "timestamp": "2025-06-10T16:40:50.347283"
     },
     {
       "index": 83,
       "data": {
-        "upc": "0002500004490",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply Lemonade With Raspberry All Natural Non-Gmo"
+        "upc": "0075573800066",
+        "price": "USD 11.99",
+        "size": "750 mL",
+        "description": "Jam Jar Sweet White Moscato South Africa White Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774614"
+      "timestamp": "2025-06-10T16:40:50.347296"
     },
     {
       "index": 84,
-      "data": {
-        "upc": "0002500004496",
-        "price": "USD 5.49",
-        "size": "52 fl oz",
-        "description": "Simply All Natural Orange Juice With Calcium"
-      },
-      "timestamp": "2025-06-03T12:36:40.774626"
+      "data": null,
+      "timestamp": "2025-06-10T16:40:50.347308"
     },
     {
       "index": 85,
       "data": {
-        "upc": "0002500004498",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply Lemonade All Natural Non-Gmo"
+        "upc": "0008500003244",
+        "price": "USD 14.99",
+        "size": "750 mL",
+        "description": "La Marca Prosecco Rose Italian Sparkling Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774637"
+      "timestamp": "2025-06-10T16:40:50.347321"
     },
     {
       "index": 86,
       "data": {
-        "upc": "0002500005179",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply Fruit Punch All Natural Juice"
+        "upc": "0008500001773",
+        "price": "USD 14.99",
+        "size": "750 mL",
+        "description": "La Marca Prosecco Italian Sparkling Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774648"
+      "timestamp": "2025-06-10T16:40:50.347333"
     },
     {
       "index": 87,
       "data": {
-        "upc": "0002500010000",
-        "price": "USD 5.49",
-        "size": "52 fl oz",
-        "description": "Simply Pulp Free All Natural Orange Juice"
+        "upc": "0008500001163",
+        "price": "USD 16.99",
+        "size": "750 mL",
+        "description": "Prati by Louis M. Martini Cabernet Sauvignon Sonoma California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774658"
+      "timestamp": "2025-06-10T16:40:50.347344"
     },
     {
       "index": 88,
       "data": {
-        "upc": "0002500010061",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply Light Lemonade All Natural Non-Gmo"
+        "upc": "0085171800004",
+        "price": "USD 13.99",
+        "size": "750 mL",
+        "description": "Mark West\u00ae Pinot Noir California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774670"
+      "timestamp": "2025-06-10T16:40:50.347357"
     },
     {
       "index": 89,
       "data": {
-        "upc": "0002500010071",
-        "price": "USD 5.49",
-        "size": "52 fl oz",
-        "description": "Simply Light Orange Pulp Free Orange All Natural Juice Non-Gmo"
+        "upc": "0008143431530",
+        "price": "USD 11.99",
+        "size": "750 mL",
+        "description": "Nobilo\u2122 Sauvignon Blanc New Zealand White Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774680"
+      "timestamp": "2025-06-10T16:40:50.347369"
     },
     {
       "index": 90,
       "data": {
-        "upc": "0002500010211",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply Watermelon Fruit Juice Drink"
+        "upc": "0008224254403",
+        "price": "USD 8.99",
+        "size": "750 ml",
+        "description": "Noble Vines 667 Monterey California Pinot Noir Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774691"
+      "timestamp": "2025-06-10T16:40:50.347381"
     },
     {
       "index": 91,
       "data": {
-        "upc": "0002500013405",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply\u00ae All Natural Pineapple Juice Drink"
+        "upc": "0008224244743",
+        "price": "USD 8.99",
+        "size": "750 ml",
+        "description": "Noble Vines 181 California Merlot Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774701"
+      "timestamp": "2025-06-10T16:40:50.347392"
     },
     {
       "index": 92,
       "data": {
-        "upc": "0002500013642",
-        "price": "USD 3.29",
-        "size": "52 fl oz",
-        "description": "Simply\u00ae Mango Juice Bottle"
+        "upc": "0008469251120",
+        "price": "USD 19.99",
+        "size": "750 mL",
+        "description": "Poema Cava Brut Sparkling Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774714"
+      "timestamp": "2025-06-10T16:40:50.347407"
     },
     {
       "index": 93,
       "data": {
-        "upc": "0002529300098",
-        "price": "USD 4.49",
-        "size": "1/2 gal",
-        "description": "Silk Dairy Free Original Almond Milk Half Gallon"
+        "upc": "0008469251130",
+        "price": "USD 19.99",
+        "size": "750 mL",
+        "description": "Poema Cava Extra Dry Sparkling Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774732"
+      "timestamp": "2025-06-10T16:40:50.347420"
     },
     {
       "index": 94,
       "data": {
-        "upc": "0002529300149",
-        "price": "USD 4.49",
-        "size": "1/2 gal",
-        "description": "Silk Dairy Free Unsweeted Original Almond Milk Half Gallon"
+        "upc": "0008500043232",
+        "price": "USD 10.99",
+        "size": "4 cans / 12 fl oz",
+        "description": "High Noon Mango Vodka Hard Seltzer"
       },
-      "timestamp": "2025-06-03T12:36:40.774743"
+      "timestamp": "2025-06-10T16:40:50.347432"
     },
     {
       "index": 95,
       "data": {
-        "upc": "0002529360023",
-        "price": "USD 5.19",
-        "size": "1/2 gal",
-        "description": "Silk Dairy Free Organic Unsweetened Plain Soy Milk Half Gallon"
+        "upc": "0008500042925",
+        "price": "USD 10.99",
+        "size": "4 cans / 12 fl oz",
+        "description": "High Noon Watermelon Vodka Hard Seltzer"
       },
-      "timestamp": "2025-06-03T12:36:40.774754"
+      "timestamp": "2025-06-10T16:40:50.347444"
     },
     {
       "index": 96,
       "data": {
-        "upc": "0002529360027",
-        "price": "USD 5.19",
-        "size": "1/2 gal",
-        "description": "Silk Dairy Free Vanilla Soy Milk Half Gallon"
+        "upc": "0008500042927",
+        "price": "USD 10.99",
+        "size": "4 cans / 355 mL",
+        "description": "High Noon Black Cherry Vodka Hard Seltzer"
       },
-      "timestamp": "2025-06-03T12:36:40.774765"
+      "timestamp": "2025-06-10T16:40:50.347456"
     },
     {
       "index": 97,
       "data": {
-        "upc": "0002529360039",
-        "price": "USD 5.19",
-        "size": "1/2 gal",
-        "description": "Silk Dairy Free Protein Original Soy Milk Half Gallon"
+        "upc": "0008500043137",
+        "price": "USD 10.99",
+        "size": "4 cans / 12 fl oz",
+        "description": "High Noon Peach Vodka Hard Seltzer"
       },
-      "timestamp": "2025-06-03T12:36:40.774776"
+      "timestamp": "2025-06-10T16:40:50.347467"
     },
     {
       "index": 98,
       "data": {
-        "upc": "0002700037800",
-        "price": "USD 2.29",
-        "size": "14.500 OZ",
-        "description": "Hunt's Fire Roasted Diced Tomatoes"
+        "upc": "0008500042627",
+        "price": "USD 10.99",
+        "size": "4 cans / 355 mL",
+        "description": "High Noon Grapefruit Vodka Hard Seltzer"
       },
-      "timestamp": "2025-06-03T12:36:40.774786"
+      "timestamp": "2025-06-10T16:40:50.347479"
     },
     {
       "index": 99,
       "data": {
-        "upc": "0002700038040",
-        "price": "USD 2.29",
-        "size": "14.500 OZ",
-        "description": "Hunt\u2019S Diced Tomatoes"
+        "upc": "0008500043095",
+        "price": "USD 10.99",
+        "size": "4 cans / 355 mL",
+        "description": "High Noon Lime Vodka Hard Seltzer"
       },
-      "timestamp": "2025-06-03T12:36:40.774797"
+      "timestamp": "2025-06-10T16:40:50.347491"
     },
     {
       "index": 100,
       "data": {
-        "upc": "0002700038049",
-        "price": "USD 2.29",
-        "size": "14.500 OZ",
-        "description": "Hunt's No Salt Added Diced Tomatoes"
+        "upc": "0008500003448",
+        "price": "USD 6.99",
+        "size": "700 mL",
+        "description": "High Noon\u00ae Pineapple Vodka Hard Seltzer Single Can"
       },
-      "timestamp": "2025-06-03T12:36:40.774807"
+      "timestamp": "2025-06-10T16:40:50.347502"
     },
     {
       "index": 101,
       "data": {
-        "upc": "0002700038143",
-        "price": null,
-        "size": null,
-        "description": "Hunt\u2019S Tomato Ketchup"
+        "upc": "0008500003609",
+        "price": "USD 22.99",
+        "size": "8 ct / 355 mL",
+        "description": "High Noon Tequila Hard Seltzer Variety Pack"
       },
-      "timestamp": "2025-06-03T12:36:40.774818"
+      "timestamp": "2025-06-10T16:40:50.347514"
     },
     {
       "index": 102,
       "data": {
-        "upc": "0002700038811",
-        "price": "USD 2.59",
-        "size": "12 OZ",
-        "description": "Hunt\u2019S Tomato Paste"
+        "upc": "0008500003896",
+        "price": "USD 19.99",
+        "size": "8 cans / 12 fl oz",
+        "description": "High Noon Vodka Hard Tea Variety Pack 8 Pack 355ml Cans"
       },
-      "timestamp": "2025-06-03T12:36:40.774933"
+      "timestamp": "2025-06-10T16:40:50.347526"
     },
     {
       "index": 103,
       "data": {
-        "upc": "0002700038815",
-        "price": "USD 1.59",
-        "size": "6 OZ",
-        "description": "Hunt\u2019S Tomato Paste"
+        "upc": "0008469251230",
+        "price": null,
+        "size": null,
+        "description": "Poema Brut Rose Sparkling Wine"
       },
-      "timestamp": "2025-06-03T12:36:40.774962"
+      "timestamp": "2025-06-10T16:40:50.347566"
     },
     {
       "index": 104,
-      "data": {
-        "upc": "0002700039005",
-        "price": "USD 0.99",
-        "size": "8 OZ",
-        "description": "Hunt's Tomato Sauce"
-      },
-      "timestamp": "2025-06-03T12:36:53.563415"
+      "data": null,
+      "timestamp": "2025-06-10T16:41:06.104804"
     },
     {
       "index": 105,
-      "data": {
-        "upc": "0002700039007",
-        "price": "USD 0.99",
-        "size": "8 OZ",
-        "description": "Hunt's No Salt Added Tomato Sauce"
-      },
-      "timestamp": "2025-06-03T12:36:53.563442"
+      "data": null,
+      "timestamp": "2025-06-10T16:41:06.104821"
     },
     {
       "index": 106,
-      "data": {
-        "upc": "0002700039014",
-        "price": "USD 1.99",
-        "size": "15 OZ",
-        "description": "Hunt's Tomato Sauce"
-      },
-      "timestamp": "2025-06-03T12:36:53.563456"
+      "data": null,
+      "timestamp": "2025-06-10T16:41:06.104833"
     },
     {
       "index": 107,
-      "data": {
-        "upc": "0002800021580",
-        "price": "USD 5.29",
-        "size": "12 OZ",
-        "description": "Nestle Toll House Semi Sweet Chocolate Chips"
-      },
-      "timestamp": "2025-06-03T12:36:53.563467"
+      "data": null,
+      "timestamp": "2025-06-10T16:41:06.104843"
     },
     {
       "index": 108,
       "data": {
-        "upc": "0002840056463",
-        "price": "USD 5.49",
-        "size": "7.33 oz",
-        "description": "Stacy's\u00ae Simply Naked\u00ae Baked Pita Chips Snacks"
+        "upc": "0008500003576",
+        "price": "USD 26.99",
+        "size": "750 mL",
+        "description": "RumChata Coconut Cream Liqueur"
       },
-      "timestamp": "2025-06-03T12:36:53.563480"
+      "timestamp": "2025-06-10T16:41:06.104853"
     },
     {
       "index": 109,
       "data": {
-        "upc": "0003000001020",
-        "price": "USD 4.19",
-        "size": "18 oz",
-        "description": "Quaker\u00ae Old Fashioned Oats"
+        "upc": "0089035500102",
+        "price": "USD 26.99",
+        "size": "750 mL",
+        "description": "RumChata Original Made With Premium Caribbean Rum 750ml"
       },
-      "timestamp": "2025-06-03T12:36:53.563491"
+      "timestamp": "2025-06-10T16:41:06.104863"
     },
     {
       "index": 110,
-      "data": {
-        "upc": "0003000001040",
-        "price": "USD 7.19",
-        "size": "42 oz",
-        "description": "Quaker\u00ae Old Fashioned Oats"
-      },
-      "timestamp": "2025-06-03T12:36:53.563502"
+      "data": null,
+      "timestamp": "2025-06-10T16:41:06.104872"
     },
     {
       "index": 111,
       "data": {
-        "upc": "0003000001180",
-        "price": "USD 4.19",
-        "size": "18 oz",
-        "description": "Quaker\u00ae Quick 1 Minute Oats"
+        "upc": "0070919246064",
+        "price": "USD 26.99",
+        "size": "750 mL",
+        "description": "Kali Hart\u00ae Pinot Noir California Red Wine"
       },
-      "timestamp": "2025-06-03T12:36:53.563513"
+      "timestamp": "2025-06-10T16:41:06.104881"
     },
     {
       "index": 112,
-      "data": {
-        "upc": "0003000001200",
-        "price": "USD 7.19",
-        "size": "42 oz",
-        "description": "Quaker\u00ae Quick Oats"
-      },
-      "timestamp": "2025-06-03T12:36:53.563524"
+      "data": null,
+      "timestamp": "2025-06-10T16:41:06.104890"
     },
     {
       "index": 113,
       "data": {
-        "upc": "0003000065040",
-        "price": "USD 4.29",
-        "size": "32 oz",
-        "description": "Pearl Milling Company\u2122 Original Pancake & Waffle Mix"
+        "upc": "0008500001201",
+        "price": "USD 16.99",
+        "size": "750 mL",
+        "description": "Whitehaven Sauvignon Blanc New Zealand White Wine"
       },
-      "timestamp": "2025-06-03T12:36:53.563535"
+      "timestamp": "2025-06-10T16:41:06.104899"
     },
     {
       "index": 114,
       "data": {
-        "upc": "0003000065070",
-        "price": "USD 4.29",
-        "size": "32 oz",
-        "description": "Pearl Milling Company\u2122 Complete Original Pancake & Waffle Mix"
-      },
-      "timestamp": "2025-06-03T12:36:53.563546"
-    },
-    {
-      "index": 115,
-      "data": {
-        "upc": "0003000065300",
-        "price": "USD 4.29",
-        "size": "32 oz",
-        "description": "Pearl Milling Company Complete Pancake & Waffle Mix Buttermilk"
-      },
-      "timestamp": "2025-06-03T12:36:53.563556"
-    },
-    {
-      "index": 116,
-      "data": {
-        "upc": "0003000065320",
-        "price": "USD 4.29",
-        "size": "32 oz",
-        "description": "Pearl Milling Company\u2122 Buttermilk Pancake & Waffle Mix 32 Oz"
-      },
-      "timestamp": "2025-06-03T12:36:53.563567"
-    },
-    {
-      "index": 117,
-      "data": {
-        "upc": "0003000065800",
-        "price": "USD 4.99",
-        "size": "24 fl oz",
-        "description": "Pearl Milling Company Original Lite Syrup"
-      },
-      "timestamp": "2025-06-03T12:36:53.563578"
-    },
-    {
-      "index": 118,
-      "data": {
-        "upc": "0003000065940",
-        "price": "USD 4.99",
-        "size": "24 fl oz",
-        "description": "Pearl Milling Company Butter Rich Syrup"
-      },
-      "timestamp": "2025-06-03T12:36:53.563588"
-    },
-    {
-      "index": 119,
-      "data": {
-        "upc": "0003000065970",
-        "price": "USD 4.99",
-        "size": "24 fl oz",
-        "description": "Pearl Milling Company Syrup Original"
-      },
-      "timestamp": "2025-06-03T12:36:53.563600"
-    },
-    {
-      "index": 120,
-      "data": null,
-      "timestamp": "2025-06-03T12:36:53.563611"
-    },
-    {
-      "index": 121,
-      "data": {
-        "upc": "0003040079391",
-        "price": "USD 5.59",
-        "size": "4 rolls",
-        "description": "Angel Soft\u00ae Toilet Paper Mega Roll"
-      },
-      "timestamp": "2025-06-03T12:36:53.563621"
-    },
-    {
-      "index": 122,
-      "data": {
-        "upc": "0003040079414",
-        "price": "USD 9.49",
-        "size": "8 rolls",
-        "description": "Angel Soft\u00ae Toilet Paper Mega Roll"
-      },
-      "timestamp": "2025-06-03T12:36:53.563632"
-    },
-    {
-      "index": 123,
-      "data": {
-        "upc": "0003077204515",
-        "price": "USD 7.79",
-        "size": "6 rolls",
-        "description": "Charmin Essentials Strong Mega Roll Toilet Paper"
-      },
-      "timestamp": "2025-06-03T12:36:53.563643"
-    },
-    {
-      "index": 124,
-      "data": {
-        "upc": "0003077204537",
-        "price": "USD 7.79",
-        "size": "6 rolls",
-        "description": "Charmin Essentials Soft Mega Roll Toilet Paper"
-      },
-      "timestamp": "2025-06-03T12:36:53.563656"
-    },
-    {
-      "index": 125,
-      "data": {
-        "upc": "0003077205701",
-        "price": "USD 13.99",
-        "size": "4 rolls",
-        "description": "Bounty Select-A-Size Paper Towels Double Rolls"
-      },
-      "timestamp": "2025-06-03T12:36:53.563666"
-    },
-    {
-      "index": 126,
-      "data": {
-        "upc": "0003077205707",
-        "price": "USD 8.99",
-        "size": "2 rolls",
-        "description": "Bounty Select-A-Size Paper Towels Double Plus Rolls"
-      },
-      "timestamp": "2025-06-03T12:36:53.563677"
-    },
-    {
-      "index": 127,
-      "data": null,
-      "timestamp": "2025-06-03T12:36:53.563688"
-    },
-    {
-      "index": 128,
-      "data": {
-        "upc": "0003077215535",
-        "price": "USD 7.49",
-        "size": "12 ct",
-        "description": "Cascade Platinum Dishwasher Pods Dishwasher Detergent Dish Detergent Soap Fresh"
-      },
-      "timestamp": "2025-06-03T12:36:53.563700"
-    },
-    {
-      "index": 129,
-      "data": {
-        "upc": "0003077215712",
-        "price": "USD 13.99",
-        "size": "4 rolls",
-        "description": "Bounty Paper Towels Select-A-Size White, 4 Double Rolls, 82 Sheets Per Roll"
-      },
-      "timestamp": "2025-06-03T12:36:53.563711"
-    },
-    {
-      "index": 130,
-      "data": {
-        "upc": "0003114200069",
-        "price": "USD 15.99",
-        "size": "16 oz",
-        "description": "BelGioioso\u00ae Sliced Fresh Mozzarella Cheese"
-      },
-      "timestamp": "2025-06-03T12:37:07.395438"
-    },
-    {
-      "index": 131,
-      "data": {
-        "upc": "0003114200088",
-        "price": "USD 8.99",
-        "size": "8 oz",
-        "description": "BelGioioso Fresh Mozzarella Cheese"
-      },
-      "timestamp": "2025-06-03T12:37:07.395493"
-    },
-    {
-      "index": 132,
-      "data": {
-        "upc": "0003114200089",
-        "price": null,
-        "size": null,
-        "description": "BelGioioso Fresh Mozzarella Cheese"
-      },
-      "timestamp": "2025-06-03T12:37:07.395511"
-    },
-    {
-      "index": 133,
-      "data": {
-        "upc": "0003114200480",
-        "price": "USD 8.99",
-        "size": "8 oz",
-        "description": "BelGioioso\u00ae Fresh Mozzarella Pearls Cheese"
-      },
-      "timestamp": "2025-06-03T12:37:07.395526"
-    },
-    {
-      "index": 134,
-      "data": {
-        "upc": "0003114200525",
-        "price": null,
-        "size": null,
-        "description": "BelGioioso Fresh Mozzarella Cheese"
-      },
-      "timestamp": "2025-06-03T12:37:07.395540"
-    },
-    {
-      "index": 135,
-      "data": null,
-      "timestamp": "2025-06-03T12:37:07.395555"
-    },
-    {
-      "index": 136,
-      "data": {
-        "upc": "0003114235899",
-        "price": null,
-        "size": null,
-        "description": "BelGioioso\u00ae Freshly Shaved Parmesan Cheese"
-      },
-      "timestamp": "2025-06-03T12:37:07.395569"
-    },
-    {
-      "index": 137,
-      "data": {
-        "upc": "0003114235900",
-        "price": null,
-        "size": null,
-        "description": "BelGioioso\u00ae Freshly Grated Parmesan"
-      },
-      "timestamp": "2025-06-03T12:37:07.395665"
-    },
-    {
-      "index": 138,
-      "data": {
-        "upc": "0003114235902",
-        "price": null,
-        "size": null,
-        "description": "BelGioioso\u00ae Parmesaon Cheese Freshly Shredded"
-      },
-      "timestamp": "2025-06-03T12:37:07.395703"
-    },
-    {
-      "index": 139,
-      "data": null,
-      "timestamp": "2025-06-03T12:37:07.395739"
-    },
-    {
-      "index": 140,
-      "data": {
-        "upc": "0003260102515",
-        "price": null,
-        "size": null,
-        "description": "Earthbound Farm Frozen Organic California-Style Blend"
-      },
-      "timestamp": "2025-06-03T12:37:07.395837"
-    },
-    {
-      "index": 141,
-      "data": {
-        "upc": "0003320001130",
-        "price": "USD 0.99",
-        "size": "8 oz",
-        "description": "Arm & Hammer Pure Baking Soda"
-      },
-      "timestamp": "2025-06-03T12:37:07.395964"
-    },
-    {
-      "index": 142,
-      "data": {
-        "upc": "0003485605092",
-        "price": "USD 1.89",
-        "size": "5 oz",
-        "description": "Welch's Berries 'N Cherries Fruit Snacks"
-      },
-      "timestamp": "2025-06-03T12:37:07.396003"
-    },
-    {
-      "index": 143,
-      "data": {
-        "upc": "0003485605098",
-        "price": "USD 1.89",
-        "size": "5 oz",
-        "description": "Welch's Mixed Fruit Fruit Snacks"
-      },
-      "timestamp": "2025-06-03T12:37:07.396030"
-    },
-    {
-      "index": 144,
-      "data": {
-        "upc": "0003500014108",
-        "price": "USD 5.69",
-        "size": "3 ct / 3.7 oz",
-        "description": "Irish Spring Bar Soap Original Scent"
-      },
-      "timestamp": "2025-06-03T12:37:07.396054"
-    },
-    {
-      "index": 145,
-      "data": {
-        "upc": "0003500014116",
-        "price": "USD 5.69",
-        "size": "3.7 oz / 3 bars",
-        "description": "Irish Spring 3-Pack Bar Soap Aloe Vera Scent"
-      },
-      "timestamp": "2025-06-03T12:37:07.396078"
-    },
-    {
-      "index": 146,
-      "data": {
-        "upc": "0003500044676",
-        "price": null,
-        "size": null,
-        "description": "Ajax Ultra Vinegar and Lime Scent Liquid Dish Soap"
-      },
-      "timestamp": "2025-06-03T12:37:07.396101"
-    },
-    {
-      "index": 147,
-      "data": null,
-      "timestamp": "2025-06-03T12:37:07.396125"
-    },
-    {
-      "index": 148,
-      "data": {
-        "upc": "0003600049995",
-        "price": "USD 2.29",
-        "size": "70 ct",
-        "description": "Kleenex\u00ae Facial Tissues"
-      },
-      "timestamp": "2025-06-03T12:37:07.396151"
-    },
-    {
-      "index": 149,
-      "data": {
-        "upc": "0003663200975",
-        "price": "USD 7.49",
-        "size": "3.1 fl. oz., 12 pack",
-        "description": "Danimals Strawberry Explosion & Wild Watermelon Variety Pack Smoothies Bottle"
-      },
-      "timestamp": "2025-06-03T12:37:07.396174"
-    },
-    {
-      "index": 150,
-      "data": {
-        "upc": "0003663201039",
-        "price": "USD 7.49",
-        "size": "12 ct / 3.1 fl oz",
-        "description": "Danimals\u00ae Non-GMO Strawberry Explosion & Mixed Berry Smoothies"
-      },
-      "timestamp": "2025-06-03T12:37:07.396199"
-    },
-    {
-      "index": 151,
-      "data": {
-        "upc": "0003663202600",
-        "price": "USD 4.29",
-        "size": "4 ct / 4 fl oz",
-        "description": "Activia Low Fat Probiotic Strawberry Yogurt Cups"
-      },
-      "timestamp": "2025-06-03T12:37:07.396222"
-    },
-    {
-      "index": 152,
-      "data": null,
-      "timestamp": "2025-06-03T12:37:07.396246"
-    },
-    {
-      "index": 153,
-      "data": {
-        "upc": "0003663203575",
-        "price": null,
-        "size": null,
-        "description": "Activia Probiotic Strawberry Dairy Drink Bottle"
-      },
-      "timestamp": "2025-06-03T12:37:07.396269"
-    },
-    {
-      "index": 154,
-      "data": null,
-      "timestamp": "2025-06-03T12:37:07.396294"
-    },
-    {
-      "index": 155,
-      "data": {
-        "upc": "0003663207262",
-        "price": "USD 6.99",
-        "size": "48 fl. oz.",
-        "description": "Stok\u00ae Extra Bold Unsweet Dark Roast Black Cold Brew Iced Coffee Carton"
-      },
-      "timestamp": "2025-06-03T12:37:07.396316"
-    },
-    {
-      "index": 156,
-      "data": {
-        "upc": "0003663207618",
-        "price": "USD 6.99",
-        "size": "48 fl. oz.",
-        "description": "Stok\u00ae Unsweet Cold Brew Light Roast Black Iced Coffee Carton"
-      },
-      "timestamp": "2025-06-03T12:37:22.414479"
-    },
-    {
-      "index": 157,
-      "data": {
-        "upc": "0003700033840",
-        "price": "USD 9.99",
-        "size": "75 fl oz",
-        "description": "Cascade Complete Fresh Scent Gel Dishwasher Detergent"
-      },
-      "timestamp": "2025-06-03T12:37:22.414503"
-    },
-    {
-      "index": 158,
-      "data": {
-        "upc": "0003700034885",
-        "price": "USD 4.99",
-        "size": "200 ct",
-        "description": "Bounty White Paper Napkins"
-      },
-      "timestamp": "2025-06-03T12:37:22.414518"
-    },
-    {
-      "index": 159,
-      "data": {
-        "upc": "0003746601643",
-        "price": "USD 4.29",
-        "size": "1 bar / 3.5 oz",
-        "description": "Lindt EXCELLENCE Extra Creamy Milk Chocolate Candy Bar"
-      },
-      "timestamp": "2025-06-03T12:37:22.414530"
-    },
-    {
-      "index": 160,
-      "data": {
-        "upc": "0003746601645",
-        "price": "USD 4.29",
-        "size": "1 bar / 3.5 oz",
-        "description": "Lindt EXCELLENCE 85% Cocoa Dark Chocolate Candy Bar"
-      },
-      "timestamp": "2025-06-03T12:37:22.414542"
-    },
-    {
-      "index": 161,
-      "data": {
-        "upc": "0003746601763",
-        "price": "USD 4.29",
-        "size": "1 bar / 3.5 oz",
-        "description": "Lindt EXCELLENCE 70% Cocoa Dark Chocolate Candy Bar"
-      },
-      "timestamp": "2025-06-03T12:37:22.414553"
-    },
-    {
-      "index": 162,
-      "data": {
-        "upc": "0003746602342",
-        "price": "USD 4.29",
-        "size": "1 bar / 3.5 oz",
-        "description": "Lindt EXCELLENCE Intense Orange Dark Chocolate Candy Bar"
-      },
-      "timestamp": "2025-06-03T12:37:22.414564"
-    },
-    {
-      "index": 163,
-      "data": {
-        "upc": "0003746603941",
-        "price": "USD 4.29",
-        "size": "1 bar / 3.5 oz",
-        "description": "Lindt EXCELLENCE Sea Salt Dark Chocolate Candy Bar"
-      },
-      "timestamp": "2025-06-03T12:37:22.414575"
-    },
-    {
-      "index": 164,
-      "data": {
-        "upc": "0003746604269",
-        "price": "USD 4.29",
-        "size": "1 bar / 3.5 oz",
-        "description": "Lindt EXCELLENCE 90% Cocoa Dark Chocolate Candy Bar"
-      },
-      "timestamp": "2025-06-03T12:37:22.414586"
-    },
-    {
-      "index": 165,
-      "data": {
-        "upc": "0003760011072",
-        "price": "USD 3.39",
-        "size": "16.3 oz",
-        "description": "Skippy\u00ae Super Chunk\u00ae Extra Crunchy Peanut Butter Spread"
-      },
-      "timestamp": "2025-06-03T12:37:22.414598"
-    },
-    {
-      "index": 166,
-      "data": {
-        "upc": "0003760011075",
-        "price": "USD 3.39",
-        "size": "16.3 oz",
-        "description": "Skippy\u00ae Creamy Peanut Butter Spread"
-      },
-      "timestamp": "2025-06-03T12:37:22.414609"
-    },
-    {
-      "index": 167,
-      "data": {
-        "upc": "0003760013872",
-        "price": "USD 5.19",
-        "size": "12 oz",
-        "description": "SPAM\u00ae Canned Luncheon Meat, Classic"
-      },
-      "timestamp": "2025-06-03T12:37:22.414620"
-    },
-    {
-      "index": 168,
-      "data": {
-        "upc": "0003800000110",
-        "price": "USD 6.49",
-        "size": "12 oz",
-        "description": "Kellogg's\u00ae Corn Flakes Large Size Cereal"
-      },
-      "timestamp": "2025-06-03T12:37:22.414631"
-    },
-    {
-      "index": 169,
-      "data": {
-        "upc": "0003800000120",
-        "price": "USD 8.29",
-        "size": "18 oz",
-        "description": "Kellogg's\u00ae Corn Flakes Family Size Cereal"
-      },
-      "timestamp": "2025-06-03T12:37:22.414642"
-    },
-    {
-      "index": 170,
-      "data": {
-        "upc": "0003800023145",
-        "price": null,
-        "size": null,
-        "description": "Kellogg's\u00ae Corn Flakes Giant Size Cereal"
-      },
-      "timestamp": "2025-06-03T12:37:22.414657"
-    },
-    {
-      "index": 171,
-      "data": {
-        "upc": "0003800026985",
-        "price": "USD 5.19",
-        "size": "9.6 oz",
-        "description": "Kellogg's\u00ae Special K Original Cereal"
-      },
-      "timestamp": "2025-06-03T12:37:22.414670"
-    },
-    {
-      "index": 172,
-      "data": {
-        "upc": "0003800040260",
-        "price": "USD 4.19",
-        "size": "10 ct / 1.23 oz",
-        "description": "Kellogg's\u00ae Eggo\u00ae Homestyle Homestyle Frozen Waffles"
-      },
-      "timestamp": "2025-06-03T12:37:22.414683"
-    },
-    {
-      "index": 173,
-      "data": {
-        "upc": "0003940001700",
-        "price": "USD 1.79",
-        "size": "16 oz",
-        "description": "Bush's Chick Peas 16 oz"
-      },
-      "timestamp": "2025-06-03T12:37:22.414696"
-    },
-    {
-      "index": 174,
-      "data": {
-        "upc": "0003940001810",
-        "price": "USD 1.79",
-        "size": "16 oz",
-        "description": "Bush's Pinto Beans 16 oz"
-      },
-      "timestamp": "2025-06-03T12:37:22.414708"
-    },
-    {
-      "index": 175,
-      "data": {
-        "upc": "0003940001870",
-        "price": "USD 1.79",
-        "size": "15.5 oz",
-        "description": "Bush's Cannellini Beans 15.5 oz"
-      },
-      "timestamp": "2025-06-03T12:37:22.414720"
-    },
-    {
-      "index": 176,
-      "data": {
-        "upc": "0003940001880",
-        "price": "USD 1.79",
-        "size": "15 oz",
-        "description": "Bush's Black Beans 15 oz"
-      },
-      "timestamp": "2025-06-03T12:37:22.414732"
-    },
-    {
-      "index": 177,
-      "data": {
-        "upc": "0003940001883",
-        "price": "USD 1.79",
-        "size": "15 oz",
-        "description": "Bush's Best\u00ae Reduced Sodium Black Beans"
-      },
-      "timestamp": "2025-06-03T12:37:22.414743"
-    },
-    {
-      "index": 178,
-      "data": {
-        "upc": "0004000000031",
-        "price": "USD 1.89",
-        "size": "1.69 oz",
-        "description": "M&M'S Milk Chocolate Candy, Full Size, 1.69 oz Bag"
-      },
-      "timestamp": "2025-06-03T12:37:22.414754"
-    },
-    {
-      "index": 179,
-      "data": {
-        "upc": "0004000000032",
-        "price": "USD 1.89",
-        "size": "1.74 oz",
-        "description": "M&M'S, Peanut Milk Chocolate Candy, 1.74-Ounce Pouch"
-      },
-      "timestamp": "2025-06-03T12:37:22.414766"
-    },
-    {
-      "index": 180,
-      "data": {
-        "upc": "0004000000160",
-        "price": "USD 1.99",
-        "size": "2.17 OZ",
-        "description": "Skittles Original Candy Chewy Fruit Candies Full Size Bag"
-      },
-      "timestamp": "2025-06-03T12:37:22.414777"
-    },
-    {
-      "index": 181,
-      "data": {
-        "upc": "0004000000162",
-        "price": null,
-        "size": null,
-        "description": "Skittles\u00ae Wild Berry Bite Size Candy"
-      },
-      "timestamp": "2025-06-03T12:37:22.414788"
-    },
-    {
-      "index": 182,
-      "data": {
-        "upc": "0004000042206",
-        "price": "USD 1.89",
-        "size": "1.84 oz",
-        "description": "Milky Way Milk Chocolate Candy Bar Full Size Bar"
-      },
-      "timestamp": "2025-06-03T12:37:34.605807"
-    },
-    {
-      "index": 183,
-      "data": {
-        "upc": "0004000042431",
-        "price": "USD 1.89",
-        "size": "1.86 oz",
-        "description": "Snickers Full Size Chocolate Candy Bar"
-      },
-      "timestamp": "2025-06-03T12:37:34.605834"
-    },
-    {
-      "index": 184,
-      "data": {
-        "upc": "0004010000928",
-        "price": "USD 2.69",
-        "size": "3 ct / 0.25 oz",
-        "description": "Fleischmann's\u00ae Original ActiveDry Yeast"
-      },
-      "timestamp": "2025-06-03T12:37:34.605848"
-    },
-    {
-      "index": 185,
-      "data": {
-        "upc": "0004112907700",
-        "price": "USD 4.19",
-        "size": "24 OZ",
-        "description": "Classico Fire Roasted Tomato & Garlic Spaghetti Pasta Sauce"
-      },
-      "timestamp": "2025-06-03T12:37:34.605861"
-    },
-    {
-      "index": 186,
-      "data": {
-        "upc": "0004112907705",
-        "price": "USD 4.19",
-        "size": "24 OZ",
-        "description": "Classico Vodka Sauce Spaghetti Pasta Sauce"
-      },
-      "timestamp": "2025-06-03T12:37:34.605873"
-    },
-    {
-      "index": 187,
-      "data": {
-        "upc": "0004112907762",
-        "price": "USD 4.19",
-        "size": "24 OZ",
-        "description": "Classico Four Cheese Spaghetti Pasta Sauce"
-      },
-      "timestamp": "2025-06-03T12:37:34.605885"
-    },
-    {
-      "index": 188,
-      "data": {
-        "upc": "0004112963110",
-        "price": "USD 4.19",
-        "size": "24 OZ",
-        "description": "Classico Spicy Tomato & Basil Spaghetti Pasta Sauce"
-      },
-      "timestamp": "2025-06-03T12:37:34.605897"
-    },
-    {
-      "index": 189,
-      "data": {
-        "upc": "0004114312870",
-        "price": "USD 5.99",
-        "size": "20 oz",
-        "description": "Sun-Maid\u00ae California Sun-Dried Raisins"
-      },
-      "timestamp": "2025-06-03T12:37:34.605909"
-    },
-    {
-      "index": 190,
-      "data": {
-        "upc": "0004119210043",
-        "price": "USD 5.69",
-        "size": "12 oz",
-        "description": "Kellogg's\u00ae Frosted Flakes Cereal"
-      },
-      "timestamp": "2025-06-03T12:37:34.605921"
-    },
-    {
-      "index": 191,
-      "data": {
-        "upc": "0004127102773",
-        "price": "USD 6.99",
-        "size": "48 fl. oz.",
-        "description": "Stok\u00ae Unsweet Cold Brew Slow Roast Black Iced Coffee Carton"
-      },
-      "timestamp": "2025-06-03T12:37:34.605932"
-    },
-    {
-      "index": 192,
-      "data": {
-        "upc": "0004127102774",
-        "price": "USD 6.99",
-        "size": "48 fl. oz.",
-        "description": "Stok\u00ae Light Sweet Cold Brew Slow Roast Black Iced Coffee Carton"
-      },
-      "timestamp": "2025-06-03T12:37:34.605945"
-    },
-    {
-      "index": 193,
-      "data": {
-        "upc": "0004138309010",
-        "price": "USD 4.69",
-        "size": "0.5 gal",
-        "description": "Lactaid\u00ae Lactose Free 2% Reduced Fat Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:37:34.605957"
-    },
-    {
-      "index": 194,
-      "data": {
-        "upc": "0004138309022",
-        "price": "USD 4.69",
-        "size": "0.5 gal",
-        "description": "Lactaid\u00ae Lactose Free 1% Lowfat Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:37:34.605968"
-    },
-    {
-      "index": 195,
-      "data": {
-        "upc": "0004138309036",
-        "price": "USD 4.69",
-        "size": "1/2 gallon",
-        "description": "Lactaid\u00ae Lactose Free Whole Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:37:34.605980"
-    },
-    {
-      "index": 196,
-      "data": {
-        "upc": "0004138309042",
-        "price": null,
-        "size": null,
-        "description": "Lactaid\u00ae Lactose Free 2% Reduced Fat Milk Quart"
-      },
-      "timestamp": "2025-06-03T12:37:34.605992"
-    },
-    {
-      "index": 197,
-      "data": {
-        "upc": "0004138309043",
-        "price": null,
-        "size": null,
-        "description": "Lactaid\u00ae 100% Lactose Free Fat Free Milk"
-      },
-      "timestamp": "2025-06-03T12:37:34.606003"
-    },
-    {
-      "index": 198,
-      "data": {
-        "upc": "0004138309072",
-        "price": "USD 7.19",
-        "size": "96 fl oz",
-        "description": "Lactaid\u00ae Lactose Free 2% Reduced Fat Milk"
-      },
-      "timestamp": "2025-06-03T12:37:34.606015"
-    },
-    {
-      "index": 199,
-      "data": {
-        "upc": "0004138309073",
-        "price": "USD 7.19",
-        "size": "96 fl oz",
-        "description": "Lactaid Lactose Free Whole Milk"
-      },
-      "timestamp": "2025-06-03T12:37:34.606027"
-    },
-    {
-      "index": 200,
-      "data": {
-        "upc": "0004150000700",
-        "price": "USD 1.99",
-        "size": "8 oz",
-        "description": "French's Classic Yellow Mustard"
-      },
-      "timestamp": "2025-06-03T12:37:34.606040"
-    },
-    {
-      "index": 201,
-      "data": {
-        "upc": "0004150880012",
-        "price": "USD 2.79",
-        "size": "25.3 OZ",
-        "description": "S.Pellegrino Sparkling Natural Mineral Water Glass Bottle"
-      },
-      "timestamp": "2025-06-03T12:37:34.606052"
-    },
-    {
-      "index": 202,
-      "data": {
-        "upc": "0004150880218",
-        "price": "USD 2.79",
-        "size": "33.8oz",
-        "description": "San Pellegrino Sparkling Natural Mineral Water Plastic Single"
-      },
-      "timestamp": "2025-06-03T12:37:34.606064"
-    },
-    {
-      "index": 203,
-      "data": {
-        "upc": "0004157005617",
-        "price": "USD 4.19",
-        "size": "1/2 gal",
-        "description": "Almond Breeze\u00ae Dairy Free Original Almond Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:37:34.606076"
-    },
-    {
-      "index": 204,
-      "data": {
-        "upc": "0004157005618",
-        "price": "USD 4.19",
-        "size": "1/2 gal",
-        "description": "Almond Breeze\u00ae Dairy Free Unsweetened Vanilla Almond Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:37:34.606087"
-    },
-    {
-      "index": 205,
-      "data": {
-        "upc": "0004157005621",
-        "price": "USD 4.19",
-        "size": "0.5 gal",
-        "description": "Almond Breeze\u00ae Dairy Free Vanilla Almond Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:37:34.606099"
-    },
-    {
-      "index": 206,
-      "data": {
-        "upc": "0004157005670",
-        "price": "USD 4.19",
-        "size": "1/2 gal",
-        "description": "Almond Breeze\u00ae Dairy Free Unsweetened Original Almond Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:37:34.606111"
-    },
-    {
-      "index": 207,
-      "data": {
-        "upc": "0004175702541",
-        "price": "USD 5.99",
-        "size": "8 ct / 5.4 oz",
-        "description": "The Laughing Cow\u00ae Creamy Original Spreadable Wedge Cheese"
-      },
-      "timestamp": "2025-06-03T12:37:34.606124"
-    },
-    {
-      "index": 208,
-      "data": {
-        "upc": "0004175702571",
-        "price": "USD 6.99",
-        "size": "6 pk / 4.2 oz",
-        "description": "Mini Babybel\u00ae Original Snack Cheese"
-      },
-      "timestamp": "2025-06-03T12:37:48.956193"
-    },
-    {
-      "index": 209,
-      "data": {
-        "upc": "0004178900121",
-        "price": "USD 0.89",
-        "size": "2.25 oz",
-        "description": "Maruchan\u00ae Instant Lunch\u2122 Chicken Flavor Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:37:48.956222"
-    },
-    {
-      "index": 210,
-      "data": {
-        "upc": "0004178900125",
-        "price": null,
-        "size": null,
-        "description": "Maruchan\u00ae Instant Lunch\u00ae with Shrimp Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:37:48.956236"
-    },
-    {
-      "index": 211,
-      "data": {
-        "upc": "0004178900143",
-        "price": null,
-        "size": null,
-        "description": "Maruchan\u00ae Instant Lunch\u2122 Hot & Spicy Chicken Flavor Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:37:48.956249"
-    },
-    {
-      "index": 212,
-      "data": {
-        "upc": "0004178900144",
-        "price": null,
-        "size": null,
-        "description": "Maruchan\u00ae Instant Lunch Hot & Spicy Flavor with Shrimp Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:37:48.956261"
-    },
-    {
-      "index": 213,
-      "data": {
-        "upc": "0004178900211",
-        "price": null,
-        "size": null,
-        "description": "Maruchan\u00ae Chicken Flavor Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:37:48.956273"
-    },
-    {
-      "index": 214,
-      "data": {
-        "upc": "0004178900212",
-        "price": null,
-        "size": null,
-        "description": "Maruchan\u00ae Beef Flavor Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:37:48.956285"
-    },
-    {
-      "index": 215,
-      "data": {
-        "upc": "0004178900216",
-        "price": null,
-        "size": null,
-        "description": "Maruchan\u00ae Chili Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:37:48.956297"
-    },
-    {
-      "index": 216,
-      "data": {
-        "upc": "0004178900217",
-        "price": null,
-        "size": null,
-        "description": "Maruchan\u00ae Shrimp Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:37:48.956309"
-    },
-    {
-      "index": 217,
-      "data": {
-        "upc": "0004180020750",
-        "price": "USD 5.99",
-        "size": "64 fl oz",
-        "description": "Welch's\u00ae 100% Concord Grape Juice"
-      },
-      "timestamp": "2025-06-03T12:37:48.956321"
-    },
-    {
-      "index": 218,
-      "data": {
-        "upc": "0004180040127",
-        "price": null,
-        "size": null,
-        "description": "Welch's Passion Fruit Flavored Fruit Juice Cocktail Blend"
-      },
-      "timestamp": "2025-06-03T12:37:48.956333"
-    },
-    {
-      "index": 219,
-      "data": {
-        "upc": "0004200035515",
-        "price": "USD 4.49",
-        "size": "40 ct",
-        "description": "Vanity Fair\u00ae Entertain Disposable Paper Napkins"
-      },
-      "timestamp": "2025-06-03T12:37:48.956345"
-    },
-    {
-      "index": 220,
-      "data": {
-        "upc": "0004400000057",
-        "price": "USD 5.19",
-        "size": "16 oz",
-        "description": "Premium Original Saltine Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956358"
-    },
-    {
-      "index": 221,
-      "data": {
-        "upc": "0004400000386",
-        "price": null,
-        "size": null,
-        "description": "Premium Original Saltine Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956369"
-    },
-    {
-      "index": 222,
-      "data": {
-        "upc": "0004400000463",
-        "price": "USD 5.39",
-        "size": "14.4 oz",
-        "description": "HONEY MAID Graham Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956381"
-    },
-    {
-      "index": 223,
-      "data": {
-        "upc": "0004400002734",
-        "price": "USD 5.39",
-        "size": "11 oz",
-        "description": "Nilla Wafers Cookies"
-      },
-      "timestamp": "2025-06-03T12:37:48.956394"
-    },
-    {
-      "index": 224,
-      "data": {
-        "upc": "0004400003111",
-        "price": "USD 5.69",
-        "size": "13.7 oz",
-        "description": "RITZ Original Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956406"
-    },
-    {
-      "index": 225,
-      "data": {
-        "upc": "0004400003219",
-        "price": "USD 5.69",
-        "size": "13.0 oz",
-        "description": "CHIPS AHOY! Original Chocolate Chip Cookies"
-      },
-      "timestamp": "2025-06-03T12:37:48.956418"
-    },
-    {
-      "index": 226,
-      "data": {
-        "upc": "0004400003223",
-        "price": "USD 5.69",
-        "size": "13 oz",
-        "description": "CHIPS AHOY! Chewy Chocolate Chip Cookies"
-      },
-      "timestamp": "2025-06-03T12:37:48.956429"
-    },
-    {
-      "index": 227,
-      "data": {
-        "upc": "0004400005098",
-        "price": "USD 5.39",
-        "size": "8.5 oz",
-        "description": "Triscuit Organic Original Whole Grain Wheat Vegan Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956441"
-    },
-    {
-      "index": 228,
-      "data": {
-        "upc": "0004400005099",
-        "price": "USD 5.39",
-        "size": "8.5 oz",
-        "description": "Triscuit Cracked Pepper & Olive Oil Whole Grain Wheat Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956453"
-    },
-    {
-      "index": 229,
-      "data": {
-        "upc": "0004400005101",
-        "price": "USD 5.39",
-        "size": "8.5 oz",
-        "description": "Triscuit Rosemary & Olive Oil Whole Grain Wheat Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956465"
-    },
-    {
-      "index": 230,
-      "data": {
-        "upc": "0004400005169",
-        "price": "USD 6.49",
-        "size": "12.5 oz",
-        "description": "Triscuit Organic Original Whole Grain Wheat Vegan Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956477"
-    },
-    {
-      "index": 231,
-      "data": {
-        "upc": "0004400006011",
-        "price": "USD 4.99",
-        "size": "13.29 oz",
-        "description": "OREO Chocolate Sandwich Cookies"
-      },
-      "timestamp": "2025-06-03T12:37:48.956489"
-    },
-    {
-      "index": 232,
-      "data": {
-        "upc": "0004400006013",
-        "price": "USD 4.99",
-        "size": "14.03 oz",
-        "description": "OREO Double Stuf Chocolate Sandwich Cookies"
-      },
-      "timestamp": "2025-06-03T12:37:48.956502"
-    },
-    {
-      "index": 233,
-      "data": {
-        "upc": "0004400006922",
-        "price": "USD 5.39",
-        "size": "8.5 oz",
-        "description": "Wheat Thins Hint of Salt Low Sodium Whole Grain Wheat Crackers"
-      },
-      "timestamp": "2025-06-03T12:37:48.956516"
-    },
-    {
-      "index": 234,
-      "data": {
-        "upc": "0004400006923",
-        "price": "USD 5.39",
-        "size": "8.5 oz",
-        "description": "Wheat Thins Original Whole Grain Wheat Crackers"
-      },
-      "timestamp": "2025-06-03T12:38:01.006933"
-    },
-    {
-      "index": 235,
-      "data": {
-        "upc": "0004400006925",
-        "price": "USD 5.39",
-        "size": "8 oz",
-        "description": "Wheat Thins Reduced Fat Whole Grain Wheat Crackers"
-      },
-      "timestamp": "2025-06-03T12:38:01.006965"
-    },
-    {
-      "index": 236,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:01.006982"
-    },
-    {
-      "index": 237,
-      "data": {
-        "upc": "0004410015618",
-        "price": "USD 3.99",
-        "size": "52 fl oz",
-        "description": "Planet Oat\u00ae Dairy Free Original Oatmilk"
-      },
-      "timestamp": "2025-06-03T12:38:01.006997"
-    },
-    {
-      "index": 238,
-      "data": {
-        "upc": "0004410015619",
-        "price": "USD 3.99",
-        "size": "52 fl oz",
-        "description": "Planet Oat\u00ae Dairy Free Extra Creamy Original Oat Milk"
-      },
-      "timestamp": "2025-06-03T12:38:01.007011"
-    },
-    {
-      "index": 239,
-      "data": {
-        "upc": "0004410015621",
-        "price": "USD 3.99",
-        "size": "52 fl oz",
-        "description": "Planet Oat Dairy Free Vanilla Oat Milk"
-      },
-      "timestamp": "2025-06-03T12:38:01.007024"
-    },
-    {
-      "index": 240,
-      "data": {
-        "upc": "0004410019080",
-        "price": "USD 3.99",
-        "size": "52 oz",
-        "description": "Planet Oat Dairy Free Unsweeted Original Oat Milk"
-      },
-      "timestamp": "2025-06-03T12:38:01.007037"
-    },
-    {
-      "index": 241,
-      "data": {
-        "upc": "0004410019081",
-        "price": "USD 3.99",
-        "size": "52 oz",
-        "description": "Planet Oat Dairy Free Unsweetened Vanilla Oat Milk"
-      },
-      "timestamp": "2025-06-03T12:38:01.007051"
-    },
-    {
-      "index": 242,
-      "data": {
-        "upc": "0004410019092",
-        "price": "USD 3.99",
-        "size": "52 fl oz",
-        "description": "Planet Oat\u00ae Dairy Free Barista Oat Milk"
-      },
-      "timestamp": "2025-06-03T12:38:01.007064"
-    },
-    {
-      "index": 243,
-      "data": {
-        "upc": "0004450032953",
-        "price": "USD 6.99",
-        "size": "9 OZ",
-        "description": "Hillshire Farm Ultra Thin Sliced Black Forest Ham Deli Lunch Meat"
-      },
-      "timestamp": "2025-06-03T12:38:01.007078"
-    },
-    {
-      "index": 244,
-      "data": {
-        "upc": "0004450033904",
-        "price": "USD 6.99",
-        "size": "12 OZ",
-        "description": "Hillshire Farm\u00ae Beef Polska Kielbasa Smoked Sausage"
-      },
-      "timestamp": "2025-06-03T12:38:01.007091"
-    },
-    {
-      "index": 245,
-      "data": {
-        "upc": "0004450033905",
-        "price": "USD 6.99",
-        "size": "12 OZ",
-        "description": "Hillshire Farm\u00ae Beef Smoked Sausage"
-      },
-      "timestamp": "2025-06-03T12:38:01.007105"
-    },
-    {
-      "index": 246,
-      "data": {
-        "upc": "0004450097644",
-        "price": "USD 6.99",
-        "size": "8 OZ",
-        "description": "Hillshire Farm Ultra Thin Sliced Lower Sodium Oven Roasted Turkey Breast Sandwich Meat"
-      },
-      "timestamp": "2025-06-03T12:38:01.007118"
-    },
-    {
-      "index": 247,
-      "data": {
-        "upc": "0004450097645",
-        "price": "USD 6.99",
-        "size": "8 OZ",
-        "description": "Hillshire Farm Ultra Thin Sliced Lower Sodium Honey Ham Sandwich Meat"
-      },
-      "timestamp": "2025-06-03T12:38:01.007131"
-    },
-    {
-      "index": 248,
-      "data": {
-        "upc": "0004450097650",
-        "price": "USD 6.99",
-        "size": "9 OZ",
-        "description": "Hillshire Farm Ultra Thin Sliced Oven Roasted Turkey Breast Sandwich Meat"
-      },
-      "timestamp": "2025-06-03T12:38:01.007144"
-    },
-    {
-      "index": 249,
-      "data": {
-        "upc": "0004450097651",
-        "price": "USD 6.99",
-        "size": "9 OZ",
-        "description": "Hillshire Farm Ultra Thin Sliced Honey Roasted Turkey Breast Sandwich Meat"
-      },
-      "timestamp": "2025-06-03T12:38:01.007159"
-    },
-    {
-      "index": 250,
-      "data": {
-        "upc": "0004470001988",
-        "price": "USD 11.99",
-        "size": "16 OZ",
-        "description": "Oscar Mayer 12-Hour Real Wood Smoked Bacon"
-      },
-      "timestamp": "2025-06-03T12:38:01.007173"
-    },
-    {
-      "index": 251,
-      "data": {
-        "upc": "0004470001988",
-        "price": "USD 11.99",
-        "size": "16 OZ",
-        "description": "Oscar Mayer 12-Hour Real Wood Smoked Bacon"
-      },
-      "timestamp": "2025-06-03T12:38:01.007186"
-    },
-    {
-      "index": 252,
-      "data": {
-        "upc": "0004470001990",
-        "price": "USD 11.99",
-        "size": "16 OZ",
-        "description": "Oscar Mayer 12-Hour Real Wood Smoked Thick Cut Bacon"
-      },
-      "timestamp": "2025-06-03T12:38:01.007200"
-    },
-    {
-      "index": 253,
-      "data": {
-        "upc": "0004470002268",
-        "price": "USD 11.99",
-        "size": "12 OZ",
-        "description": "Oscar Mayer Original Center Cut Bacon"
-      },
-      "timestamp": "2025-06-03T12:38:01.007213"
-    },
-    {
-      "index": 254,
-      "data": {
-        "upc": "0004470003054",
-        "price": "USD 6.99",
-        "size": "9 oz",
-        "description": "Oscar Mayer Deli Fresh Honey Uncured Ham Thin Sliced Lunchmeat 9 oz"
-      },
-      "timestamp": "2025-06-03T12:38:01.007226"
-    },
-    {
-      "index": 255,
-      "data": {
-        "upc": "0004470003070",
-        "price": "USD 6.99",
-        "size": "8 oz",
-        "description": "Oscar Mayer Deli Fresh Mesquite Smoked Turkey Breast Thin Sliced Lunchmeat 8 oz"
-      },
-      "timestamp": "2025-06-03T12:38:01.007240"
-    },
-    {
-      "index": 256,
-      "data": {
-        "upc": "0004470003095",
-        "price": "USD 6.99",
-        "size": "9 OZ",
-        "description": "Oscar Mayer Deli Fresh Honey Smoked Turkey Breast Thin Sliced Lunchmeat 9 oz"
-      },
-      "timestamp": "2025-06-03T12:38:01.007253"
-    },
-    {
-      "index": 257,
-      "data": {
-        "upc": "0004470003099",
-        "price": "USD 6.99",
-        "size": "9 oz",
-        "description": "Oscar Mayer Deli Fresh Rotisserie Seasoned Chicken Breast Thin Sliced Lunchmeat 9 oz"
-      },
-      "timestamp": "2025-06-03T12:38:01.007267"
-    },
-    {
-      "index": 258,
-      "data": {
-        "upc": "0004470003250",
-        "price": "USD 6.99",
-        "size": "8 oz",
-        "description": "Oscar Mayer Deli Fresh Cracked Black Pepper Turkey Breast Thin Sliced Lunchmeat 8 oz"
-      },
-      "timestamp": "2025-06-03T12:38:01.007280"
-    },
-    {
-      "index": 259,
-      "data": {
-        "upc": "0004610000107",
-        "price": "USD 4.69",
-        "size": "11 slices / 8 oz",
-        "description": "Sargento\u00ae Muenster Sliced Cheese"
-      },
-      "timestamp": "2025-06-03T12:38:01.007294"
-    },
-    {
-      "index": 260,
-      "data": {
-        "upc": "0004610000122",
-        "price": "USD 4.69",
-        "size": "10 slices / 7.5 oz",
-        "description": "Sargento\u00ae Pepper Jack Sliced Cheese"
-      },
-      "timestamp": "2025-06-03T12:38:13.691116"
-    },
-    {
-      "index": 261,
-      "data": {
-        "upc": "0004610000123",
-        "price": "USD 4.69",
-        "size": "12 slices / 8 oz",
-        "description": "Sargento\u00ae Provolone Sliced Cheese"
-      },
-      "timestamp": "2025-06-03T12:38:13.691146"
-    },
-    {
-      "index": 262,
-      "data": {
-        "upc": "0004610000163",
-        "price": null,
-        "size": null,
-        "description": "Sargento\u00ae Aged Swiss Sliced Cheese"
-      },
-      "timestamp": "2025-06-03T12:38:13.691162"
-    },
-    {
-      "index": 263,
-      "data": {
-        "upc": "0004610000272",
-        "price": "USD 4.69",
-        "size": "10 slices / 7 oz",
-        "description": "Sargento\u00ae Extra Sharp Cheddar Sliced Cheese"
-      },
-      "timestamp": "2025-06-03T12:38:13.691176"
-    },
-    {
-      "index": 264,
-      "data": {
-        "upc": "0004610000715",
-        "price": "USD 6.19",
-        "size": "12 ct / 1 oz each",
-        "description": "Sargento\u00ae Mozzarella String Cheese\u00ae"
-      },
-      "timestamp": "2025-06-03T12:38:13.691189"
-    },
-    {
-      "index": 265,
-      "data": {
-        "upc": "0004800121338",
-        "price": "USD 5.29",
-        "size": "15 oz",
-        "description": "Hellmann's Real Mayo"
-      },
-      "timestamp": "2025-06-03T12:38:13.691203"
-    },
-    {
-      "index": 266,
-      "data": {
-        "upc": "0004800121348",
-        "price": "USD 6.49",
-        "size": "30 oz",
-        "description": "Hellmann's Real Mayo"
-      },
-      "timestamp": "2025-06-03T12:38:13.691217"
-    },
-    {
-      "index": 267,
-      "data": {
-        "upc": "0004800135366",
-        "price": "USD 5.49",
-        "size": "11.5 oz",
-        "description": "Hellmann's Real Mayo"
-      },
-      "timestamp": "2025-06-03T12:38:13.691231"
-    },
-    {
-      "index": 268,
-      "data": {
-        "upc": "0004850002238",
-        "price": "USD 6.99",
-        "size": "48 fl oz",
-        "description": "Starbucks\u00ae Medium Roast Unsweetened Black Iced Coffee Carton"
-      },
-      "timestamp": "2025-06-03T12:38:13.691245"
-    },
-    {
-      "index": 269,
-      "data": {
-        "upc": "0004850020184",
-        "price": "USD 6.99",
-        "size": "48 fl oz",
-        "description": "Starbucks\u00ae Dark Roast Unsweetened Black Iced Coffee Carton"
-      },
-      "timestamp": "2025-06-03T12:38:13.691259"
-    },
-    {
-      "index": 270,
-      "data": {
-        "upc": "0004850020564",
-        "price": "USD 4.69",
-        "size": "46 fl oz",
-        "description": "Tropicana Pure Premium Original Lots Of Pulp No Sugar Added 100% Orange Juice"
-      },
-      "timestamp": "2025-06-03T12:38:13.691272"
-    },
-    {
-      "index": 271,
-      "data": {
-        "upc": "0004850020567",
-        "price": "USD 4.69",
-        "size": "46 fl oz",
-        "description": "Tropicana Pure Premium Original Some Pulp No Sugar Added 100% Orange Juice"
-      },
-      "timestamp": "2025-06-03T12:38:13.691289"
-    },
-    {
-      "index": 272,
-      "data": {
-        "upc": "0004850020571",
-        "price": "USD 4.69",
-        "size": "46 fl oz",
-        "description": "Tropicana Pure Premium Original No Pulp No Sugar Added 100% Orange Juice"
-      },
-      "timestamp": "2025-06-03T12:38:13.691309"
-    },
-    {
-      "index": 273,
-      "data": {
-        "upc": "0004850020572",
-        "price": "USD 4.69",
-        "size": "46 fl oz",
-        "description": "Tropicana Pure Premium Original No Pulp No Sugar Added Calcium And Vitamin D 100% Orange Juice"
-      },
-      "timestamp": "2025-06-03T12:38:13.691324"
-    },
-    {
-      "index": 274,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:13.691338"
-    },
-    {
-      "index": 275,
-      "data": {
-        "upc": "0004850020603",
-        "price": "USD 2.49",
-        "size": "11 fl oz",
-        "description": "Tropicana Pure Premium Original No Pulp No Sugar Added Single Serve 100% Orange Juice"
-      },
-      "timestamp": "2025-06-03T12:38:13.691351"
-    },
-    {
-      "index": 276,
-      "data": {
-        "upc": "0004920000722",
-        "price": "USD 3.19",
-        "size": "1 lb",
-        "description": "Domino Premium Pure Cane Granulated Sugar 1 lb Canister"
-      },
-      "timestamp": "2025-06-03T12:38:13.691365"
-    },
-    {
-      "index": 277,
-      "data": {
-        "upc": "0004920004201",
-        "price": null,
-        "size": null,
-        "description": "Domino Sugar - 1 Lb"
-      },
-      "timestamp": "2025-06-03T12:38:13.691378"
-    },
-    {
-      "index": 278,
-      "data": {
-        "upc": "0004920004350",
-        "price": null,
-        "size": null,
-        "description": "Domino Premium Pure Cane Granulated Sugar"
-      },
-      "timestamp": "2025-06-03T12:38:13.691391"
-    },
-    {
-      "index": 279,
-      "data": {
-        "upc": "0004920004550",
-        "price": "USD 5.79",
-        "size": "4 lb",
-        "description": "Domino Premium Pure Cane Granulated Sugar"
-      },
-      "timestamp": "2025-06-03T12:38:13.691405"
-    },
-    {
-      "index": 280,
-      "data": {
-        "upc": "0004920005100",
-        "price": "USD 2.69",
-        "size": "1 lb",
-        "description": "Domino Premium Cane Powdered Sugar"
-      },
-      "timestamp": "2025-06-03T12:38:13.691419"
-    },
-    {
-      "index": 281,
-      "data": {
-        "upc": "0004920005600",
-        "price": "USD 2.69",
-        "size": "1 lb",
-        "description": "Domino Premium Pure Cane Dark Brown Sugar"
-      },
-      "timestamp": "2025-06-03T12:38:13.691432"
-    },
-    {
-      "index": 282,
-      "data": {
-        "upc": "0004920005675",
-        "price": "USD 2.69",
-        "size": "1 lb",
-        "description": "Domino Premium Pure Cane Light Brown Sugar"
-      },
-      "timestamp": "2025-06-03T12:38:13.691445"
-    },
-    {
-      "index": 283,
-      "data": {
-        "upc": "0004973309101",
-        "price": "USD 6.49",
-        "size": "5 fl oz",
-        "description": "Cholula Original Hot Sauce"
-      },
-      "timestamp": "2025-06-03T12:38:13.691458"
-    },
-    {
-      "index": 284,
-      "data": {
-        "upc": "0004973312345",
-        "price": "USD 10.99",
-        "size": "12 fl oz",
-        "description": "Cholula Original Hot Sauce"
-      },
-      "timestamp": "2025-06-03T12:38:13.691471"
-    },
-    {
-      "index": 285,
-      "data": {
-        "upc": "0004973380011",
-        "price": "USD 6.49",
-        "size": "5 fl oz",
-        "description": "Cholula Chili Garlic Hot Sauce"
-      },
-      "timestamp": "2025-06-03T12:38:13.691485"
-    },
-    {
-      "index": 286,
-      "data": {
-        "upc": "0004973383011",
-        "price": "USD 6.49",
-        "size": "5 fl oz",
-        "description": "Cholula Chipotle Hot Sauce"
-      },
-      "timestamp": "2025-06-03T12:38:26.989470"
-    },
-    {
-      "index": 287,
-      "data": {
-        "upc": "0004973384011",
-        "price": "USD 6.49",
-        "size": "5 fl oz",
-        "description": "Cholula Chili Lime Hot Sauce"
-      },
-      "timestamp": "2025-06-03T12:38:26.989500"
-    },
-    {
-      "index": 288,
-      "data": {
-        "upc": "0005100001251",
-        "price": "USD 1.69",
-        "size": "10.75 oz",
-        "description": "Campbell's\u00ae Condensed Chicken Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:38:26.989522"
-    },
-    {
-      "index": 289,
-      "data": {
-        "upc": "0005100002549",
-        "price": "USD 3.19",
-        "size": "24 oz",
-        "description": "Prego\u00ae Traditional Pasta Sauce"
-      },
-      "timestamp": "2025-06-03T12:38:26.989538"
-    },
-    {
-      "index": 290,
-      "data": {
-        "upc": "0005150001700",
-        "price": "USD 4.49",
-        "size": "16 oz",
-        "description": "Smucker's\u00ae Creamy Natural Peanut Butter"
-      },
-      "timestamp": "2025-06-03T12:38:26.989552"
-    },
-    {
-      "index": 291,
-      "data": {
-        "upc": "0005150001701",
-        "price": "USD 4.49",
-        "size": "16 oz",
-        "description": "Smucker's Natural Chunky Peanut Butter"
-      },
-      "timestamp": "2025-06-03T12:38:26.989566"
-    },
-    {
-      "index": 292,
-      "data": {
-        "upc": "0005150024177",
-        "price": "USD 6.29",
-        "size": "28 oz",
-        "description": "Jif\u00ae Creamy Peanut Butter"
-      },
-      "timestamp": "2025-06-03T12:38:26.989580"
-    },
-    {
-      "index": 293,
-      "data": {
-        "upc": "0005150025516",
-        "price": "USD 4.29",
-        "size": "16 oz",
-        "description": "Jif\u00ae Creamy Peanut Butter Spread"
-      },
-      "timestamp": "2025-06-03T12:38:26.989594"
-    },
-    {
-      "index": 294,
-      "data": {
-        "upc": "0005150025537",
-        "price": "USD 4.29",
-        "size": "16 oz",
-        "description": "Jif\u00ae Extra Crunchy Peanut Butter"
-      },
-      "timestamp": "2025-06-03T12:38:26.989608"
-    },
-    {
-      "index": 295,
-      "data": {
-        "upc": "0005150025565",
-        "price": "USD 4.29",
-        "size": "16 oz",
-        "description": "Jif Natural Creamy Peanut Butter"
-      },
-      "timestamp": "2025-06-03T12:38:26.989623"
-    },
-    {
-      "index": 296,
-      "data": {
-        "upc": "0005250005009",
-        "price": "USD 5.99",
-        "size": "18 fl oz",
-        "description": "Duke's\u00ae Smooth & Creamy Mayo"
-      },
-      "timestamp": "2025-06-03T12:38:26.989636"
-    },
-    {
-      "index": 297,
-      "data": {
-        "upc": "0005400010060",
-        "price": "USD 13.79",
-        "size": "12 rolls",
-        "description": "Scott 1000 Toilet Paper Rolls 1 Ply Toilet Tissue"
-      },
-      "timestamp": "2025-06-03T12:38:26.989650"
-    },
-    {
-      "index": 298,
-      "data": {
-        "upc": "0005400010183",
-        "price": "USD 5.79",
-        "size": "4 rolls",
-        "description": "Scott 1000 Toilet Paper Rolls 1 Ply Toilet Tissue"
-      },
-      "timestamp": "2025-06-03T12:38:26.989664"
-    },
-    {
-      "index": 299,
-      "data": {
-        "upc": "0005400020042",
-        "price": null,
-        "size": null,
-        "description": "Scott\u00ae 1000 Sheets Bath Tissue Roll"
-      },
-      "timestamp": "2025-06-03T12:38:26.989678"
-    },
-    {
-      "index": 300,
-      "data": {
-        "upc": "0005410000400",
-        "price": "USD 4.99",
-        "size": "16 OZA",
-        "description": "Vlasic Kosher Keto Friendly Dill Baby Whole Pickles"
-      },
-      "timestamp": "2025-06-03T12:38:26.989692"
-    },
-    {
-      "index": 301,
-      "data": {
-        "upc": "0005929031141",
-        "price": "USD 5.49",
-        "size": "14.1 oz",
-        "description": "McVitie's Original Digestive Wheat Biscuits"
-      },
-      "timestamp": "2025-06-03T12:38:26.989706"
-    },
-    {
-      "index": 302,
-      "data": {
-        "upc": "0005929031143",
-        "price": "USD 5.49",
-        "size": "10.5 oz",
-        "description": "McVitie's Milk Chocolate Hobnobs"
-      },
-      "timestamp": "2025-06-03T12:38:26.989720"
-    },
-    {
-      "index": 303,
-      "data": {
-        "upc": "0005929031144",
-        "price": "USD 5.49",
-        "size": "10.5 oz",
-        "description": "Mcvitie's\u00ae Digestive Milk Chocolate Wheat Biscuits"
-      },
-      "timestamp": "2025-06-03T12:38:26.989733"
-    },
-    {
-      "index": 304,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:26.989747"
-    },
-    {
-      "index": 305,
-      "data": {
-        "upc": "0006827436016",
-        "price": "USD 2.59",
-        "size": "1 Gal",
-        "description": "Pure Life Distilled Water Jug"
-      },
-      "timestamp": "2025-06-03T12:38:26.989761"
-    },
-    {
-      "index": 306,
-      "data": {
-        "upc": "0007027223202",
-        "price": "USD 3.99",
-        "size": "6.500 OZ",
-        "description": "Reddi Wip Original Whipped Topping Made With Real Cream"
-      },
-      "timestamp": "2025-06-03T12:38:26.989775"
-    },
-    {
-      "index": 307,
-      "data": {
-        "upc": "0007027223203",
-        "price": "USD 3.99",
-        "size": "6.500 OZ",
-        "description": "Reddi Wip Extra Creamy Whipped Topping Made With Real Cream"
-      },
-      "timestamp": "2025-06-03T12:38:26.989789"
-    },
-    {
-      "index": 308,
-      "data": {
-        "upc": "0007027223205",
-        "price": "USD 3.99",
-        "size": "6.500 OZ",
-        "description": "Reddi Wip Fat Free Whipped Topping Made With Real Cream"
-      },
-      "timestamp": "2025-06-03T12:38:26.989804"
-    },
-    {
-      "index": 309,
-      "data": {
-        "upc": "0007066203003",
-        "price": "USD 0.79",
-        "size": "2.25 oz",
-        "description": "Nissin Cup Noodles Chicken Flavor Ramen Noodle Soup"
-      },
-      "timestamp": "2025-06-03T12:38:26.989821"
-    },
-    {
-      "index": 310,
-      "data": {
-        "upc": "0007080004118",
-        "price": "USD 9.99",
-        "size": "1 lb",
-        "description": "Smithfield Hometown Original Bacon 16 oz"
-      },
-      "timestamp": "2025-06-03T12:38:26.989835"
-    },
-    {
-      "index": 311,
-      "data": {
-        "upc": "0007080004125",
-        "price": "USD 9.99",
-        "size": "16 oz",
-        "description": "Smithfield Thick Cut Naturally Hickory Smoked Bacon"
-      },
-      "timestamp": "2025-06-03T12:38:26.989849"
-    },
-    {
-      "index": 312,
-      "data": {
-        "upc": "0007101200003",
-        "price": null,
-        "size": null,
-        "description": "King Arthur\u00ae Flour Unbleached All-Purpose Flour"
-      },
-      "timestamp": "2025-06-03T12:38:38.287226"
-    },
-    {
-      "index": 313,
-      "data": {
-        "upc": "0007147900001",
-        "price": "USD 4.99",
-        "size": "6 pc / 12 oz",
-        "description": "Bays Original English Muffins"
-      },
-      "timestamp": "2025-06-03T12:38:38.287257"
-    },
-    {
-      "index": 314,
-      "data": {
-        "upc": "0007147900015",
-        "price": "USD 4.99",
-        "size": "6 pc / 12 oz",
-        "description": "Bays Sourdough English Muffins"
-      },
-      "timestamp": "2025-06-03T12:38:38.287273"
-    },
-    {
-      "index": 315,
-      "data": {
-        "upc": "0007147900080",
-        "price": "USD 4.99",
-        "size": "6 pc / 12 oz",
-        "description": "Bays Brioche English Muffins"
-      },
-      "timestamp": "2025-06-03T12:38:38.287288"
-    },
-    {
-      "index": 316,
-      "data": {
-        "upc": "0007187154860",
-        "price": "USD 5.99",
-        "size": "12 OZ",
-        "description": "Oscar Mayer Fully Cooked Gluten Free Turkey Bacon with Less Fat & Less Sodium"
-      },
-      "timestamp": "2025-06-03T12:38:38.287303"
-    },
-    {
-      "index": 317,
-      "data": {
-        "upc": "0007241201004",
-        "price": "USD 5.19",
-        "size": "16 fl oz",
-        "description": "Holland House\u00ae White Cooking Wine"
-      },
-      "timestamp": "2025-06-03T12:38:38.287317"
-    },
-    {
-      "index": 318,
-      "data": {
-        "upc": "0007342000011",
-        "price": "USD 2.99",
-        "size": "16 oz",
-        "description": "Daisy Pure and Natural Sour Cream"
-      },
-      "timestamp": "2025-06-03T12:38:38.287331"
-    },
-    {
-      "index": 319,
-      "data": {
-        "upc": "0007342000015",
-        "price": "USD 2.99",
-        "size": "16 oz",
-        "description": "Daisy Pure and Natural Light Sour Cream"
-      },
-      "timestamp": "2025-06-03T12:38:38.287346"
-    },
-    {
-      "index": 320,
-      "data": {
-        "upc": "0007342001614",
-        "price": "USD 3.59",
-        "size": "14 oz",
-        "description": "Daisy Pure and Natural Squeeze Sour Cream"
-      },
-      "timestamp": "2025-06-03T12:38:38.287360"
-    },
-    {
-      "index": 321,
-      "data": {
-        "upc": "0007342011614",
-        "price": "USD 3.59",
-        "size": "14 oz",
-        "description": "Daisy Pure and Natural Light Squeeze Sour Cream"
-      },
-      "timestamp": "2025-06-03T12:38:38.287374"
-    },
-    {
-      "index": 322,
-      "data": {
-        "upc": "0007342051620",
-        "price": "USD 3.59",
-        "size": "16 oz",
-        "description": "Daisy Pure and Natural 2% Low Fat Cottage Cheese"
-      },
-      "timestamp": "2025-06-03T12:38:38.287388"
-    },
-    {
-      "index": 323,
-      "data": {
-        "upc": "0007342051640",
-        "price": "USD 3.59",
-        "size": "16 oz",
-        "description": "Daisy Pure and Natural 4% Cottage Cheese"
-      },
-      "timestamp": "2025-06-03T12:38:38.287403"
-    },
-    {
-      "index": 324,
-      "data": {
-        "upc": "0007349120100",
-        "price": "USD 4.99",
-        "size": "6 ct / 4 oz",
-        "description": "Kozy Shack Rice Pudding Snack Cups, Gluten Free Dessert"
-      },
-      "timestamp": "2025-06-03T12:38:38.287417"
-    },
-    {
-      "index": 325,
-      "data": {
-        "upc": "0007418226800",
-        "price": "USD 2.79",
-        "size": "7.5 fl oz",
-        "description": "Softsoap Aquarium Liquid Hand Soap Kitchen and Bathroom Hand Soap"
-      },
-      "timestamp": "2025-06-03T12:38:38.287430"
-    },
-    {
-      "index": 326,
-      "data": {
-        "upc": "0007418227093",
-        "price": "USD 2.69",
-        "size": "7.5 fl oz",
-        "description": "Softsoap Liquid Hand Soap Kitchen and Bathroom Hand Soap Fresh Breeze Scent"
-      },
-      "timestamp": "2025-06-03T12:38:38.287445"
-    },
-    {
-      "index": 327,
-      "data": {
-        "upc": "0007430500132",
-        "price": "USD 6.99",
-        "size": "32 fl oz",
-        "description": "Bragg\u00ae Organic Apple Cider Vinegar with the Mother"
-      },
-      "timestamp": "2025-06-03T12:38:38.287459"
-    },
-    {
-      "index": 328,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:38.287476"
-    },
-    {
-      "index": 329,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:38.287490"
-    },
-    {
-      "index": 330,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:38.287505"
-    },
-    {
-      "index": 331,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:38.287519"
-    },
-    {
-      "index": 332,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:38.287533"
-    },
-    {
-      "index": 333,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:38.287547"
-    },
-    {
-      "index": 334,
-      "data": null,
-      "timestamp": "2025-06-03T12:38:38.287561"
-    },
-    {
-      "index": 335,
-      "data": {
-        "upc": "0007680800388",
-        "price": "USD 3.69",
-        "size": "12 oz",
-        "description": "Barilla Gluten Free Spaghetti Non-GMO Project Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:38.287575"
-    },
-    {
-      "index": 336,
-      "data": {
-        "upc": "0007680800649",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Whole Grain Thin Spaghetti Non-GMO and Kosher Pasta Made With Whole Wheat"
-      },
-      "timestamp": "2025-06-03T12:38:38.287590"
-    },
-    {
-      "index": 337,
-      "data": {
-        "upc": "0007680828017",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Linguine Pasta, Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:38.287604"
-    },
-    {
-      "index": 338,
-      "data": {
-        "upc": "0007680828045",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Ditalini Pasta Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142777"
-    },
-    {
-      "index": 339,
-      "data": {
-        "upc": "0007680828073",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Penne Pasta, Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142813"
-    },
-    {
-      "index": 340,
-      "data": {
-        "upc": "0007680828098",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Rotini Pasta, Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142831"
-    },
-    {
-      "index": 341,
-      "data": {
-        "upc": "0007680850106",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Angel Hair Pasta Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142850"
-    },
-    {
-      "index": 342,
-      "data": {
-        "upc": "0007680850108",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Farfalle Pasta Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142867"
-    },
-    {
-      "index": 343,
-      "data": {
-        "upc": "0007680850738",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Fettuccine Pasta Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142884"
-    },
-    {
-      "index": 344,
-      "data": {
-        "upc": "0007680851398",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Orzo Pasta, Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142901"
-    },
-    {
-      "index": 345,
-      "data": {
-        "upc": "0007680851437",
-        "price": null,
-        "size": null,
-        "description": "Barilla Cellentani Pasta Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142918"
-    },
-    {
-      "index": 346,
-      "data": {
-        "upc": "0007680851613",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Elbow Pasta Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142935"
-    },
-    {
-      "index": 347,
-      "data": {
-        "upc": "0007680851798",
-        "price": "USD 2.19",
-        "size": "16 oz",
-        "description": "Barilla Medium Pasta Shells, Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:38:49.142951"
-    },
-    {
-      "index": 348,
-      "data": {
-        "upc": "0007778200221",
-        "price": "USD 5.99",
-        "size": "14 ct / 12 oz",
-        "description": "Johnsonville\u00ae Vermont Maple Syrup Breakfast Pork Sausage Links"
-      },
-      "timestamp": "2025-06-03T12:38:49.142968"
-    },
-    {
-      "index": 349,
-      "data": {
-        "upc": "0007778200276",
-        "price": "USD 5.99",
-        "size": "12 ct / 12 oz",
-        "description": "Johnsonville\u00ae Original Recipe Breakfast Pork Sausage Links"
-      },
-      "timestamp": "2025-06-03T12:38:49.142984"
-    },
-    {
-      "index": 350,
-      "data": {
-        "upc": "0007778200813",
-        "price": "USD 7.49",
-        "size": "5 ct / 19 oz",
-        "description": "Johnsonville\u00ae Hot Italian Pork Sausage Links"
-      },
-      "timestamp": "2025-06-03T12:38:49.143001"
-    },
-    {
-      "index": 351,
-      "data": {
-        "upc": "0007778201357",
-        "price": "USD 5.99",
-        "size": "12 oz",
-        "description": "Johnsonville\u00ae Brown Sugar & Honey Flavor Breakfast Sausage Links"
-      },
-      "timestamp": "2025-06-03T12:38:49.143018"
-    },
-    {
-      "index": 352,
-      "data": {
-        "upc": "0007790100651",
-        "price": "USD 8.99",
-        "size": "8 oz",
-        "description": "President Feta Cheese Chunk 8 oz"
-      },
-      "timestamp": "2025-06-03T12:38:49.143065"
-    },
-    {
-      "index": 353,
-      "data": {
-        "upc": "0007790100781",
-        "price": "USD 6.99",
-        "size": "6oz",
-        "description": "President Feta Cheese Crumbled"
-      },
-      "timestamp": "2025-06-03T12:38:49.143114"
-    },
-    {
-      "index": 354,
-      "data": {
-        "upc": "0007981300011",
-        "price": "USD 7.99",
-        "size": "5.3 oz",
-        "description": "Boursin Garlic & Fine Herbs Gourmet Cheese"
-      },
-      "timestamp": "2025-06-03T12:38:49.143138"
-    },
-    {
-      "index": 355,
-      "data": {
-        "upc": "0007981300027",
-        "price": "USD 7.99",
-        "size": "5.3 oz",
-        "description": "Boursin\u00ae Shallot & Chive Gourmet Cheese Spread"
-      },
-      "timestamp": "2025-06-03T12:38:49.143157"
-    },
-    {
-      "index": 356,
-      "data": {
-        "upc": "0008265733412",
-        "price": "USD 2.29",
-        "size": "101.4 fl. oz.",
-        "description": "Deer Park 100% Natural Spring Water Jug"
-      },
-      "timestamp": "2025-06-03T12:38:49.143174"
-    },
-    {
-      "index": 357,
-      "data": {
-        "upc": "0008265750060",
-        "price": "USD 2.49",
-        "size": "1 Gal",
-        "description": "Deer Park 100% Natural Spring Water Jug"
-      },
-      "timestamp": "2025-06-03T12:38:49.143191"
-    },
-    {
-      "index": 358,
-      "data": {
-        "upc": "0008265750061",
-        "price": "USD 2.99",
-        "size": "6 bottles / 16.9 fl oz",
-        "description": "Deer Park\u00ae Natural Spring Bottled Water"
-      },
-      "timestamp": "2025-06-03T12:38:49.143209"
-    },
-    {
-      "index": 359,
-      "data": {
-        "upc": "0008265750080",
-        "price": "USD 4.99",
-        "size": "2.5 Gal",
-        "description": "Deer Park 100% Natural Spring Water Jug"
-      },
-      "timestamp": "2025-06-03T12:38:49.143225"
-    },
-    {
-      "index": 360,
-      "data": {
-        "upc": "0008265750406",
-        "price": "USD 6.79",
-        "size": "16.9 fl. oz.",
-        "description": "Deer Park 100% Natural Spring Water Bottle"
-      },
-      "timestamp": "2025-06-03T12:38:49.143242"
-    },
-    {
-      "index": 361,
-      "data": {
-        "upc": "0009396600021",
-        "price": "USD 3.39",
-        "size": "32 fl oz",
-        "description": "Organic Valley\u00ae 2% Reduced Fat Milk"
-      },
-      "timestamp": "2025-06-03T12:38:49.143259"
-    },
-    {
-      "index": 362,
-      "data": {
-        "upc": "0009396600028",
-        "price": "USD 6.99",
-        "size": "1 pt",
-        "description": "Organic Valley\u00ae Heavy Whipping Cream"
-      },
-      "timestamp": "2025-06-03T12:38:49.143276"
-    },
-    {
-      "index": 363,
-      "data": {
-        "upc": "0009396600033",
-        "price": "USD 6.29",
-        "size": "1 qt",
-        "description": "Organic Valley\u00ae Ultra Pasteruized Half & Half"
-      },
-      "timestamp": "2025-06-03T12:38:49.143296"
-    },
-    {
-      "index": 364,
-      "data": {
-        "upc": "0009396600091",
-        "price": "USD 3.39",
-        "size": "1 qt",
-        "description": "Organic Valley\u00ae Whole Milk Quart"
-      },
-      "timestamp": "2025-06-03T12:39:00.781453"
-    },
-    {
-      "index": 365,
-      "data": {
-        "upc": "0009396600586",
-        "price": "USD 7.59",
-        "size": "1/2 gal",
-        "description": "Organic Valley\u00ae Grassmilk\u00ae Grassfed 2% Reduced Fat Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:39:00.781484"
-    },
-    {
-      "index": 366,
-      "data": {
-        "upc": "0009396600689",
-        "price": "USD 4.79",
-        "size": "1 pt",
-        "description": "Organic Valley\u00ae Grassmilk Organic Half & Half"
-      },
-      "timestamp": "2025-06-03T12:39:00.781501"
-    },
-    {
-      "index": 367,
-      "data": {
-        "upc": "0009396651052",
-        "price": "USD 3.99",
-        "size": "1 pt",
-        "description": "Organic Valley\u00ae Half & Half"
-      },
-      "timestamp": "2025-06-03T12:39:00.781517"
-    },
-    {
-      "index": 368,
-      "data": {
-        "upc": "0009396651300",
-        "price": "USD 5.99",
-        "size": "1/2 gal",
-        "description": "Organic Valley\u00ae Whole Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:39:00.781532"
-    },
-    {
-      "index": 369,
-      "data": {
-        "upc": "0009396651400",
-        "price": "USD 5.99",
-        "size": "1/2 gal",
-        "description": "Organic Valley\u00ae 1% Lowfat Milk"
-      },
-      "timestamp": "2025-06-03T12:39:00.781548"
-    },
-    {
-      "index": 370,
-      "data": {
-        "upc": "0009396651500",
-        "price": "USD 5.99",
-        "size": "1/2 gal",
-        "description": "Organic Valley\u00ae 2% Reduced Fat Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:39:00.781562"
-    },
-    {
-      "index": 371,
-      "data": {
-        "upc": "0009396651600",
-        "price": "USD 5.99",
-        "size": "1/2 gal",
-        "description": "Organic Valley\u00ae Fat Free Milk"
-      },
-      "timestamp": "2025-06-03T12:39:00.781577"
-    },
-    {
-      "index": 372,
-      "data": {
-        "upc": "0009990090836",
-        "price": "USD 1.79",
-        "size": "1.55 oz",
-        "description": "CRUNCH Milk Chocolate and Crisped Rice Full Size Candy Bar, 1.55 oz"
-      },
-      "timestamp": "2025-06-03T12:39:00.781591"
-    },
-    {
-      "index": 373,
-      "data": {
-        "upc": "0018685200034",
-        "price": "USD 6.79",
-        "size": "1 pt",
-        "description": "Talenti Double Dark Chocolate Gelato Pint"
-      },
-      "timestamp": "2025-06-03T12:39:00.781606"
-    },
-    {
-      "index": 374,
-      "data": {
-        "upc": "0018685200036",
-        "price": "USD 6.79",
-        "size": "1 pt",
-        "description": "Talenti Mediterranean Mint Gelato Pint"
-      },
-      "timestamp": "2025-06-03T12:39:00.781621"
-    },
-    {
-      "index": 375,
-      "data": {
-        "upc": "0018685200038",
-        "price": "USD 6.79",
-        "size": "16 oz",
-        "description": "Talenti Madagascan Vanilla Bean Gelato Pint"
-      },
-      "timestamp": "2025-06-03T12:39:00.781636"
-    },
-    {
-      "index": 376,
-      "data": {
-        "upc": "0018685200049",
-        "price": "USD 6.79",
-        "size": "1 pt",
-        "description": "Talenti Coffee Chocolate Chip Gelato"
-      },
-      "timestamp": "2025-06-03T12:39:00.781651"
-    },
-    {
-      "index": 377,
-      "data": {
-        "upc": "0018685200060",
-        "price": "USD 6.79",
-        "size": "16 oz",
-        "description": "Talenti Southern Butter Pecan Gelato"
-      },
-      "timestamp": "2025-06-03T12:39:00.781666"
-    },
-    {
-      "index": 378,
-      "data": {
-        "upc": "0018685200082",
-        "price": "USD 6.79",
-        "size": "1 pt",
-        "description": "Talenti Sorbetto Roman Raspberry, a Non-Dairy Ice Cream Alternative with Non-GMO Ingredients, 1 Pint"
-      },
-      "timestamp": "2025-06-03T12:39:00.781681"
-    },
-    {
-      "index": 379,
-      "data": {
-        "upc": "0018685200084",
-        "price": "USD 6.79",
-        "size": "1 pt",
-        "description": "Talenti Sorbetto Alphonso Mango, a Non-Dairy Ice Cream Alternative with Non-GMO Ingredients, 1 Pint"
-      },
-      "timestamp": "2025-06-03T12:39:00.781697"
-    },
-    {
-      "index": 380,
-      "data": {
-        "upc": "0063256500003",
-        "price": "USD 2.99",
-        "size": "1.5 liter",
-        "description": "FIJI Natural Artesian Bottled Water"
-      },
-      "timestamp": "2025-06-03T12:39:00.781711"
-    },
-    {
-      "index": 381,
-      "data": {
-        "upc": "0063314810001",
-        "price": "USD 3.79",
-        "size": "5 oz",
-        "description": "Tajin\u00ae Clasico with Lime Mild Seasoning Mix"
-      },
-      "timestamp": "2025-06-03T12:39:00.781726"
-    },
-    {
-      "index": 382,
-      "data": {
-        "upc": "0068954400173",
-        "price": "USD 4.69",
-        "size": "16 oz",
-        "description": "Fage Total Plain 0% Milkfat Nonfat Greek Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:00.781741"
-    },
-    {
-      "index": 383,
-      "data": {
-        "upc": "0068954407002",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "FAGE\u00ae BestSelf\u00ae Lactose Free With Blueberry"
-      },
-      "timestamp": "2025-06-03T12:39:00.781756"
-    },
-    {
-      "index": 384,
-      "data": {
-        "upc": "0068954407210",
-        "price": "USD 7.59",
-        "size": "32 oz",
-        "description": "Fage\u00ae BestSelf Plain Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:00.781771"
-    },
-    {
-      "index": 385,
-      "data": {
-        "upc": "0068954408000",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Fage\u00ae Total Plain 0% Milkfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:00.781785"
-    },
-    {
-      "index": 386,
-      "data": {
-        "upc": "0068954408020",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Fage\u00ae Total Plain 2% Milkfat Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:00.781800"
-    },
-    {
-      "index": 387,
-      "data": {
-        "upc": "0068954408060",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Fage Total Plain 5% Milkfat Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:00.781814"
-    },
-    {
-      "index": 388,
-      "data": {
-        "upc": "0068954408130",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Fage\u00ae Total Honey 2% Milkfat Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:00.781829"
-    },
-    {
-      "index": 389,
-      "data": {
-        "upc": "0068954408146",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Fage\u00ae Total Strawberry 2% Milkfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:00.781844"
-    },
-    {
-      "index": 390,
-      "data": {
-        "upc": "0068954408156",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Fage\u00ae Total Cherry 2% Milkfat Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:10.072003"
-    },
-    {
-      "index": 391,
-      "data": {
-        "upc": "0068954408166",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Fage\u00ae Total Blueberry 2% Milkfat Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:10.072049"
-    },
-    {
-      "index": 392,
-      "data": {
-        "upc": "0068954408196",
-        "price": null,
-        "size": null,
-        "description": "Fage Total Peach 2% Milkfat Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:10.072071"
-    },
-    {
-      "index": 393,
-      "data": {
-        "upc": "0068954408200",
-        "price": "USD 4.69",
-        "size": "16 oz",
-        "description": "Fage\u00ae Total 5% Milkfat Plain Greek Yogurt"
-      },
-      "timestamp": "2025-06-03T12:39:10.072091"
-    },
-    {
-      "index": 394,
-      "data": {
-        "upc": "0068954408300",
-        "price": "USD 7.59",
-        "size": "32 oz",
-        "description": "Fage\u00ae Total Plain 5% Milkfat Greek Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:10.072110"
-    },
-    {
-      "index": 395,
-      "data": {
-        "upc": "0068954408301",
-        "price": "USD 7.59",
-        "size": "32 oz",
-        "description": "Fage\u00ae Total Plain 0% Milkfat Nonfat Greek Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:10.072128"
-    },
-    {
-      "index": 396,
-      "data": {
-        "upc": "0068954408302",
-        "price": "USD 7.59",
-        "size": "32 oz",
-        "description": "Fage\u00ae Total Plain 2% Milkfat Low Fat Greek Strained Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:10.072147"
-    },
-    {
-      "index": 397,
-      "data": {
-        "upc": "0068954408340",
-        "price": "USD 4.69",
-        "size": "16 oz",
-        "description": "Fage\u00ae Total 2% Milkfat Strained Greek Yogurt"
-      },
-      "timestamp": "2025-06-03T12:39:10.072165"
-    },
-    {
-      "index": 398,
-      "data": {
-        "upc": "0071514111357",
-        "price": "USD 7.69",
-        "size": "18 ct",
-        "description": "Eggland's Best Classic Large White Eggs, 18 count"
-      },
-      "timestamp": "2025-06-03T12:39:10.072210"
-    },
-    {
-      "index": 399,
-      "data": null,
-      "timestamp": "2025-06-03T12:39:10.072317"
-    },
-    {
-      "index": 400,
-      "data": {
-        "upc": "0071514150349",
-        "price": "USD 5.49",
-        "size": "12 ct",
-        "description": "Eggland's Best Classic Large White Eggs, 12 count"
-      },
-      "timestamp": "2025-06-03T12:39:10.072359"
-    },
-    {
-      "index": 401,
-      "data": {
-        "upc": "0071514151464",
-        "price": "USD 6.49",
-        "size": "12 ct",
-        "description": "Eggland's Best Cage Free Large Brown Eggs, 12 count"
-      },
-      "timestamp": "2025-06-03T12:39:10.072384"
-    },
-    {
-      "index": 402,
-      "data": {
-        "upc": "0071514171682",
-        "price": "USD 6.99",
-        "size": "12 ct",
-        "description": "Eggland's Best 100% USDA Organic Certified Large Brown Eggs, 12 count"
-      },
-      "timestamp": "2025-06-03T12:39:10.072403"
-    },
-    {
-      "index": 403,
-      "data": {
-        "upc": "0071514172928",
-        "price": "USD 5.99",
-        "size": "12 ct",
-        "description": "Eggland's Best Classic Extra Large White Eggs, 12 count"
-      },
-      "timestamp": "2025-06-03T12:39:10.072421"
-    },
-    {
-      "index": 404,
-      "data": {
-        "upc": "0074236521670",
-        "price": "USD 4.39",
-        "size": "1 pt",
-        "description": "Horizon Organic Half and Half"
-      },
-      "timestamp": "2025-06-03T12:39:10.072440"
-    },
-    {
-      "index": 405,
-      "data": {
-        "upc": "0074236521685",
-        "price": "USD 6.99",
-        "size": "1 pt",
-        "description": "Horizon Organic Heavy Whipping Cream"
-      },
-      "timestamp": "2025-06-03T12:39:10.072458"
-    },
-    {
-      "index": 406,
-      "data": {
-        "upc": "0074236526405",
-        "price": "USD 6.49",
-        "size": "1/2 gal",
-        "description": "Horizon Organic Fat Free Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:39:10.072475"
-    },
-    {
-      "index": 407,
-      "data": {
-        "upc": "0074236526415",
-        "price": "USD 6.49",
-        "size": "1/2 gal",
-        "description": "Horizon Organic 1% Lowfat Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:39:10.072493"
-    },
-    {
-      "index": 408,
-      "data": {
-        "upc": "0074236526425",
-        "price": "USD 6.49",
-        "size": "1/2 gal",
-        "description": "Horizon Organic 2% Reduced Fat Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:39:10.072511"
-    },
-    {
-      "index": 409,
-      "data": {
-        "upc": "0074236526435",
-        "price": "USD 6.49",
-        "size": "1/2 gal",
-        "description": "Horizon Organic DHA Omega-3 2% Reduced Fat Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:39:10.072529"
-    },
-    {
-      "index": 410,
-      "data": {
-        "upc": "0074236526445",
-        "price": "USD 6.49",
-        "size": "1/2 gal",
-        "description": "Horizon Organic Vitamin D Whole Milk Half Gallon"
-      },
-      "timestamp": "2025-06-03T12:39:10.072547"
-    },
-    {
-      "index": 411,
-      "data": {
-        "upc": "0074759961065",
-        "price": "USD 5.79",
-        "size": "11 oz",
-        "description": "Ghirardelli\u00ae Premium Baking Classic White Chips"
-      },
-      "timestamp": "2025-06-03T12:39:10.072566"
-    },
-    {
-      "index": 412,
-      "data": {
-        "upc": "0074759961274",
-        "price": "USD 5.79",
-        "size": "10 oz",
-        "description": "Ghirardelli\u00ae Premium Baking 60% Cacao Bittersweet Chocolate Chips"
-      },
-      "timestamp": "2025-06-03T12:39:10.072584"
-    },
-    {
-      "index": 413,
-      "data": {
-        "upc": "0074759964012",
-        "price": "USD 5.79",
-        "size": "11.5 oz",
-        "description": "Ghirardelli\u00ae Premium Baking Milk Chocolate Chips"
-      },
-      "timestamp": "2025-06-03T12:39:10.072601"
-    },
-    {
-      "index": 414,
-      "data": {
-        "upc": "0074759964015",
-        "price": "USD 5.79",
-        "size": "12 oz",
-        "description": "Ghirardelli\u00ae Premium Baking Semi Sweet Chocolate Chips"
-      },
-      "timestamp": "2025-06-03T12:39:10.072619"
-    },
-    {
-      "index": 415,
-      "data": {
-        "upc": "0076401420805",
-        "price": "USD 6.99",
-        "size": "12 OZ",
-        "description": "Aidells\u00ae Smoked Chicken Sausage Chicken and Apple Sausage Links"
-      },
-      "timestamp": "2025-06-03T12:39:10.072636"
-    },
-    {
-      "index": 416,
-      "data": {
-        "upc": "0076401433352",
-        "price": null,
-        "size": null,
-        "description": "Aidells\u00ae Smoked Chicken Sausage Pineapple & Bacon"
-      },
-      "timestamp": "2025-06-03T12:39:20.275118"
-    },
-    {
-      "index": 417,
-      "data": {
-        "upc": "0076401434352",
-        "price": null,
-        "size": null,
-        "description": "Aidells\u00ae Smoked Chicken Sausage with Roasted Garlic & Gruyere Cheese"
-      },
-      "timestamp": "2025-06-03T12:39:20.275156"
-    },
-    {
-      "index": 418,
-      "data": null,
-      "timestamp": "2025-06-03T12:39:20.275177"
-    },
-    {
-      "index": 419,
-      "data": {
-        "upc": "0076401445805",
-        "price": "USD 6.99",
-        "size": "12 OZ",
-        "description": "Aidells\u00ae Cajun Style Smoked Pork Andouille Sausage Links"
-      },
-      "timestamp": "2025-06-03T12:39:20.275196"
-    },
-    {
-      "index": 420,
-      "data": {
-        "upc": "0076401487202",
-        "price": null,
-        "size": null,
-        "description": "Aidells\u00ae Chicken Meatballs Italian Style with Mozzarella Cheese"
-      },
-      "timestamp": "2025-06-03T12:39:20.275214"
-    },
-    {
-      "index": 421,
-      "data": {
-        "upc": "0079124130048",
-        "price": "USD 9.99",
-        "size": "10 oz",
-        "description": "Godshall's Beef Bacon"
-      },
-      "timestamp": "2025-06-03T12:39:20.275232"
-    },
-    {
-      "index": 422,
-      "data": null,
-      "timestamp": "2025-06-03T12:39:20.275250"
-    },
-    {
-      "index": 423,
-      "data": {
-        "upc": "0081162002016",
-        "price": "USD 5.69",
-        "size": "52 fl oz",
-        "description": "fairlife Ultra-Filtered Milk, Lactose Free, High Protein, Whole Milk"
-      },
-      "timestamp": "2025-06-03T12:39:20.275268"
-    },
-    {
-      "index": 424,
-      "data": {
-        "upc": "0081829001158",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Whole Milk Honey Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:20.275285"
-    },
-    {
-      "index": 425,
-      "data": {
-        "upc": "0081829001271",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Key Lime Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:20.275303"
-    },
-    {
-      "index": 426,
-      "data": {
-        "upc": "0081829001273",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Coconut Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:20.275320"
-    },
-    {
-      "index": 427,
-      "data": {
-        "upc": "0081829001466",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Mixed Berry Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:20.275338"
-    },
-    {
-      "index": 428,
-      "data": {
-        "upc": "0081829001959",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani Coffee Blended Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:20.275356"
-    },
-    {
-      "index": 429,
-      "data": {
-        "upc": "0081829001979",
-        "price": null,
-        "size": null,
-        "description": "Chobani Blended Greek Reduced Fat Honey Vanilla Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:20.275374"
-    },
-    {
-      "index": 430,
-      "data": {
-        "upc": "0082785400712",
-        "price": null,
-        "size": null,
-        "description": "Ajax Ultra Triple Action Orange Scent Liquid Dish Soap"
-      },
-      "timestamp": "2025-06-03T12:39:20.275391"
-    },
-    {
-      "index": 431,
-      "data": {
-        "upc": "0082785400714",
-        "price": null,
-        "size": null,
-        "description": "Ajax Ultra Super Degreaser Lemon Scent Liquid Dish Soap"
-      },
-      "timestamp": "2025-06-03T12:39:20.275408"
-    },
-    {
-      "index": 432,
-      "data": {
-        "upc": "0085631200275",
-        "price": "USD 5.69",
-        "size": "52 fl oz",
-        "description": "fairlife Ultra-Filtered Milk, Lactose Free, High Protein, Fat Free Milk"
-      },
-      "timestamp": "2025-06-03T12:39:20.275426"
-    },
-    {
-      "index": 433,
-      "data": {
-        "upc": "0085631200277",
-        "price": "USD 5.69",
-        "size": "52 fl oz",
-        "description": "fairlife Ultra-Filtered Milk, Lactose Free, High Protein, 2% Reduced Fat Milk"
-      },
-      "timestamp": "2025-06-03T12:39:20.275443"
-    },
-    {
-      "index": 434,
-      "data": {
-        "upc": "0085631200279",
-        "price": "USD 5.69",
-        "size": "52 fl oz",
-        "description": "fairlife Ultra-Filtered Milk, Lactose Free, High Protein, 2% Reduced Fat Chocolate Milk"
-      },
-      "timestamp": "2025-06-03T12:39:20.275460"
-    },
-    {
-      "index": 435,
-      "data": {
-        "upc": "0087744800162",
-        "price": "USD 6.49",
-        "size": "7 oz",
-        "description": "Rana Pesto Sauce"
-      },
-      "timestamp": "2025-06-03T12:39:20.275478"
-    },
-    {
-      "index": 436,
-      "data": {
-        "upc": "0087744800355",
-        "price": "USD 9.99",
-        "size": "20 oz",
-        "description": "Rana\u2122 Family Size Spinach & Cheese Tortelloni"
-      },
-      "timestamp": "2025-06-03T12:39:20.275495"
-    },
-    {
-      "index": 437,
-      "data": {
-        "upc": "0087744800359",
-        "price": "USD 6.99",
-        "size": "10 oz",
-        "description": "Rana\u2122 Chicken and Roasted Garlic Ravioli"
-      },
-      "timestamp": "2025-06-03T12:39:20.275512"
-    },
-    {
-      "index": 438,
-      "data": {
-        "upc": "0087744800360",
-        "price": "USD 6.99",
-        "size": "10 oz",
-        "description": "Rana\u2122 Cheese Lovers Tortellini"
-      },
-      "timestamp": "2025-06-03T12:39:20.275530"
-    },
-    {
-      "index": 439,
-      "data": {
-        "upc": "0087744800362",
-        "price": null,
-        "size": null,
-        "description": "Rana\u2122 Italian Sausage Ravioli"
-      },
-      "timestamp": "2025-06-03T12:39:20.275547"
-    },
-    {
-      "index": 440,
-      "data": {
-        "upc": "0087744800364",
-        "price": "USD 6.99",
-        "size": "10 oz",
-        "description": "Rana\u2122 Mushroom Ravioli"
-      },
-      "timestamp": "2025-06-03T12:39:20.275564"
-    },
-    {
-      "index": 441,
-      "data": {
-        "upc": "0088491200471",
-        "price": "USD 5.29",
-        "size": "20.5 oz",
-        "description": "Post\u00ae The Original Grape-Nuts Cereal"
-      },
-      "timestamp": "2025-06-03T12:39:20.275581"
-    },
-    {
-      "index": 442,
-      "data": {
-        "upc": "0088491201426",
-        "price": "USD 6.39",
-        "size": "18 Ounces",
-        "description": "Post Honey Bunches of Oats Honey Roasted Breakfast Cereal"
-      },
-      "timestamp": "2025-06-03T12:39:31.223128"
-    },
-    {
-      "index": 443,
-      "data": {
-        "upc": "0088491201427",
-        "price": "USD 6.39",
-        "size": "18 oz",
-        "description": "Post\u00ae Honey Bunches of Oats\u00ae With Almonds Family Size Cereal"
-      },
-      "timestamp": "2025-06-03T12:39:31.223172"
-    },
-    {
-      "index": 444,
-      "data": {
-        "upc": "0088491235915",
-        "price": "USD 5.19",
-        "size": "12 Ounces",
-        "description": "Post Honey Bunches of Oats Honey Roasted Breakfast Cereal"
-      },
-      "timestamp": "2025-06-03T12:39:31.223197"
-    },
-    {
-      "index": 445,
-      "data": {
-        "upc": "0088491235916",
-        "price": "USD 5.19",
-        "size": "12 Ounces",
-        "description": "Post Honey Bunches of Oats with Almonds Breakfast Cereal"
-      },
-      "timestamp": "2025-06-03T12:39:31.223220"
-    },
-    {
-      "index": 446,
-      "data": {
-        "upc": "0088491235948",
-        "price": "USD 5.19",
-        "size": "11 Ounces",
-        "description": "Post Honey Bunches of Oats with Strawberries Breakfast Cereal"
-      },
-      "timestamp": "2025-06-03T12:39:31.223242"
-    },
-    {
-      "index": 447,
-      "data": {
-        "upc": "0088491237714",
-        "price": null,
-        "size": null,
-        "description": "Post Honey Bunches of Oats Vanilla Breakfast Cereal"
-      },
-      "timestamp": "2025-06-03T12:39:31.223263"
-    },
-    {
-      "index": 448,
-      "data": {
-        "upc": "0088491237811",
-        "price": null,
-        "size": null,
-        "description": "Plaza Provision Post Raisin Bran"
-      },
-      "timestamp": "2025-06-03T12:39:31.223285"
-    },
-    {
-      "index": 449,
-      "data": {
-        "upc": "0089470001001",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Plain Nonfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223306"
-    },
-    {
-      "index": 450,
-      "data": {
-        "upc": "0089470001002",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Vanilla Nonfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223328"
-    },
-    {
-      "index": 451,
-      "data": {
-        "upc": "0089470001004",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Strawberry on the Bottom Nonfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223349"
-    },
-    {
-      "index": 452,
-      "data": {
-        "upc": "0089470001005",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Blueberry on the Bottom Nonfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223370"
-    },
-    {
-      "index": 453,
-      "data": {
-        "upc": "0089470001006",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Peach on the Bottom Nonfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223408"
-    },
-    {
-      "index": 454,
-      "data": {
-        "upc": "0089470001012",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Raspberry on the Bottom Nonfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223431"
-    },
-    {
-      "index": 455,
-      "data": {
-        "upc": "0089470001013",
-        "price": "USD 6.99",
-        "size": "32 oz",
-        "description": "Chobani\u00ae Plain Nonfat Greek Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:31.223452"
-    },
-    {
-      "index": 456,
-      "data": {
-        "upc": "0089470001014",
-        "price": "USD 6.99",
-        "size": "32 oz",
-        "description": "Chobani\u00ae Vanilla Nonfat Greek Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:31.223474"
-    },
-    {
-      "index": 457,
-      "data": {
-        "upc": "0089470001015",
-        "price": null,
-        "size": null,
-        "description": "Chobani\u00ae Non-Fat Pomegranate on the Bottom Greek Yogurt"
-      },
-      "timestamp": "2025-06-03T12:39:31.223498"
-    },
-    {
-      "index": 458,
-      "data": {
-        "upc": "0089470001016",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Black Cherry on the Bottom Nonfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223519"
-    },
-    {
-      "index": 459,
-      "data": {
-        "upc": "0089470001019",
-        "price": "USD 6.99",
-        "size": "32 oz",
-        "description": "Chobani\u00ae Lowfat Greek Yogurt Plain"
-      },
-      "timestamp": "2025-06-03T12:39:31.223540"
-    },
-    {
-      "index": 460,
-      "data": {
-        "upc": "0089470001026",
-        "price": "USD 6.99",
-        "size": "32 oz",
-        "description": "Chobani\u00ae Strawberry Nonfat Greek Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:31.223561"
-    },
-    {
-      "index": 461,
-      "data": {
-        "upc": "0089470001032",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Strawberry Banana on the Bottom Nonfat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223582"
-    },
-    {
-      "index": 462,
-      "data": {
-        "upc": "0089470001033",
-        "price": "USD 1.79",
-        "size": "5.3 oz",
-        "description": "Chobani\u00ae Mango on the Bottom Low Fat Greek Yogurt Cup"
-      },
-      "timestamp": "2025-06-03T12:39:31.223603"
-    },
-    {
-      "index": 463,
-      "data": {
-        "upc": "0089470001043",
-        "price": "USD 6.99",
-        "size": "32 oz",
-        "description": "Chobani\u00ae Whole Milk Plain Greek Yogurt Tub"
-      },
-      "timestamp": "2025-06-03T12:39:31.223624"
-    },
-    {
-      "index": 464,
-      "data": {
-        "upc": "0089505900061",
-        "price": "USD 3.49",
-        "size": "16 oz",
-        "description": "Barilla Wavy Lasagne Pasta, Quality Non-GMO and Kosher Certified Pasta"
-      },
-      "timestamp": "2025-06-03T12:39:31.223644"
+        "upc": "0008500002264",
+        "price": "USD 16.99",
+        "size": "750 mL",
+        "description": "William Hill\u00ae Estate Sauvignon Blanc North Coast California White Wine"
+      },
+      "timestamp": "2025-06-10T16:41:06.104908"
     }
   ],
-  "last_updated": "2025-06-03T12:39:36.362778"
+  "last_updated": "2025-06-10T16:41:14.804854"
 }

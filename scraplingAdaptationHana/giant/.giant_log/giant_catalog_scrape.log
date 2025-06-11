@@ -208,3 +208,220 @@ Call log:
 2025-06-05 17:13:44,948 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
 2025-06-05 17:16:16,608 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
 2025-06-05 17:22:36,758 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-09 10:32:04,192 [ERROR] Error executing async page_action: Timeout 17000ms exceeded.
+2025-06-09 10:32:04,289 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-09 10:33:58,172 [ERROR] Task was destroyed but it is pending!
+task: <Task cancelling name='Task-2' coro=<Connection.run() running at /Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/.venv/lib/python3.11/site-packages/playwright/_impl/_connection.py:279> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py:754]>
+2025-06-09 10:34:38,322 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-09 10:36:34,302 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-09 10:42:17,335 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-09 16:56:47,066 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-09 16:57:19,764 [ERROR] Task was destroyed but it is pending!
+task: <Task cancelling name='Task-2' coro=<Connection.run() running at /Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/.venv/lib/python3.11/site-packages/playwright/_impl/_connection.py:279> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py:754]>
+2025-06-09 17:02:52,647 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-09 17:03:13,685 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-09 17:03:58,831 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-09 17:03:58,859 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-09 17:04:43,628 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-09 17:04:43,649 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-09 17:13:40,658 [ERROR] Error executing async page_action: Locator.click: Timeout 7000ms exceeded.
+Call log:
+  - waiting for locator("li").filter(has_text="1345 Park Road N.W.").locator("button")
+    - locator resolved to <button type="submit" id="location-block-button-378" class="button button--second btn pdl-location_select-btn">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-09 17:13:40,746 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 09:15:40,310 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-10 09:15:40,389 [INFO] Fetched (304) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 09:49:52,608 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 10:18:57,394 [INFO] Fetched (304) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 10:22:42,279 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 10:57:31,569 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:13:49,184 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:22:25,159 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-10 11:22:25,232 [INFO] Fetched (304) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:27:10,730 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-10 11:27:10,803 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:30:43,269 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:30:43,291 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:31:22,170 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:31:22,193 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:32:01,527 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:32:01,547 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:32:13,151 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:40:54,731 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:53:05,246 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:53:05,269 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:54:42,758 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:54:42,777 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:55:23,298 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:55:23,314 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:56:03,035 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:56:03,054 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:56:42,342 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:56:42,360 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:56:55,229 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:57:34,162 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:57:34,181 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:58:13,242 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 11:58:13,264 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 11:58:22,122 [ERROR] Error executing async page_action: Page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://giantfood.com/", waiting until "load"
+
+2025-06-10 12:06:49,382 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 13:23:46,134 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 13:23:46,161 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 13:50:32,702 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 13:50:32,725 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 13:51:11,404 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 13:51:11,425 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 13:51:51,435 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 13:51:51,451 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 13:52:58,153 [ERROR] Error executing async page_action: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"commit" event fired
+"domcontentloaded" event fired
+"load" event fired
+============================================================
+2025-06-10 13:52:58,290 [INFO] Fetched (200) <GET https://giantfood.com/browse-aisles/categories/1/categories/2098-produce> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 13:53:14,754 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 13:53:26,078 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 14:04:37,278 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 14:04:37,302 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 14:05:18,714 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 14:05:18,732 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 14:06:00,340 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 14:06:00,368 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 14:06:41,478 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 14:06:41,489 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-10 14:07:23,360 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-10 14:07:23,377 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)

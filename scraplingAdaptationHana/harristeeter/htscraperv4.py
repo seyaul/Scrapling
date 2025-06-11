@@ -26,7 +26,9 @@ CHECKPOINT_FILE = BASE_FILE / "ht_scraping/ht_scraping_checkpoint.json"
 # TODO: Remember this selection for next time?
 SOURCE_EXCEL = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
 OUTPUT_EXCEL = BASE_FILE / "harris_teeter_price_compare/harris_teeter_pc.xlsx"  # Final results
+OUTPUT_EXCEL.parent.mkdir(parents=True, exist_ok=True)
 TEMP_RESULTS_FILE = BASE_FILE / "ht_scraping/temp_session_results.json"
+TEMP_RESULTS_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 # Scraping configurations
 BATCH_SIZE = 26  # Conservative batch size
