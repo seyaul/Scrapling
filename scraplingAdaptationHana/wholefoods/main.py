@@ -16,8 +16,9 @@ import random
 import logging, sys, pathlib
 import re
 import unicodedata
+import bootstrap
 
-
+bootstrap.install_packages()
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 LOG_FILE = BASE_DIR / "wholefoods_logging/wholefoods_scrape.log"
