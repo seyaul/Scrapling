@@ -22,7 +22,7 @@ PARENT_DIR = pathlib.Path(__file__).resolve().parent.parent
 sys.path.append(str(PARENT_DIR))
 from RateLimiter import RateLimiter
 
-CHECKPOINT_FILE = BASE_FILE / "ht_scraping/ht_scraping_checkpoint.json"
+CHECKPOINT_FILE = BASE_FILE / "ht_scraping/ht_scraping_checkpoint2.json"
 # TODO: Remember this selection for next time?
 SOURCE_EXCEL = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
 OUTPUT_EXCEL = BASE_FILE / "harris_teeter_price_compare/harris_teeter_pc.xlsx"  # Final results
@@ -166,9 +166,20 @@ class ExcelManager:
                         key=lambda x: x['index'])
 
         for result in sorted_results:
+            idx = result["index"]
+            if idx >= len(self.source_data):
+                print(f"⚠️  Skipping idx {idx} – source sheet has only {len(self.source_data)} rows")
+                continue
             row = self.source_data.iloc[result['index']].to_dict()
             original_upc = str(row.get('UPC', ''))
             original_upc = upc_to_gtin13(original_upc)  # Ensure UPC is in GTIN-13 format
+            
+            # Start with only UPC and Price from original data
+            filtered_row = {
+                'UPC': row.get('UPC'),
+                'Price': row.get('Price')
+            }
+            
             # Add scraped data
             scraped_data = result['data']
             if scraped_data:
@@ -178,29 +189,24 @@ class ExcelManager:
                 if not upc_match and scraped_upc:
                     print(f"⚠️ UPC mismatch at row {result['index']}: Expected {original_upc}, Got {scraped_upc}")
                 
-                row.update({
+                filtered_row.update({
                     'scraped_upc': scraped_upc,
                     'scraped_price': scraped_data.get('price'),
-                    'scraped_size': scraped_data.get('size'),
                     'scraped_description': scraped_data.get('description'),
-                    'scraped_timestamp': result['timestamp'],
                     'scraping_status': 'success',
                     'upc_match': upc_match
                 })
             else:
-                row.update({
+                filtered_row.update({
                     'scraped_upc': None,
                     'scraped_price': None,
-                    'scraped_size': None,
                     'scraped_description': None,
-                    'scraped_timestamp': result['timestamp'],
                     'scraping_status': 'failed',
                     'upc_match': None
                 })
             
-            results_data.append(row)
-    
-        
+            results_data.append(filtered_row)
+
         # Save to Excel
         results_df = pd.DataFrame(results_data)
         results_df.to_excel(self.output_file, index=False)
@@ -211,6 +217,7 @@ class ExcelManager:
                 mismatch_count = mismatches.sum()
                 print(f"⚠️ WARNING: {mismatch_count} UPC mismatches detected in results!")
                 print("📋 Check the 'upc_match' column in the output file")
+
 
     
     def get_completion_stats(self, checkpoint_manager):
@@ -368,15 +375,17 @@ async def fetch_ht_batch(gtin_list, page, laf_object, query_url):
                     results.append({
                         "upc": prod["item"]["upc"],
                         "price": pickup_summary["regular"]["price"],
-                        "size": pickup_summary["regular"]["pricePerUnitString"],
-                        "description": prod["item"]["description"]
+                        ## NOTE: In order to debug, comment out the next two lines
+                        #"size": pickup_summary["regular"]["pricePerUnitString"],
+                        #"description": prod["item"]["description"]
                     })
                 else:
                     results.append({
                         "upc": prod["item"]["upc"],
                         "price": None,
-                        "size": None,
-                        "description": prod["item"]["description"]
+                        ## NOTE: In order to debug, comment out the next two lines
+                        # "size": None,
+                        # "description": prod["item"]["description"]
                     })
         
         return results

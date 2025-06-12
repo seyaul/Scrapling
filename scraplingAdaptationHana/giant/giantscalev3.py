@@ -14,7 +14,7 @@ from typing import Dict, List, Optional, Tuple, Any
 BASE_FILE = pathlib.Path(__file__).resolve().parent
 
 # File configurations
-SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+
 # SOURCE_DATA = '/Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/scraplingAdaptationHana/source_prices.xlsx'
 OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_foods_comparison.xlsx"
 CHECKPOINT_FILE = BASE_FILE / "giant_scraping/catalog_checkpoint_giant.json"
@@ -682,7 +682,7 @@ async def scrape_giant_with_throttle_recovery(max_retries=999):
 
 def match_giant_upcs_and_create_comparison():
     """Match UPCs between input dataset and Giant scraped data, create comparison file"""
-    
+    SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
     if not os.path.exists(SOURCE_DATA):
         print(f"❌ Input file not found: {SOURCE_DATA}")
         return False
@@ -690,15 +690,16 @@ def match_giant_upcs_and_create_comparison():
     try:
         # Load input dataset
         print(f"📖 Loading input dataset: {SOURCE_DATA}")
+        keep_cols = ['UPC', 'Price']
         input_df = pd.read_excel(SOURCE_DATA)
         print(f"📊 Input dataset: {len(input_df)} rows")
-        
         # Check if UPC column exists
         if 'UPC' not in input_df.columns:
             print(f"❌ 'UPC' column not found in input dataset")
             print(f"Available columns: {list(input_df.columns)}")
             return False
-        
+
+        input_df = input_df[keep_cols]
         # Load scraped data
         if not os.path.exists(DUMP_FILE):
             print(f"❌ Scraped data file not found: {DUMP_FILE}")
@@ -723,6 +724,7 @@ def match_giant_upcs_and_create_comparison():
         print(f"📊 Giant scraped dataset: {len(scraped_df)} rows")
         
         # Normalize UPCs
+        
         input_df['normalized_upc'] = input_df['UPC'].apply(normalize_upc_input)
         scraped_df['normalized_upc'] = scraped_df['upc'].apply(normalize_upc_scraped)
 
@@ -759,10 +761,10 @@ def match_giant_upcs_and_create_comparison():
                         # Add Giant data with prefixes
                         'giant_upc': scraped_row.get('upc'),
                         'giant_price': scraped_row.get('price'),
-                        'giant_category': scraped_row.get('category_name'),
-                        'giant_brand': scraped_row.get('brand'),
+                        #'giant_category': scraped_row.get('category_name'),
+                        #'giant_brand': scraped_row.get('brand'),
                         'giant_name': scraped_row.get('name'),
-                        'giant_size': scraped_row.get('size'),
+                        #'giant_size': scraped_row.get('size'),
                         'giant_description': scraped_row.get('description'),
                         'giant_scraped_at': scraped_row.get('scraped_timestamp')
                     }

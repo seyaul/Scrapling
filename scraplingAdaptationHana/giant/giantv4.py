@@ -13,7 +13,6 @@ import pathlib
 BASE_FILE = pathlib.Path(__file__).resolve().parent
 
 # File configurations
-SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
 OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_foods_pc.xlsx"
 CHECKPOINT_FILE = BASE_FILE / "giant_scraping/scraping_checkpoint_giant.json"
 TEMP_RESULTS_FILE = BASE_FILE / "giant_scraping/temp_session_results_giant.json"
@@ -27,7 +26,6 @@ MIN_DELAY = 2.0  # Minimum delay between requests
 MAX_DELAY = 5.0  # Maximum delay between requests
 ZIP_CODE = "20010"  # Default ZIP code
 STORE_ADDRESS = "1345 Park Road N.W." 
-
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
@@ -130,7 +128,9 @@ class CheckpointManager:
         print(f"🚀 Starting session #{self.checkpoint_data['session_count']}")
 
 class ExcelManager:
-    def __init__(self, source_file=SOURCE_DATA, output_file=OUTPUT_DATA):
+    def __init__(self, source_file: str | None = None, output_file=OUTPUT_DATA):
+        if source_file is None:
+            source_file = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
         self.source_file = source_file
         self.output_file = output_file
         self.source_data = None
@@ -139,7 +139,13 @@ class ExcelManager:
     def load_source_data(self):
         """Load source Excel file"""
         try:
-            self.source_data = pd.read_excel(self.source_file)
+            keep_cols = ['UPC', 'Price']
+            self.source_data = pd.read_excel(
+                self.source_file,
+                usecols=keep_cols,          # read only needed cols
+                dtype={"UPC": str},         # ← force the UPC column to be *string*
+                engine="openpyxl",          # optional but explicit
+            )
             print(f"📊 Loaded {len(self.source_data)} items from {self.source_file}")
             
             # Validate required columns
@@ -172,18 +178,18 @@ class ExcelManager:
                 row.update({
                     'scraped_upc': scraped_data.get('upc'),
                     'scraped_price': scraped_data.get('price'),
-                    'scraped_size': scraped_data.get('size'),
+                    #'scraped_size': scraped_data.get('size'),
                     'scraped_name': scraped_data.get('name'),
-                    'scraped_timestamp': result['timestamp'],
+                    #'scraped_timestamp': result['timestamp'],
                     'scraping_status': 'success'
                 })
             else:
                 row.update({
                     'scraped_upc': None,
                     'scraped_price': None,
-                    'scraped_size': None,
+                    #'scraped_size': None,
                     'scraped_name': None,
-                    'scraped_timestamp': result['timestamp'],
+                    #'scraped_timestamp': result['timestamp'],
                     'scraping_status': 'failed'
                 })
             
@@ -310,8 +316,8 @@ async def fetch_upc_via_playwright(checkpoint_manager, excel_manager):
             if not remaining_indices:
                 print("✅ All items completed!")
                 break
-            
-            print(f"\n📊 Progress: {len(completed_set)}/{len(excel_manager.source_data)} completed ({len(completed_set)/len(excel_manager.source_data)})%")
+
+            print(f"\n📊 Progress: {len(completed_set)}/{len(excel_manager.source_data)} completed ({len(completed_set)/len(excel_manager.source_data) * 100:.2f}%)")
             print(f"🎯 {len(remaining_indices)} items remaining")
             
             # Process next item

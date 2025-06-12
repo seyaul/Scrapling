@@ -87,34 +87,8 @@ async def set_zip_wholefoods(page, zipcode):
     await frame.press("#store-finder-search-bar", "Enter")
     await frame.wait_for_selector(".w-store-finder-store-selector", timeout=5000)
 
-    # store_blocks = await frame.query_selector_all(".w-store-finder-store-selector")
-
-    # for store in store_blocks:
-    #     # Get the address element inside the current store block
-    #     address_el = await store.query_selector(".storeAddress")
-        
-    #     if address_el:
-    #         address_text = await address_el.inner_text()
-            
-    #         if "20005" in address_text:
-    #             print("✅ Found store with zip 20005:", address_text)
-                
-    #             # Click the "Make this my store" button inside the same block
-    #             make_store_btn = await store.query_selector("span.w-makethismystore[tabindex='0']")
-    #             if make_store_btn:
-    #                 await make_store_btn.click()
-    #                 print("🏪 Clicked 'Make this my store'")
-    #                 break
-    #         else:
-    #             print("❌ Skipping store:", address_text)
-
     await frame.click("span.w-makethismystore[tabindex='0']")
     await page.wait_for_timeout(1000)
-
-    # buttons = await frame.query_selector_all("button")
-    # for i, btn in enumerate(buttons):
-    #     text = await btn.inner_text()
-    #     print(f"Button {i}: {text}")
 
     await page.wait_for_selector("button.modalCloseButtonStyle", timeout=5000)
     await page.click("button.modalCloseButtonStyle")
@@ -136,24 +110,6 @@ async def set_zip_wholefoods(page, zipcode):
     print("🍪 Cookies for API:", cookies_for_api)
     
     print("✅ store id in cookie:", payload)
-    #log.info("Session cookies captured - storeId=%s", payload["id"])
-    # await page.click("text='Browse In-Store'")
-    # await page.click("text='All Products'")
-
-    # while True:
-    #     try:
-    #         # Wait for "Load More" button to appear and be enabled
-    #         await page.wait_for_selector("button:has-text('Load More')", timeout=5000)
-    #         #await page.click("button:has-text('Load More')")
-    #         await page.eval_on_selector("button:has-text('Load More')", "el => el.click()")
-    #         print("🔄 Clicked 'Load More'")
-    #         await page.wait_for_timeout(1500)  # let products load in
-    #     except Exception as e:
-    #         print("✅ No more 'Load More' button or error:", str(e))
-    #         break
-    
-    # products = await page.query_selector_all(".product-tile")
-    # print("🛒 Total products found:", len(products))
 
     await page.wait_for_timeout(3000)  # Wait for the page to update
 
@@ -215,7 +171,7 @@ async def fetch_wholefoods_api(cookies, category="all-products", limit=60) -> li
     products = []
     seen_slugs = set()
     no_new_items_count = 0
-    max_no_new_items = 10  # Exit after 3 consecutive API calls with no new items
+    max_no_new_items = 3  # Exit after 3 consecutive API calls with no new items
     consecutive_empty_batches = 0
     first_run = True
     with httpx.Client(headers=headers, cookies=cookies_for_api, timeout=20) as c:
@@ -325,13 +281,14 @@ def extract_item_fields(item: dict) -> dict:
         "name"            : item.get("name"),
         "brand"           : item.get("brand"),
         "regular_price"   : item.get("regularPrice"),
+         ## NOTE: To activate debug mode, uncomment the comments
         # optional sale fields
-        "sale_price"          : item.get("salePrice"),
-        "incremental_sale_price": item.get("incrementalSalePrice"),
-        "sale_start_date"     : item.get("saleStartDate"),
-        "sale_end_date"       : item.get("saleEndDate"),
-        "slug"          : item.get("slug"),
-        "uom"           : item.get("uom"),  
+        # "sale_price"          : item.get("salePrice"),
+        # "incremental_sale_price": item.get("incrementalSalePrice"),
+        # "sale_start_date"     : item.get("saleStartDate"),
+        # "sale_end_date"       : item.get("saleEndDate"),
+        # "slug"          : item.get("slug"),
+        # "uom"           : item.get("uom"),  
         # handy if you need the PDP URL later
         # "slug"            : item.get("slug"),
         # "store"           : item.get("store"),
@@ -625,18 +582,20 @@ async def compare_prices(scraped_items: list[dict]):
             
 
             price_diffs.append({
+                ## NOTE: To activate debug mode, uncomment the comments
                 "Brand" : df_comp.loc[row_idx, "brand"] if row_idx is not None else "n/a",
-                "MatchName" : df_comp.loc[row_idx, "name"] if row_idx is not None else "n/a",
-                "Size": df_comp.loc[row_idx, "size"] if row_idx is not None else "n/a",
+                #"MatchName" : df_comp.loc[row_idx, "name"] if row_idx is not None else "n/a",
+                #"Size": df_comp.loc[row_idx, "size"] if row_idx is not None else "n/a",
                 "CompPrice": comp_price,
-                "PotetentiateName": potentiate_name,
+                #"PotetentiateName": potentiate_name,
                 "RejectReason": reject_reason,
                 #"Δ pct"    : diff_pct,
             })
 
     price_cols = pd.DataFrame(price_diffs)
+    keep_cols = ["upc", 'item desc.', 'price']
     df_out = pd.concat(
-        [df_src.reset_index(drop=True),
+        [df_src[keep_cols].reset_index(drop=True),
          price_cols,
          pd.Series(best_scores, name="Score")],
         axis=1,

@@ -496,12 +496,19 @@ def match_upcs_and_create_comparison():
 
         print(f"📊 Scraped dataset: {len(scraped_df)} rows")
         
-        # Get list of UPCs from input dataset
+        # Normalize UPCs
         input_df['normalized_upc'] = input_df['UPC'].apply(normalize_upc_input)
         scraped_df['normalized_upc'] = scraped_df['upc'].apply(normalize_upc_scraped)
 
-        input_upcs = set(input_df['normalized_upc'].dropna())
-        scraped_upcs = set(scraped_df['normalized_upc'].dropna())
+        # Create lookup dictionary for scraped data
+        scraped_lookup = {}
+        for _, row in scraped_df.iterrows():
+            upc = str(row['normalized_upc'])
+            if pd.notna(row['normalized_upc']):
+                scraped_lookup[upc] = row
+
+        input_upcs = set(input_df['normalized_upc'].dropna().astype(str))
+        scraped_upcs = set(scraped_df['normalized_upc'].dropna().astype(str))
         
         print(f"🔍 Input UPCs: {len(input_upcs)}")
         print(f"🔍 Scraped UPCs: {len(scraped_upcs)}")
@@ -509,39 +516,53 @@ def match_upcs_and_create_comparison():
         # Find matches
         matched_upcs = input_upcs.intersection(scraped_upcs)
         print(f"✅ Matched UPCs: {len(matched_upcs)}")
+        print(f"❌ Unmatched UPCs: {len(input_upcs) - len(matched_upcs)}")
         
-        if not matched_upcs:
-            print("❌ No UPC matches found between datasets")
-            return False
-        
-        # Create comparison dataset
+        # Create comparison dataset - include ALL input rows
         comparison_data = []
         
-        for upc in matched_upcs:
-            # Get original data
-            original_rows = input_df[input_df['normalized_upc'].astype(str) == upc]
+        for _, original_row in input_df.iterrows():
+
+            upc = str(original_row['normalized_upc']) if pd.notna(original_row['normalized_upc']) else None
+
+            keep_cols = ['UPC', 'Price']
+            # Start with original row data
+            combined_row = original_row[keep_cols].to_dict()
             
-            # Get scraped data
-            scraped_rows = scraped_df[scraped_df['normalized_upc'].astype(str) == upc]
+            # Try to find matching scraped data
+            if upc and upc in scraped_lookup:
+                scraped_row = scraped_lookup[upc]
+                # Add Safeway data with actual values
+                combined_row.update({
+                    'safeway_upc': scraped_row.get('upc'),
+                    'safeway_price': scraped_row.get('price'),
+                    'match_status': 'matched',
+                    ## NOTE: To debug, uncomment these lines
+                    # 'safeway_sale_price': scraped_row.get('salePrice'),
+                    # 'safeway_category': scraped_row.get('category_name'),
+                    # 'safeway_parent_category': scraped_row.get('parent_category'),
+                    # 'safeway_brand': scraped_row.get('brand'),
+                    'safeway_name': scraped_row.get('name'),
+                    # 'safeway_size': scraped_row.get('size'),
+                    # 'safeway_description': scraped_row.get('description')
+                })
+            else:
+                # Add Safeway data with n/a values
+                combined_row.update({
+                    'safeway_upc': 'n/a',
+                    'safeway_price': 'n/a',
+                    'match_status': 'no_match'
+                    ## NOTE: To debug, uncomment these lines
+                    # 'safeway_sale_price': 'n/a',
+                    # 'safeway_category': 'n/a',
+                    # 'safeway_parent_category': 'n/a',
+                    # 'safeway_brand': 'n/a',
+                    # 'safeway_name': 'n/a',
+                    # 'safeway_size': 'n/a',
+                    # 'safeway_description': 'n/a'
+                })
             
-            for _, original_row in original_rows.iterrows():
-                for _, scraped_row in scraped_rows.iterrows():
-                    # Combine data
-                    combined_row = {
-                        # Original data (keep all columns)
-                        **original_row.to_dict(),
-                        # Add Safeway data with prefixes
-                        'safeway_upc': scraped_row.get('upc'),
-                        'safeway_price': scraped_row.get('price'),
-                        'safeway_sale_price': scraped_row.get('salePrice'),
-                        'safeway_category': scraped_row.get('category_name'),
-                        'safeway_parent_category': scraped_row.get('parent_category'),
-                        'safeway_brand': scraped_row.get('brand'),
-                        'safeway_name': scraped_row.get('name'),
-                        'safeway_size': scraped_row.get('size'),
-                        'safeway_description': scraped_row.get('description')
-                    }
-                    comparison_data.append(combined_row)
+            comparison_data.append(combined_row)
         
         # Create comparison DataFrame
         comparison_df = pd.DataFrame(comparison_data)
@@ -551,7 +572,9 @@ def match_upcs_and_create_comparison():
         comparison_df.to_excel(OUTPUT_XLSX, index=False)
         
         print(f"\n🎉 UPC matching completed!")
-        print(f"📊 Matched products: {len(comparison_df)}")
+        print(f"📊 Total products processed: {len(comparison_df)}")
+        print(f"✅ Products with matches: {len(comparison_df[comparison_df['match_status'] == 'matched'])}")
+        print(f"❌ Products without matches: {len(comparison_df[comparison_df['match_status'] == 'no_match'])}")
         print(f"📁 Comparison file saved to: {OUTPUT_XLSX}")
         
         # Show sample UPC format comparison
@@ -564,9 +587,10 @@ def match_upcs_and_create_comparison():
         for i, upc in enumerate(list(scraped_upcs)[:5], 1):
             print(f"   {i}. {upc} (length: {len(upc)})")
         
-        print("Matched UPC samples:")
-        for i, upc in enumerate(list(matched_upcs)[:5], 1):
-            print(f"   {i}. {upc} (length: {len(upc)})")
+        if matched_upcs:
+            print("Matched UPC samples:")
+            for i, upc in enumerate(list(matched_upcs)[:5], 1):
+                print(f"   {i}. {upc} (length: {len(upc)})")
         
         return True
         
@@ -575,7 +599,6 @@ def match_upcs_and_create_comparison():
         import traceback
         traceback.print_exc()
         return False
-
 
 async def main():
     """Main function with options for scraping or UPC matching"""
