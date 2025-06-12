@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QLabel, QTabWidget,
-    QWidget, QPushButton, QFrame
+    QWidget, QPushButton, QFrame, QStackedWidget
 )
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt, QPropertyAnimation, QRect
@@ -14,9 +14,9 @@ class MainWindow(QMainWindow):
         # Main container widget and layout
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
-        self.main_layout = QHBoxLayout(self.central_widget)
-        self.central_widget.setStyleSheet("background-color: #f5f5f5;")
+        self.main_layout = QVBoxLayout(self.central_widget)
 
+        self.central_widget.setStyleSheet("background-color: #f5f5f5;")
         self.content = QWidget()
         self.content_layout = QVBoxLayout(self.content)
 
@@ -31,10 +31,17 @@ class MainWindow(QMainWindow):
         """)
         self.hamburger_button.setCursor(Qt.PointingHandCursor)
         self.hamburger_button.clicked.connect(self.toggle_sidebar)
-        self.content_layout.addWidget(self.hamburger_button, alignment=Qt.AlignLeft)
 
-        # Main Content (Logo area)
-        header_layout = QHBoxLayout()
+        self.content_layout.addWidget(self.hamburger_button, alignment=Qt.AlignLeft)
+        self.main_layout.addWidget(self.content)
+
+        # Make different pages
+        self.stacked = QStackedWidget()
+        self.main_layout.addWidget(self.stacked)
+
+        # Landing page (Logo area)
+        self.landing_page = QWidget()
+        landing_layout = QHBoxLayout(self.landing_page)  # Change to horizontal layout
 
         logo = QLabel()
         pixmap = QPixmap("../images/hana_logo.png")
@@ -46,12 +53,62 @@ class MainWindow(QMainWindow):
         label.setStyleSheet("color: #1d55b4; font-size: 90px; font-weight: 100;")
         label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
 
-        header_layout.addWidget(logo)
-        header_layout.addWidget(label)
-        header_layout.setAlignment(Qt.AlignHCenter)
+        landing_layout.addWidget(logo)
+        landing_layout.addWidget(label)
 
-        self.content_layout.addLayout(header_layout)
-        self.main_layout.addWidget(self.content)
+        landing_layout.setAlignment(Qt.AlignCenter)  # Optional: centers the entire row
+
+        self.stacked.addWidget(self.landing_page)
+
+        # Tool 1 Page:
+        self.tool1_page = QWidget()
+        tool1_layout = QVBoxLayout(self.tool1_page)
+        hello_label = QLabel("1")
+        hello_label.setStyleSheet("font-size: 50px; color: #1d55b4;")
+        hello_label.setAlignment(Qt.AlignCenter)
+        tool1_layout.addWidget(hello_label)
+
+        self.stacked.addWidget(self.tool1_page)
+
+        # Tool 2 Page:
+        self.tool2_page = QWidget()
+        tool2_layout = QVBoxLayout(self.tool2_page)
+        hello_label = QLabel("2")
+        hello_label.setStyleSheet("font-size: 50px; color: #1d55b4;")
+        hello_label.setAlignment(Qt.AlignCenter)
+        tool2_layout.addWidget(hello_label)
+
+        self.stacked.addWidget(self.tool2_page)
+
+        # Tool 3 Page:
+        self.tool3_page = QWidget()
+        tool3_layout = QVBoxLayout(self.tool3_page)
+        hello_label = QLabel("3")
+        hello_label.setStyleSheet("font-size: 50px; color: #1d55b4;")
+        hello_label.setAlignment(Qt.AlignCenter)
+        tool3_layout.addWidget(hello_label)
+
+        self.stacked.addWidget(self.tool3_page)
+
+        # Tool 4 Page:
+        self.tool4_page = QWidget()
+        tool4_layout = QVBoxLayout(self.tool4_page)
+        hello_label = QLabel("4")
+        hello_label.setStyleSheet("font-size: 50px; color: #1d55b4;")
+        hello_label.setAlignment(Qt.AlignCenter)
+        tool4_layout.addWidget(hello_label)
+
+        self.stacked.addWidget(self.tool4_page)
+
+        # Tool 5 Page:
+        self.tool5_page = QWidget()
+        tool5_layout = QVBoxLayout(self.tool5_page)
+        hello_label = QLabel("5")
+        hello_label.setStyleSheet("font-size: 50px; color: #1d55b4;")
+        hello_label.setAlignment(Qt.AlignCenter)
+        tool5_layout.addWidget(hello_label)
+
+        self.stacked.addWidget(self.tool5_page)
 
         # Dimming Layer
         self.dimming_layer = QWidget(self.central_widget)
@@ -60,7 +117,7 @@ class MainWindow(QMainWindow):
         self.dimming_layer.setVisible(False)
         self.dimming_layer.mousePressEvent = lambda event: self.toggle_sidebar()
 
-        # Hamburger Menu/Sidebar
+        # Sidebar Setup
         self.sidebar = QFrame(self.central_widget)
         self.sidebar.setGeometry(-300, 0, 300, 800)
         self.sidebar.setStyleSheet("border: 1px solid #aaa;")
@@ -80,16 +137,6 @@ class MainWindow(QMainWindow):
         self.close_button.clicked.connect(self.toggle_sidebar)
         sidebar_layout.addWidget(self.close_button, alignment=Qt.AlignRight)
 
-        # Initialize the Tab Widget and Tabs
-        self.tab_widget = QTabWidget()
-        self.tab_widget.tabBar().hide()
-
-        # Create Tabs
-        self.tab1 = QWidget()
-        layout1 = QVBoxLayout(self.tab1)
-        layout1.addWidget(QLabel("This is Tool 1 Page"))
-        self.tab_widget.addTab(self.tab1, "Tab 1")
-        
         # Tool 1 Tab:
         tool1_button = QPushButton("Tool 1")
         tool1_button.setCursor(Qt.PointingHandCursor)
@@ -99,7 +146,7 @@ class MainWindow(QMainWindow):
             font-size: 24px;
             font-weight: 100;
         """)
-        tool1_button.clicked.connect(lambda: self.switch_tab(0))
+        tool1_button.clicked.connect(lambda: self.switch_tabs(self.tool1_page))
         sidebar_layout.addWidget(tool1_button, alignment=Qt.AlignHCenter)
 
         # Tool 2 Tab:
@@ -111,9 +158,10 @@ class MainWindow(QMainWindow):
             font-size: 24px;
             font-weight: 100;
         """)
+        tool2_button.clicked.connect(lambda: self.switch_tabs(self.tool2_page))
         sidebar_layout.addWidget(tool2_button, alignment=Qt.AlignHCenter)
 
-        # Tool 3 Tab:
+        # # Tool 3 Tab:
         tool3_button = QPushButton("Tool 3")
         tool3_button.setCursor(Qt.PointingHandCursor)
         tool3_button.setFixedSize(250, 80)
@@ -122,7 +170,32 @@ class MainWindow(QMainWindow):
             font-size: 24px;
             font-weight: 100;
         """)
+        tool3_button.clicked.connect(lambda: self.switch_tabs(self.tool3_page))
         sidebar_layout.addWidget(tool3_button, alignment=Qt.AlignHCenter)
+
+        # # Tool 4 Tab:
+        tool4_button = QPushButton("Tool 4")
+        tool4_button.setCursor(Qt.PointingHandCursor)
+        tool4_button.setFixedSize(250, 80)
+        tool4_button.setStyleSheet("""
+            background-color: #1d55b4;
+            font-size: 24px;
+            font-weight: 100;
+        """)
+        tool4_button.clicked.connect(lambda: self.switch_tabs(self.tool4_page))
+        sidebar_layout.addWidget(tool4_button, alignment=Qt.AlignHCenter)
+
+        # # Tool 5 Tab:
+        tool5_button = QPushButton("Tool 5")
+        tool5_button.setCursor(Qt.PointingHandCursor)
+        tool5_button.setFixedSize(250, 80)
+        tool5_button.setStyleSheet("""
+            background-color: #1d55b4;
+            font-size: 24px;
+            font-weight: 100;
+        """)
+        tool5_button.clicked.connect(lambda: self.switch_tabs(self.tool5_page))
+        sidebar_layout.addWidget(tool5_button, alignment=Qt.AlignHCenter)
 
         # Sidebar animation setup
         self.sidebar_animation = QPropertyAnimation(self.sidebar, b"geometry")
@@ -152,12 +225,13 @@ class MainWindow(QMainWindow):
             self.sidebar.setVisible(False)
             self.dimming_layer.setVisible(False)
     
-    def switch_tab(self, index):
-        self.tab_widget.setCurrentIndex(index)
+    def switch_tabs(self, page):
+        self.stacked.setCurrentWidget(page)
         self.toggle_sidebar()
 
-
-app = QApplication([])
-window = MainWindow()
-window.show()
-app.exec()
+if __name__ == "__main__":
+    import sys
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
