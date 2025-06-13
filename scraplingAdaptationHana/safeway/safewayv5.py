@@ -15,7 +15,7 @@ BASE_DIR = pathlib.Path(__file__).resolve().parent
 
 CONFIG_FILE = BASE_DIR / 'safeway_necessary_ppdata/.safeway_config.json'
 CATEGORIES_FILE = BASE_DIR / 'safeway_necessary_ppdata/enhanced_safeway_categories.json'
-OUTPUT_XLSX = BASE_DIR / 'safeway_price_compare/safeway_pc.xlsx'
+OUTPUT_XLSX = BASE_DIR / 'safeway_price_compare/safeway_kehe_pc.xlsx'
 OUTPUT_XLSX.parent.mkdir(parents=True, exist_ok=True)
 PROGRESS_FILE = BASE_DIR / 'scraping/safeway_scrape_progress.json'
 PROGRESS_FILE.parent.mkdir(parents=True, exist_ok=True)

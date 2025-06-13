@@ -22,7 +22,7 @@ PARENT_DIR = pathlib.Path(__file__).resolve().parent.parent
 sys.path.append(str(PARENT_DIR))
 from RateLimiter import RateLimiter
 
-CHECKPOINT_FILE = BASE_FILE / "ht_scraping/ht_scraping_checkpoint2.json"
+CHECKPOINT_FILE = BASE_FILE / "ht_scraping/ht_scraping_checkpoint1.json"
 # TODO: Remember this selection for next time?
 SOURCE_EXCEL = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
 OUTPUT_EXCEL = BASE_FILE / "harris_teeter_price_compare/harris_teeter_pc.xlsx"  # Final results

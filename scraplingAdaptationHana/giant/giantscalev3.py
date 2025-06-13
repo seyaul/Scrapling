@@ -16,7 +16,7 @@ BASE_FILE = pathlib.Path(__file__).resolve().parent
 # File configurations
 
 # SOURCE_DATA = '/Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/scraplingAdaptationHana/source_prices.xlsx'
-OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_foods_comparison.xlsx"
+OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_julypc_comparison.xlsx"
 CHECKPOINT_FILE = BASE_FILE / "giant_scraping/catalog_checkpoint_giant.json"
 DUMP_FILE = BASE_FILE / 'giant_scraping/scraped_products_dump.csv'
 LOG_FILE = BASE_FILE / ".giant_log/giant_catalog_scrape.log"
