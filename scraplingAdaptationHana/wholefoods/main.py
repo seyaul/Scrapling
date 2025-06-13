@@ -1,3 +1,34 @@
+import os
+import subprocess
+import sys
+import asyncio
+import importlib.util
+
+# Bootsrapper in main to ensure all dependenceies are set
+# List of required packages
+REQUIRED_PACKAGES = [
+    "pandas",
+    "openpyxl",
+    "httpx",
+    "rapidfuzz",
+    "scrapling"
+]
+
+def install_missing_packages():
+    for package in REQUIRED_PACKAGES:
+        if not importlib.util.find_spec(package):
+            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+def ensure_camoufox_ready():
+    camoufox_cache = os.path.expanduser("~\\AppData\\Local\\camoufox\\camoufox\\Cache\\version.json")
+    if not os.path.exists(camoufox_cache):
+        print("Running 'camoufox fetch' to install browser...")
+        subprocess.check_call([sys.executable, "-m", "camoufox", "fetch"])
+
+# Run both setup steps
+install_missing_packages()
+ensure_camoufox_ready()
+
 from scrapling.fetchers import StealthyFetcher
 from urllib.parse import urlparse
 from rapidfuzz import fuzz, process
@@ -16,9 +47,7 @@ import random
 import logging, sys, pathlib
 import re
 import unicodedata
-import bootstrap
 
-bootstrap.install_packages()
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 LOG_FILE = BASE_DIR / "wholefoods_logging/wholefoods_scrape.log"
