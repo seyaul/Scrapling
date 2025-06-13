@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (
     QPushButton, QLabel, QStackedWidget, QFrame, QFileDialog, QLineEdit, QTextEdit
 )
 from PySide6.QtGui import QPixmap
-import subprocess, re
+import subprocess, re, os
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -62,10 +62,10 @@ class MainWindow(QMainWindow):
 
         # Dimming Layer
         self.dimming_layer = QWidget(self.central_widget)
-        self.dimming_layer.setGeometry(0, 0, 1000, 800)
         self.dimming_layer.setStyleSheet("background-color: rgba(0, 0, 0, 100);")
         self.dimming_layer.setVisible(False)
         self.dimming_layer.mousePressEvent = lambda event: self.toggle_sidebar()
+        self.dimming_layer.setGeometry(self.central_widget.rect())
 
         # Sidebar Setup
         self.sidebar = QFrame(self.central_widget)
@@ -108,6 +108,10 @@ class MainWindow(QMainWindow):
         self.sidebar_animation.setDuration(300)
         self.sidebar_animation.finished.connect(self.hide_sidebar)
 
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self.dimming_layer.setGeometry(self.central_widget.rect())
+
     def create_tool_page(self, label_text, script):
         page = QWidget()
         layout = QVBoxLayout(page)
@@ -122,21 +126,16 @@ class MainWindow(QMainWindow):
 
         file_layout = QHBoxLayout()
         file_input = QLineEdit()
-        file_input.setPlaceholderText("Select a price sheet (.xlsx file)...")
-        file_input.setFixedWidth(300)
+        file_input.setFixedWidth(0)
         file_input.setStyleSheet("color: black;")
-        file_input.setFixedHeight(30)
+        file_input.setFixedHeight(0)
         file_input.setReadOnly(True)
 
-        browse_button = QPushButton("Browse")
-        browse_button.setFixedSize(100, 30)
-        browse_button.setCursor(Qt.PointingHandCursor)
-        browse_button.setStyleSheet("background-color: gray; font-size: 18px; font-weight: 400;")
-        browse_button.clicked.connect(lambda: self.browse_file(file_input))
+        file_drop = FileDropArea(file_input)
 
-        file_layout.addWidget(browse_button, alignment=Qt.AlignVCenter)
-        file_layout.addWidget(file_input, alignment=Qt.AlignVCenter)
-        file_layout.setSpacing(5)
+        file_layout.addWidget(file_drop, alignment=Qt.AlignVCenter)
+        file_layout.addWidget(file_input, alignment=Qt.AlignTop | Qt.AlignHCenter)
+        file_layout.setSpacing(10)
         file_layout.setContentsMargins(0, 0, 0, 0)
 
         layout.addLayout(file_layout)
@@ -145,7 +144,7 @@ class MainWindow(QMainWindow):
         run_button = QPushButton("Match UPCs and\nCompare Prices")
         run_button.setFixedSize(200, 80)
         run_button.setCursor(Qt.PointingHandCursor)
-        run_button.setStyleSheet("background-color: #1d55b4; font-size: 18px; font-weight: 500;")
+        run_button.setStyleSheet("background-color: #1d55b4; font-size: 18px; font-weight: 500; margin-top: 20px;")
         run_button.clicked.connect(lambda: self.run_script(script, file_input, output_display))
         
         layout.addWidget(run_button)
@@ -233,6 +232,62 @@ class MainWindow(QMainWindow):
     def switch_tabs(self, page):
         self.stacked.setCurrentWidget(page)
         self.toggle_sidebar()
+
+class FileDropArea(QLabel):
+    def __init__(self, file_input):
+        super().__init__("Drag and drop a price sheet here (.xlsx)")
+        self.setStyleSheet("""
+            QLabel {
+                border: 2px dashed #1d55b4;
+                border-radius: 10px;
+                min-height: 150px;
+                min-width: 400px;
+                font-size: 18px;
+                background-color: #f0f0f0;
+                color: #A9A9A9;
+                qproperty-alignment: AlignCenter;
+            }
+        """)
+        self.setAcceptDrops(True)
+        self.file_input = file_input
+
+    def dragEnterEvent(self, event):
+        if event.mimeData().hasUrls():
+            event.acceptProposedAction()
+
+    def dropEvent(self, event):
+        urls = event.mimeData().urls()
+        if urls:
+            file_path = urls[0].toLocalFile()
+            if file_path.endswith('.xlsx') or file_path.endswith('.xls'):
+                self.file_input.setText(file_path)
+                self.setText(f"{os.path.basename(file_path)}\n\nFile ready!")
+                self.setStyleSheet("""
+                    QLabel {
+                        border: 2px dashed #1d55b4;
+                        border-radius: 10px;
+                        min-height: 150px;
+                        min-width: 400px;
+                        font-size: 18px;
+                        background-color: #f0f0f0;
+                        color: black;
+                        qproperty-alignment: AlignCenter;
+                    }
+                """)
+            else:
+                self.setText("Invalid file type. Please drop an Excel file.")
+                self.setStyleSheet("""
+                    QLabel {
+                        border: 2px dashed #1d55b4;
+                        border-radius: 10px;
+                        min-height: 150px;
+                        min-width: 400px;
+                        font-size: 18px;
+                        background-color: #f0f0f0;
+                        color: black;
+                        qproperty-alignment: AlignCenter;
+                    }
+                """)
 
 if __name__ == "__main__":
     import sys
