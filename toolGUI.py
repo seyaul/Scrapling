@@ -4,7 +4,12 @@ from PySide6.QtWidgets import (
     QPushButton, QLabel, QStackedWidget, QFrame, QFileDialog, QLineEdit, QTextEdit
 )
 from PySide6.QtGui import QPixmap
-import subprocess, re, os
+import subprocess, re, os, sys
+
+def get_path(relative_path):
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -45,7 +50,8 @@ class MainWindow(QMainWindow):
         landing_layout = QHBoxLayout(self.landing_page)
 
         logo = QLabel()
-        pixmap = QPixmap("images/hana_logo.png")
+        # Added data to .spec file
+        pixmap = QPixmap(get_path("images/hana_logo.png"))
         pixmap = pixmap.scaledToHeight(500, Qt.SmoothTransformation)
         logo.setPixmap(pixmap)
         logo.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
@@ -107,7 +113,7 @@ class MainWindow(QMainWindow):
         self.sidebar_animation = QPropertyAnimation(self.sidebar, b"geometry")
         self.sidebar_animation.setDuration(300)
         self.sidebar_animation.finished.connect(self.hide_sidebar)
-
+    
     def resizeEvent(self, event):
         super().resizeEvent(event)
         self.dimming_layer.setGeometry(self.central_widget.rect())

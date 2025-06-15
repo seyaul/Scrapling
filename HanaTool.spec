@@ -5,7 +5,7 @@ a = Analysis(
     ['toolGUI.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('images/hana_logo.png', 'images')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
