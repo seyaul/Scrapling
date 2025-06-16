@@ -3,11 +3,15 @@ import sys
 import subprocess
 import platform
 import importlib.util
-import pathlib
 
 VENV_DIR = ".venv"
 REQUIRED_PACKAGES = [
-    "pandas", "openpyxl", "httpx", "rapidfuzz", "scrapling", "camoufox"
+    "pandas",
+    "openpyxl",
+    "httpx",
+    "rapidfuzz",
+    "scrapling",
+    "camoufox"
 ]
 
 def in_virtualenv():
@@ -26,13 +30,16 @@ def ensure_all_dependencies():
 
 def ensure_camoufox_ready():
     if platform.system() == "Windows":
-        camoufox_cache = os.path.expanduser("~\\AppData\\Local\\camoufox\\camoufox\\Cache\\version.json")
+        base_dir = os.path.expanduser("~\\AppData\\Local\\camoufox\\camoufox\\Cache")
     else:
-        camoufox_cache = os.path.expanduser("~/.local/share/camoufox/camoufox/Cache/version.json")
-    
-    if not os.path.exists(camoufox_cache):
-        print("🌐 Running `camoufox fetch` to install the browser...")
-        subprocess.check_call([sys.executable, "-m", "camoufox", "fetch"])
+        base_dir = os.path.expanduser("~/.local/share/camoufox/camoufox/Cache")
+
+    exe_path = os.path.join(base_dir, "camoufox.exe")
+    version_path = os.path.join(base_dir, "version.json")
+
+    if not (os.path.exists(version_path) and os.path.exists(exe_path)):
+        print("📦 camoufox missing or incomplete. Fetching...")
+        subprocess.check_call([sys.executable, "-m", "camoufox", "fetch", "--force"])
     else:
         print("✅ camoufox browser is ready.")
 
