@@ -1,3 +1,8 @@
+import logging, sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import bootstrap
+bootstrap.bootstrap()
+
 from scrapling.fetchers import StealthyFetcher
 from urllib.parse import urlparse
 from rapidfuzz import fuzz, process
@@ -13,15 +18,12 @@ import httpx, json
 import base64, urllib.parse
 import pandas as pd
 import random
-import logging, sys, pathlib
+
 import re
 import unicodedata
 import pathlib
 import sys
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-import bootstrap
-bootstrap.bootstrap()
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 LOG_FILE = BASE_DIR / "wholefoods_logging/wholefoods_scrape.log"
@@ -63,7 +65,7 @@ async def set_zip_wholefoods(page, zipcode):
     await page.click("text='Find a Store' >> visible=true")
 
     # html = await page.content()
-    # with open("sidebar_dom.html", "w", encoding="utf-8") as f:
+    # with open("headebar_dom.html", "w", encoding="utf-8") as f:
     #     f.write(html)
     
     #debugging 
@@ -177,7 +179,7 @@ async def main(urlstr):
     
     response = await StealthyFetcher.async_fetch(
         url=url,
-        headless=False,
+        headless=True,
         network_idle=True,
         disable_resources=True,
         page_action=page_action

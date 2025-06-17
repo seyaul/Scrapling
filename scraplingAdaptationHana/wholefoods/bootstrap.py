@@ -39,14 +39,16 @@ def ensure_camoufox_ready():
 
     if not (os.path.exists(version_path) and os.path.exists(exe_path)):
         print("📦 camoufox missing or incomplete. Fetching...")
-        subprocess.check_call([sys.executable, "-m", "camoufox", "fetch", "--force"])
-    else:
+        subprocess.check_call([sys.executable, "-m", "camoufox", "fetch"])
+    elif (os.path.exists(version_path) and os.path.exists(exe_path)):
         print("✅ camoufox browser is ready.")
+    else:
+        print("unexpected conditional behavior")
 
 def bootstrap():
-    if not in_virtualenv():
-        print("❌ You are not in a virtual environment. Please activate it first.")
-        sys.exit(1)
+    # if not in_virtualenv():
+    #     print("❌ You are not in a virtual environment. Please activate it first.")
+    #     sys.exit(1)
     
     ensure_all_dependencies()
     ensure_camoufox_ready()
