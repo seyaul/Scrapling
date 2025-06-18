@@ -15,7 +15,7 @@ BASE_DIR = pathlib.Path(__file__).resolve().parent
 
 CONFIG_FILE = BASE_DIR / 'safeway_necessary_ppdata/.safeway_config.json'
 CATEGORIES_FILE = BASE_DIR / 'safeway_necessary_ppdata/enhanced_safeway_categories.json'
-OUTPUT_XLSX = BASE_DIR / 'safeway_price_compare/safeway_kehe_pc.xlsx'
+OUTPUT_XLSX = BASE_DIR / 'safeway_price_compare/safeway_grocery_pc.xlsx'
 OUTPUT_XLSX.parent.mkdir(parents=True, exist_ok=True)
 PROGRESS_FILE = BASE_DIR / 'scraping/safeway_scrape_progress.json'
 PROGRESS_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -600,43 +600,7 @@ def match_upcs_and_create_comparison():
         traceback.print_exc()
         return False
 
-async def main():
-    """Main function with options for scraping or UPC matching"""
-    
-    print("🏪 Safeway Product Scraper & Price Comparator")
-    print("=" * 50)
-    print("1. Scrape products from Safeway")
-    print("2. Match UPCs and create price comparison")
-    print("3. Both (scrape then compare)")
-    
-    while True:
-        choice = input("\nEnter your choice (1, 2, or 3): ").strip()
-        
-        if choice == "1":
-            # Scraping only
-            await run_scraping()
-            break
-        elif choice == "2":
-            # UPC matching only
-            success = match_upcs_and_create_comparison()
-            if success:
-                print("✅ UPC matching completed successfully!")
-            else:
-                print("❌ UPC matching failed")
-            break
-        elif choice == "3":
-            # Both scraping and matching
-            await run_scraping()
-            print("\n" + "="*50)
-            print("🔄 Now starting UPC matching...")
-            success = match_upcs_and_create_comparison()
-            if success:
-                print("✅ Both scraping and UPC matching completed!")
-            else:
-                print("⚠️ Scraping completed but UPC matching failed")
-            break
-        else:
-            print("❌ Invalid choice. Please enter 1, 2, or 3.")
+
 
 async def run_scraping():
     """Run the scraping functionality"""
@@ -658,5 +622,54 @@ async def run_scraping():
 
 # Add this before the if __name__ == '__main__' block
 
+
+async def main(choice: int):
+    """Main function with options for scraping or UPC matching"""
+    
+
+    while True:
+        if choice == 1:
+            # Scraping only
+            await run_scraping()
+            break
+        elif choice == 2:
+            # UPC matching only
+            success = match_upcs_and_create_comparison()
+            if success:
+                print("✅ UPC matching completed successfully!")
+            else:
+                print("❌ UPC matching failed")
+            break
+        elif choice == 3:
+            # Both scraping and matching
+            await run_scraping()
+            print("\n" + "="*50)
+            print("🔄 Now starting UPC matching...")
+            success = match_upcs_and_create_comparison()
+            if success:
+                print("✅ Both scraping and UPC matching completed!")
+            else:
+                print("⚠️ Scraping completed but UPC matching failed")
+            break
+        else:
+            print("❌ Unknown error. Please try again.")
+
+
 if __name__ == '__main__':
-    asyncio.run(main())
+    import sys
+    print("🏪 Safewayv5 Foods Product Scraper & Price Comparator")
+    print("=" * 50)
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "scrape":
+            asyncio.run(main(1))
+        elif sys.argv[1] == "match":
+            asyncio.run(main(2))
+        elif sys.argv[1] == "both":
+            asyncio.run(main(3))
+        else:
+            print("Usage: python safewayv5.py [scrape|match|both]")
+    else:
+        print("Usage: python safewayv5.py [scrape|match|both]")
+        print("scrape: Scrape products from Safeway")
+        print("match: Match UPCs and create price comparison")
+        print("both: Both (scrape then compare)")

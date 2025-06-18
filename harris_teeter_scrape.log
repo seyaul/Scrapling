@@ -1,1 +1,16 @@
 2025-06-13 14:34:59,018 [INFO] Fetched (200) <GET https://www.harristeeter.com/search?query=milk&searchType=default_search> (referer: https://www.google.com/search?q=harristeeter)
+2025-06-13 17:16:06,334 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button[data-testid = 'CurrentModality-button']") to be visible
+
+2025-06-13 17:16:06,372 [INFO] Fetched (403) <GET https://www.harristeeter.com/> (referer: https://www.google.com/search?q=harristeeter)
+2025-06-13 17:17:42,664 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button[data-testid = 'SelectStore-09700352']") to be visible
+
+2025-06-13 17:17:42,782 [INFO] Fetched (200) <GET https://www.harristeeter.com/> (referer: https://www.google.com/search?q=harristeeter)
+2025-06-13 17:21:35,672 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button[data-testid = 'SelectStore-09700352']") to be visible
+
+2025-06-13 17:21:35,796 [INFO] Fetched (200) <GET https://www.harristeeter.com/> (referer: https://www.google.com/search?q=harristeeter)

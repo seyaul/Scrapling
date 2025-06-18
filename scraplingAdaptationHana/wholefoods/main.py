@@ -287,7 +287,7 @@ def extract_item_fields(item: dict) -> dict:
         # "incremental_sale_price": item.get("incrementalSalePrice"),
         # "sale_start_date"     : item.get("saleStartDate"),
         # "sale_end_date"       : item.get("saleEndDate"),
-        # "slug"          : item.get("slug"),
+        "slug"          : item.get("slug"),
         # "uom"           : item.get("uom"),  
         # handy if you need the PDP URL later
         # "slug"            : item.get("slug"),
@@ -359,6 +359,7 @@ def normalise(txt: str | None) -> str:
     """lower-case, strip, collapse whitespace."""
     if not txt:
         return ""
+    txt = str(txt)
     return " ".join(txt.lower().split())
 
 def build_matcher(df_cat: pd.DataFrame, brand_included: bool) -> callable:
@@ -447,7 +448,7 @@ async def compare_prices(scraped_items: list[dict]):
         matcher = build_matcher(df_comp, brand_included)
     elif "brand" in df_src.columns:
         brand_included = True
-        df_src["norm"] = df_src["item name"].map(normalise)
+        df_src["norm"] = df_src["item desc."].map(normalise)
         df_src["size_norm"] = df_src["size"].map(normalize_size_string)
         df_src["brand"] = df_src["brand"].map(normalize_brand)
         df_comp = pd.DataFrame(scraped_items)

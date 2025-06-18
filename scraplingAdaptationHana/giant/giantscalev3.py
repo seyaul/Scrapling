@@ -16,7 +16,7 @@ BASE_FILE = pathlib.Path(__file__).resolve().parent
 # File configurations
 
 # SOURCE_DATA = '/Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/scraplingAdaptationHana/source_prices.xlsx'
-OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_julypc_comparison.xlsx"
+OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_grocery_comparison.xlsx"
 CHECKPOINT_FILE = BASE_FILE / "giant_scraping/catalog_checkpoint_giant.json"
 DUMP_FILE = BASE_FILE / 'giant_scraping/scraped_products_dump.csv'
 LOG_FILE = BASE_FILE / ".giant_log/giant_catalog_scrape.log"
@@ -795,43 +795,6 @@ def match_giant_upcs_and_create_comparison():
         traceback.print_exc()
         return False
 
-async def main():
-    """Main function with options for scraping or UPC matching"""
-    
-    print("🏪 Giant Foods Product Scraper & Price Comparator")
-    print("=" * 50)
-    print("1. Scrape products from Giant Foods")
-    print("2. Match UPCs and create price comparison")
-    print("3. Both (scrape then compare)")
-    
-    while True:
-        choice = input("\nEnter your choice (1, 2, or 3): ").strip()
-        
-        if choice == "1":
-            # Scraping only
-            await run_giant_scraping()
-            break
-        elif choice == "2":
-            # UPC matching only
-            success = match_giant_upcs_and_create_comparison()
-            if success:
-                print("✅ Giant UPC matching completed successfully!")
-            else:
-                print("❌ Giant UPC matching failed")
-            break
-        elif choice == "3":
-            # Both scraping and matching
-            await run_giant_scraping()
-            print("\n" + "="*50)
-            print("🔄 Now starting UPC matching...")
-            success = match_giant_upcs_and_create_comparison()
-            if success:
-                print("✅ Both scraping and UPC matching completed!")
-            else:
-                print("⚠️ Scraping completed but UPC matching failed")
-            break
-        else:
-            print("❌ Invalid choice. Please enter 1, 2, or 3.")
 
 async def run_giant_scraping():
     """Run the Giant scraping functionality"""
@@ -878,16 +841,61 @@ def reset_giant_progress():
     
     print("🔄 Giant progress reset complete")
 
+
+async def main(choice: int):
+    """Main function with options for scraping or UPC matching"""
+    while True:
+        if choice == 1:
+            # Scraping only
+            await run_giant_scraping()
+            break
+        elif choice == 2:
+            # UPC matching only
+            success = match_giant_upcs_and_create_comparison()
+            if success:
+                print("✅ Giant UPC matching completed successfully!")
+            else:
+                print("❌ Giant UPC matching failed")
+            break
+        elif choice == 3:
+            # Both scraping and matching
+            await run_giant_scraping()
+            print("\n" + "="*50)
+            print("🔄 Now starting UPC matching...")
+            success = match_giant_upcs_and_create_comparison()
+            if success:
+                print("✅ Both scraping and UPC matching completed!")
+            else:
+                print("⚠️ Scraping completed but UPC matching failed")
+            break
+        else:
+            print("❌ Unknown error occurred. Please try again.")
+
+
 if __name__ == "__main__":
+    print("🏪 Giant Foods Product Scraper & Price Comparator")
+    print("=" * 50)
     if len(sys.argv) > 1:
         if sys.argv[1] == "status":
             show_giant_progress()
         elif sys.argv[1] == "reset":
             reset_giant_progress()
+        elif sys.argv[1] == "scrape":
+            asyncio.run(main(1))
+        elif sys.argv[1] == "match":
+            asyncio.run(main(2))
+        elif sys.argv[1] == "both":
+            asyncio.run(main(3))
         else:
             print("Usage: python giant_catalog_scraper.py [status|reset]")
             print("  status - Show current scraping progress")
             print("  reset  - Reset progress and start over")
             print("  (no args) - Run scraping/comparison session")
     else:
-        asyncio.run(main())
+        print("Usage:")
+        print("scrape: Scrape products from Giant Foods")
+        print("match: Match UPCs and create price comparison")
+        print("both: Both (scrape then compare)")
+        print("status: Show current scraping progress")
+        print("reset: Reset scraping progress and start over (get most updated prices)")
+    
