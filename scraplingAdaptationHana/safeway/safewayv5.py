@@ -438,11 +438,12 @@ async def scrape_with_throttle_recovery(categories_map, max_retries=999):
     return False
 
 
-def match_upcs_and_create_comparison():
+def match_upcs_and_create_comparison(input_file=None):
     """Match UPCs between input dataset and scraped data, create comparison file"""
     
     # Get input file from user
-    input_file = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+    if input_file == None:
+        input_file = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
     
     if not os.path.exists(input_file):
         print(f"❌ Input file not found: {input_file}")

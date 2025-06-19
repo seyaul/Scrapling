@@ -680,9 +680,11 @@ async def scrape_giant_with_throttle_recovery(max_retries=999):
     
     return False
 
-def match_giant_upcs_and_create_comparison():
+def match_giant_upcs_and_create_comparison(SOURCE_DATA=None):
     """Match UPCs between input dataset and Giant scraped data, create comparison file"""
-    SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+    if SOURCE_DATA == None:
+        SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+    
     if not os.path.exists(SOURCE_DATA):
         print(f"❌ Input file not found: {SOURCE_DATA}")
         return False

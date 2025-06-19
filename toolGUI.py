@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (
     QPushButton, QLabel, QStackedWidget, QFrame, QFileDialog, QLineEdit, QTextEdit
 )
 from PySide6.QtGui import QPixmap
-import subprocess, re, os, sys
+import asyncio, re, os, sys
 
 def get_path(relative_path):
     if hasattr(sys, '_MEIPASS'):
@@ -96,7 +96,7 @@ class MainWindow(QMainWindow):
         # Tool Pages and Tabs Setup
         tool_names = ["Whole Foods Market", "Safeway", "Harris Teeter", "Giant Food"]
         # **Revisit for making the two giant versions
-        script_names = ["wholefoods/main", "safeway/safewayv5", "harristeeter/htscraperv4", "giant/giantscalev3"]
+        script_names = ["wholefoods", "safewayv5", "htscraperv4", "giantscalev3"]
         self.tool_pages = []
 
         for idx, name in enumerate(tool_names):
@@ -188,31 +188,17 @@ class MainWindow(QMainWindow):
             return
         
         try:
-            process = subprocess.Popen(
-                ["python", "scraplingAdaptationHana/"+script+".py"],
-                stdin=subprocess.PIPE,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True
-            )
-            if script in ["giant/giantscalev3", "safeway/safewayv5"]:
-                user_input = "2\n" + file_path
-            else:
-                user_input = file_path
-            stdout, stderr = process.communicate(input=user_input +"\n")
-            save_path_match = re.search(r"Saved \d+ results to (.+\.xlsx)", stdout)
-            if save_path_match:
-                save_path = save_path_match.group(1)
-                result_text = f"✅ Script completed successfully.\n\n📂 File saved to:\n{save_path}"
-            else:
-                result_text = "📄 Script Output:\n" + stdout
+            if script == "giantscalev3":
+                from scraplingAdaptationHana.giant.giantscalev3 import match_giant_upcs_and_create_comparison
+                match_giant_upcs_and_create_comparison(SOURCE_DATA=file_path)
+            elif script == "safewayv5":
+                from scraplingAdaptationHana.safeway.safewayv5 import match_upcs_and_create_comparison
+                match_upcs_and_create_comparison(input_file=file_path)
 
-            if stderr:
-                result_text += "\n⚠️ Script Errors:\n" + stderr
-
+            result_text = "✅ UPC Matching completed successfully."
             output_display.setPlainText(result_text)
         except Exception as e:
-            output_display.setPlainText("Failed to run the script.")
+            output_display.setPlainText("Failed to run the script: " + str(e))
 
     def toggle_sidebar(self):
         if not self.sidebar.isVisible():
