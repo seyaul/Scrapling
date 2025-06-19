@@ -680,11 +680,8 @@ async def scrape_giant_with_throttle_recovery(max_retries=999):
     
     return False
 
-def match_giant_upcs_and_create_comparison(SOURCE_DATA=None):
+def match_giant_upcs_and_create_comparison(SOURCE_DATA):
     """Match UPCs between input dataset and Giant scraped data, create comparison file"""
-    if SOURCE_DATA == None:
-        SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
-    
     if not os.path.exists(SOURCE_DATA):
         print(f"❌ Input file not found: {SOURCE_DATA}")
         return False
@@ -844,8 +841,11 @@ def reset_giant_progress():
     print("🔄 Giant progress reset complete")
 
 
-async def main(choice: int):
+async def main(choice: int, SOURCE_DATA=None):
     """Main function with options for scraping or UPC matching"""
+    if SOURCE_DATA == None:
+        SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
+    
     while True:
         if choice == 1:
             # Scraping only
@@ -853,7 +853,7 @@ async def main(choice: int):
             break
         elif choice == 2:
             # UPC matching only
-            success = match_giant_upcs_and_create_comparison()
+            success = match_giant_upcs_and_create_comparison(SOURCE_DATA)
             if success:
                 print("✅ Giant UPC matching completed successfully!")
             else:
@@ -864,7 +864,7 @@ async def main(choice: int):
             await run_giant_scraping()
             print("\n" + "="*50)
             print("🔄 Now starting UPC matching...")
-            success = match_giant_upcs_and_create_comparison()
+            success = match_giant_upcs_and_create_comparison(SOURCE_DATA)
             if success:
                 print("✅ Both scraping and UPC matching completed!")
             else:

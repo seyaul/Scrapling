@@ -438,13 +438,8 @@ async def scrape_with_throttle_recovery(categories_map, max_retries=999):
     return False
 
 
-def match_upcs_and_create_comparison(input_file=None):
-    """Match UPCs between input dataset and scraped data, create comparison file"""
-    
-    # Get input file from user
-    if input_file == None:
-        input_file = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
-    
+def match_upcs_and_create_comparison(input_file):
+    """Match UPCs between input dataset and scraped data, create comparison file"""    
     if not os.path.exists(input_file):
         print(f"❌ Input file not found: {input_file}")
         return False
@@ -624,9 +619,11 @@ async def run_scraping():
 # Add this before the if __name__ == '__main__' block
 
 
-async def main(choice: int):
+async def main(choice: int, input_file=None):
     """Main function with options for scraping or UPC matching"""
-    
+    # Get input file from user
+    if input_file == None:
+        input_file = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
 
     while True:
         if choice == 1:
@@ -635,7 +632,7 @@ async def main(choice: int):
             break
         elif choice == 2:
             # UPC matching only
-            success = match_upcs_and_create_comparison()
+            success = match_upcs_and_create_comparison(input_file)
             if success:
                 print("✅ UPC matching completed successfully!")
             else:
@@ -646,7 +643,7 @@ async def main(choice: int):
             await run_scraping()
             print("\n" + "="*50)
             print("🔄 Now starting UPC matching...")
-            success = match_upcs_and_create_comparison()
+            success = match_upcs_and_create_comparison(input_file)
             if success:
                 print("✅ Both scraping and UPC matching completed!")
             else:
