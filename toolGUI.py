@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (
     QPushButton, QLabel, QStackedWidget, QFrame, QFileDialog, QLineEdit, QTextEdit
 )
 from PySide6.QtGui import QPixmap
-import asyncio, re, os, sys
+import io, os, sys, asyncio
 
 def get_path(relative_path):
     if hasattr(sys, '_MEIPASS'):
@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
 
         for idx, name in enumerate(tool_names):
             # Create page
-            page = self.create_tool_page(tool_names[idx] + "\nScrape Tool", script_names[idx])
+            page = self.create_tool_page(tool_names[idx], script_names[idx])
             self.stacked.addWidget(page)
             self.tool_pages.append(page)
 
@@ -124,7 +124,7 @@ class MainWindow(QMainWindow):
         layout.setSpacing(10)
         layout.setContentsMargins(20, 20, 20, 20)
 
-        label = QLabel(label_text)
+        label = QLabel(label_text + "\nScrape Tool")
         label.setStyleSheet("font-size: 50px; color: #1d55b4; font-weight: 300;")
         label.setFixedHeight(150)
         label.setAlignment(Qt.AlignTop | Qt.AlignHCenter)
@@ -147,14 +147,41 @@ class MainWindow(QMainWindow):
         layout.addLayout(file_layout)
         layout.setAlignment(file_layout, Qt.AlignTop | Qt.AlignHCenter)
 
-        run_button = QPushButton("Match UPCs and\nCompare Prices")
-        run_button.setFixedSize(200, 80)
-        run_button.setCursor(Qt.PointingHandCursor)
-        run_button.setStyleSheet("background-color: #1d55b4; font-size: 18px; font-weight: 500; margin-top: 20px;")
-        run_button.clicked.connect(lambda: self.run_script(script, file_input, output_display))
-        
-        layout.addWidget(run_button)
-        layout.setAlignment(run_button, Qt.AlignTop | Qt.AlignHCenter)
+        if (label_text == "Safeway" or label_text == "Giant Food"):
+            button_row = QHBoxLayout()
+
+            scrape_button = QPushButton("Get products and \nprices (Scrape)")
+            scrape_button.setFixedSize(200, 80)
+            scrape_button.setCursor(Qt.PointingHandCursor)
+            scrape_button.setStyleSheet("background-color: #1d55b4; font-size: 18px; font-weight: 500; margin-top: 20px;")
+            scrape_button.clicked.connect(lambda: self.run_script(script, file_input, output_display, choice=1))
+
+            compare_button = QPushButton("Match UPCs and\nCompare Prices")
+            compare_button.setFixedSize(200, 80)
+            compare_button.setCursor(Qt.PointingHandCursor)
+            compare_button.setStyleSheet("background-color: #1d55b4; font-size: 18px; font-weight: 500; margin-top: 20px;")
+            compare_button.clicked.connect(lambda: self.run_script(script, file_input, output_display, choice=2))
+
+            both_button = QPushButton("Scrape and \ncompare prices")
+            both_button.setFixedSize(200, 80)
+            both_button.setCursor(Qt.PointingHandCursor)
+            both_button.setStyleSheet("background-color: #1d55b4; font-size: 18px; font-weight: 500; margin-top: 20px;")
+            both_button.clicked.connect(lambda: self.run_script(script, file_input, output_display, choice=3))
+
+            button_row.addWidget(scrape_button)
+            button_row.addWidget(compare_button)
+            button_row.addWidget(both_button)
+
+            layout.addLayout(button_row)
+        else: 
+            run_button = QPushButton("Match UPCs and\nCompare Prices")
+            run_button.setFixedSize(200, 80)
+            run_button.setCursor(Qt.PointingHandCursor)
+            run_button.setStyleSheet("background-color: #1d55b4; font-size: 18px; font-weight: 500; margin-top: 20px;")
+            run_button.clicked.connect(lambda: self.run_script(script, file_input, output_display))
+            
+            layout.addWidget(run_button)
+            layout.setAlignment(run_button, Qt.AlignTop | Qt.AlignHCenter)
         
         output_display = QTextEdit()
         output_display.setReadOnly(True)
@@ -181,22 +208,32 @@ class MainWindow(QMainWindow):
         button.clicked.connect(lambda: self.switch_tabs(page))
         return button
 
-    def run_script(self, script, file_input, output_display):
+    def run_script(self, script, file_input, output_display, choice=0):
+        # Can't drag files with a path to messages b/c of security
+        # Scraping will open a new Hana application... fix
         file_path = file_input.text().strip()
-        if not file_path:
+        if not file_path and choice != 1:
             output_display.setPlainText("Please select a file first.")
             return
         
         try:
-            if script == "giantscalev3":
-                from scraplingAdaptationHana.giant.giantscalev3 import match_giant_upcs_and_create_comparison
-                match_giant_upcs_and_create_comparison(SOURCE_DATA=file_path)
-            elif script == "safewayv5":
-                from scraplingAdaptationHana.safeway.safewayv5 import match_upcs_and_create_comparison
-                match_upcs_and_create_comparison(input_file=file_path)
+            buffer = io.StringIO()
+            old_stdout = sys.stdout
+            sys.stdout = buffer
+            
+            try:
+                if script == "giantscalev3":
+                    from scraplingAdaptationHana.giant.giantscalev3 import main
+                    asyncio.run(main(choice, SOURCE_DATA=file_path))
+                elif script == "safewayv5":
+                    from scraplingAdaptationHana.safeway.safewayv5 import main
+                    asyncio.run(main(choice, input_file=file_path))
+            finally:
+                sys.stdout = old_stdout
 
-            result_text = "✅ UPC Matching completed successfully."
-            output_display.setPlainText(result_text)
+            output_text = buffer.getvalue()
+            output_display.setPlainText(output_text)
+        
         except Exception as e:
             output_display.setPlainText("Failed to run the script: " + str(e))
 
@@ -227,7 +264,7 @@ class MainWindow(QMainWindow):
 
 class FileDropArea(QLabel):
     def __init__(self, file_input):
-        super().__init__("Drag and drop a price sheet here (.xlsx)")
+        super().__init__("Drag and drop a price sheet here (.xlsx)... \n(Not required if only scraping)")
         self.setStyleSheet("""
             QLabel {
                 border: 2px dashed #1d55b4;
