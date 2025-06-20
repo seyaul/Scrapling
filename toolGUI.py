@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Hana Food Distributor, Inc. Tool')
-        self.setGeometry(300, 300, 1000, 800)
+        self.showFullScreen()
 
         # Main container widget and layout
         self.central_widget = QWidget()
@@ -37,6 +37,7 @@ class MainWindow(QMainWindow):
         """)
         self.hamburger_button.setCursor(Qt.PointingHandCursor)
         self.hamburger_button.clicked.connect(self.toggle_sidebar)
+        self.hamburger_button.setVisible(False)
 
         self.content_layout.addWidget(self.hamburger_button, alignment=Qt.AlignLeft)
         self.main_layout.addWidget(self.content)
@@ -66,12 +67,17 @@ class MainWindow(QMainWindow):
 
         self.stacked.addWidget(self.landing_page)
 
+        # Login page
+        self.login_page = LoginPage(self.switch_tabs, self.landing_page)
+        self.stacked.addWidget(self.login_page)
+        self.stacked.setCurrentWidget(self.login_page)
+
         # Dimming Layer
         self.dimming_layer = QWidget(self.central_widget)
         self.dimming_layer.setStyleSheet("background-color: rgba(0, 0, 0, 100);")
         self.dimming_layer.setVisible(False)
         self.dimming_layer.mousePressEvent = lambda event: self.toggle_sidebar()
-        self.dimming_layer.setGeometry(self.central_widget.rect())
+        self.dimming_layer.setGeometry(self.rect())
 
         # Sidebar Setup
         self.sidebar = QFrame(self.central_widget)
@@ -116,7 +122,8 @@ class MainWindow(QMainWindow):
     
     def resizeEvent(self, event):
         super().resizeEvent(event)
-        self.dimming_layer.setGeometry(self.central_widget.rect())
+        if hasattr(self, 'dimming_layer'):
+            self.dimming_layer.setGeometry(self.rect())
 
     def create_tool_page(self, label_text, script):
         page = QWidget()
@@ -173,6 +180,7 @@ class MainWindow(QMainWindow):
             button_row.addWidget(both_button)
 
             layout.addLayout(button_row)
+            layout.setAlignment(button_row, Qt.AlignTop | Qt.AlignHCenter)
         else: 
             run_button = QPushButton("Match UPCs and\nCompare Prices")
             run_button.setFixedSize(200, 80)
@@ -209,8 +217,6 @@ class MainWindow(QMainWindow):
         return button
 
     def run_script(self, script, file_input, output_display, choice=0):
-        # Can't drag files with a path to messages b/c of security
-        # Scraping will open a new Hana application... fix
         file_path = file_input.text().strip()
         if not file_path and choice != 1:
             output_display.setPlainText("Please select a file first.")
@@ -258,9 +264,82 @@ class MainWindow(QMainWindow):
             self.sidebar.setVisible(False)
             self.dimming_layer.setVisible(False)
 
-    def switch_tabs(self, page):
+    def switch_tabs(self, page, toggle=True):
         self.stacked.setCurrentWidget(page)
-        self.toggle_sidebar()
+        if toggle:
+            self.toggle_sidebar()
+        if page == self.login_page:
+            self.hamburger_button.setVisible(False)
+            self.sidebar.setVisible(False)
+        else:
+            self.hamburger_button.setVisible(True)
+
+class LoginPage(QWidget):
+    def __init__(self, switch_function, target_page):
+        super().__init__()
+        self.switch_to_main = switch_function
+        self.target_page = target_page
+
+        layout = QVBoxLayout()
+
+        welcome_layout = QVBoxLayout()
+        title = QLabel("Welcome!")
+        title.setStyleSheet("color: #1d55b4; font-size: 100px; font-weight: 300;")
+        blurb = QLabel("Login with your Hana email to get started.")
+        blurb.setStyleSheet("color: #1d55b4; font-size: 35px; font-weight: 200;")
+        
+        welcome_layout.addWidget(title, alignment=Qt.AlignHCenter)
+        welcome_layout.addWidget(blurb, alignment=Qt.AlignTop | Qt.AlignHCenter)
+        layout.addLayout(welcome_layout)
+        
+        # Username Block
+        username_block = QVBoxLayout()
+
+        username_label = QLabel("Username:")
+        username_label.setStyleSheet("color: black; font-size: 20px; font-weight: 200;")
+
+        self.username_input = QLineEdit()
+        self.username_input.setPlaceholderText("Enter your username")
+        self.username_input.setStyleSheet("border: 1px solid #1d55b4; color: #A9A9A9; font-size: 20px; font-weight: 200;")
+
+        username_block.addWidget(username_label)
+        username_block.addWidget(self.username_input, alignment=Qt.AlignTop)
+
+        username_container = QWidget()
+        username_container.setLayout(username_block)
+        username_container.setFixedWidth(350)
+        layout.addWidget(username_container, alignment=Qt.AlignHCenter)
+
+        # Password Field
+        password_block = QVBoxLayout()
+
+        password_label = QLabel("Password:")
+        password_label.setStyleSheet("color: black; font-size: 20px; font-weight: 200")
+        self.password_input = QLineEdit()
+        self.password_input.setPlaceholderText("Enter your password")
+        self.password_input.setStyleSheet("border: 1px solid #1d55b4; color: #A9A9A9; font-size: 20px; font-weight: 200")
+        self.password_input.setEchoMode(QLineEdit.Password)
+
+        password_block.addWidget(password_label)
+        password_block.addWidget(self.password_input, alignment=Qt.AlignTop)
+
+        password_container = QWidget()
+        password_container.setLayout(password_block)
+        password_container.setFixedWidth(350)
+        layout.addWidget(password_container, alignment=Qt.AlignHCenter)
+
+
+        login_button = QPushButton("Login")
+        login_button.setFixedSize(150, 60)
+        login_button.setCursor(Qt.PointingHandCursor)
+        login_button.setStyleSheet("background-color: black; font-size: 20px;")
+        login_button.clicked.connect(self.go_to_main)
+
+        layout.addWidget(login_button, alignment=Qt.AlignCenter)
+        self.setLayout(layout)
+
+    def go_to_main(self):
+        self.switch_to_main(self.target_page, toggle=False)
 
 class FileDropArea(QLabel):
     def __init__(self, file_input):
