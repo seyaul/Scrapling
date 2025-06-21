@@ -1,0 +1,113 @@
+2025-06-19 15:21:00,291 [ERROR] Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed\nCall log:\n  - waiting for locator("button.robot-shopping-mode-location") to be visible\n')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-19 15:27:25,223 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-19 16:32:21,205 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-19 16:39:39,537 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-19 16:39:57,970 [ERROR] Error executing async page_action: Page.click: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-19 16:41:15,310 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-19 16:44:09,104 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-19 16:44:27,299 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-19 16:44:48,399 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-19 16:45:07,782 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-20 03:45:40,871 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-20 12:56:08,946 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-20 12:56:09,005 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-20 12:58:06,376 [ERROR] Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-06-20 16:00:08,993 [ERROR] Error executing async page_action: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-20 16:00:09,031 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-20 16:00:30,383 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-20 16:00:30,419 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-20 16:00:37,394 [ERROR] Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-06-20 17:17:26,097 [ERROR] Error executing async page_action: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location")
+    - locator resolved to <button aria-haspopup="dialog" data-opens-modal="true" class="robot-shopping-mode-location pl-2 flex no-wrap items-baseline">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+2025-06-20 17:17:26,172 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-20 17:26:38,784 [ERROR] Error executing async page_action: Page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name='zipCode']")
+
+2025-06-20 17:26:38,832 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-20 17:26:54,099 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+
+2025-06-20 17:29:34,673 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+

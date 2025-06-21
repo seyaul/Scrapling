@@ -425,3 +425,7 @@ Call log:
   - waiting for locator("button.robot-shopping-mode-location") to be visible
 
 2025-06-10 14:07:23,377 [INFO] Fetched (200) <GET https://giantfood.com/> (referer: https://www.google.com/search?q=giantfood)
+2025-06-19 14:58:51,674 [ERROR] Error executing async page_action: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("button.robot-shopping-mode-location") to be visible
+

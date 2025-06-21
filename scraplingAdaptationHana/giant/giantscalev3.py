@@ -16,10 +16,10 @@ BASE_FILE = pathlib.Path(__file__).resolve().parent
 # File configurations
 SOURCE_DATA = input("📁 Enter path to your input XLSX file: ").strip().strip('"\'')
 # SOURCE_DATA = '/Users/seyaul/hana inc projects/simpledimplewebscraper/Scrapling/scraplingAdaptationHana/source_prices.xlsx'
-OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_foods_comparison.xlsx"
-CHECKPOINT_FILE = BASE_FILE / "giant_scraping/catalog_checkpoint_giant.json"
-DUMP_FILE = BASE_FILE / 'giant_scraping/scraped_products_dump.csv'
-LOG_FILE = BASE_FILE / ".giant_log/giant_catalog_scrape.log"
+OUTPUT_DATA = BASE_FILE / "giant_price_compare/giant_foods_comparison_v3.xlsx"
+CHECKPOINT_FILE = BASE_FILE / "giant_scraping/catalog_checkpoint_giant_v3.json"
+DUMP_FILE = BASE_FILE / 'giant_scraping/scraped_products_dump_v3.csv'
+LOG_FILE = BASE_FILE / ".giant_log/giant_catalog_scrape_v3.log"
 CATEGORY_MAPPING_FILE = BASE_FILE / "giant_scraping" / "giant_category_mapping.json"
 
 # Ensure directories exist
@@ -172,32 +172,32 @@ async def _fetch_with_retry(page, url, max_retries=2, context_recreator=None):
     """Fetch JSON with automatic throttling recovery."""
     for attempt in range(max_retries):
         try:
+            # Add jitter to avoid detection
+            await asyncio.sleep(random.uniform(2.5, 7.5))
+
             res = await _fetch_json_via_browser(page, url)
             status = res.get('status')
             
             # Check for throttling statuses
             if status in [403, 429, 503, 520, 521, 522, 523, 524]:
                 if attempt == max_retries - 1:
-                    # Final attempt failed - raise exception to trigger context recreation
                     raise Exception(f"Max retries exceeded. Final status: {status}")
-                
+
                 print(f"   🔄 Throttled (status {status}), waiting before retry... (attempt {attempt + 1}/{max_retries})")
-                
-                # Exponential backoff
-                wait_time = (2 ** attempt) * 10  # 10s, 20s, 40s
-                print(f"   ⏳ Waiting {wait_time}s before retry...")
+                wait_time = (2 ** attempt) * 20 + random.uniform(5, 15)  # Longer backoff
+                print(f"   ⏳ Waiting {wait_time:.1f}s before retry...")
                 await asyncio.sleep(wait_time)
                 continue
                 
             return res
-            
+
         except Exception as e:
             if attempt == max_retries - 1:
                 raise
             print(f"   ⚠️  Request failed: {e}, retrying... (attempt {attempt + 1}/{max_retries})")
-            await asyncio.sleep(5)
-    
-    raise Exception("All retry attempts failed")
+            await asyncio.sleep(10)
+
+# Clean scrape_giant_category_with_browser()
 
 async def scrape_giant_category_with_browser(
     page,
@@ -305,7 +305,9 @@ async def scrape_giant_category_with_browser(
     # 2️⃣  Sub‑category pass via mapping file
     # ─────────────────────────────────────────────────────
 
-    if str(category_id) in category_map and len(items) < max_items:
+    enable_subcats = False
+
+    if enable_subcats and str(category_id) in category_map and len(items) < max_items:
         subcats: List[Dict[str, Any]] = category_map[str(category_id)].get("subcategories", [])
         for sc in subcats:
             print(f"🧩 Beginning sub‑category scrape for {sc.get('name')} …")
@@ -384,25 +386,34 @@ async def _scrape_single_subcat(
     store_id: str,
     parent_category_name: str,
     seen_upcs: set[str],
+    progress: Dict[str, Any],          
     max_items_remaining: int,
 ) -> List[Dict[str, Any]]:
+    
     sc_name = subcat.get("name", "(unknown)")
+    sc_id = subcat.get("cat_tree_id", "filter")
 
     expected_total = None
     sc_total = 0
     start = 0
-
-    params = base_params | {"catTreeId": subcat.get("cat_tree_id"), "start": str(start), "rows": "40"}
     collected: List[Dict[str, Any]] = []
-    
+
+    print(f"🧩 Beginning sub‑category scrape for {sc_name} …")
+
     while len(collected) < max_items_remaining:
         print(f"Starting offset={start} …")
+
+        params = base_params | {
+            "catTreeId": sc_id,
+            "start": str(start),
+            "rows": "40"
+        }
+
         url = f"https://giantfood.com/api/v6.0/products/{store_id}/{FACILITY_ID}?" + urlencode(params)
-        
+
         try:
             res = await _fetch_with_retry(page, url)
         except Exception as e:
-            # If throttling persists, re-raise to trigger context recreation
             if "403" in str(e) or "Throttled" in str(e) or "429" in str(e):
                 raise e
             print(f"   ⚠️  {sc_name}: Failed after retries: {e}")
@@ -415,39 +426,36 @@ async def _scrape_single_subcat(
         resp = res["data"].get("response", {})
         products = resp.get("products", [])
         pag = resp.get("pagination", {})
-        
+
         if expected_total is None:
             expected_total = pag.get("total")
 
         if not products:
+            print(f"⚠️ No products returned at offset {start}, exiting sub-cat loop.")
             break
 
-        # Fix: Load current progress and save after each batch
-        progress = load_giant_progress()
         added = _ingest_products(
             products,
             f"{parent_category_name} > {sc_name}",
-            subcat.get("cat_tree_id", "filter"),
+            sc_id,
             seen_upcs,
             collected,
             progress,
             verbose=False,
         )
         save_giant_progress(progress)
-        
-        if added == 0:
-            # NOTE: FOUND THE LINE!!!!!
-            break
 
         sc_total += added
-        start += added
+        start += 40
 
         if expected_total:
             pct = sc_total / expected_total * 100
             print(f"      ✅ +{added} (now {sc_total}/{expected_total} | {pct:.2f}% of sub-category)")
         else:
-            print(f"      ✅ +{added} (now {sc_total}/?? items)") 
-        await asyncio.sleep(random.uniform(3, 5))
+            print(f"      ✅ +{added} (now {sc_total}/?? items)")
+
+        # Sleep after each batch to avoid throttling
+        await asyncio.sleep(random.uniform(3.0, 6.0))
 
     # final summary
     if expected_total:
@@ -455,8 +463,9 @@ async def _scrape_single_subcat(
         print(f"   • {sc_name}: {sc_total}/{expected_total} items ({cov:.2f}% of sub-category)")
     else:
         print(f"   • {sc_name}: {sc_total} items (total unknown)")
-        
+
     return collected
+
 
 async def scrape_with_browser_context():
     """Scrape using browser context throughout"""
@@ -548,7 +557,8 @@ async def scrape_with_browser_context():
         # Now scrape all categories using the same browser context
         progress = load_giant_progress()
         await page.wait_for_load_state("networkidle", timeout = 30000)
-        
+        category_map = load_category_map()  # ✅ Must be here before loop
+
         for category_id, category_name in MAIN_CATEGORIES.items():
             category_key = f"{category_id}::{category_name}"
             
@@ -563,10 +573,9 @@ async def scrape_with_browser_context():
                 items = await scrape_giant_category_with_browser(
                     page, category_id, category_name, base_params, store_id, max_items
                 )
-    
                 if items:
                     print(f"✅ Completed {category_name}: {len(items)} items")
-                    progress = load_giant_progress()  # Reload to get updated counts
+                    progress = load_giant_progress()
                     progress['completed_categories'].append(category_key)
                 else:
                     print(f"⚠️ No items found for {category_name}")
@@ -734,7 +743,10 @@ def match_giant_upcs_and_create_comparison():
         
         # Find matches
         matched_upcs = input_upcs.intersection(scraped_upcs)
-        print(f"✅ Matched UPCs: {len(matched_upcs)}")
+        
+        accuracy_pct = (len(matched_upcs) / len(input_upcs)) * 100 if input_upcs else 0
+        print(f"🎯 Matching Accuracy: {accuracy_pct:.2f}%")
+        
         
         if not matched_upcs:
             print("❌ No UPC matches found between datasets")
